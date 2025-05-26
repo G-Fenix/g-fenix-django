@@ -1,0 +1,67 @@
+{% extends "layout_tr.html" %}
+{% load static %}
+
+{% block title %}G-Fenix | Devam Eden Projeler{% endblock %}
+
+{% block content %}
+
+
+
+<div class="row">
+  <div class="col-12">
+    <div style="height: 100px;"></div> <!-- 50px boşluk -->
+  </div>
+</div>
+
+
+<section class="py-5" style="background-color: none">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Yazı Bölümü -->
+      <div class="col-md-6" data-aos="fade-right">
+        <h2 class="mb-4">G-Fenix’ten "MyFriens" mobil uygulaması</h2>
+        <p class="text-white">
+          MyFriends, insanları ortak ilgi alanlarında buluşturan sosyal bir etkinlik uygulamasıdır. Kullanıcılar ister sabah koşusu ister festival olsun, her türlü planı kolayca oluşturabilir ve başkalarını davet edebilir. Aynı zamanda çevredeki etkinlikleri keşfedebilir, diğer kullanıcıları takip edebilir ve anılarını fotoğraf veya videolarla paylaşabilirler. MyFriends, gerçek dünyada sosyalleşmeyi teknolojiyle birleştiren yepyeni bir deneyim sunar.
+        </p>
+        <ul class="list-unstyled mt-3">
+          <li>📅 Etkinlik planla ve paylaş: seyahatlerden konserlere, sabah koşularından plaj voleyboluna kadar her şey.</li>
+          <li>🤝 Yakındaki planlara katıl ya da arkadaşlarını kendi etkinliğine davet et.</li>
+          <li>📍 Konumuna ve ilgi alanlarına göre etkinlikleri keşfet.</li>
+          <li>💬 Katılımcılarla sohbet et, planları koordine et veya sadece selam ver.</li>
+          <li>👥 Diğer kullanıcıları takip et ve kendi arkadaş çevreni oluştur.</li>
+          <li>📸 Etkinlik deneyimlerini fotoğraflar, videolar ve tepkilerle paylaş.</li>
+          <li>🎥 Etkinlik anlarını doğrudan video olarak yayınla — tıpkı bir sosyal medya akışı gibi!</li>
+          <li>🌟 Doğrulanmış bir ev sahibi ol ya da topluluk etkileşiminle rozetler kazan.</li>
+        </ul>
+      </div>
+
+      <!-- Görsel Bölümü -->
+      <div class="col-md-6 text-center" data-aos="fade-left">
+        <img src="{% static 'images/myfrnds.png' %}" alt="AI Solutions" class="img-fluid">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<section class="py-5" id="our-mission">
+  <div class="container text-center remove-margin" data-aos="fade-up">
+    <h2 class="mb-4 text-white text-2xl font-semibold">Daha fazlası için lütfen bizimle iletişime geçin</h2>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="/tr/bize-ulasin" class="btn btn-outline-info mt-auto text-white">Topluluğumuza katılın veya bizimle iş birliği yapın.</a>
+    </div>
+  </div>
+</section>
+
+
+
+<div class="container text-center my-5" data-aos="zoom-in">
+  <img src="{% static 'images/logoweb.png' %}" alt="G-FENIX Logo" 
+    style="width: 160px; max-width: 100%; height: auto;">
+</div>
+
+
+{% endblock content %}

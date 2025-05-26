@@ -1,0 +1,238 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.rtl.min.css' %}"/>
+  <title>{% block title %}G-Fenix{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link href="{% static 'css/aos.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="{% static 'css/all.min.css' %}" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+  <div class="container-fluid position-relative">
+
+    <!-- Vista Escritorio -->
+    <div class="d-none d-lg-flex w-100 justify-content-between align-items-center position-relative">
+
+      <!-- Menú Izquierdo -->
+      <ul class="navbar-nav flex-row align-items-center left-menu">
+        <!-- Idiomas -->
+        <li class="nav-item dropdown me-3">
+          <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">🌐</a>
+          <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+            <li><a class="dropdown-item" href="/">🇬🇧 English</a></li>
+            <li><a class="dropdown-item" href="/tr/">🇹🇷 Türkçe</a></li>
+            <li><a class="dropdown-item" href="/es/">🇪🇸 Español</a></li>
+            <li><a class="dropdown-item" href="/bg/">🇧🇬 Български</a></li>
+          </ul>
+        </li>
+
+        <!-- ¿Qué Hacemos? -->
+        <li class="nav-item dropdown me-3">
+          <a class="nav-link dropdown-toggle" href="#" id="whatwedoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">¿Qué Hacemos?</a>
+          <ul class="dropdown-menu" aria-labelledby="whatwedoDropdown">
+            <li><a class="dropdown-item" href="/es/que-hacemos/analisis-de-datos">Análisis de Datos</a></li>
+            <li><a class="dropdown-item" href="/es/que-hacemos/desarrollo-web">Desarrollo Web</a></li>
+            <li><a class="dropdown-item" href="/es/que-hacemos/ia">Aplicaciones de IA</a></li>
+            <li><a class="dropdown-item" href="/es/que-hacemos/desarrollo-python">Desarrollo en Python</a></li>
+            <li><a class="dropdown-item" href="/es/que-hacemos/casos-de-usuario">Casos de Usuario</a></li>
+            <li><a class="dropdown-item" href="/es/que-hacemos/formacion">Formación</a></li>
+          </ul>
+        </li>
+
+        <!-- Proyectos -->
+        <li class="nav-item dropdown me-3">
+          <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Proyectos</a>
+          <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+            <li><a class="dropdown-item" href="/es/proyectos/proyectos-completados">Proyectos Completados</a></li>
+            <li><a class="dropdown-item" href="/es/proyectos/proyectos-en-curso">Proyectos en Curso</a></li>
+            <li><a class="dropdown-item" href="/es/proyectos/proyectos-futuros">Proyectos Futuros</a></li>
+            <li><a class="dropdown-item" href="/es/proyectos/proyectos-de-clientes">Proyectos de Clientes</a></li>
+          </ul>
+        </li>
+
+        <!-- Productos -->
+        <li class="nav-item me-3">
+          <a class="nav-link" href="/es/productos">Productos</a>
+        </li>
+      </ul>
+
+      <!-- Logo Centrado -->
+      <a class="navbar-brand position-absolute top-50 start-50 translate-middle d-flex align-items-center" href="/es/">
+        <img src="{% static 'images/gfenix-logos.png' %}" alt="G-Fenix Logo" width="45" height="45" class="me-2">
+        <span class="fs-5 fw-bold">G-Fenix</span>
+      </a>
+
+      <!-- Menú Derecho -->
+      <ul class="navbar-nav flex-row align-items-center right-menu">
+        <!-- Blog -->
+        <li class="nav-item me-3">
+          <a class="nav-link" href="/es/blog">Blog</a>
+        </li>
+
+        <!-- Sobre Nosotros -->
+        <li class="nav-item dropdown me-3">
+          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sobre Nosotros</a>
+          <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+            <li><a class="dropdown-item" href="/es/sobre-nosotros/nuestro-equipo">Nuestro Equipo</a></li>
+            <li><a class="dropdown-item" href="/es/sobre-nosotros/nuestra-vision">Nuestra Visión</a></li>
+            <li><a class="dropdown-item" href="/es/sobre-nosotros/nuestra-mision">Nuestra Misión</a></li>
+            <li><a class="dropdown-item" href="/es/sobre-nosotros/redes-sociales">Redes Sociales</a></li>
+          </ul>
+        </li>
+
+        <!-- Contacto -->
+        <li class="nav-item">
+          <a class="nav-link" href="/es/contacto">Contacto</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Vista Móvil -->
+    <div class="d-lg-none w-100">
+      <div class="d-flex justify-content-between align-items-center">
+        <a class="navbar-brand d-flex align-items-center" href="/es/">
+          <img src="{% static 'images/gfenix-logos.png' %}" alt="G-Fenix Logo" width="35" height="35" class="me-2">
+          G-Fenix
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse mt-3" id="mainNavbar">
+        <ul class="navbar-nav">
+          <!-- Idiomas -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="languageDropdownMobile" role="button" data-bs-toggle="dropdown" aria-expanded="false">🌐</a>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdownMobile">
+              <li><a class="dropdown-item" href="/">🇬🇧 English</a></li>
+              <li><a class="dropdown-item" href="/tr/">🇹🇷 Türkçe</a></li>
+              <li><a class="dropdown-item" href="/es/">🇪🇸 Español</a></li>
+              <li><a class="dropdown-item" href="/bg/">🇧🇬 Български</a></li>
+            </ul>
+          </li>
+
+          <!-- ¿Qué Hacemos? -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="whatwedoDropdownMobile" role="button" data-bs-toggle="dropdown" aria-expanded="false">¿Qué Hacemos?</a>
+            <ul class="dropdown-menu" aria-labelledby="whatwedoDropdownMobile">
+              <li><a class="dropdown-item" href="/es/que-hacemos/analisis-de-datos">Análisis de Datos</a></li>
+              <li><a class="dropdown-item" href="/es/que-hacemos/desarrollo-web">Desarrollo Web</a></li>
+              <li><a class="dropdown-item" href="/es/que-hacemos/ia">Aplicaciones de IA</a></li>
+              <li><a class="dropdown-item" href="/es/que-hacemos/desarrollo-python">Desarrollo en Python</a></li>
+              <li><a class="dropdown-item" href="/es/que-hacemos/casos-de-usuario">Casos de Usuario</a></li>
+              <li><a class="dropdown-item" href="/es/que-hacemos/formacion">Formación</a></li>
+            </ul>
+          </li>
+
+          <!-- Proyectos -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdownMobile" role="button" data-bs-toggle="dropdown" aria-expanded="false">Proyectos</a>
+            <ul class="dropdown-menu" aria-labelledby="projectsDropdownMobile">
+              <li><a class="dropdown-item" href="/es/proyectos/proyectos-completados">Proyectos Completados</a></li>
+              <li><a class="dropdown-item" href="/es/proyectos/proyectos-en-curso">Proyectos en Curso</a></li>
+              <li><a class="dropdown-item" href="/es/proyectos/proyectos-futuros">Proyectos Futuros</a></li>
+              <li><a class="dropdown-item" href="/es/proyectos/proyectos-de-clientes">Proyectos de Clientes</a></li>
+            </ul>
+          </li>
+
+          <!-- Productos -->
+          <li class="nav-item"><a class="nav-link" href="/es/productos">Productos</a></li>
+          <!-- Blog -->
+          <li class="nav-item"><a class="nav-link" href="/es/blog">Blog</a></li>
+
+          <!-- Sobre Nosotros -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdownMobile" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sobre Nosotros</a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdownMobile">
+              <li><a class="dropdown-item" href="/es/sobre-nosotros/nuestro-equipo">Nuestro Equipo</a></li>
+              <li><a class="dropdown-item" href="/es/sobre-nosotros/nuestra-vision">Nuestra Visión</a></li>
+              <li><a class="dropdown-item" href="/es/sobre-nosotros/nuestra-mision">Nuestra Misión</a></li>
+              <li><a class="dropdown-item" href="/es/sobre-nosotros/redes-sociales">Redes Sociales</a></li>
+            </ul>
+          </li>
+
+          <!-- Contacto -->
+          <li class="nav-item"><a class="nav-link" href="/es/contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+{% block zaman %}{% endblock zaman%}
+
+
+<footer class="text-light pt-5 pb-4" style="background-color: rgba(0,0,0,0.9);">
+  <div class="container px-4">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      <div class="col">
+        <div class="mb-3">
+          <img src="{% static 'images/gfenix-logos.png' %}" alt="G-Fenix Logo" width="50" height="50">
+        </div>
+        <p class="text-white-50">
+          Usamos inteligencia artificial, datos y código para crear soluciones digitales inteligentes, modernas y escalables. Vamos, construyamos el futuro juntos.
+        </p>
+      </div>
+    
+      <div class="col">
+        <h6 class="text-uppercase mb-3" style="color: #00ADB5;">¿Qué Hacemos?</h6>
+        <ul class="list-unstyled">
+          <li><a href="/es/que-hacemos/analisis-de-datos" class="text-white-50 text-decoration-none">Análisis de Datos</a></li>
+          <li><a href="/es/que-hacemos/desarrollo-web" class="text-white-50 text-decoration-none">Desarrollo Web</a></li>
+          <li><a href="/es/que-hacemos/ia" class="text-white-50 text-decoration-none">Aplicaciones de Inteligencia Artificial</a></li>
+          <li><a href="/es/que-hacemos/desarrollo-python" class="text-white-50 text-decoration-none">Desarrollo en Python</a></li>
+          <li><a href="/es/que-hacemos/formacion" class="text-white-50 text-decoration-none">Formación</a></li>
+        </ul>
+      </div>
+    
+      <div class="col">
+        <h6 class="text-uppercase mb-3" style="color: #00ADB5;">Enlaces Rápidos</h6>
+        <ul class="list-unstyled">
+          <li><a href="/es/" class="text-white-50 text-decoration-none">Página de Inicio</a></li>
+          <li><a href="/es/productos" class="text-white-50 text-decoration-none">Productos</a></li>
+          <li><a href="/es/blog" class="text-white-50 text-decoration-none">Blog</a></li>
+          <li><a href="/es/sobre-nosotros/nuestro-equipo" class="text-white-50 text-decoration-none">Nuestro Equipo</a></li>
+          <li><a href="/es/contacto" class="text-white-50 text-decoration-none">Contáctanos</a></li>
+        </ul>
+      </div>
+    
+      <div class="col">
+        <h6 class="text-uppercase mb-3" style="color: #00ADB5;">Contáctanos</h6>
+        <p class="text-white-50 mb-1"><i class="bi bi-envelope me-2"></i> hello@g-fenix.com</p>
+        <p class="text-white-50 mb-1"><i class="bi bi-telephone me-2"></i> +359 88 2839085</p>
+        <p class="text-white-50"><i class="bi bi-geo-alt me-2"></i> Sofía, Bulgaria</p>
+      </div>
+    </div>
+    
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4 pt-4 border-top border-secondary">
+      <p class="text-white-50 mb-2 mb-md-0">© 2025 G-FENIX. Todos los derechos reservados.</p>
+      <div>
+        <a href="https://x.com/g_fenix44823" class="text-white-50 me-3"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.linkedin.com/company/106604996/admin/dashboard/" class="text-white-50 me-3"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/heygfenix/" class="text-white-50 me-3"><i class="bi bi-instagram"></i></a>
+        <a href="https://wa.me/905396102361?text=Hello%20GFenix%2C%20I%20visited%20website!" class="text-white-50 me-3"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://t.me/cengizhangenc" class="text-white-50 me-3"><i class="bi bi-telegram"></i></a>
+        <a href="viber://chat?number=+359887663892" class="text-white-50 me-3"><i class="fab fa-viber"></i></a>
+        <a href="mailto:hello@g-fenix.com?subject=Website%20Contact&body=Hi%20GFenix%2C%20I%20just%20visited%20your%20website..." class="text-white-50 me-3"><i class="bi bi-envelope-fill"></i></a>
+        <a href="#" class="text-white-50 me-3"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/aos.js' %}"></script>
+<script>
+  AOS.init({ duration: 800, once: false });
+</script>
+
+</body>
+</html>

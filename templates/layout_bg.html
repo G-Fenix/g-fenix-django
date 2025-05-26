@@ -1,0 +1,219 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.rtl.min.css' %}"/>
+  <title>{% block title %}G-Fenix{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link href="{% static 'css/aos.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="{% static 'css/all.min.css' %}" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+  <div class="container-fluid position-relative">
+
+    <!-- Masaüstü Görünüm -->
+    <div class="d-none d-lg-flex w-100 justify-content-between align-items-center position-relative">
+
+      <!-- Sol Menü -->
+      <ul class="navbar-nav flex-row align-items-center left-menu">
+        <li class="nav-item dropdown me-3">
+          <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">🌐</a>
+          <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+            <li><a class="dropdown-item" href="/">🇬🇧 English</a></li>
+            <li><a class="dropdown-item" href="/tr/">🇹🇷 Türkçe</a></li>
+            <li><a class="dropdown-item" href="/es/">🇪🇸 Español</a></li>
+            <li><a class="dropdown-item" href="/bg/">🇧🇬 Български</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown me-3">
+          <a class="nav-link dropdown-toggle" href="#" id="whatwedoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Какво Правим</a>
+          <ul class="dropdown-menu" aria-labelledby="whatwedoDropdown">
+            <li><a class="dropdown-item" href="/bg/kakvo-pravim/analiz-na-danni">Анализ на Данни</a></li>
+            <li><a class="dropdown-item" href="/bg/kakvo-pravim/web-razrabotka">Уеб Разработка</a></li>
+            <li><a class="dropdown-item" href="/bg/kakvo-pravim/izkustven-intellekt">Приложения с Изкуствен Интелект</a></li>
+            <li><a class="dropdown-item" href="/bg/kakvo-pravim/python-razrabotka">Пайтън Разработка</a></li>
+            <li><a class="dropdown-item" href="/bg/kakvo-pravim/primeri">Потребителски Примери</a></li>
+            <li><a class="dropdown-item" href="/bg/kakvo-pravim/obuchenie">Обучение</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown me-3">
+          <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Проекти</a>
+          <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+            <li><a class="dropdown-item" href="/bg/proekti/zavarsheni-proekti">Завършени  Проекти</a></li>
+            <li><a class="dropdown-item" href="/bg/proekti/tekushti-proekti">Текущи  Проекти</a></li>
+            <li><a class="dropdown-item" href="/bg/proekti/badeshti-proekti"> Бъдещи  Проекти</a></li>
+            <li><a class="dropdown-item" href="/bg/proekti/klientski-proekti">Клиентски  Проекти</a></li>
+          </ul>
+        </li>
+        <li class="nav-item me-3">
+          <a class="nav-link" href="/bg/produkti">Продукти</a>
+        </li>
+      </ul>
+
+      <!-- Logo Ortada -->
+      <a class="navbar-brand position-absolute top-50 start-50 translate-middle d-flex align-items-center" href="/bg/">
+        <img src="{% static 'images/gfenix-logos.png' %}" alt="G-Fenix Logo" width="45" height="45" class="me-2">
+        <span class="fs-5 fw-bold">G-Fenix</span>
+      </a>
+
+      <!-- Sağ Menü -->
+      <ul class="navbar-nav flex-row align-items-center right-menu">
+        <li class="nav-item me-3">
+          <a class="nav-link" href="/bg/blog">Блог</a>
+        </li>
+        <li class="nav-item dropdown me-3">
+          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">За Нас</a>
+          <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+            <li><a class="dropdown-item" href="/bg/za-nas/nashiyat-ekip">Нашият Екип</a></li>
+            <li><a class="dropdown-item" href="/bg/za-nas/nashata-viziya">Нашата Визия</a></li>
+            <li><a class="dropdown-item" href="/bg/za-nas/nashata-misiya">Нашата Мисия</a></li>
+            <li><a class="dropdown-item" href="/bg/za-nas/sotsialni-mrezhi">Социални Мрежи</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/bg/kontakt">Свържете се с нас</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Mobil Görünüm -->
+    <div class="d-lg-none w-100">
+      <div class="d-flex justify-content-between align-items-center">
+        <a class="navbar-brand d-flex align-items-center" href="/bg/">
+          <img src="{% static 'images/gfenix-logos.png' %}" alt="G-Fenix Logo" width="35" height="35" class="me-2">
+          G-Fenix
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse mt-3" id="mainNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown me-3">
+            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">🌐</a>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+              <li><a class="dropdown-item" href="/">🇬🇧 English</a></li>
+              <li><a class="dropdown-item" href="/tr/">🇹🇷 Türkçe</a></li>
+              <li><a class="dropdown-item" href="/es/">🇪🇸 Español</a></li>
+              <li><a class="dropdown-item" href="/bg/">🇧🇬 Български</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown me-3">
+            <a class="nav-link dropdown-toggle" href="#" id="whatwedoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Какво Правим</a>
+            <ul class="dropdown-menu" aria-labelledby="whatwedoDropdown">
+              <li><a class="dropdown-item" href="/bg/kakvo-pravim/analiz-na-danni">Анализ на Данни</a></li>
+              <li><a class="dropdown-item" href="/bg/kakvo-pravim/web-razrabotka">Уеб Разработка</a></li>
+              <li><a class="dropdown-item" href="/bg/kakvo-pravim/izkustven-intellekt">Приложения с Изкуствен Интелект</a></li>
+              <li><a class="dropdown-item" href="/bg/kakvo-pravim/python-razrabotka">Пайтън Разработка</a></li>
+              <li><a class="dropdown-item" href="/bg/kakvo-pravim/primeri">Потребителски Примери</a></li>
+              <li><a class="dropdown-item" href="/bg/kakvo-pravim/obuchenie">Обучение</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown me-3">
+            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Проекти</a>
+            <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+              <li><a class="dropdown-item" href="/bg/proekti/zavarsheni-proekti">Завършени  Проекти</a></li>
+              <li><a class="dropdown-item" href="/bg/proekti/tekushti-proekti">Текущи  Проекти</a></li>
+              <li><a class="dropdown-item" href="/bg/proekti/badeshti-proekti"> Бъдещи  Проекти</a></li>
+              <li><a class="dropdown-item" href="/bg/proekti/klientski-proekti">Клиентски  Проекти</a></li>
+            </ul>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link" href="/bg/produkti">Продукти</a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link" href="/bg/blog">Блог</a>
+          </li>
+          <li class="nav-item dropdown me-3">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">За Нас</a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="/bg/za-nas/nashiyat-ekip">Нашият Екип</a></li>
+              <li><a class="dropdown-item" href="/bg/za-nas/nashata-viziya">Нашата Визия</a></li>
+              <li><a class="dropdown-item" href="/bg/za-nas/nashata-misiya">Нашата Мисия</a></li>
+              <li><a class="dropdown-item" href="/bg/za-nas/sotsialni-mrezhi">Социални Мрежи</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/bg/kontakt">Свържете се с нас</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+{% block imera %}{% endblock imera%}
+
+
+<footer class="text-light pt-5 pb-4" style="background-color: rgba(0,0,0,0.9);">
+  <div class="container px-4">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      <div class="col">
+        <div class="mb-3">
+          <img src="{% static 'images/gfenix-logos.png' %}" alt="G-Fenix Logo" width="50" height="50">
+        </div>
+        <p class="text-white-50">
+          С помощта на изкуствен интелект, данни и код създаваме интелигентни, модерни и мащабируеми дигитални решения. Хайде да изградим бъдещето заедно.
+        </p>
+      </div>
+    
+      <div class="col">
+        <h6 class="text-uppercase mb-3" style="color: #00ADB5;">Какво Правим</h6>
+        <ul class="list-unstyled">
+          <li><a href="/bg/kakvo-pravim/analiz-na-danni" class="text-white-50 text-decoration-none">Анализ на Данни</a></li>
+          <li><a href="/bg/kakvo-pravim/web-razrabotka" class="text-white-50 text-decoration-none">Уеб Разработка</a></li>
+          <li><a href="/bg/kakvo-pravim/izkustven-intellekt" class="text-white-50 text-decoration-none">Приложения с Изкуствен Интелект</a></li>
+          <li><a href="/bg/kakvo-pravim/python-razrabotka" class="text-white-50 text-decoration-none">Пайтън Разработка</a></li>
+          <li><a href="/bg/kakvo-pravim/obuchenie" class="text-white-50 text-decoration-none">Обучение</a></li>
+        </ul>
+      </div>
+    
+      <div class="col">
+        <h6 class="text-uppercase mb-3" style="color: #00ADB5;">Бързи Връзки</h6>
+        <ul class="list-unstyled">
+          <li><a href="/bg/" class="text-white-50 text-decoration-none">Начало</a></li>
+          <li><a href="/bg/produkti" class="text-white-50 text-decoration-none">Продукти</a></li>
+          <li><a href="/bg/blog" class="text-white-50 text-decoration-none">Блог</a></li>
+          <li><a href="/bg/za-nas/nashiyat-ekip" class="text-white-50 text-decoration-none">Нашият Екип</a></li>
+          <li><a href="/bg/kontakt" class="text-white-50 text-decoration-none">Свържете се с нас</a></li>
+        </ul>
+      </div>
+    
+      <div class="col">
+        <h6 class="text-uppercase mb-3" style="color: #00ADB5;">Свържете се с нас</h6>
+        <p class="text-white-50 mb-1"><i class="bi bi-envelope me-2"></i> hello@g-fenix.com</p>
+        <p class="text-white-50 mb-1"><i class="bi bi-telephone me-2"></i> +359 88 2839085</p>
+        <p class="text-white-50"><i class="bi bi-geo-alt me-2"></i> София, България</p>
+      </div>
+    </div>
+    
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4 pt-4 border-top border-secondary">
+      <p class="text-white-50 mb-2 mb-md-0">© 2025 G-FENIX. Всички права запазени.</p>
+      <div>
+        <a href="https://x.com/g_fenix44823" class="text-white-50 me-3"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.linkedin.com/company/106604996/admin/dashboard/" class="text-white-50 me-3"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/heygfenix/" class="text-white-50 me-3"><i class="bi bi-instagram"></i></a>
+        <a href="https://wa.me/905396102361?text=Hello%20GFenix%2C%20I%20visited%20website!" class="text-white-50 me-3"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://t.me/cengizhangenc" class="text-white-50 me-3"><i class="bi bi-telegram"></i></a>
+        <a href="viber://chat?number=+359887663892" class="text-white-50 me-3"><i class="fab fa-viber"></i></a>
+        <a href="mailto:hello@g-fenix.com?subject=Website%20Contact&body=Hi%20GFenix%2C%20I%20just%20visited%20your%20website..." class="text-white-50 me-3"><i class="bi bi-envelope-fill"></i></a>
+        <a href="#" class="text-white-50 me-3"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/aos.js' %}"></script>
+<script>
+  AOS.init({ duration: 800, once: false });
+</script>
+
+</body>
+</html>

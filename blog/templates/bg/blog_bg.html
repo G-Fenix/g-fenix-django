@@ -1,0 +1,159 @@
+{% extends "layout_bg.html" %}
+{% load static %}
+
+{% block title %}G-Fenix | Блог{% endblock %}
+
+{% block imera %}
+
+
+<div class="row">
+  <div class="col-12">
+    <div style="height: 100px;"></div> <!-- 50px boşluk -->
+  </div>
+</div>
+
+<section class="headline-photo-section">
+  <h2>Ние от G-FENIX участвахме на MWC Barcelona 2025</h2>
+  <img src="{% static 'images/mwc.jpg' %}" alt="MWC Barcelona 2025" class="mwc-photo">
+</section>
+
+<section class="video-text-section">
+  <video class="vertical-video" autoplay muted loop>
+    <source src="{% static 'videos/aihead.mp4' %}" type="video/mp4">
+    Вашият браузър не поддържа видео етикета.
+  </video>
+
+  <div class="text-content">
+    <p>
+      През март участвахме в <strong>MWC Barcelona 2025</strong> (Mobile World Congress), проведен в Барселона. На най-големия световен панаир за мобилни технологии имахме възможността да се запознаем с иновативни решения – от продукти с изкуствен интелект и 5G технологии до умни градски системи и дигитални здравни приложения. Да видим на живо технологиите, които оформят бъдещето, беше истинско вдъхновение.
+    </p>
+  </div>
+
+  <video class="vertical-video" autoplay muted loop>
+    <source src="{% static 'videos/airobottt.mp4' %}" type="video/mp4">
+    Вашият браузър не поддържа видео етикета.
+  </video>
+</section>
+
+<hr class="section-divider">
+
+<section id="blog-section">
+  <div class="container px-3 px-md-4">
+    <section class="d-flex justify-content-center align-items-center full-center-section">
+      <h1 class="blur-heading" data-aos="fade-up">📰 Блогове за Данни и Софтуер 📰</h1>
+    </section>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
+      <div class="col" data-aos="fade-up">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/openai.jpg' %}" class="card-img-top" alt="AI Article">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">
+              <a href="https://cloud.google.com/learn/what-is-artificial-intelligence" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+                Какво е Изкуствен Интелект?
+              </a>
+            </h5>
+            <p class="card-text text-white">Открийте основите на изкуствения интелект и нарастващата му роля в нашия живот и индустрии.</p>
+            <a href="https://cloud.google.com/learn/what-is-artificial-intelligence" class="btn btn-outline-info mt-auto" target="_blank" rel="noopener">Отиди на Уебсайта</a>
+          </div>
+        </div>
+      </div>
+            
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/pythonweb.jpg' %}" class="card-img-top" alt="Python Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Python за Автоматизация</h5>
+            <p class="card-text text-white">Научете как Python опростява задачите и ускорява работните процеси.</p>
+            <a href="https://www.python.org/doc/essays/blurb/" class="btn btn-outline-info mt-auto">Отиди на Уебсайта</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/microsoft.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Блог на Microsoft Azure AI</h5>
+            <p class="card-text text-white">Прозрения, казуси и новини от отдела за изкуствен интелект на Azure.</p>
+            <a href="https://techcommunity.microsoft.com/t5/azure-ai/bg-p/AzureAI" class="btn btn-outline-info mt-auto">Отиди на Уебсайта</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/data2.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Към Науката за Данни</h5>
+            <p class="card-text text-white">Истории и прозрения от практици в сферата на науката за данни.</p>
+            <a href="https://towardsdatascience.com" class="btn btn-outline-info mt-auto">Отиди на Уебсайта</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/aiweb.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Общност на Програмистите</h5>
+            <p class="card-text text-white">Споделяйте и откривайте проекти, кодове и софтуерни преживявания.</p>
+            <a href="https://dev.to/" class="btn btn-outline-info mt-auto">Отиди на Уебсайта</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/chatgbt.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Блог на OpenAI</h5>
+            <p class="card-text text-white">Най-новите развития в сферата на изкуствения интелект.</p>
+            <a href="https://openai.com/blog" class="btn btn-outline-info mt-auto">Отиди на Уебсайта</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/google.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Google Cloud AI – Блог за Данни</h5>
+            <p class="card-text text-white">Технически анализи и примери от реалния свят от Google Cloud.</p>
+            <a href="https://cloud.google.com/blog" class="btn btn-outline-info mt-auto">Отиди на Уебсайта</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/codesss.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Real Python: Практическо Обучение</h5>
+            <p class="card-text text-white">Задълбочени обучения по Python – от автоматизация до уеб разработка.</p>
+            <a href="https://realpython.com/" class="btn btn-outline-info mt-auto">Отиди на Уебсайта</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/dataanalweb.jpg' %}" class="card-img-top" alt="ERP Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Бизнес Анализ</h5>
+            <p class="card-text text-white">Открийте как интегрираме ERP данни с табла в Power BI за по-интелигентни бизнес решения.</p>
+            <a href="https://www.investopedia.com/terms/d/data-analytics.asp" class="btn btn-outline-info mt-auto">Отиди на Уебсайта</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container text-center my-5" data-aos="zoom-in">
+  <img src="{% static 'images/logoweb.png' %}" alt="G-FENIX Logo" 
+      style="width: 160px; max-width: 100%; height: auto;">
+</div>
+
+
+{% endblock imera %}

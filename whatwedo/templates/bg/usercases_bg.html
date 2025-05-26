@@ -1,0 +1,111 @@
+{% extends "layout_bg.html" %}
+{% load static %}
+
+{% block title %}G-Fenix | Примери за използване{% endblock %}
+
+{% block imera %}
+
+
+<div class="row">
+    <div class="col-12">
+      <div style="height: 100px;"></div> <!-- 50px boşluk -->
+    </div>
+</div>
+
+<section class="usecases-section" data-aos="fade-up">
+  <h1 class="section-title">Как създаваме реално въздействие</h1>
+  
+  <div class="row">
+    <div class="col-12">
+      <div style="height: 100px;"></div> <!-- 50px boşluk -->
+    </div>
+  </div>
+
+  <div class="usecases-grid">
+
+    <!-- Card 1 -->
+    <div class="usecase-card">
+      <img src="{% static 'images/pythonbu.jpg' %}" alt="Report Automation">
+      <h2>Спестяване на време чрез автоматизирано отчитане</h2>
+      <p>
+        Наш клиент прекарваше по 6 часа седмично в ръчно създаване на отчети в Excel. С Python скрипт целият процес беше автоматизиран. Сега всичко се извършва за 1 минута.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="usecase-card">
+      <img src="{% static 'images/twowebdevelop.jpg' %}" alt="Web Development">
+      <h2>Уебсайт за бизнеса</h2>
+      <p>
+        Създадохме модерен уебсайт за клиент, който имаше само присъствие в социалните мрежи. Резултат: по-голяма видимост в Google и 40% повече клиенти.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="usecase-card">
+      <img src="{% static 'images/aidata.png' %}" alt="AI Analysis">
+      <h2>Анализ на клиентски отзиви с изкуствен интелект</h2>
+      <p>
+        Чрез AI-базиран текстов анализ автоматично анализирахме хиляди отзиви. Отрицателните коментари бяха открити бързо и удовлетвореността на клиентите се увеличи.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="stats-section" data-aos="fade-right">
+  <div class="stat-box">
+    <h2>+20</h2>
+    <p>Проекта за автоматизация</p>
+  </div>
+  <div class="stat-box">
+    <h2>+95%</h2>
+    <p>Доволни клиенти</p>
+  </div>
+  <div class="stat-box">
+    <h2>+300</h2>
+    <p>Спестени часове</p>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<section class="faq-zigzag-section">
+  <h2 class="faq-title" data-aos="fade-up">Често задавани въпроси</h2>
+
+  <div class="faq-zigzag">
+    <div class="faq-item left" data-aos="fade-right">
+      <h3>Мога ли да използвам системата без да знам Python?</h3>
+      <p>Да. Вие ни предоставяте данните, а ние автоматизираме целия процес. Вие получавате готов отчет.</p>
+    </div>
+
+    <div class="faq-item right" data-aos="fade-left">
+      <h3>Мога ли да добавям съдържание след изработката на уебсайта?</h3>
+      <p>Да. Благодарение на панел или CMS система можете да добавяте съдържание по всяко време.</p>
+    </div>
+
+    <div class="faq-item left" data-aos="fade-right">
+      <h3>Предлагате ли обучение?</h3>
+      <p>Да. Предлагаме онлайн и присъствени обучения, съобразени с индивидуалните и корпоративните нужди.</p>
+    </div>
+
+    <div class="faq-item right" data-aos="fade-left">
+      <h3>Изкуственият интелект само за големи фирми ли е?</h3>
+      <p>Не. Предлагаме достъпни и умни AI решения и за малки бизнеси и индивидуални клиенти.</p>
+    </div>
+  </div>
+</section>
+
+<div class="container text-center mt-5" data-aos="zoom-in-up">
+  <h4 class="text-white mb-4">Според нас технологията трябва да служи на човечеството, а не обратното.</h4>
+  <p class="text-white-50 mb-4">Нашата мисия не е да заменим хората, а да ги направим по-силни. В G-FENIX си представяме бъдеще, в което интелигентните системи подчертават най-доброто в нас.</p>
+  <h2 class="mb-4 text-2xl font-semibold">Какво решение можем да предложим за твоя бизнес?</h2>
+  <a href="/bg/kontakt" class="btn btn-outline-info mt-auto text-white">Свържи се с нас</a>
+</div>
+
+<div class="container text-center my-5" data-aos="zoom-in">
+  <img src="{% static 'images/logoweb.png' %}" alt="G-FENIX Logo" 
+    style="width: 160px; max-width: 100%; height: auto;">
+</div>
+
+{% endblock imera %}

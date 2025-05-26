@@ -1,0 +1,77 @@
+{% extends "layout_bg.html" %}
+{% load static %}
+
+{% block title %}G-Fenix | Свържете се с нас{% endblock %}
+
+{% block imera %}
+
+
+<section class="py-1 text-center" data-aos="fade-up">
+  <div class="container">
+    <h1 class="display-5">Свържете се с нас</h1>
+    <p class="lead text-white">Нека започнем да изграждаме нещо невероятно заедно.</p>
+  </div>
+</section>
+<!-- İletişim Formu -->
+<section class="pb-5">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+      <!-- FORM (sol) -->
+      <div class="col-md-7" data-aos="fade-up">
+        <form action="mailto:hello@g-fenix.com" method="post" enctype="text/plain">
+          <div class="mb-3">
+            <input type="text" name="Name" class="form-control" placeholder="Вашето име" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" name="Email" class="form-control" placeholder="Вашият имейл адрес" required>
+          </div>
+          <div class="mb-3">
+            <input type="text" name="Subject" class="form-control" placeholder="Тема" required>
+          </div>
+          <div class="mb-3">
+            <textarea name="Message" class="form-control mt-3" rows="5" placeholder="Вашето съобщение" required></textarea>
+          </div>
+          <button type="submit" class="btn" style="background-color: #00ADB5; color: white; border: none;">Изпрати съобщение</button>
+        </form>
+      </div>
+      <!-- İLETİŞİM BİLGİLERİ (sağ) -->
+      <div class="col-md-5" data-aos="fade-up">
+        <div class="p-4">
+          <div class="mb-3 d-flex align-items-center">
+            <i class="fas fa-envelope text-info me-5 fa-lg"></i>
+            <div>
+              <h5 class="mb-1 d-inline" style="color: #00ADB5;">Имейл адрес</h5>
+              <div class="text-white">hello@g-fenix.com</div>
+            </div>
+          </div>
+
+          <!-- Phone -->
+          <div class="mb-3 d-flex align-items-center">
+            <i class="fas fa-phone text-success me-5 fa-lg"></i>
+            <div>
+              <h5 class="mb-1 d-inline" style="color: #00ADB5;">Телефон</h5>
+              <div class="text-white">+359 88 2839085</div>
+            </div>
+          </div>
+
+          <!-- Location -->
+          <div class="mb-3 d-flex align-items-center">
+            <i class="fas fa-location-dot text-warning me-5 fa-lg"></i>
+            <div>
+              <h5 class="mb-1 d-inline" style="color: #00ADB5;">Местоположение</h5>
+              <div class="text-white">София, България</div>
+            </div>
+          </div>
+        </div>
+      </div>     
+    </div>    
+  </div>
+</section>
+
+<div class="container text-center my-5" data-aos="zoom-in">
+  <img src="{% static 'images/logoweb.png' %}" alt="G-FENIX Logo" 
+      style="width: 160px; max-width: 100%; height: auto;">
+</div>
+
+
+{% endblock imera %}

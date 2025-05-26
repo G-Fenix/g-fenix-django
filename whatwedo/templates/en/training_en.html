@@ -1,0 +1,53 @@
+{% extends "layout_en.html" %}
+{% load static %}
+
+{% block title %}G-Fenix | Training{% endblock %}
+
+{% block icerik %}
+
+<div class="row">
+  <div class="col-12">
+    <div style="height: 50px;"></div> <!-- 50px boşluk -->
+  </div>
+</div>
+
+
+<section class="py-5" style="background-color: none">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <div class="col-md-6" data-aos="fade-right">
+        <h2 class="mb-4">Shape Your Future with Artificial Intelligence</h2>
+        <p class="text-white">
+          Digital transformation is reshaping every industry, and keeping up is no longer optional—it's essential.  
+          With this course, you'll learn to create AI-powered solutions and get ahead in your career.  
+          Through rich content and hands-on modules, you'll gain not only knowledge but real experience.
+        </p>
+        <ul class="list-unstyled mt-3">
+          <li><i class="bi bi-check-circle-fill text-success me-2"></i> Learn to build practical tools using virtual assistants and automation systems.</li>
+          <li><i class="bi bi-check-circle-fill text-success me-2"></i> Gain the ability to develop AI solutions that increase business efficiency.</li>
+          <li><i class="bi bi-check-circle-fill text-success me-2"></i> Acquire essential technical and strategic skills for the digital age.</li>
+          <li><i class="bi bi-check-circle-fill text-success me-2"></i> Gain real-world experience by working on professional projects.</li>
+        </ul>
+        <p><span style="color: #e74c3c;">* Only for residents in Spain aged 16 or older.</span></p>
+        <a href="https://grupomainjobs.com/revoluciona-ia/" target="_blank" class="register-link">Click here to register quickly through our website.</a>
+        <p class="price-red"><del>1000€</del> Now completely free!</p>
+        <a href="/contact-us" class="btn-contact">Click here to contact us for more information</a>
+      </div>
+
+      <div class="col-md-6 text-center" data-aos="fade-left">
+        <img src="{% static 'images/egitim.png' %}" alt="AI Solutions" class="img-fluid">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<div class="container text-center my-5" data-aos="zoom-in">
+  <img src="{% static 'images/logoweb.png' %}" alt="G-FENIX Logo" 
+      style="width: 160px; max-width: 100%; height: auto;">
+</div>
+
+{% endblock icerik %}

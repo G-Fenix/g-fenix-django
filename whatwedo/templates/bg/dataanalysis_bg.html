@@ -1,0 +1,201 @@
+{% extends "layout_bg.html" %}
+{% load static %}
+
+{% block title %}G-Fenix | Анализ на данни{% endblock %}
+
+{% block imera %}
+
+
+<div class="row">
+  <div class="col-12">
+    <div style="height: 80px;"></div> <!-- 50px boşluk -->
+  </div>
+</div>
+
+
+<section class="hero-video">
+  <video autoplay muted loop id="bg-video">
+    <source src="{% static 'videos/analll.mp4' %}" type="video/mp4">
+  </video>
+</section>
+
+<section class="text-center bg-blur text-white section-spacer">
+    <div class="container">
+        <div class="row align-items-center mb-5" data-aos="fade-right">
+        <div class="col-md-6">
+            <div class="container">
+            <h1 class="text-md-start text-center">Анализ на данни и маркетинг</h1>
+            </div>
+        </div>
+        <div class="col-md-6 d-none d-md-flex justify-content-center align-items-center" style="height: 100%;">
+            <img src="{% static 'images/grafikgif.gif' %}"
+            alt="Custom solution visual"
+            class="img-fluid rounded"
+            style="max-width: 100%; height: auto;">
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up">
+            <div class="info-box h-100">
+            <h5>📊 Стратегия, основана на данни</h5>
+            <p>Създаваме стратегии, базирани на реални данни, чрез анализ на поведението на клиентите и бизнес метриките ви.</p>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="info-box h-100">
+            <h5>📍 Познания за целевата аудитория</h5>
+            <p>Открийте кой е идеалният ви клиент и какво наистина иска. Оптимизирайте кампаниите си спрямо това.</p>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="info-box h-100">
+            <h5>📢 Интелигентни кампании</h5>
+            <p>Създаваме маркетингови кампании с фокус върху резултатите, използвайки инструменти с изкуствен интелект, за да увеличим максимално възвръщаемостта на инвестициите (ROI).</p>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="info-box h-100">
+            <h5>📉 Анализ в реално време</h5>
+            <p>Проследявайте представянето си в реално време. Вземайте по-бързи и по-умни решения с интерактивни табла и KPI.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+  <section id="hero-section-image">
+    <div class="container-fluid d-flex align-items-center justify-content-center gap-4" data-aos="fade-up" style="padding: 40px 0;">
+      <h1 class="m-0">Превърнете суровите данни в реален растеж</h1>
+      <img src="{% static 'images/matrixgif.gif' %}"
+          alt="AI Animation"
+          style="width: 250px; height: auto;">
+    </div>
+  </section>
+
+  <section id="hero-section" class="py-5">
+    <div class="container-fluid">
+      <div class="row mt-2">
+        <!-- Left side: Single Image -->
+        <div class="col-md-3 d-flex">
+          <img src="{% static 'images/earthgif.gif' %}" alt="AI Long Image" class="img-fluid w-100 ai-image" data-aos="fade-up" data-aos-delay="200">
+        </div>
+    
+        <!-- Right side: Zig-zag text content -->
+        <div class="col-md-9 ai-text-content">
+
+          <!-- Question 1 -->
+          <div class="row mb-4" data-aos="fade-right">
+            <div class="col-12 col-md-10">
+              <h4>📊 Защо анализът на данни е незаменим за вашия бизнес?</h4>
+              <p>
+                В днешния конкурентен свят решенията, базирани на интуиция, вече не са достатъчни. Анализът на данни ви помага да разберете бизнеса си, клиентите си и пазарните тенденции чрез реални числа, а не предположения.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 2 (indented right) -->
+          <div class="row mb-4 justify-content-end" data-aos="fade-left">
+            <div class="col-12 col-md-10">
+              <h4>🔍 Какви прозрения можем да извлечем от вашите данни?</h4>
+              <p>
+                Помагаме ви да идентифицирате най-печелившите си продукти, да откриете неефективни процеси и да забележите скрити възможности — само чрез анализ на наличните ви данни.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="row mb-4" data-aos="fade-right">
+            <div class="col-12 col-md-10">
+              <h4>📈 Как превръщаме анализа в действие?</h4>
+              <p>
+                Самите числа не носят стойност — стойността е в тълкуването. Превръщаме суровите данни в ясни, визуални доклади, които насочват интелигентни стратегии и водят до измерими подобрения.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 4 (indented right) -->
+          <div class="row mb-4 justify-content-end" data-aos="fade-left">
+            <div class="col-12 col-md-10">
+              <h4>🧩 Какви услуги предлагаме?</h4>
+              <p>
+                От табла с KPI и сегментиране на клиенти до предсказуем анализ и автоматизация — предлагаме решения, съобразени с нуждите и целите на вашия бизнес.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 5 -->
+          <div class="row mb-4" data-aos="fade-right">
+            <div class="col-12 col-md-10">
+              <h4>🚀 Какви резултати можете да очаквате?</h4>
+              <p>
+                По-информирани решения, по-висока ефективност и реален растеж. Анализът на данни не е просто инструмент — той е вашето конкурентно предимство в икономиката на дигиталния свят. А ние сме тук, за да го направим полезен за вас.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section class="py-5" style="background-color: none">
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <!-- Yazı Bölümü -->
+        <div class="col-md-6" data-aos="fade-right">
+          <h2 class="mb-4">Решения, базирани на данни от G-Fenix</h2>
+          <p class="text-white">
+            В G-Fenix превръщаме суровите данни в приложими прозрения. Нашите усъвършенствани аналитични решения помагат на бизнеса да взема по-умни решения, да идентифицира модели и да открива скрити възможности. Всичко това се подкрепя от надеждни данни и модерни визуализационни инструменти.
+          </p>
+          <ul class="list-unstyled mt-3">
+            <li><i class="bi bi-check-circle-fill text-success me-2"></i> Интерактивни табла и отчети</li>
+            <li><i class="bi bi-check-circle-fill text-success me-2"></i> Сегментиране на клиенти и анализ на поведение</li>
+            <li><i class="bi bi-check-circle-fill text-success me-2"></i> Прогнозиране на продажби и пазарни тенденции</li>
+            <li><i class="bi bi-check-circle-fill text-success me-2"></i> Оптимизация на оперативната ефективност</li>
+          </ul>
+        </div>
+
+        <!-- Görsel Bölümü -->
+        <div class="col-md-6 text-center" data-aos="fade-left">
+          <img src="{% static 'images/analremove.png' %}" alt="AI Solutions" class="img-fluid">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="technologies">
+    <section class="d-flex justify-content-center align-items-center full-center-section">
+      <h2 class="blur-heading" data-aos="fade-up">Използвани технологии</h2>
+    </section>
+    <div class="tech-logos">
+      <img src="{% static 'tech_logos/vscode.svg' %}" alt="VsCode" class="tech-icon" data-aos="zoom-in" data-aos-delay="0"/>
+      <img src="{% static 'tech_logos/python-svgrepo-com.svg' %}" alt="Python" class="tech-icon" data-aos="zoom-in" data-aos-delay="100"/>
+      <img src="{% static 'tech_logos/statistics-svgrepo-com.svg' %}" alt="stastic" class="tech-icon" data-aos="zoom-in" data-aos-delay="200"/>
+      <img src="{% static 'tech_logos/microsoft-sql-server-logo-svgrepo-com.svg' %}" alt="msql" class="tech-icon" data-aos="zoom-in" data-aos-delay="300"/>
+      <img src="{% static 'tech_logos/fastapi-svgrepo-com.svg' %}" alt="fast-api" class="tech-icon" data-aos="zoom-in" data-aos-delay="400"/>
+      <img src="{% static 'tech_logos/postman-icon-svgrepo-com.svg' %}" alt="postman" class="tech-icon" data-aos="zoom-in" data-aos-delay="500"/>
+      <img src="{% static 'tech_logos/github.svg' %}" alt="GitHub" class="tech-icon" data-aos="zoom-in" data-aos-delay="600"/>
+      <img src="{% static 'tech_logos/database-svgrepo-com.svg' %}" alt="DataBase" class="tech-icon" data-aos="zoom-in" data-aos-delay="700"/>
+      <img src="{% static 'tech_logos/sqlite-svgrepo-com.svg' %}" alt="SQlite" class="tech-icon" data-aos="zoom-in" data-aos-delay="800"/>
+      <img src="{% static 'tech_logos/numpy-svgrepo-com.svg' %}" alt="numpy" class="tech-icon" data-aos="zoom-in" data-aos-delay="900"/>
+      <img src="{% static 'tech_logos/pandas-svgrepo-com.svg' %}" alt="Pandas" class="tech-icon" data-aos="zoom-in" data-aos-delay="1000"/>
+    </div>
+  </section>
+
+  <div class="container text-center my-5" data-aos="zoom-in">
+    <img src="{% static 'images/logoweb.png' %}" alt="G-FENIX Logo" 
+        style="width: 160px; max-width: 100%; height: auto;">
+  </div>
+
+
+{% endblock imera %}

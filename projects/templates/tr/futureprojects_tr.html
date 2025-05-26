@@ -1,0 +1,80 @@
+{% extends "layout_tr.html" %}
+{% load static %}
+
+{% block title %}G-Fenix | Gelecek Proejeler{% endblock %}
+
+{% block content %}
+
+
+<div class="row">
+  <div class="col-12">
+    <div style="height: 100px;"></div> <!-- 50px boşluk -->
+  </div>
+</div>
+
+<section class="usecases-section" data-aos="fade-up">
+  <h1 class="section-title">G-Fenix ile Geleceğin Kapılarını Arala</h1>
+  <p>Yapay zekâ odaklı, teknolojik ve global çözümler geliştirmek için heyecan verici bir yolda ilerliyoruz.</p>
+
+  <div class="row">
+    <div class="col-12">
+      <div style="height: 100px;"></div> <!-- 50px boşluk -->
+    </div>
+  </div>
+
+  <div class="usecases-grid">
+
+    <!-- Card 1 -->
+    <div class="usecase-card">
+      <img src="{% static 'images/mobil.png' %}" alt="Report Automation">
+      <h2>Mobil Uygulama Geliştirme</h2>
+      <p>
+        Günlük hayatı kolaylaştıran, veri odaklı ve kullanıcı deneyimini önceleyen mobil uygulamalar geliştirmek öncelikli hedefimiz. Sağlık, üretkenlik ve eğitim alanlarında akıllı çözümler yakında cebinizde olacak.
+      </p>
+    </div>
+
+    <div class="usecase-card">
+      <img src="{% static 'images/alexa.png' %}" alt="Report Automation">
+      <h2>AI Entegre Cihazlar</h2>
+      <p>
+        Evde, ofiste veya yolda; yapay zekâ destekli cihazlarla hayatı daha akıllı ve verimli hale getirmeye odaklanıyoruz. Sesli komutlarla çalışan sistemler, otomatik öğrenen cihazlar ve daha fazlası geliştirilecek projelerimiz arasında.
+      </p>
+    </div>
+
+    <div class="usecase-card">
+      <img src="{% static 'images/makinerobot.png' %}" alt="Report Automation">
+      <h2>Makine Öğrenimi ile Global Çözümler</h2>
+      <p>
+        Makine öğrenmesi alanında yetkinliğimizi artırarak, küresel ölçekte kullanılan sistemler geliştirmeyi hedefliyoruz. AI ile kişisel asistanlar, akıllı öneri motorları ve öngörü analizleri gibi projeler üzerinde çalışmaya devam ediyoruz.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<div style="text-align: center; margin-top: 60px;" data-aos="fade-left">
+<p style="font-size: 35px; margin-bottom: 16px; color: white; font-weight: 600;">
+  Sizin de harika fikirleriniz mi var?
+</p>
+<a href="/tr/bize-ulasin/" style="
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #00ADB5;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  " onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#00ADB5'">
+  Bize Ulaşın
+</a>
+</div>
+
+
+<div class="container text-center my-5" data-aos="zoom-in">
+  <img src="{% static 'images/logoweb.png' %}" alt="G-FENIX Logo" 
+    style="width: 160px; max-width: 100%; height: auto;">
+</div>
+
+
+{% endblock content %}

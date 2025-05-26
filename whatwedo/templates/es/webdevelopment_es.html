@@ -1,0 +1,227 @@
+{% extends "layout_eses.html" %}
+{% load static %}
+
+{% block title %}G-Fenix | Desarrollo Web{% endblock %}
+
+{% block zaman %}
+
+<section class="py-5 text-center bg-blur text-white section-spacer">
+    <div class="container">
+      <div class="row align-items-center mb-5" data-aos="fade-right">
+        <div class="col-md-6">
+          <div class="container">
+            <h2 class="text-md-start text-center">¿Por qué tu negocio necesita un sitio web?</h2>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 d-flex justify-content-center align-items-center mb-4">
+          <img src="{% static 'images/thinkinggirl.png' %}"
+            alt="Custom solution visual"
+            class="img-fluid rounded"
+            style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+    
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up">
+          <div class="info-box h-100">
+            <h5>🌐 Disponible 24/7</h5>
+            <p>Tu sitio web es tu tarjeta de presentación digital que nunca duerme. Siempre accesible desde cualquier lugar.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="info-box h-100">
+            <h5>🤝 Confianza y Reputación</h5>
+            <p>Los clientes confían en los negocios que tienen una presencia web profesional y moderna.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="info-box h-100">
+            <h5>📈 Aumenta tus Ventas</h5>
+            <p>Convierte más visitantes en clientes que pagan con mensajes claros y un diseño inteligente.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="info-box h-100">
+            <h5>🛠️ Muestra tus Servicios</h5>
+            <p>Presenta claramente lo que ofreces a tu público objetivo con imágenes e información detallada.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section style="text-align: center; margin-top: 80px;" data-aos="fade-up">
+    <h2 style="font-size: 26px; color: white; margin-bottom: 12px;">
+      Además, le preguntamos a ChatGPT: "¿Por qué tu negocio necesita un sitio web?"
+    </h2>
+    <p style="font-size: 18px; color: #00ADB5; margin-bottom: 30px;">
+      Aquí está su respuesta: 👇
+    </p>
+
+    <div style="display: flex; justify-content: center; margin-bottom: 60px; data-aos="fade-up"">
+      <video style="width: 100%; max-width: 900px; height: auto;" autoplay muted controls>
+        <source src="{% static 'videos/sonwebvideo.mp4' %}" type="video/mp4">
+        Tu navegador no admite la etiqueta de video.
+      </video>
+    </div>
+    
+  </section>
+  
+  <hr class="section-divider">
+
+  <!-- İçerik Bölümü -->
+  <section class="py-5">
+    <div class="container-fluid" style="padding: 0 150px;">
+      <section class="d-flex justify-content-center align-items-center full-center-section">
+        <h2 class="blur-heading" data-aos="fade-up">¿Qué obtienes con nosotros?</h2>
+      </section>
+      <!-- 1. Satır: Metin solda -->
+      <div class="row align-items-center mb-5" data-aos="fade-right">
+        <div class="col-md-6">
+          <div class="glass-card">
+            <h2 class="mb-3">Creamos sitios web modernos y eficientes</h2>
+            <p>Somos expertos en desarrollar sitios web receptivos, fáciles de usar y visualmente atractivos que responden a las necesidades de los negocios modernos.</p>
+            <h2 class="mt-5 mb-3">Enfocados en SEO y rendimiento</h2>
+            <p>Cada sitio que desarrollamos está optimizado para los motores de búsqueda y diseñado para ofrecer tiempos de carga rápidos, garantizando así una experiencia de usuario fluida y una alta visibilidad en línea.</p>
+          </div>
+        </div>
+        <div class="col-md-6 d-none d-md-flex justify-content-center align-items-center" style="height: 100%;">
+          <img src="{% static 'images/websitecomputer2.png' %}" alt="Custom solution visual" class="img-fluid rounded">
+        </div>
+      </div>
+  
+      <!-- 2. Satır: Metin sağda -->
+      <div class="row align-items-center flex-md-row-reverse" data-aos="fade-left">
+        <!-- Yazı kısmı -->
+        <div class="col-md-6">
+          <div class="glass-card">
+            <h2 class="mb-3">Soluciones personalizadas para tu negocio</h2>
+            <p>Trabajamos estrechamente contigo para comprender tus objetivos y crear sitios web a medida que reflejan la identidad de tu marca y apoyan tu crecimiento.</p>
+            <h2 class="mt-5 mb-3">Tecnologías que utilizamos</h2>
+            <p>Usamos tecnologías como HTML5, CSS3, JavaScript, Django y React para garantizar que tu sitio web sea seguro, escalable y preparado para el futuro.</p>
+          </div>
+        </div>
+      
+        <!-- Teknoloji ikonları kısmı -->
+        <div class="col-md-6 d-none d-md-flex justify-content-center align-items-center" style="height: 100%;">
+          <div class="tech-logos-container">
+            <img src="{% static 'tech_logos/vscode.svg' %}" alt="VsCode" class="tech-icon" data-aos="zoom-in" data-aos-delay="0"/>
+            <img src="{% static 'tech_logos/python-svgrepo-com.svg' %}" alt="Python" class="tech-icon" data-aos="zoom-in" data-aos-delay="100"/>
+            <img src="{% static 'tech_logos/django-svgrepo-com.svg' %}" alt="Django" class="tech-icon" data-aos="zoom-in" data-aos-delay="200"/>
+            <img src="{% static 'tech_logos/html-5-svgrepo-com.svg' %}" alt="HTML5" class="tech-icon" data-aos="zoom-in" data-aos-delay="300"/>
+            <img src="{% static 'tech_logos/css-3-svgrepo-com.svg' %}" alt="CSS3" class="tech-icon" data-aos="zoom-in" data-aos-delay="400"/>
+            <img src="{% static 'tech_logos/javascript-svgrepo-com.svg' %}" alt="JavaScript" class="tech-icon" data-aos="zoom-in" data-aos-delay="500"/>
+            <img src="{% static 'tech_logos/github.svg' %}" alt="GitHub" class="tech-icon" data-aos="zoom-in" data-aos-delay="600"/>
+            <img src="{% static 'tech_logos/database-svgrepo-com.svg' %}" alt="Database" class="tech-icon" data-aos="zoom-in" data-aos-delay="700"/>
+            <img src="{% static 'tech_logos/sqlite-svgrepo-com.svg' %}" alt="SQLite" class="tech-icon" data-aos="zoom-in" data-aos-delay="800"/>
+            <img src="{% static 'tech_logos/render.svg' %}" alt="Render" class="tech-icon" data-aos="zoom-in" data-aos-delay="900"/>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container text-white">
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-5" data-aos="fade-right">
+          <div class="p-4 rounded-pill border-start border-4 border-info position-relative"
+            style="background-color: rgba(0, 0, 0, 0);">
+              <h5 class="mb-1">💬 Sitios Corporativos</h5>
+              <p class="mb-0">¿Quieres un sitio web que refleje tu marca y transmita profesionalismo desde el primer clic? Creamos sitios elegantes y responsivos que causan una impresión poderosa desde el primer momento.</p>
+              <p class="position-absolute top-50 end-0 translate-middle-y text-info fs-4"></p>
+          </div>
+        </div>
+        <div class="col-md-5" data-aos="fade-left">
+          <div class="p-4 rounded-pill border-start border-4 border-success position-relative"
+            style="background-color: rgba(0, 0, 0, 0);">
+              <h5 class="mb-1">💬 Comercio Electrónico</h5>
+              <p class="mb-0">Te ayudamos a vender de manera inteligente y sin complicaciones. Nuestras soluciones de e-commerce son rápidas, seguras y están diseñadas para convertir visitantes en clientes fieles. Déjanos transformar tu tienda en una experiencia de compra fluida.</p>
+              <p class="position-absolute top-50 end-0 translate-middle-y text-success fs-4"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Line 2 -->
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-5" data-aos="fade-right">
+          <div class="p-4 rounded-pill border-start border-4 border-warning position-relative"
+            style="background-color: rgba(0, 0, 0, 0);">
+              <h5 class="mb-1">💬 Desarrollo Personalizado</h5>
+              <p class="mb-0">¿Tienes una idea única? Genial. Nos encanta desarrollar herramientas web personalizadas que hagan realidad tu visión — totalmente adaptadas a los objetivos de tu negocio. Nada de plantillas genéricas, sin límites; solo soluciones hechas a tu medida.</p>
+              <p class="position-absolute top-50 end-0 translate-middle-y text-warning fs-4"></p>
+          </div>
+        </div>
+        <div class="col-md-5" data-aos="fade-left">
+          <div class="p-4 rounded-pill border-start border-4 border-primary position-relative"
+            style="background-color: rgba(0, 0, 0, 0);">
+              <h5 class="mb-1">💬 Compatible con Dispositivos Móviles</h5>
+              <p class="mb-0">Nos aseguramos de que tu sitio se vea y funcione perfectamente en cualquier dispositivo — ya sea móvil, tableta o escritorio. Siempre responsivo. Siempre confiable.</p>
+              <p class="position-absolute top-50 end-0 translate-middle-y text-primary fs-4"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Line 3 -->
+      <div class="row justify-content-center">
+        <div class="col-md-5" data-aos="fade-right">
+          <div class="p-4 rounded-pill border-start border-4 border-danger position-relative"
+            style="background-color: rgba(0, 0, 0, 0);">
+              <h5 class="mb-1">💬 SEO y Velocidad</h5>
+              <p class="mb-0">Optimizamos tu sitio para que cargue rápido y tenga gran visibilidad en buscadores, ofreciendo una experiencia fluida en todos los dispositivos.</p>
+              <p class="position-absolute top-50 end-0 translate-middle-y text-danger fs-4"></p>
+          </div>
+        </div>
+        <div class="col-md-5" data-aos="fade-left">
+          <div class="p-4 rounded-pill border-start border-4 border-secondary position-relative"
+            style="background-color: rgba(0, 0, 0, 0);">
+              <h5 class="mb-1">💬 Infraestructura Tecnológica Segura</h5>
+              <p class="mb-0">¿Las herramientas que usamos? Confiables, modernas y seguras. Trabajamos con HTML5, CSS3, JavaScript, Django y React para darte una base sólida.</p>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 60px;" data-aos="fade-left">
+        <p style="font-size: 35px; margin-bottom: 16px; color: white; font-weight: 600;">
+          ¿Quieres crear tu propio sitio web?
+        </p>
+        <a href="/es/contacto" style="
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #00ADB5;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+          " onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#00ADB5'">
+          Contáctanos
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="technologies">
+    <section class="d-flex justify-content-center align-items-center full-center-section">
+      <h2 class="blur-heading" data-aos="fade-up">Tecnologías que utilizamos</h2>
+    </section>
+    <div class="tech-logos">
+      <img src="{% static 'tech_logos/vscode.svg' %}" alt="VsCode" class="tech-icon" data-aos="zoom-in" data-aos-delay="0"/>
+      <img src="{% static 'tech_logos/python-svgrepo-com.svg' %}" alt="Python" class="tech-icon" data-aos="zoom-in" data-aos-delay="100"/>
+      <img src="{% static 'tech_logos/django-svgrepo-com.svg' %}" alt="Django" class="tech-icon" data-aos="zoom-in" data-aos-delay="200"/>
+      <img src="{% static 'tech_logos/html-5-svgrepo-com.svg' %}" alt="HTML5" class="tech-icon" data-aos="zoom-in" data-aos-delay="300"/>
+      <img src="{% static 'tech_logos/css-3-svgrepo-com.svg' %}" alt="CSS3" class="tech-icon" data-aos="zoom-in" data-aos-delay="400"/>
+      <img src="{% static 'tech_logos/javascript-svgrepo-com.svg' %}" alt="JavaScript" class="tech-icon" data-aos="zoom-in" data-aos-delay="500"/>
+      <img src="{% static 'tech_logos/github.svg' %}" alt="GitHub" class="tech-icon" data-aos="zoom-in" data-aos-delay="600"/>
+      <img src="{% static 'tech_logos/database-svgrepo-com.svg' %}" alt="DataBase" class="tech-icon" data-aos="zoom-in" data-aos-delay="700"/>
+      <img src="{% static 'tech_logos/sqlite-svgrepo-com.svg' %}" alt="SQlite" class="tech-icon" data-aos="zoom-in" data-aos-delay="800"/>
+      <img src="{% static 'tech_logos/render.svg' %}" alt="Render" class="tech-icon" data-aos="zoom-in" data-aos-delay="900"/>
+    </div>
+  </section>
+
+  <div class="container text-center my-5" data-aos="zoom-in">
+    <img src="{% static 'images/logoweb.png' %}" alt="G-FENIX Logo" 
+        style="width: 160px; max-width: 100%; height: auto;">
+  </div>
+
+{% endblock zaman %}

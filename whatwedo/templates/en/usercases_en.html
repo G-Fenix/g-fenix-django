@@ -1,0 +1,111 @@
+{% extends "layout_en.html" %}
+{% load static %}
+
+{% block title %}G-Fenix | User Cases{% endblock %}
+
+{% block icerik %}
+
+  <div class="row">
+    <div class="col-12">
+      <div style="height: 100px;"></div> <!-- 50px boşluk -->
+    </div>
+  </div>
+
+  <section class="usecases-section" data-aos="fade-up">
+    <h1 class="section-title">How We Create Real Impact</h1>
+
+    <div class="row">
+      <div class="col-12">
+        <div style="height: 100px;"></div> <!-- 50px boşluk -->
+      </div>
+    </div>
+
+    <div class="usecases-grid">
+
+      <!-- Card 1 -->
+      <div class="usecase-card">
+        <img src="{% static 'images/pythonbu.jpg' %}" alt="Report Automation">
+        <h2>Automated Reporting for Time Efficiency</h2>
+        <p>
+          Our client was spending 6 hours weekly on manual Excel reports. With a Python script, we automated the entire process. Now it’s completed in just 1 minute.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="usecase-card">
+        <img src="{% static 'images/twowebdevelop.jpg' %}" alt="Web Development">
+        <h2>Website Solutions for Businesses</h2>
+        <p>
+          A client who only had visibility on social media now has a modern website. Result: visibility on Google + 40% more customers.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="usecase-card">
+        <img src="{% static 'images/aidata.png' %}" alt="AI Analysis">
+        <h2>AI-Powered Customer Feedback Analysis</h2>
+        <p>
+          We used AI-based text analysis to process thousands of reviews. Negative feedback is now detected quickly and customer satisfaction improved.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="stats-section" data-aos="fade-right">
+    <div class="stat-box">
+      <h2>+20</h2>
+      <p>Automation Projects</p>
+    </div>
+    <div class="stat-box">
+      <h2>+95%</h2>
+      <p>Customer Satisfaction</p>
+    </div>
+    <div class="stat-box">
+      <h2>+300</h2>
+      <p>Hours Saved</p>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section class="faq-zigzag-section">
+    <h2 class="faq-title" data-aos="fade-up">Frequently Asked Questions</h2>
+
+    <div class="faq-zigzag">
+      <div class="faq-item left" data-aos="fade-right">
+        <h3>Do I need to know Python to have a system built?</h3>
+        <p>Yes. We receive the data from you and automate the entire process. You receive the report ready to use.</p>
+      </div>
+
+      <div class="faq-item right" data-aos="fade-left">
+        <h3>Can I update content after the website is delivered?</h3>
+        <p>Yes. Thanks to a panel or CMS system, you can add content anytime you want.</p>
+      </div>
+
+      <div class="faq-item left" data-aos="fade-right">
+        <h3>Do you offer training?</h3>
+        <p>Yes. We offer both online and in-person trainings tailored to individual or corporate needs.</p>
+      </div>
+
+      <div class="faq-item right" data-aos="fade-left">
+        <h3>Is AI only for big companies?</h3>
+        <p>No. We provide smart, affordable AI solutions for small businesses and individuals as well.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container text-center mt-5" data-aos="zoom-in-up">
+    <h4 class="text-white mb-4">We believe technology should serve humanity, not the other way around.</h4>
+    <p class="text-white-50 mb-4">Our mission is not to replace people, but to empower them. At G-FENIX, we envision a future where smart systems amplify the best of us.</p>
+    <h2 class="mb-4 text-2xl font-semibold">What kind of solution can we create for your business?</h2>
+    <a href="/contact-us" class="btn btn-outline-info mt-auto text-white">Contact US!</a>
+  </div>
+
+
+  <div class="container text-center my-5" data-aos="zoom-in">
+    <img src="{% static 'images/logoweb.png' %}" alt="G-FENIX Logo" 
+      style="width: 160px; max-width: 100%; height: auto;">
+  </div>
+
+{% endblock icerik %}

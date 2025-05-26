@@ -1,0 +1,255 @@
+{% extends "layout_eses.html" %}
+{% load static %}
+
+{% block title %}G-Fenix | Proyectos de Clientes{% endblock %}
+
+{% block zaman %}
+
+
+<div class="row">
+  <div class="col-12">
+    <div style="height: 100px;"></div> <!-- 50px boşluk -->
+  </div>
+</div>
+
+<div id="neYapiyoruzCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
+  <div class="carousel-inner">
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2 class="fw-bold">Análisis de Datos</h2>
+            <p>Los datos de tu negocio son en realidad un tesoro. Con soluciones personalizadas en SQL y Python, analizamos tus clientes, ventas y rendimiento de contenido. Toma decisiones informadas basadas en datos y ahorra tiempo y dinero.</p>
+          </div>
+          <div class="col-md-6">
+            <img src="{% static 'images/crsdata.png' %}" loading="lazy" class="img-fluid rounded shadow" alt="Web Geliştirme">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2 class="fw-bold">Visualización de Datos</h2>
+            <p>No dejes que los datos complejos te intimiden. Con herramientas como Power BI y Plotly, convertimos tus datos en gráficos y paneles claros. Creamos presentaciones comprensibles para tus equipos y directivos.</p>
+          </div>
+          <div class="col-md-6">
+            <img src="{% static 'images/crsbi.png' %}" loading="lazy" class="img-fluid rounded shadow" alt="Python Geliştirme">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="carousel-item">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2 class="fw-bold">Bot de IA para Respuestas Automáticas</h2>
+            <p>Creamos bots con inteligencia artificial que responden 24/7 en WhatsApp, Instagram o tu sitio web. Mejora la satisfacción del cliente y alivia a tu equipo de soporte. ¡Compatible con todos los idiomas!</p>
+          </div>
+          <div class="col-md-6">
+            <img src="{% static 'images/crsaibot.png' %}" loading="lazy" class="img-fluid rounded shadow" alt="Yapay Zekâ">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="carousel-item">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2 class="fw-bold">Desarrollo Web Moderno</h2>
+            <p>Creamos sitios web modernos, rápidos y adaptables a dispositivos móviles para destacar tu marca en internet. Desde paneles personalizados hasta blogs y automatización, te ofrecemos soluciones a medida.</p>
+          </div>
+          <div class="col-md-6">
+            <img src="{% static 'images/crsweb.png' %}" loading="lazy" class="img-fluid rounded shadow" alt="Kullanıcı Durumları">
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!-- Slide 6 -->
+    <div class="carousel-item active">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2 class="fw-bold">Scripts de Python para Redes Sociales</h2>
+            <p>Con Python puedes automatizar mensajes, likes, comentarios y publicaciones programadas en plataformas como LinkedIn e Instagram. Te damos scripts listos para usar para que ahorres tiempo y trabajes con inteligencia.</p>
+          </div>
+          <div class="col-md-6">
+            <img src="{% static 'images/crssclmdy.png' %}" loading="lazy" class="img-fluid rounded shadow" alt="Veri Analizi">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Carousel Navigation Buttons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#neYapiyoruzCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#neYapiyoruzCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+
+<section class="w-100 py-5" style="background-color: none;">
+  <div class="d-flex justify-content-center align-items-center" data-aos="fade-up">
+    <img src="{% static 'images/catalog.png' %}" 
+         alt="Vurgulu Görsel" 
+         class="img-fluid"
+         style="max-width: 90vw; height: auto; border-radius: 12px;">
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<section class="py-5">
+  <div class="container-fluid" style="padding: 0 150px;">
+    <section class="d-flex justify-content-center align-items-center full-center-section">
+      <h2 class="blur-heading" data-aos="fade-up">¿Qué Ofrecemos?</h2>
+    </section>
+
+    <div class="row">
+      <div class="col-12">
+        <div style="height: 100px;"></div> <!-- 50px boşluk -->
+      </div>
+    </div>
+
+    <!-- 1. Satır - Yazı Solda -->
+    <div class="row align-items-center mb-5" data-aos="fade-right">
+      <div class="col-md-6">
+        <div class="glass-card">
+          <h2 class="mb-3">Toma Decisiones Inteligentes con Análisis de Datos</h2>
+          <p>Cada negocio genera cientos de datos cada día: comportamiento del cliente, informes de ventas, tráfico web, interacciones en redes sociales… Limpiamos y transformamos estos datos en información útil.
+            Con soluciones personalizadas en SQL y Python, identificamos patrones, campañas exitosas y puntos de abandono.
+            Así, tomas decisiones basadas en datos y te adelantas a la competencia.</p>
+        </div>
+      </div>
+      <div class="col-md-6 d-none d-md-flex justify-content-center">
+        <img src="{% static 'images/crsdata.png' %}" alt="Veri Analizi" class="img-fluid rounded">
+      </div>
+    </div>
+
+    <hr class="my-5" style="border-color: #ccc; opacity: 0.2;">
+
+
+    <!-- 2. Satır - Yazı Sağda -->
+    <div class="row align-items-center flex-md-row-reverse mb-5" data-aos="fade-left">
+      <div class="col-md-6">
+        <div class="glass-card">
+          <h2 class="mb-3">Transformamos los Datos en Visualizaciones Claras</h2>
+          <p>Los datos valen cuando se entienden. Usamos herramientas como Power BI, Plotly y Looker Studio para crear paneles visuales claros e informativos.
+            Desde el rendimiento de contenido hasta segmentos de clientes, facilitamos decisiones más rápidas e inteligentes.</p>
+        </div>
+      </div>
+      <div class="col-md-6 d-none d-md-flex justify-content-center">
+        <img src="{% static 'images/crsbi.png' %}" alt="Veri Görselleştirme" class="img-fluid rounded">
+      </div>
+    </div>
+
+    <hr class="my-5" style="border-color: #ccc; opacity: 0.2;">
+
+
+    <!-- 3. Satır - Yazı Solda -->
+    <div class="row align-items-center mb-5" data-aos="fade-right">
+      <div class="col-md-6">
+        <div class="glass-card">
+          <h2 class="mb-3">Automatiza tus Redes Sociales con Python</h2>
+          <p>Publicar, comentar o hacer seguimiento manual lleva tiempo. Con nuestros scripts de Python puedes automatizar publicaciones programadas, mensajes masivos, likes y más en Instagram o LinkedIn.
+            Ahorra tiempo y aumenta tu productividad con automatización inteligente.</p>
+        </div>
+      </div>
+      <div class="col-md-6 d-none d-md-flex justify-content-center">
+        <img src="{% static 'images/crssclmdy.png' %}" alt="Python Sosyal Medya" class="img-fluid rounded">
+      </div>
+    </div>
+
+    <hr class="my-5" style="border-color: #ccc; opacity: 0.2;">
+
+
+    <!-- 4. Satır - Yazı Sağda -->
+    <div class="row align-items-center flex-md-row-reverse mb-5" data-aos="fade-left">
+      <div class="col-md-6">
+        <div class="glass-card">
+          <h2 class="mb-3">Sistemas de Mensajería Automática con IA</h2>
+          <p>Nuestros chatbots responden instantáneamente en Instagram, WhatsApp o tu web — las 24 horas, en cualquier idioma.
+            Atienden preguntas frecuentes, reservas o soporte, mejorando la experiencia del cliente y descargando a tu equipo.</p>
+        </div>
+      </div>
+      <div class="col-md-6 d-none d-md-flex justify-content-center">
+        <img src="{% static 'images/crsaibot.png' %}" alt="AI Chatbot" class="img-fluid rounded">
+      </div>
+    </div>
+
+    <hr class="my-5" style="border-color: #ccc; opacity: 0.2;">
+
+
+    <!-- 5. Satır - Yazı Solda -->
+    <div class="row align-items-center mb-5" data-aos="fade-right">
+      <div class="col-md-6">
+        <div class="glass-card">
+          <h2 class="mb-3">Sitios Web Modernos a la Medida de Tu Negocio</h2>
+          <p>Creamos sitios web rápidos y adaptables con Django, HTML5, CSS y JavaScript. Ya sea un blog, portafolio o página corporativa con automatización, garantizamos diseño y funcionalidad.</p>
+        </div>
+      </div>
+      <div class="col-md-6 d-none d-md-flex justify-content-center">
+        <img src="{% static 'images/crsweb.png' %}" alt="Web Sitesi" class="img-fluid rounded">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div style="text-align: center; margin-top: 60px;" data-aos="fade-left">
+  <p style="font-size: 35px; margin-bottom: 16px; color: white; font-weight: 600;">
+    ¿Quieres Trabajar con Nosotros?
+  </p>
+  <a href="/es/contacto" style="
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #00ADB5;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    " onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#00ADB5'">
+    Contáctanos
+  </a>
+</div>
+
+  <section id="technologies">
+    <section class="d-flex justify-content-center align-items-center full-center-section">
+      <h2 class="blur-heading" data-aos="fade-up">Tecnologías que Utilizamos</h2>
+    </section>
+    <div class="tech-logos">
+      <img src="{% static 'tech_logos/vscode.svg' %}" alt="VsCode" class="tech-icon" data-aos="zoom-in" data-aos-delay="0"/>
+      <img src="{% static 'tech_logos/python-svgrepo-com.svg' %}" alt="Python" class="tech-icon" data-aos="zoom-in" data-aos-delay="100"/>
+      <img src="{% static 'tech_logos/django-svgrepo-com.svg' %}" alt="Django" class="tech-icon" data-aos="zoom-in" data-aos-delay="200"/>
+      <img src="{% static 'tech_logos/html-5-svgrepo-com.svg' %}" alt="HTML5" class="tech-icon" data-aos="zoom-in" data-aos-delay="300"/>
+      <img src="{% static 'tech_logos/css-3-svgrepo-com.svg' %}" alt="CSS3" class="tech-icon" data-aos="zoom-in" data-aos-delay="400"/>
+      <img src="{% static 'tech_logos/javascript-svgrepo-com.svg' %}" alt="JavaScript" class="tech-icon" data-aos="zoom-in" data-aos-delay="500"/>
+      <img src="{% static 'tech_logos/github.svg' %}" alt="GitHub" class="tech-icon" data-aos="zoom-in" data-aos-delay="600"/>
+      <img src="{% static 'tech_logos/database-svgrepo-com.svg' %}" alt="DataBase" class="tech-icon" data-aos="zoom-in" data-aos-delay="700"/>
+      <img src="{% static 'tech_logos/sqlite-svgrepo-com.svg' %}" alt="SQlite" class="tech-icon" data-aos="zoom-in" data-aos-delay="800"/>
+      <img src="{% static 'tech_logos/render.svg' %}" alt="Render" class="tech-icon" data-aos="zoom-in" data-aos-delay="900"/>
+    </div>
+  </section>
+
+
+
+<div class="container text-center my-5" data-aos="zoom-in">
+  <img src="{% static 'images/logoweb.png' %}" alt="G-FENIX Logo" 
+      style="width: 160px; max-width: 100%; height: auto;">
+</div>
+
+
+{% endblock zaman %}

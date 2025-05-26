@@ -1,0 +1,228 @@
+{% extends "layout_en.html" %}
+{% load static %}
+
+{% block title %}G-Fenix | Web Dewelopment{% endblock %}
+
+{% block icerik %}
+
+  <section class="py-5 text-center bg-blur text-white section-spacer">
+    <div class="container">
+      <div class="row align-items-center mb-5" data-aos="fade-right">
+        <div class="col-md-6">
+          <div class="container">
+            <h2 class="text-md-start text-center">Why Does Your Business Need a Website?</h2>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 d-flex justify-content-center align-items-center mb-4">
+          <img src="{% static 'images/thinkinggirl.png' %}"
+            alt="Custom solution visual"
+            class="img-fluid rounded"
+            style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+    
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up">
+          <div class="info-box h-100">
+            <h5>🌐 24/7 Online</h5>
+            <p>Your website is your business card that never sleeps — accessible anytime, anywhere.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="info-box h-100">
+            <h5>🤝 Trust & Credibility</h5>
+            <p>Customers trust businesses with a professional and modern web presence.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="info-box h-100">
+            <h5>📈 Increase Sales</h5>
+            <p>Convert more visitors into paying clients with clear messaging and smart design.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="info-box h-100">
+            <h5>🛠️ Showcase Services</h5>
+            <p>Let your audience know exactly what you offer with visuals and detailed info.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section style="text-align: center; margin-top: 80px;" data-aos="fade-up">
+    <h2 style="font-size: 26px; color: white; margin-bottom: 12px;">
+      Also, We asked ChatGPT: "Why does your business need a website?"
+    </h2>
+    <p style="font-size: 18px; color: #00ADB5; margin-bottom: 30px;">
+      Here's what it answered 👇
+    </p>
+
+    <div style="display: flex; justify-content: center; margin-bottom: 60px; data-aos="fade-up"">
+      <video style="width: 100%; max-width: 900px; height: auto;" autoplay muted controls>
+        <source src="{% static 'videos/sonwebvideo.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    
+  </section>
+  
+  <hr class="section-divider">
+
+  <!-- İçerik Bölümü -->
+  <section class="py-5">
+    <div class="container-fluid" style="padding: 0 150px;">
+      <section class="d-flex justify-content-center align-items-center full-center-section">
+        <h2 class="blur-heading" data-aos="fade-up">What You Get With Us?</h2>
+      </section>
+      <!-- 1. Satır: Metin solda -->
+      <div class="row align-items-center mb-5" data-aos="fade-right">
+        <div class="col-md-6">
+          <div class="glass-card">
+            <h2 class="mb-3">Creating Modern and Efficient Websites</h2>
+            <p>We specialize in building responsive, user-friendly, and visually stunning websites that meet the needs of modern businesses.</p>
+            <h2 class="mt-5 mb-3">SEO-Optimized and Performance-Driven</h2>
+            <p>Every website we develop is optimized for search engines and designed to deliver fast loading times, ensuring a smooth user experience and better visibility online.</p>
+          </div>
+        </div>
+        <div class="col-md-6 d-none d-md-flex justify-content-center align-items-center" style="height: 100%;">
+          <img src="{% static 'images/websitecomputer2.png' %}" alt="Custom solution visual" class="img-fluid rounded">
+        </div>
+      </div>
+  
+      <!-- 2. Satır: Metin sağda -->
+      <div class="row align-items-center flex-md-row-reverse" data-aos="fade-left">
+        <!-- Yazı kısmı -->
+        <div class="col-md-6">
+          <div class="glass-card">
+            <h2 class="mb-3">Custom Solutions Tailored to Your Business</h2>
+            <p>We work closely with you to understand your goals and create customized websites that reflect your brand identity and support your growth.</p>
+            <h2 class="mt-5 mb-3">Technologies We Use</h2>
+            <p>We use technologies like HTML5, CSS3, JavaScript, Django, and React to ensure your website is secure, scalable, and future-proof.</p>
+          </div>
+        </div>
+      
+        <!-- Teknoloji ikonları kısmı -->
+        <div class="col-md-6 d-none d-md-flex justify-content-center align-items-center" style="height: 100%;">
+          <div class="tech-logos-container">
+            <img src="{% static 'tech_logos/vscode.svg' %}" alt="VsCode" class="tech-icon" data-aos="zoom-in" data-aos-delay="0"/>
+            <img src="{% static 'tech_logos/python-svgrepo-com.svg' %}" alt="Python" class="tech-icon" data-aos="zoom-in" data-aos-delay="100"/>
+            <img src="{% static 'tech_logos/django-svgrepo-com.svg' %}" alt="Django" class="tech-icon" data-aos="zoom-in" data-aos-delay="200"/>
+            <img src="{% static 'tech_logos/html-5-svgrepo-com.svg' %}" alt="HTML5" class="tech-icon" data-aos="zoom-in" data-aos-delay="300"/>
+            <img src="{% static 'tech_logos/css-3-svgrepo-com.svg' %}" alt="CSS3" class="tech-icon" data-aos="zoom-in" data-aos-delay="400"/>
+            <img src="{% static 'tech_logos/javascript-svgrepo-com.svg' %}" alt="JavaScript" class="tech-icon" data-aos="zoom-in" data-aos-delay="500"/>
+            <img src="{% static 'tech_logos/github.svg' %}" alt="GitHub" class="tech-icon" data-aos="zoom-in" data-aos-delay="600"/>
+            <img src="{% static 'tech_logos/database-svgrepo-com.svg' %}" alt="Database" class="tech-icon" data-aos="zoom-in" data-aos-delay="700"/>
+            <img src="{% static 'tech_logos/sqlite-svgrepo-com.svg' %}" alt="SQLite" class="tech-icon" data-aos="zoom-in" data-aos-delay="800"/>
+            <img src="{% static 'tech_logos/render.svg' %}" alt="Render" class="tech-icon" data-aos="zoom-in" data-aos-delay="900"/>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container text-white">
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-5" data-aos="fade-right">
+          <div class="p-4 rounded-pill border-start border-4 border-info position-relative"
+            style="background-color: rgba(0, 0, 0, 0);">
+              <h5 class="mb-1">💬 Corporate Sites</h5>
+              <p class="mb-0">Want a website that reflects your brand and feels professional from the first click? We build sleek, responsive sites that leave a strong first impression.</p>
+              <p class="position-absolute top-50 end-0 translate-middle-y text-info fs-4"></p>
+          </div>
+        </div>
+        <div class="col-md-5" data-aos="fade-left">
+          <div class="p-4 rounded-pill border-start border-4 border-success position-relative"
+            style="background-color: rgba(0, 0, 0, 0);">
+              <h5 class="mb-1">💬 E-commerce</h5>
+              <p class="mb-0">We help you sell smart, not hard. Our e-commerce solutions are fast, secure, and built to convert visitors into loyal customers.Let us turn your store into a smooth.</p>
+              <p class="position-absolute top-50 end-0 translate-middle-y text-success fs-4"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Line 2 -->
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-5" data-aos="fade-right">
+          <div class="p-4 rounded-pill border-start border-4 border-warning position-relative"
+            style="background-color: rgba(0, 0, 0, 0);">
+              <h5 class="mb-1">💬 Custom Development</h5>
+              <p class="mb-0">Have a unique idea? Perfect. We love building custom web tools that bring your vision to life; fully tailored to your business goals. No templates, no limits, just solutions made just for you.</p>
+              <p class="position-absolute top-50 end-0 translate-middle-y text-warning fs-4"></p>
+          </div>
+        </div>
+        <div class="col-md-5" data-aos="fade-left">
+          <div class="p-4 rounded-pill border-start border-4 border-primary position-relative"
+            style="background-color: rgba(0, 0, 0, 0);">
+              <h5 class="mb-1">💬 Mobile Ready</h5>
+              <p class="mb-0">We make sure your site looks and works great everywhere—whether it’s a phone, tablet, or desktop. Always responsive. Always reliable.</p>
+              <p class="position-absolute top-50 end-0 translate-middle-y text-primary fs-4"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Line 3 -->
+      <div class="row justify-content-center">
+        <div class="col-md-5" data-aos="fade-right">
+          <div class="p-4 rounded-pill border-start border-4 border-danger position-relative"
+            style="background-color: rgba(0, 0, 0, 0);">
+              <h5 class="mb-1">💬 SEO & Speed</h5>
+              <p class="mb-0">We don't just build pretty sites—we build fast ones. Optimized for Google and performance-tuned for smooth browsing. Speed and visibility are baked into every project we deliver.</p>
+              <p class="position-absolute top-50 end-0 translate-middle-y text-danger fs-4"></p>
+          </div>
+        </div>
+        <div class="col-md-5" data-aos="fade-left">
+          <div class="p-4 rounded-pill border-start border-4 border-secondary position-relative"
+            style="background-color: rgba(0, 0, 0, 0);">
+              <h5 class="mb-1">💬 Secure Tech Stack</h5>
+              <p class="mb-0">Our tools? Trusted, modern, and secure. We work with HTML5, CSS3, JavaScript, Django, and React to give you a solid foundation.</p>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 60px;" data-aos="fade-left">
+        <p style="font-size: 35px; margin-bottom: 16px; color: white; font-weight: 600;">
+          Want to have your own website?
+        </p>
+        <a href="/contact-us/" style="
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #00ADB5;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+          " onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#00ADB5'">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="technologies">
+    <section class="d-flex justify-content-center align-items-center full-center-section">
+      <h2 class="blur-heading" data-aos="fade-up">Technologies We Use</h2>
+    </section>
+    <div class="tech-logos">
+      <img src="{% static 'tech_logos/vscode.svg' %}" alt="VsCode" class="tech-icon" data-aos="zoom-in" data-aos-delay="0"/>
+      <img src="{% static 'tech_logos/python-svgrepo-com.svg' %}" alt="Python" class="tech-icon" data-aos="zoom-in" data-aos-delay="100"/>
+      <img src="{% static 'tech_logos/django-svgrepo-com.svg' %}" alt="Django" class="tech-icon" data-aos="zoom-in" data-aos-delay="200"/>
+      <img src="{% static 'tech_logos/html-5-svgrepo-com.svg' %}" alt="HTML5" class="tech-icon" data-aos="zoom-in" data-aos-delay="300"/>
+      <img src="{% static 'tech_logos/css-3-svgrepo-com.svg' %}" alt="CSS3" class="tech-icon" data-aos="zoom-in" data-aos-delay="400"/>
+      <img src="{% static 'tech_logos/javascript-svgrepo-com.svg' %}" alt="JavaScript" class="tech-icon" data-aos="zoom-in" data-aos-delay="500"/>
+      <img src="{% static 'tech_logos/github.svg' %}" alt="GitHub" class="tech-icon" data-aos="zoom-in" data-aos-delay="600"/>
+      <img src="{% static 'tech_logos/database-svgrepo-com.svg' %}" alt="DataBase" class="tech-icon" data-aos="zoom-in" data-aos-delay="700"/>
+      <img src="{% static 'tech_logos/sqlite-svgrepo-com.svg' %}" alt="SQlite" class="tech-icon" data-aos="zoom-in" data-aos-delay="800"/>
+      <img src="{% static 'tech_logos/render.svg' %}" alt="Render" class="tech-icon" data-aos="zoom-in" data-aos-delay="900"/>
+    </div>
+  </section>
+
+  <div class="container text-center my-5" data-aos="zoom-in">
+    <img src="{% static 'images/logoweb.png' %}" alt="G-FENIX Logo" 
+        style="width: 160px; max-width: 100%; height: auto;">
+  </div>
+
+
+{% endblock icerik %}

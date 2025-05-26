@@ -1,0 +1,158 @@
+{% extends "layout_en.html" %}
+{% load static %}
+
+{% block title %}G-Fenix | Blog{% endblock %}
+
+{% block icerik %}
+
+<div class="row">
+  <div class="col-12">
+    <div style="height: 100px;"></div> <!-- 50px boşluk -->
+  </div>
+</div>
+
+<section class="headline-photo-section">
+  <h2>We attended MWC Barcelona 2025 as G-FENIX</h2>
+  <img src="{% static 'images/mwc.jpg' %}" alt="MWC Barcelona 2025" class="mwc-photo">
+</section>
+
+<section class="video-text-section">
+  <video class="vertical-video" autoplay muted loop>
+    <source src="{% static 'videos/aihead.mp4' %}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="text-content">
+    <p>
+      In March, we participated in <strong>MWC Barcelona 2025</strong> (Mobile World Congress), held in Barcelona. At the world's largest mobile technology fair, we had the chance to explore cutting-edge innovations — from AI-powered products and 5G solutions to smart city systems and digital health applications. Seeing the technologies shaping the future up close was truly inspiring.
+    </p>
+  </div>
+
+  <video class="vertical-video" autoplay muted loop>
+    <source src="{% static 'videos/airobottt.mp4' %}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</section>
+
+<hr class="section-divider">
+
+<section id="blog-section">
+  <div class="container px-3 px-md-4">
+    <section class="d-flex justify-content-center align-items-center full-center-section">
+      <h1 class="blur-heading" data-aos="fade-up">📰 Data - Software Blogs 📰</h1>
+    </section>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
+      <div class="col" data-aos="fade-up">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/openai.jpg' %}" class="card-img-top" alt="AI Article">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">
+              <a href="https://cloud.google.com/learn/what-is-artificial-intelligence" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+                What Is Artificial Intelligence?
+              </a>
+            </h5>
+            <p class="card-text text-white">Explore the fundamentals of AI and its growing role in our lives and industries.</p>
+            <a href="https://cloud.google.com/learn/what-is-artificial-intelligence" class="btn btn-outline-info mt-auto" target="_blank" rel="noopener">Go to Website</a>
+          </div>
+        </div>
+      </div>
+            
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/pythonweb.jpg' %}" class="card-img-top" alt="Python Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Python for Automation</h5>
+            <p class="card-text text-white">Learn how Python simplifies tasks and accelerates workflows through scripting.</p>
+            <a href="https://www.python.org/doc/essays/blurb/" class="btn btn-outline-info mt-auto">Go to Website</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/microsoft.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Microsoft Azure AI Blog</h5>
+            <p class="card-text text-white">Insights, case studies and news from Azure’s AI division.</p>
+            <a href="https://techcommunity.microsoft.com/t5/azure-ai/bg-p/AzureAI" class="btn btn-outline-info mt-auto">Go to Website</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/data2.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Towards Data Science</h5>
+            <p class="card-text text-white">Stories and insights from data science practitioners</p>
+            <a href="https://towardsdatascience.com" class="btn btn-outline-info mt-auto">Go to Website</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/aiweb.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">DEV Community</h5>
+            <p class="card-text text-white">Share and discover projects, code and dev experiences</p>
+            <a href="https://dev.to/" class="btn btn-outline-info mt-auto">Go to Website</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/chatgbt.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">OpenAI Blog</h5>
+            <p class="card-text text-white">Cutting-edge advancements in artificial intelligence</p>
+            <a href="https://openai.com/blog" class="btn btn-outline-info mt-auto">Go to Website</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/google.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Google Cloud AI - Data Blog</h5>
+            <p class="card-text text-white">Technical deep dives and real-world use cases from Google Cloud</p>
+            <a href="https://cloud.google.com/blog" class="btn btn-outline-info mt-auto">Go to Website</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/codesss.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Real Python: Learn by Doing</h5>
+            <p class="card-text text-white">In-depth Python tutorials on everything from automation to web development</p>
+            <a href="https://realpython.com/" class="btn btn-outline-info mt-auto">Go to Website</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/dataanalweb.jpg' %}" class="card-img-top" alt="ERP Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Business Analysis</h5>
+            <p class="card-text text-white">Discover how we connected ERP data with Power BI dashboards for smarter decisions</p>
+            <a href="https://www.investopedia.com/terms/d/data-analytics.asp" class="btn btn-outline-info mt-auto">Go to Website</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container text-center my-5" data-aos="zoom-in">
+  <img src="{% static 'images/logoweb.png' %}" alt="G-FENIX Logo" 
+      style="width: 160px; max-width: 100%; height: auto;">
+</div>
+
+
+{% endblock icerik %}

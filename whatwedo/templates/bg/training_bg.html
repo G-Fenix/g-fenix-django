@@ -1,0 +1,52 @@
+{% extends "layout_bg.html" %}
+{% load static %}
+
+{% block title %}G-Fenix | обучение{% endblock %}
+
+{% block imera %}
+
+<div class="row">
+  <div class="col-12">
+    <div style="height: 50px;"></div> <!-- 50px boşluk -->
+  </div>
+</div>
+
+<section class="py-5" style="background-color: none">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <div class="col-md-6" data-aos="fade-right">
+        <h2 class="mb-4">Оформи бъдещето си с Изкуствен Интелект</h2>
+        <p class="text-white">
+          Дигиталната трансформация променя всички сектори и адаптацията вече не е избор, а необходимост.  
+          С този курс ще се научиш да създаваш ИИ решения и да направиш крачка напред в кариерата си.  
+          С богато съдържание и практически модули ще придобиеш не само знания, но и реален опит.
+        </p>
+        <ul class="list-unstyled mt-3">
+          <li><i class="bi bi-check-circle-fill text-success me-2"></i> Научи се да използваш виртуални асистенти и автоматизации в реални проекти.</li>
+          <li><i class="bi bi-check-circle-fill text-success me-2"></i> Разработвай ИИ решения за подобряване на бизнес ефективността.</li>
+          <li><i class="bi bi-check-circle-fill text-success me-2"></i> Усвои ключови технически и стратегически умения за дигиталната ера.</li>
+          <li><i class="bi bi-check-circle-fill text-success me-2"></i> Работи по реални сценарии и трупай практически опит.</li>
+        </ul>
+        <p><span style="color: #e74c3c;">* Само за жители на Испания над 16 години.</span></p>
+        <a href="https://grupomainjobs.com/revoluciona-ia/" target="_blank" class="register-link">Регистрирай се бързо от нашия сайт тук.</a>
+        <p class="price-red"><del>1000€</del> Сега напълно безплатно!</p>
+        <a href="/bg/kontakt" class="btn-contact">Свържи се с нас тук за повече информация</a>
+      </div>
+
+      <div class="col-md-6 text-center" data-aos="fade-left">
+        <img src="{% static 'images/egitim.png' %}" alt="AI решения" class="img-fluid">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<div class="container text-center my-5" data-aos="zoom-in">
+  <img src="{% static 'images/logoweb.png' %}" alt="G-FENIX Logo" 
+      style="width: 160px; max-width: 100%; height: auto;">
+</div>
+
+{% endblock imera %}

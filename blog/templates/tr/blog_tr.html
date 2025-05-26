@@ -1,0 +1,159 @@
+{% extends "layout_tr.html" %}
+{% load static %}
+
+{% block title %}G-Fenix | Blog{% endblock %}
+
+{% block content %}
+
+
+<div class="row">
+  <div class="col-12">
+    <div style="height: 100px;"></div> <!-- 50px boşluk -->
+  </div>
+</div>
+
+<section class="headline-photo-section">
+  <h2>G-FENIX olarak MWC Barcelona 2025 teknoloji fuarındaydık</h2>
+  <img src="{% static 'images/mwc.jpg' %}" alt="MWC Barcelona 2025" class="mwc-photo">
+</section>
+
+<section class="video-text-section">
+  <video class="vertical-video" autoplay muted loop>
+    <source src="{% static 'videos/aihead.mp4' %}" type="video/mp4">
+    Tarayıcınız video etiketini desteklemiyor.
+  </video>
+
+  <div class="text-content">
+    <p>
+       Mart ayında Barselona'da düzenlenen <strong>MWC Barcelona 2025</strong> (Mobile World Congress)'e katıldık. Dünyanın en büyük mobil teknoloji fuarında, yapay zekâ destekli ürünlerden 5G çözümlerine, akıllı şehir sistemlerinden dijital sağlık uygulamalarına kadar pek çok yenilikçi teknolojiyle tanışma fırsatı bulduk. Geleceği şekillendiren bu çözümleri yerinde görmek ilham vericiydi.
+    </p>
+  </div>
+
+  <video class="vertical-video" autoplay muted loop>
+    <source src="{% static 'videos/airobottt.mp4' %}" type="video/mp4">
+    Tarayıcınız video etiketini desteklemiyor.
+  </video>
+</section>
+
+<hr class="section-divider">
+
+<section id="blog-section">
+  <div class="container px-3 px-md-4">
+    <section class="d-flex justify-content-center align-items-center full-center-section">
+      <h1 class="blur-heading" data-aos="fade-up">📰 Veri - Yazılım Blogları 📰</h1>
+    </section>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
+      <div class="col" data-aos="fade-up">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/openai.jpg' %}" class="card-img-top" alt="AI Article">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">
+              <a href="https://cloud.google.com/learn/what-is-artificial-intelligence" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+                Yapay Zekâ Nedir?
+              </a>
+            </h5>
+            <p class="card-text text-white">Yapay zekânın temellerini ve hayatımızda ve endüstrilerde artan rolünü keşfedin.</p>
+            <a href="https://cloud.google.com/learn/what-is-artificial-intelligence" class="btn btn-outline-info mt-auto" target="_blank" rel="noopener">Web Sitesine Git</a>
+          </div>
+        </div>
+      </div>
+            
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/pythonweb.jpg' %}" class="card-img-top" alt="Python Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Otomasyon için Python</h5>
+            <p class="card-text text-white">Python’un görevleri nasıl basitleştirdiğini ve iş akışlarını nasıl hızlandırdığını öğrenin.</p>
+            <a href="https://www.python.org/doc/essays/blurb/" class="btn btn-outline-info mt-auto">Web Sitesine Git</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/microsoft.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Microsoft Azure AI Blogu</h5>
+            <p class="card-text text-white">Azure’un yapay zekâ bölümünden içgörüler, vaka çalışmaları ve haberler.</p>
+            <a href="https://techcommunity.microsoft.com/t5/azure-ai/bg-p/AzureAI" class="btn btn-outline-info mt-auto">Web Sitesine Git</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/data2.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Towards Veri Bilimi</h5>
+            <p class="card-text text-white">Veri bilimi uygulayıcılarından hikâyeler ve içgörüler.</p>
+            <a href="https://towardsdatascience.com" class="btn btn-outline-info mt-auto">Web Sitesine Git</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/aiweb.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Yazılımcı Topluluğu</h5>
+            <p class="card-text text-white">Projeleri, kodları ve yazılım deneyimlerini paylaşın ve keşfedin.</p>
+            <a href="https://dev.to/" class="btn btn-outline-info mt-auto">Web Sitesine Git</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/chatgbt.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">OpenAI Blogu</h5>
+            <p class="card-text text-white">Yapay zekâ alanındaki en son gelişmeler.</p>
+            <a href="https://openai.com/blog" class="btn btn-outline-info mt-auto">Web Sitesine Git</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/google.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Google Cloud AI – Veri Blogu</h5>
+            <p class="card-text text-white">Google Cloud’dan teknik analizler ve gerçek dünya kullanım örnekleri.</p>
+            <a href="https://cloud.google.com/blog" class="btn btn-outline-info mt-auto">Web Sitesine Git</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/codesss.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Gerçek Python: Uygulamalı Öğrenme</h5>
+            <p class="card-text text-white">Otomasyondan web geliştirmeye kadar her konuda derinlemesine Python eğitimleri.</p>
+            <a href="https://realpython.com/" class="btn btn-outline-info mt-auto">Web Sitesine Git</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/dataanalweb.jpg' %}" class="card-img-top" alt="ERP Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">İş Analizi</h5>
+            <p class="card-text text-white">ERP verilerini Power BI panolarıyla nasıl entegre edip daha akıllı kararlar aldığımızı keşfedin.</p>
+            <a href="https://www.investopedia.com/terms/d/data-analytics.asp" class="btn btn-outline-info mt-auto">Web Sitesine Git</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container text-center my-5" data-aos="zoom-in">
+  <img src="{% static 'images/logoweb.png' %}" alt="G-FENIX Logo" 
+      style="width: 160px; max-width: 100%; height: auto;">
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,112 @@
+{% extends "layout_tr.html" %}
+{% load static %}
+
+{% block title %}G-Fenix | Misyonumuz{% endblock %}
+
+{% block content %}
+
+
+  <section class="py-5" id="our-mission">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="display-5 fw-bold">Misyonumuz</h2>
+        <p class="lead text-white">İşletmeleri akıllı, etik ve ölçeklenebilir veriye dayalı çözümlerle güçlendirmek.</p>
+      </div>
+
+      <div class="row g-4 text-center">
+        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="p-4 h-100">
+            <h5 class="fw-bold mb-3">📊 İş Verisi Analizi</h5>
+            <p class="text-white mb-0">SQL, Power BI ve özel panolar kullanarak şirketlerin daha iyi kararlar almasına yardımcı oluyoruz.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+          <div class="p-4 h-100">
+            <h5 class="fw-bold mb-3">🐍 Python ve Otomasyon</h5>
+            <p class="text-white mb-0">Pandas, Selenium ve BeautifulSoup4 ile veri akışlarını ve web görevlerini otomatikleştiriyoruz.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+          <div class="p-4 h-100">
+            <h5 class="fw-bold mb-3">🌐 Akıllı Web Çözümleri</h5>
+            <p class="text-white mb-0">Verilerinizi ve marka kimliğinizi yansıtan modern, SEO uyumlu web siteleri geliştiriyoruz.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+          <div class="p-4 h-100">
+            <h5 class="fw-bold mb-3">🧠 Uzman Veri Projeleri</h5>
+            <p class="text-white mb-0">Tiger Data Analizi’nden yapay zekâ entegrasyonuna kadar, içgörüleri gerçek dünya etkisi için özelleştiriyoruz.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5 align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+          <img src="{% static 'images/airobot.png' %}" alt="Mission Visual" class="img-fluid rounded shadow-sm">
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <h3 class="fw-bold">Neden Varız</h3>
+          <p class="text-white">G-FENIX olarak, verinin yalnızca bilgilendirmekle kalmaması gerektiğine, aynı zamanda dönüştürmesi gerektiğine inanıyoruz. Misyonumuz, güçlü araçları her takım ve girişimcinin erişimine sunarak, netlik, otomasyon ve dijital zekâ sayesinde büyümelerine yardımcı olmaktır.</p>
+          <ul class="list-unstyled text-white">
+            <li>✅ İşletmeyi Yönlendiren Veri Çözümleri</li>
+            <li>✅ Verimlilik için Python Otomasyonu</li>
+            <li>✅ Size Uyan Araçlar</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container text-center mt-5" data-aos="fade-up">
+        <div class="p-4" style="background-color: none">
+          <h5 class="text-white mb-3">🚀 Henüz Yeni Başlıyoruz!</h5>
+          <p class="text-white-50 mb-4">
+            Yeni kurulan bir ekip olarak, büyük hedeflere doğru cesur adımlar atıyoruz.
+            Gelecekte nereye gittiğimizi merak mı ediyorsunuz?
+          </p>
+          <a href="/tr/hakkimizda/vizyonumuz" class="btn btn-outline-info mt-auto text-white">Vizyonumuzu Görün</a>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <section id="technologies">
+    <section class="d-flex justify-content-center align-items-center full-center-section">
+      <h2 class="blur-heading" data-aos="fade-up">Kullandığımız Teknolojiler</h2>
+    </section>
+    <div class="tech-logos">
+      <img src="{% static 'tech_logos/vscode.svg' %}" alt="VsCode" class="tech-icon" data-aos="zoom-in" data-aos-delay="0"/>
+    <img src="{% static 'tech_logos/python-svgrepo-com.svg' %}" alt="Python" class="tech-icon" data-aos="zoom-in" data-aos-delay="100"/>
+    <img src="{% static 'tech_logos/django-svgrepo-com.svg' %}" alt="Django" class="tech-icon" data-aos="zoom-in" data-aos-delay="200"/>
+    <img src="{% static 'tech_logos/html-5-svgrepo-com.svg' %}" alt="HTML5" class="tech-icon" data-aos="zoom-in" data-aos-delay="300"/>
+    <img src="{% static 'tech_logos/css-3-svgrepo-com.svg' %}" alt="CSS3" class="tech-icon" data-aos="zoom-in" data-aos-delay="400"/>
+    <img src="{% static 'tech_logos/javascript-svgrepo-com.svg' %}" alt="JavaScript" class="tech-icon" data-aos="zoom-in" data-aos-delay="500"/>
+    <img src="{% static 'tech_logos/github.svg' %}" alt="GitHub" class="tech-icon" data-aos="zoom-in" data-aos-delay="600"/>
+    <img src="{% static 'tech_logos/database-svgrepo-com.svg' %}" alt="DataBase" class="tech-icon" data-aos="zoom-in" data-aos-delay="700"/>
+    <img src="{% static 'tech_logos/sqlite-svgrepo-com.svg' %}" alt="SQlite" class="tech-icon" data-aos="zoom-in" data-aos-delay="800"/>
+    <img src="{% static 'tech_logos/render.svg' %}" alt="Render" class="tech-icon" data-aos="zoom-in" data-aos-delay="900"/>
+    <img src="{% static 'tech_logos/pandas-svgrepo-com.svg' %}" alt="Pandas" class="tech-icon" data-aos="zoom-in" data-aos-delay="1000"/>
+    <img src="{% static 'tech_logos/numpy-svgrepo-com.svg' %}" alt="numpy" class="tech-icon" data-aos="zoom-in" data-aos-delay="1100"/>
+    <img src="{% static 'tech_logos/postman-icon-svgrepo-com.svg' %}" alt="postman" class="tech-icon" data-aos="zoom-in" data-aos-delay="1200"/>
+    <img src="{% static 'tech_logos/fastapi-svgrepo-com.svg' %}" alt="fast-api" class="tech-icon" data-aos="zoom-in" data-aos-delay="1300"/>
+    <img src="{% static 'tech_logos/microsoft-sql-server-logo-svgrepo-com.svg' %}" alt="msql" class="tech-icon" data-aos="zoom-in" data-aos-delay="1400"/>
+    <img src="{% static 'tech_logos/statistics-svgrepo-com.svg' %}" alt="stastic" class="tech-icon" data-aos="zoom-in" data-aos-delay="1500"/>
+    <img src="{% static 'tech_logos/openai-svgrepo-com.svg' %}" alt="openai" class="tech-icon" data-aos="zoom-in" data-aos-delay="1600"/>
+    </div>
+  </section>
+
+  <section class="py-5" id="our-mission">
+    <div class="container text-center remove-margin" data-aos="fade-up">
+      <h2 class="mb-4 text-white text-2xl font-semibold">Misyonumuzun bir parçası olmak ister misiniz?</h2>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/tr/bize-ulasin" class="btn btn-outline-info mt-auto text-white">Topluluğumuza katılın veya bizimle iş birliği yapın.</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container text-center my-5" data-aos="zoom-in">
+    <img src="{% static 'images/logoweb.png' %}" alt="G-FENIX Logo" 
+        style="width: 160px; max-width: 100%; height: auto;">
+  </div>
+
+{% endblock content %}

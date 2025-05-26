@@ -1,0 +1,501 @@
+{% extends "layout_en.html" %}
+{% load static %}
+
+{% block title %}G-Fenix | Home{% endblock %}
+
+{% block icerik %}
+
+<section class="text-center py-3" id="gfenix-intro">
+  <div class="container">
+    <h1 class="display-4 fw-bold" data-aos="fade-up">Welcome to G-Fenix</h1>
+    <p class="lead mt-3" data-aos="fade-up">
+      We are a forward-thinking collective of developers, data scientists, and AI explorers on a mission to shape the digital future.
+      At G-Fenix, we blend cutting-edge technology with creative intelligence to craft smart, scalable, and impactful solutions — from 
+      artificial intelligence and data analysis to web applications and beyond.
+    </p>
+  </div>
+  <div class="container">
+    <p class="lead mt-3" data-aos="fade-up">
+      But we’re not just building software. We’re building the future. We believe that the most powerful innovations emerge when
+      data meets purpose, and code meets vision. Whether you're a startup looking to scale or an enterprise ready to evolve, 
+      G-Fenix is your partner in transformation.
+    </p>
+  </div>
+  <div class="container">
+    <p class="lead mt-3" data-aos="fade-up">
+      Ready to go beyond the ordinary? Let’s create digital experiences that aren’t just functional — but unforgettable.
+    </p>
+  </div>
+</section>
+
+<div class="container text-center remove-margin" data-aos="fade-up">
+  <h2 class="mb-4 text-2xl font-semibold">Explore More</h2>
+  <div class="flex flex-wrap justify-center gap-4">
+    <a href="/about-us/our-mission" class="btn btn-outline-info mt-auto text-white">Our Mission</a>
+    <a href="/about-us/our-vision" class="btn btn-outline-info mt-auto text-white">Our Vision</a>
+    <a href="/about-us/our-team" class="btn btn-outline-info mt-auto text-white">Our Team</a>
+    <a href="/about-us/social-media" class="btn btn-outline-info mt-auto text-white">Social Media</a>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<section id="content-section">
+  <section class="d-flex justify-content-center align-items-center full-center-section">
+    <h2 class="blur-heading" data-aos="fade-up">How confident are we in our software capabilities?</h2>
+  </section>
+
+  <section class="py-5" id="circle-info">
+    <div class="container d-flex justify-content-center align-items-center position-relative" style="height: 600px;" data-aos="fade-up">
+      
+      <!-- Ortadaki büyük logo/görsel -->
+      <div class="center-image position-absolute top-50 start-50 translate-middle">
+        <img src="{% static 'images/logoweb.png' %}" alt="G-Fenix Logo" class="img-fluid" style="width: 200px; height: 200px;" data-aos="fade-up">
+      </div>
+  
+      <!-- Daire etrafındaki yazılar -->
+      <div class="circle-text position-relative">
+        <div class="circle-item" style="top: 5%; left: 50%;">Data Analysis</div>
+        <div class="circle-item" style="top: 25%; left: 90%;">Artificial Intelligence</div>
+        <div class="circle-item" style="top: 75%; left: 90%;">Web Development</div>
+        <div class="circle-item" style="top: 95%; left: 50%;">User Cases</div>
+        <div class="circle-item" style="top: 75%; left: 10%;">Training</div>
+        <div class="circle-item" style="top: 25%; left: 10%;">Python</div>
+      </div>
+  
+    </div>
+  </section>  
+
+  <div id="whatWeDoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2 class="fw-bold">We turn raw data into smart decisions</h2>
+            <p>We help you clean, visualize, and interpret your data using tools like Python, Pandas, and Power BI. So you can take action with confidence.</p>
+            <a href="/what-we-do/data-analysis" class="btn btn-outline-info mt-auto">Learn More</a>
+          </div>
+          <div class="col-md-6">
+            <img src="{% static 'images/indexdataanalysis.jpg' %}" loading="lazy" class="img-fluid rounded shadow" alt="Data Analysis">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2 class="fw-bold">Modern, responsive websites built with purpose</h2>
+            <p>From personal blogs to business platforms, we design and develop websites that look sharp and work seamlessly across all devices.</p>
+            <a href="/what-we-do/web-development" class="btn btn-outline-info mt-auto">Learn More</a>
+          </div>
+          <div class="col-md-6">
+            <img src="{% static 'images/indexwebb.jpg' %}" loading="lazy" class="img-fluid rounded shadow" alt="Web Development">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2 class="fw-bold">Automate the boring, Build the smart by Python</h2>
+            <p>Unlock Python's potential for data science, automation, and AI-driven solutions. Python scripts and bots that solve real world problems.</p>
+            <a href="/what-we-do/python-development" class="btn btn-outline-info mt-auto">Learn More</a>
+          </div>
+          <div class="col-md-6">
+            <img src="{% static 'images/indexpython.jpg' %}" loading="lazy" class="img-fluid rounded shadow" alt="Python Development">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="carousel-item">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2 class="fw-bold">Smarter workflows powered by AI</h2>
+            <p>Whether it's content generation, customer support, or task automation, we integrate AI tools that save time and boost productivity.</p>
+            <a href="/what-we-do/ai" class="btn btn-outline-info mt-auto">Learn More</a>
+          </div>
+          <div class="col-md-6">
+            <img src="{% static 'images/indexai.jpg' %}" loading="lazy" class="img-fluid rounded shadow" alt="AI Applications">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="carousel-item">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2 class="fw-bold">Real-world tech solutions tailored to your needs</h2>
+            <p>We analyze your business or project and recommend the best digital tools, workflows, or platforms—so tech actually works for you.</p>
+            <a href="/what-we-do/usercases" class="btn btn-outline-info mt-auto">Learn More</a>
+          </div>
+          <div class="col-md-6">
+            <img src="{% static 'images/indexusercases.jpg' %}" loading="lazy" class="img-fluid rounded shadow" alt="User Cases">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="carousel-item">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2 class="fw-bold">Upskill with G-Fenix</h2>
+            <p>We run personalized sessions on data, AI, and coding designed to be clear, interactive, and directly applicable to real work.</p>
+            <a href="/what-we-do/training" class="btn btn-outline-info mt-auto">Learn More</a>
+          </div>
+          <div class="col-md-6">
+            <img src="{% static 'images/indextraining.jpg' %}" loading="lazy" class="img-fluid rounded shadow" alt="Training">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Carousel Navigation Buttons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#whatWeDoCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#whatWeDoCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+
+</section>
+
+
+<hr class="section-divider">
+
+<section class="py-5" id="why-we-do">
+  <div class="container-fluid">
+    <div class="row">
+      
+      <!-- Sol: Dikey uzun görsel -->
+      <div class="col-md-2 d-none d-md-block"  data-aos="fade-up">
+        <img src="{% static 'images/chatgbtaii3.png' %}" alt="AI Illustration" class="img-fluid h-100" style="object-fit: cover; border-radius: 12px;"  data-aos="fade-up">
+      </div>
+
+      <!-- Sağ: İçerik -->
+      <div class="col-md-10">
+        <h2 class="fw-bold mb-5 text-center" data-aos="fade-up">Why These Technologies Matter to Us</h2>
+
+        <!-- ROW 1 -->
+        <div class="row mb-4 align-items-center" data-aos="fade-up">
+          <div class="col-md-6">
+            <div class="tech-box shadow-sm p-4 rounded">
+              <h5 class="fw-bold mb-2">Data Analysis</h5>
+              <p>
+                Data Analysis allows us to transform raw information into actionable insights. Whether it’s helping businesses 
+                optimize operations, understand users, or predict outcomes — data drives intelligent decisions.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <div class="tech-box shadow-sm p-4 rounded">
+              <h5 class="fw-bold mb-2">Artificial Intelligence</h5>
+              <p>
+                AI is more than automation — it's augmentation. We integrate machine learning, NLP, and predictive models 
+                to help clients move faster, smarter, and more strategically.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ROW 2 -->
+        <div class="row mb-4 align-items-center" data-aos="fade-up">
+          <div class="col-md-6 order-md-2">
+            <div class="tech-box shadow-sm p-4 rounded">
+              <h5 class="fw-bold mb-2">Web Development</h5>
+              <p>
+                This is where vision becomes reality. We build scalable, secure, and modern platforms that evolve with your business.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 order-md-1 text-md-start">
+            <div class="tech-box shadow-sm p-4 rounded">
+              <h5 class="fw-bold mb-2">Automation & Custom Tools</h5>
+              <p>
+                We free your team from repetitive tasks through dashboards, tools, and automated workflows — to help you focus on what matters most.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Closing Message -->
+        <div class="row justify-content-center mt-5" data-aos="fade-up">
+          <div class="col-md-10">
+            <div class="tech-box shadow-sm p-4 rounded text-center">
+              <p class="mb-0">
+                At G-Fenix, every line of code is written with purpose. We build systems that think, adapt, and evolve — 
+                just like the people behind them.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<section id="how-we-work">
+  <div class="container px-3 px-md-4">
+    <section class="d-flex flex-column flex-md-row justify-content-center align-items-center full-center-section gap-4 text-center text-md-start">
+      <h1 class="blur-heading mb-3 mb-md-0" data-aos="fade-up">We Work</h1>
+      <img src="{% static 'images/aibraingif.gif' %}"
+       alt="AI Animation"
+       style="width: 200px; height: auto;"
+       class="img-fluid"
+       data-aos="fade-up">
+    </section>
+
+    <div class="row text-center mt-5">
+      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="p-4 rounded shadow" style="background-color: rgba(0,0,0,0.5); backdrop-filter: blur(4px);">
+          <div style="font-size: 40px;">🧠</div>
+          <h5 class="mt-3" style="color: #00ADB5;">Understand</h5>
+          <p class="text-white">We analyze your needs and define the best digital approach for your goals.</p>
+        </div>
+      </div>
+  
+      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="p-4 rounded shadow" style="background-color: rgba(0,0,0,0.5); backdrop-filter: blur(4px);">
+          <div style="font-size: 40px;">⚙️</div>
+          <h5 class="mt-3" style="color: #00ADB5;">Build</h5>
+          <p class="text-white">Our team designs and develops tailored solutions using cutting-edge technologies.</p>
+        </div>
+      </div>
+  
+      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="p-4 rounded shadow" style="background-color: rgba(0,0,0,0.5); backdrop-filter: blur(4px);">
+          <div style="font-size: 40px;">🚀</div>
+          <h5 class="mt-3" style="color: #00ADB5;">Launch</h5>
+          <p class="text-white">We deploy and deliver the final product, ready for real-world impact.</p>
+        </div>
+      </div>
+  
+      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="p-4 rounded shadow" style="background-color: rgba(0,0,0,0.5); backdrop-filter: blur(4px);">
+          <div style="font-size: 40px;">📈</div>
+          <h5 class="mt-3" style="color: #00ADB5;">Optimize</h5>
+          <p class="text-white">We monitor, analyze, and continuously improve performance and results.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="p-4 rounded shadow" style="background-color: rgba(0,0,0,0.5); backdrop-filter: blur(4px);">
+          <div style="font-size: 35px;">🔍</div>
+          <h5 class="mt-3" style="color: #00ADB5;">Discover</h5>
+          <p>We start by understanding your needs, goals, and challenges in depth.</p>
+        </div>
+      </div>
+  
+      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="p-4 rounded shadow" style="background-color: rgba(0,0,0,0.5); backdrop-filter: blur(4px);">
+          <div style="font-size: 35px;">🧪</div>
+          <h5 class="mt-3" style="color: #00ADB5;">Prototype</h5>
+          <p>We believe in fast, smart iterations — building early versions to learn faster.</p>
+        </div>
+      </div>
+  
+      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="p-4 rounded shadow" style="background-color: rgba(0,0,0,0.5); backdrop-filter: blur(4px);">
+          <div style="font-size: 35px;">🧩</div>
+          <h5 class="mt-3" style="color: #00ADB5;">Engineer</h5>
+          <p>We engineer robust digital tools using clean code and smart architecture.</p>
+        </div>
+      </div>
+  
+      <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="p-4 rounded shadow" style="background-color: rgba(0,0,0,0.5); backdrop-filter: blur(4px);">
+          <div style="font-size: 35px;">🤝</div>
+          <h5 class="mt-3" style="color: #00ADB5;">Partner</h5>
+          <p>We don’t just deliver projects. We build relationships based on clarity, speed, and trust.</p>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 60px;" data-aos="fade-left">
+        <p style="font-size: 35px; margin-bottom: 16px; color: white; font-weight: 600;">
+          Want to work with US?
+        </p>
+        <a href="/contact-us/" style="
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #00ADB5;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+          " onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#00ADB5'">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<section id="blog-section">
+  <div class="container px-3 px-md-4">
+    <section class="d-flex justify-content-center align-items-center full-center-section">
+      <h1 class="blur-heading" data-aos="fade-up">📰 Data - Software Blogs 📰</h1>
+    </section>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
+      <div class="col" data-aos="fade-up">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/openai.jpg' %}" class="card-img-top" alt="AI Article">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">
+              <a href="https://cloud.google.com/learn/what-is-artificial-intelligence" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+                What Is Artificial Intelligence?
+              </a>
+            </h5>
+            <p class="card-text text-white">Explore the fundamentals of AI and its growing role in our lives and industries.</p>
+            <a href="https://cloud.google.com/learn/what-is-artificial-intelligence" class="btn btn-outline-info mt-auto" target="_blank" rel="noopener">Go to Website</a>
+          </div>
+        </div>
+      </div>
+            
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/pythonweb.jpg' %}" class="card-img-top" alt="Python Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Python for Automation</h5>
+            <p class="card-text text-white">Learn how Python simplifies tasks and accelerates workflows through scripting.</p>
+            <a href="https://www.python.org/doc/essays/blurb/" class="btn btn-outline-info mt-auto">Go to Website</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/microsoft.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Microsoft Azure AI Blog</h5>
+            <p class="card-text text-white">Insights, case studies and news from Azure’s AI division.</p>
+            <a href="https://techcommunity.microsoft.com/t5/azure-ai/bg-p/AzureAI" class="btn btn-outline-info mt-auto">Go to Website</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/data2.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Towards Data Science</h5>
+            <p class="card-text text-white">Stories and insights from data science practitioners</p>
+            <a href="https://towardsdatascience.com" class="btn btn-outline-info mt-auto">Go to Website</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/aiweb.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">DEV Community</h5>
+            <p class="card-text text-white">Share and discover projects, code and dev experiences</p>
+            <a href="https://dev.to/" class="btn btn-outline-info mt-auto">Go to Website</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/chatgbt.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">OpenAI Blog</h5>
+            <p class="card-text text-white">Cutting-edge advancements in artificial intelligence</p>
+            <a href="https://openai.com/blog" class="btn btn-outline-info mt-auto">Go to Website</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/google.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Google Cloud AI - Data Blog</h5>
+            <p class="card-text text-white">Technical deep dives and real-world use cases from Google Cloud</p>
+            <a href="https://cloud.google.com/blog" class="btn btn-outline-info mt-auto">Go to Website</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/codesss.jpg' %}" class="card-img-top" alt="Microsoft Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Real Python: Learn by Doing</h5>
+            <p class="card-text text-white">In-depth Python tutorials on everything from automation to web development</p>
+            <a href="https://realpython.com/" class="btn btn-outline-info mt-auto">Go to Website</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-100 shadow-sm bg-dark text-white">
+          <img src="{% static 'images/dataanalweb.jpg' %}" class="card-img-top" alt="ERP Blog">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title" style="color: #00ADB5;">Business Analysis</h5>
+            <p class="card-text text-white">Discover how we connected ERP data with Power BI dashboards for smarter decisions</p>
+            <a href="https://www.investopedia.com/terms/d/data-analytics.asp" class="btn btn-outline-info mt-auto">Go to Website</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+  
+<section id="technologies">
+  <section class="d-flex justify-content-center align-items-center full-center-section">
+    <h2 class="blur-heading" data-aos="fade-up">Technologies We Use</h2>
+  </section>
+  <div class="tech-logos">
+    <img src="{% static 'tech_logos/vscode.svg' %}" alt="VsCode" class="tech-icon" data-aos="zoom-in" data-aos-delay="0"/>
+    <img src="{% static 'tech_logos/python-svgrepo-com.svg' %}" alt="Python" class="tech-icon" data-aos="zoom-in" data-aos-delay="100"/>
+    <img src="{% static 'tech_logos/django-svgrepo-com.svg' %}" alt="Django" class="tech-icon" data-aos="zoom-in" data-aos-delay="200"/>
+    <img src="{% static 'tech_logos/html-5-svgrepo-com.svg' %}" alt="HTML5" class="tech-icon" data-aos="zoom-in" data-aos-delay="300"/>
+    <img src="{% static 'tech_logos/css-3-svgrepo-com.svg' %}" alt="CSS3" class="tech-icon" data-aos="zoom-in" data-aos-delay="400"/>
+    <img src="{% static 'tech_logos/javascript-svgrepo-com.svg' %}" alt="JavaScript" class="tech-icon" data-aos="zoom-in" data-aos-delay="500"/>
+    <img src="{% static 'tech_logos/github.svg' %}" alt="GitHub" class="tech-icon" data-aos="zoom-in" data-aos-delay="600"/>
+    <img src="{% static 'tech_logos/database-svgrepo-com.svg' %}" alt="DataBase" class="tech-icon" data-aos="zoom-in" data-aos-delay="700"/>
+    <img src="{% static 'tech_logos/sqlite-svgrepo-com.svg' %}" alt="SQlite" class="tech-icon" data-aos="zoom-in" data-aos-delay="800"/>
+    <img src="{% static 'tech_logos/render.svg' %}" alt="Render" class="tech-icon" data-aos="zoom-in" data-aos-delay="900"/>
+    <img src="{% static 'tech_logos/pandas-svgrepo-com.svg' %}" alt="Pandas" class="tech-icon" data-aos="zoom-in" data-aos-delay="1000"/>
+    <img src="{% static 'tech_logos/numpy-svgrepo-com.svg' %}" alt="numpy" class="tech-icon" data-aos="zoom-in" data-aos-delay="1100"/>
+    <img src="{% static 'tech_logos/postman-icon-svgrepo-com.svg' %}" alt="postman" class="tech-icon" data-aos="zoom-in" data-aos-delay="1200"/>
+    <img src="{% static 'tech_logos/fastapi-svgrepo-com.svg' %}" alt="fast-api" class="tech-icon" data-aos="zoom-in" data-aos-delay="1300"/>
+    <img src="{% static 'tech_logos/microsoft-sql-server-logo-svgrepo-com.svg' %}" alt="msql" class="tech-icon" data-aos="zoom-in" data-aos-delay="1400"/>
+    <img src="{% static 'tech_logos/statistics-svgrepo-com.svg' %}" alt="stastic" class="tech-icon" data-aos="zoom-in" data-aos-delay="1500"/>
+    <img src="{% static 'tech_logos/openai-svgrepo-com.svg' %}" alt="openai" class="tech-icon" data-aos="zoom-in" data-aos-delay="1600"/>
+  </div>
+</section>
+
+<div class="container text-center my-5" data-aos="zoom-in">
+  <img src="{% static 'images/logoweb.png' %}" alt="G-FENIX Logo" 
+      style="width: 160px; max-width: 100%; height: auto;">
+</div>
+
+
+{% endblock icerik %}

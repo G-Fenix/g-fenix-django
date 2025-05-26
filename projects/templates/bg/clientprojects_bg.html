@@ -1,0 +1,256 @@
+{% extends "layout_bg.html" %}
+{% load static %}
+
+{% block title %}G-Fenix | Клиентски проекти{% endblock %}
+
+{% block imera %}
+
+
+<div class="row">
+  <div class="col-12">
+    <div style="height: 100px;"></div> <!-- 50px boşluk -->
+  </div>
+</div>
+
+
+<div id="neYapiyoruzCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
+  <div class="carousel-inner">
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2 class="fw-bold">Анализ на Данни</h2>
+            <p>Вашите бизнес данни всъщност са златна мина. С персонализирани решения чрез SQL и Python анализираме клиентите, продажбите и ефективността на съдържанието. Вземайте информирани решения и спестете време и средства.</p>
+          </div>
+          <div class="col-md-6">
+            <img src="{% static 'images/crsdata.png' %}" loading="lazy" class="img-fluid rounded shadow" alt="Web Geliştirme">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2 class="fw-bold">Визуализация на Данни</h2>
+            <p>Не позволявайте сложните данни да ви плашат. С инструменти като Power BI и Plotly преобразуваме данните ви в ясни графики и табла. Подготвяме разбираеми презентации за вашите екипи и ръководители.</p>
+          </div>
+          <div class="col-md-6">
+            <img src="{% static 'images/crsbi.png' %}" loading="lazy" class="img-fluid rounded shadow" alt="Python Geliştirme">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="carousel-item">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2 class="fw-bold">AI Бот за Автоматични Отговори</h2>
+            <p>Създаваме AI ботове, които отговарят 24/7 на съобщения в WhatsApp, Instagram или вашия уебсайт. Подобрете обслужването на клиентите и облекчете екипа си. Поддържа всички езици!</p>
+          </div>
+          <div class="col-md-6">
+            <img src="{% static 'images/crsaibot.png' %}" loading="lazy" class="img-fluid rounded shadow" alt="Yapay Zekâ">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="carousel-item">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2 class="fw-bold">Модерни Уеб Сайтове</h2>
+            <p>Създаваме модерни, бързи и мобилно адаптивни уеб сайтове, които издигат вашата марка онлайн. От персонализирани панели до блогове и автоматизации — ние създаваме решения според вашите нужди.</p>
+          </div>
+          <div class="col-md-6">
+            <img src="{% static 'images/crsweb.png' %}" loading="lazy" class="img-fluid rounded shadow" alt="Kullanıcı Durumları">
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!-- Slide 6 -->
+    <div class="carousel-item active">
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h2 class="fw-bold">Python Скриптове за Социални Мрежи</h2>
+            <p>С Python можете да автоматизирате съобщения, харесвания, коментари и планирани публикации в LinkedIn и Instagram. Ние предоставяме готови скриптове, които ви пестят време и усилия.</p>
+          </div>
+          <div class="col-md-6">
+            <img src="{% static 'images/crssclmdy.png' %}" loading="lazy" class="img-fluid rounded shadow" alt="Veri Analizi">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Carousel Navigation Buttons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#neYapiyoruzCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#neYapiyoruzCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+
+<section class="w-100 py-5" style="background-color: none;">
+  <div class="d-flex justify-content-center align-items-center" data-aos="fade-up">
+    <img src="{% static 'images/catalog.png' %}" 
+         alt="Vurgulu Görsel" 
+         class="img-fluid"
+         style="max-width: 90vw; height: auto; border-radius: 12px;">
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<section class="py-5">
+  <div class="container-fluid" style="padding: 0 150px;">
+    <section class="d-flex justify-content-center align-items-center full-center-section">
+      <h2 class="blur-heading" data-aos="fade-up">Какво Предлагаме?</h2>
+    </section>
+
+    <div class="row">
+      <div class="col-12">
+        <div style="height: 100px;"></div> <!-- 50px boşluk -->
+      </div>
+    </div>
+
+    <!-- 1. Satır - Yazı Solda -->
+    <div class="row align-items-center mb-5" data-aos="fade-right">
+      <div class="col-md-6">
+        <div class="glass-card">
+          <h2 class="mb-3">Вземайте Умни Решения с Анализ на Данни</h2>
+          <p>Всеки бизнес генерира стотици данни ежедневно – поведение на клиенти, продажби, трафик към сайта, социални взаимодействия... Ние почистваме, комбинираме и преобразуваме тази информация в полезни прозрения.
+            С персонализирани решения чрез SQL и Python откриваме тенденции, успешни кампании и причини за загуба на клиенти.
+            Така разчитате на данни, а не на догадки, и печелите предимство.</p>
+        </div>
+      </div>
+      <div class="col-md-6 d-none d-md-flex justify-content-center">
+        <img src="{% static 'images/crsdata.png' %}" alt="Veri Analizi" class="img-fluid rounded">
+      </div>
+    </div>
+
+    <hr class="my-5" style="border-color: #ccc; opacity: 0.2;">
+
+
+    <!-- 2. Satır - Yazı Sağda -->
+    <div class="row align-items-center flex-md-row-reverse mb-5" data-aos="fade-left">
+      <div class="col-md-6">
+        <div class="glass-card">
+          <h2 class="mb-3">Правим Данните Лесни за Разбиране чрез Визуализации</h2>
+          <p>Данните са полезни, само ако са разбираеми. Използваме Power BI, Plotly и Looker Studio, за да ги преобразим в ясни табла и графики.
+            От ефективност на съдържанието до клиентски сегменти — визуализациите ви помагат да вземате по-бързи и точни решения.</p>
+        </div>
+      </div>
+      <div class="col-md-6 d-none d-md-flex justify-content-center">
+        <img src="{% static 'images/crsbi.png' %}" alt="Veri Görselleştirme" class="img-fluid rounded">
+      </div>
+    </div>
+
+    <hr class="my-5" style="border-color: #ccc; opacity: 0.2;">
+
+
+    <!-- 3. Satır - Yazı Solda -->
+    <div class="row align-items-center mb-5" data-aos="fade-right">
+      <div class="col-md-6">
+        <div class="glass-card">
+          <h2 class="mb-3">Автоматизирайте Социалните Мрежи с Python</h2>
+          <p>Ръчното публикуване, коментиране и следене на ангажираност отнема време. С нашите готови Python скриптове можете да автоматизирате публикации, съобщения и взаимодействия в Instagram и LinkedIn. Пестете време и увеличете ефективността си чрез автоматизация.</p>
+        </div>
+      </div>
+      <div class="col-md-6 d-none d-md-flex justify-content-center">
+        <img src="{% static 'images/crssclmdy.png' %}" alt="Python Sosyal Medya" class="img-fluid rounded">
+      </div>
+    </div>
+
+    <hr class="my-5" style="border-color: #ccc; opacity: 0.2;">
+
+
+    <!-- 4. Satır - Yazı Sağda -->
+    <div class="row align-items-center flex-md-row-reverse mb-5" data-aos="fade-left">
+      <div class="col-md-6">
+        <div class="glass-card">
+          <h2 class="mb-3">AI Системи за Автоматични Съобщения</h2>
+          <p>Нашите интелигентни чатботове отговарят веднага на съобщения в Instagram, WhatsApp или вашия сайт — 24/7, на всеки език.
+            Те обработват често задавани въпроси, резервации или запитвания и облекчават работата на екипа ви.</p>
+        </div>
+      </div>
+      <div class="col-md-6 d-none d-md-flex justify-content-center">
+        <img src="{% static 'images/crsaibot.png' %}" alt="AI Chatbot" class="img-fluid rounded">
+      </div>
+    </div>
+
+    <hr class="my-5" style="border-color: #ccc; opacity: 0.2;">
+
+
+    <!-- 5. Satır - Yazı Solda -->
+    <div class="row align-items-center mb-5" data-aos="fade-right">
+      <div class="col-md-6">
+        <div class="glass-card">
+          <h2 class="mb-3">Модерни Уеб Сайтове, Подходящи за Вашия Бизнес</h2>
+          <p>Изграждаме бързи и мобилно адаптивни сайтове с Django, HTML5, CSS и JavaScript. От блогове и портфолиа до бизнес страници с автоматизация — всичко е ефективно и естетично.</p>
+        </div>
+      </div>
+      <div class="col-md-6 d-none d-md-flex justify-content-center">
+        <img src="{% static 'images/crsweb.png' %}" alt="Web Sitesi" class="img-fluid rounded">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div style="text-align: center; margin-top: 60px;" data-aos="fade-left">
+  <p style="font-size: 35px; margin-bottom: 16px; color: white; font-weight: 600;">
+    Искате ли да Работим Заедно?
+  </p>
+  <a href="/bg/kontakt" style="
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #00ADB5;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    " onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#00ADB5'">
+    Свържете се с нас
+  </a>
+</div>
+
+  <section id="technologies">
+    <section class="d-flex justify-content-center align-items-center full-center-section">
+      <h2 class="blur-heading" data-aos="fade-up">Технологиите, Които Използваме</h2>
+    </section>
+    <div class="tech-logos">
+      <img src="{% static 'tech_logos/vscode.svg' %}" alt="VsCode" class="tech-icon" data-aos="zoom-in" data-aos-delay="0"/>
+      <img src="{% static 'tech_logos/python-svgrepo-com.svg' %}" alt="Python" class="tech-icon" data-aos="zoom-in" data-aos-delay="100"/>
+      <img src="{% static 'tech_logos/django-svgrepo-com.svg' %}" alt="Django" class="tech-icon" data-aos="zoom-in" data-aos-delay="200"/>
+      <img src="{% static 'tech_logos/html-5-svgrepo-com.svg' %}" alt="HTML5" class="tech-icon" data-aos="zoom-in" data-aos-delay="300"/>
+      <img src="{% static 'tech_logos/css-3-svgrepo-com.svg' %}" alt="CSS3" class="tech-icon" data-aos="zoom-in" data-aos-delay="400"/>
+      <img src="{% static 'tech_logos/javascript-svgrepo-com.svg' %}" alt="JavaScript" class="tech-icon" data-aos="zoom-in" data-aos-delay="500"/>
+      <img src="{% static 'tech_logos/github.svg' %}" alt="GitHub" class="tech-icon" data-aos="zoom-in" data-aos-delay="600"/>
+      <img src="{% static 'tech_logos/database-svgrepo-com.svg' %}" alt="DataBase" class="tech-icon" data-aos="zoom-in" data-aos-delay="700"/>
+      <img src="{% static 'tech_logos/sqlite-svgrepo-com.svg' %}" alt="SQlite" class="tech-icon" data-aos="zoom-in" data-aos-delay="800"/>
+      <img src="{% static 'tech_logos/render.svg' %}" alt="Render" class="tech-icon" data-aos="zoom-in" data-aos-delay="900"/>
+    </div>
+  </section>
+
+
+
+
+<div class="container text-center my-5" data-aos="zoom-in">
+  <img src="{% static 'images/logoweb.png' %}" alt="G-FENIX Logo" 
+      style="width: 160px; max-width: 100%; height: auto;">
+</div>
+
+
+{% endblock imera %}

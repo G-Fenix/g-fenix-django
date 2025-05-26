@@ -1,0 +1,38 @@
+{% extends "layout_bg.html" %}
+{% load static %}
+
+{% block title %}G-Fenix | Продукти{% endblock %}
+
+{% block imera %}
+
+
+<div class="row">
+  <div class="col-12">
+    <div style="height: 100px;"></div> <!-- 50px boşluk -->
+  </div>
+</div>
+
+<section class="py-5" style="background-color: none;">
+  <div class="container-fluid">
+    <div class="row mb-5 justify-content-center">
+      <div class="col-md-10 text-center">
+        <h1 class="text-danger mt-3" data-aos="fade-up">Тази страница е в процес на разработка.</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero-video">
+  <video autoplay muted loop id="bg-video">
+    <source src="{% static 'videos/yazmak.mp4' %}" type="video/mp4">
+  </video>
+</section>
+
+<div class="container text-center my-5" data-aos="zoom-in">
+  <img src="{% static 'images/logoweb.png' %}" alt="G-FENIX Logo" 
+      style="width: 160px; max-width: 100%; height: auto;">
+</div>
+
+
+{% endblock imera %}

@@ -1,0 +1,127 @@
+{% extends "layout_tr.html" %}
+{% load static %}
+
+{% block title %}G-Fenix | Python Geliştirme{% endblock %}
+
+{% block content %}
+
+
+<div class="row">
+  <div class="col-12">
+    <div style="height: 100px;"></div> <!-- 50px boşluk -->
+  </div>
+</div>
+
+<section class="usecases-section" data-aos="fade-up">
+  <h1 class="section-title">Python ile Geleceğin Kapılarını Arala</h1>
+
+  <div class="row">
+    <div class="col-12">
+      <div style="height: 100px;"></div> <!-- 50px boşluk -->
+    </div>
+  </div>
+
+  <div class="usecases-grid">
+
+    <!-- Card 1 -->
+    <div class="usecase-card">
+      <img src="{% static 'images/selenium.png' %}" alt="Report Automation">
+      <h2>Selenium ile Web Otomasyonu</h2>
+      <p>
+        Kullanıcı gibi web siteleriyle etkileşime geçebilen otomasyonlar kurabilirsiniz. Form doldurma, tıklama, giriş yapma, hatta sosyal medya gönderisi paylaşma gibi işlemleri insan eli değmeden gerçekleştirmek mümkün. Özellikle zaman alan rutin görevleri devre dışı bırakır.
+      </p>
+    </div>
+
+    <div class="usecase-card">
+      <img src="{% static 'images/pandas.jpg' %}" alt="Report Automation">
+      <h2>Pandas ile Gelişmiş Veri Analizi</h2>
+      <p>
+        Excel'in ötesine geçin: Pandas ile büyük veri setlerini hızlıca filtreleyebilir, gruplayabilir, analiz edebilir ve görselleştirebilirsiniz. Raporlarınız daha güvenilir, süreçleriniz daha hızlı olur. İş zekası kararlarını destekleyen temel yapı taşlarından biridir.
+      </p>
+    </div>
+
+    <div class="usecase-card">
+      <img src="{% static 'images/api.png' %}" alt="Report Automation">
+      <h2>API Entegrasyonu ile Veri Alışverişi</h2>
+      <p>
+        Python, farklı sistemler arasında köprü kurar. Örneğin bir e-ticaret sitesinden stok verisini çekip Google Sheet’e aktarabilir veya LinkedIn profillerinden bilgi alıp otomatik rapor oluşturabilirsiniz. Otomatik veri akışı sayesinde manuel iş yükü azalır.
+      </p>
+    </div>
+
+    <div class="usecase-card">
+      <img src="{% static 'images/jinja.png' %}" alt="Report Automation">
+      <h2>Jinja ile Dinamik Raporlama ve Şablonlama</h2>
+      <p>
+        Hazır veriyle özelleştirilmiş HTML veya PDF raporlar üretmek mi istiyorsunuz? Jinja, şablon motoru olarak Python’un gücünü tasarımla birleştirir. Her müşteri veya proje için otomatik olarak profesyonel belgeler üretebilirsiniz.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="usecase-card">
+      <img src="{% static 'images/twowebdevelop.jpg' %}" alt="Web Development">
+      <h2>Web Scraping ile Bilgi Toplama</h2>
+      <p>
+        İnternetteki açık verileri otomatik olarak toplayabilirsiniz. Örneğin rakip fiyatları, iş ilanları, hava durumu, haberler ya da ürün yorumları gibi içerikler günlük olarak sisteminize akabilir. Bu sayede güncel kalır ve rekabette öne geçersiniz.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="usecase-card">
+      <img src="{% static 'images/aidata.png' %}" alt="AI Analysis">
+      <h2>Otomasyon Botları ile Günlük İşlerinizi Devredin</h2>
+      <p>
+        Dosya adlandırma, mail gönderme, klasör temizliği, verileri kontrol etme gibi rutin işleri Python botlarına bırakın. Bu otomasyonlar, zamandan tasarruf sağlar ve hata riskini ortadan kaldırır. Siz de yaratıcı işlere odaklanabilirsiniz.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<div class="row align-items-center flex-md-row-reverse" data-aos="fade-left">
+        <!-- Yazı kısmı -->
+  <div class="col-md-6">
+    <div class="glass-card">
+      <h2 class="mb-3">Django ile Modern Web Siteleri Geliştirme</h2>
+      <p>Python’un en güçlü web framework’lerinden biri olan Django ile güvenli, hızlı ve ölçeklenebilir web siteleri inşa ediyoruz.</p>
+      <p>Panel destekli yapılar, kullanıcı giriş sistemleri, içerik yönetim araçları ve API ile entegre çalışan platformlar geliştirerek işletmelere dijital kimlik kazandırıyoruz.</p>
+      <p>Sadece estetik değil, fonksiyonel çözümler de sunuyoruz.</p>
+    </div>
+  </div>
+
+  <!-- Teknoloji ikonları kısmı -->
+  <div class="col-md-6 d-none d-md-flex justify-content-center align-items-center" style="height: 100%;">
+    <div class="tech-logos-container">
+      <img src="{% static 'tech_logos/vscode.svg' %}" alt="VsCode" class="tech-icon" data-aos="zoom-in" data-aos-delay="0"/>
+      <img src="{% static 'tech_logos/python-svgrepo-com.svg' %}" alt="Python" class="tech-icon" data-aos="zoom-in" data-aos-delay="100"/>
+      <img src="{% static 'tech_logos/django-svgrepo-com.svg' %}" alt="Django" class="tech-icon" data-aos="zoom-in" data-aos-delay="200"/>
+      <img src="{% static 'tech_logos/html-5-svgrepo-com.svg' %}" alt="HTML5" class="tech-icon" data-aos="zoom-in" data-aos-delay="300"/>
+      <img src="{% static 'tech_logos/css-3-svgrepo-com.svg' %}" alt="CSS3" class="tech-icon" data-aos="zoom-in" data-aos-delay="400"/>
+      <img src="{% static 'tech_logos/javascript-svgrepo-com.svg' %}" alt="JavaScript" class="tech-icon" data-aos="zoom-in" data-aos-delay="500"/>
+      <img src="{% static 'tech_logos/github.svg' %}" alt="GitHub" class="tech-icon" data-aos="zoom-in" data-aos-delay="600"/>
+      <img src="{% static 'tech_logos/database-svgrepo-com.svg' %}" alt="Database" class="tech-icon" data-aos="zoom-in" data-aos-delay="700"/>
+      <img src="{% static 'tech_logos/sqlite-svgrepo-com.svg' %}" alt="SQLite" class="tech-icon" data-aos="zoom-in" data-aos-delay="800"/>
+      <img src="{% static 'tech_logos/render.svg' %}" alt="Render" class="tech-icon" data-aos="zoom-in" data-aos-delay="900"/>
+      <img src="{% static 'tech_logos/pandas-svgrepo-com.svg' %}" alt="Pandas" class="tech-icon" data-aos="zoom-in" data-aos-delay="1000"/>
+      <img src="{% static 'tech_logos/fastapi-svgrepo-com.svg' %}" alt="fast-api" class="tech-icon" data-aos="zoom-in" data-aos-delay="1100"/>
+      <img src="{% static 'tech_logos/openai-svgrepo-com.svg' %}" alt="openai" class="tech-icon" data-aos="zoom-in" data-aos-delay="1200"/>
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+
+<div class="container text-center mt-5" data-aos="zoom-in-up">
+  <h4 class="text-white mb-4">Teknolojiyi esirimiz yapalım!</h4>
+  <p class="text-white-50 mb-4">Sizin işin için nasıl bir çözüm üretiriz?</p>
+  <h2 class="mb-4 text-2xl font-semibold">İş birliği için</h2>
+  <a href="/tr/bize-ulasin" class="btn btn-outline-info mt-auto text-white">Bizimle İletişime Geç</a>
+</div>
+
+
+<div class="container text-center my-5" data-aos="zoom-in">
+  <img src="{% static 'images/logoweb.png' %}" alt="G-FENIX Logo" 
+    style="width: 160px; max-width: 100%; height: auto;">
+</div>
+
+{% endblock content %}

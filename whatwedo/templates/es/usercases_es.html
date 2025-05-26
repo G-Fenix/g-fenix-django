@@ -1,0 +1,113 @@
+{% extends "layout_eses.html" %}
+{% load static %}
+
+{% block title %}G-Fenix | G-Fenix | Casos de Usuario{% endblock %}
+
+{% block zaman %}
+
+
+<div class="row">
+    <div class="col-12">
+      <div style="height: 100px;"></div> <!-- 50px boşluk -->
+    </div>
+  </div>
+
+<section class="usecases-section" data-aos="fade-up">
+  <h1 class="section-title">Cómo Creamos un Impacto Real</h1>
+
+  <div class="row">
+    <div class="col-12">
+      <div style="height: 100px;"></div> <!-- 50px boşluk -->
+    </div>
+  </div>
+
+  <div class="usecases-grid">
+
+    <!-- Card 1 -->
+    <div class="usecase-card">
+      <img src="{% static 'images/pythonbu.jpg' %}" alt="Report Automation">
+      <h2>Informes Automatizados para Ganar Tiempo</h2>
+      <p>
+        Nuestro cliente pasaba 6 horas a la semana haciendo informes en Excel manualmente. Con un script en Python, automatizamos todo el proceso. Ahora se completa en solo 1 minuto.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="usecase-card">
+      <img src="{% static 'images/twowebdevelop.jpg' %}" alt="Web Development">
+      <h2>Soluciones Web para Empresas</h2>
+      <p>
+        Un cliente que solo tenía visibilidad en redes sociales ahora tiene un sitio web moderno. Resultado: visibilidad en Google + 40% más clientes.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="usecase-card">
+      <img src="{% static 'images/aidata.png' %}" alt="AI Analysis">
+      <h2>Análisis de Opiniones de Clientes con Inteligencia Artificial</h2>
+      <p>
+        Utilizamos análisis de texto basado en IA para procesar miles de comentarios. Ahora se detecta rápidamente la retroalimentación negativa y mejoró la satisfacción del cliente.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="stats-section" data-aos="fade-right">
+  <div class="stat-box">
+    <h2>+20</h2>
+    <p>Proyectos de Automatización</p>
+  </div>
+  <div class="stat-box">
+    <h2>+95%</h2>
+    <p>Satisfacción del Cliente</p>
+  </div>
+  <div class="stat-box">
+    <h2>+300</h2>
+    <p>Horas Ahorradas</p>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<section class="faq-zigzag-section">
+  <h2 class="faq-title" data-aos="fade-up">Preguntas Frecuentes</h2>
+
+  <div class="faq-zigzag">
+    <div class="faq-item left" data-aos="fade-right">
+      <h3>¿Necesito saber Python para tener un sistema creado?</h3>
+      <p>Sí. Recibimos los datos de tu parte y automatizamos todo el proceso. Recibirás el informe listo para usar.</p>
+    </div>
+
+    <div class="faq-item right" data-aos="fade-left">
+      <h3>¿Puedo actualizar el contenido después de que se entregue el sitio web?</h3>
+      <p>Sí. Gracias a un panel o sistema CMS, puedes añadir contenido cuando quieras.</p>
+    </div>
+
+    <div class="faq-item left" data-aos="fade-right">
+      <h3>¿Ofrecen capacitación?</h3>
+      <p>Sí. Ofrecemos capacitaciones tanto en línea como presenciales adaptadas a necesidades individuales o corporativas.</p>
+    </div>
+
+    <div class="faq-item right" data-aos="fade-left">
+      <h3>¿La inteligencia artificial es solo para grandes empresas?</h3>
+      <p>No. También ofrecemos soluciones de inteligencia artificial inteligentes y accesibles para pequeñas empresas e individuos.</p>
+    </div>
+  </div>
+</section>
+
+<div class="container text-center mt-5" data-aos="zoom-in-up">
+  <h4 class="text-white mb-4">Creemos que la tecnología debe servir a la humanidad, no al revés.</h4>
+  <p class="text-white-50 mb-4">Nuestra misión no es reemplazar a las personas, sino empoderarlas. En G-FENIX, imaginamos un futuro donde los sistemas inteligentes potencian lo mejor de nosotros.</p>
+  <h2 class="mb-4 text-2xl font-semibold">¿Qué tipo de solución podemos crear para tu negocio?</h2>
+  <a href="/es/contacto" class="btn btn-outline-info mt-auto text-white">Contáctanos</a>
+</div>
+
+
+<div class="container text-center my-5" data-aos="zoom-in">
+  <img src="{% static 'images/logoweb.png' %}" alt="G-FENIX Logo" 
+    style="width: 160px; max-width: 100%; height: auto;">
+</div>
+
+
+{% endblock zaman %}
