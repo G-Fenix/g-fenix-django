@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-=_ip)#$a3b^8umhqk@)-n74w$0s_=xj791l%57yh(3rz(=wphz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['g-fenix.onrender.com', 'www.g-fenix.com', 'g-fenix.com']
 
 
 # Application definition
