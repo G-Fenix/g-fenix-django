@@ -1,38 +1,23 @@
-html, body {
-  height: auto;
-  min-height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  margin: 0;
-  padding: 0;
-}
-
 /* Genel Gövde Stili */
 body {
-  position: relative;
-  background-image: url('../images/dara.png'); /* senin genel resmin */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-color: #0e0e0e; /* fallback */
-  color: #e0e0e0;
-  font-family: 'Poppins', sans-serif;
-  padding-top: 20px;
-}
-
-/* Mobil cihazlar için düzeltme */
-@media (max-width: 768px) {
-  body {
-    background-image: url('../images/dara.png');
-    background-attachment: scroll !important;
-    background-size: cover; /* ya da contain */
-    background-position: top center;
+    background-image: url('../images/dara.png'); /* senin genel resmin */
+    background-size: cover;
     background-repeat: no-repeat;
-    background-color: #0e0e0e;
-  }
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: #0e0e0e; /* fallback */
+    color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0px; 
+    padding-top: 20px;
+    overflow-x: hidden;
 }
 
+
+html {
+  overflow-x: hidden;
+}
 
 
 .ai-image {
