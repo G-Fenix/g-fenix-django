@@ -17,6 +17,7 @@ body {
 /* Mobil cihazlar için düzeltme */
 @media (max-width: 768px) {
   body {
+    background-image: url('../images/dara.png'); /* senin genel resmin */
     background-attachment: scroll;
     background-size: contain; /* veya '100% auto' da olabilir */
     background-position: top center;
