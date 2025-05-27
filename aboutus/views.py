@@ -37,16 +37,16 @@ def ourmissionbg(request):
 def misyonumuz(request):
     return render(request, 'tr/ourmission_tr.html')
 
-def ourteam(request):
+def aourteam(request):
     return render(request, 'en/ourteam_en.html')
 
 def ekibimiz(request):
     return render(request, 'tr/ourteam_tr.html')
 
-def ourteames(request):
+def bourteames(request):
     return render(request, 'es/ourteam_es.html')
 
-def ourteambg(request):
+def courteambg(request):
     return render(request, 'bg/ourteam_bg.html')
 
 def socialmedia(request):
