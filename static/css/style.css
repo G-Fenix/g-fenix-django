@@ -22,11 +22,14 @@ body {
 @media (max-width: 768px) {
   body {
     background-image: url('../images/dara.png');
-    background-attachment: scroll;
-    background-size: contain; /* veya '100% auto' */
+    background-attachment: scroll !important;
+    background-size: cover; /* ya da contain */
     background-position: top center;
+    background-repeat: no-repeat;
+    background-color: #0e0e0e;
   }
 }
+
 
 
 .ai-image {
