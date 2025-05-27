@@ -6,6 +6,6 @@ urlpatterns = [
     path('hakkimizda', views.hakkimizda),
     path('vizyonumuz', views.vizyonumuz),
     path('misyonumuz', views.misyonumuz),
-    path('ekibimiz', views.ekibimiz),
+    path('ekibimiz', views.turkia),
     path('sosyal-medya', views.sosyalmedya),
 ]
