@@ -5,6 +5,39 @@
 
 {% block imera %}
 
-<h1 style="color: red;">TEST EKIBIMIZ</h1>
+<div class="container">
+    <div class="col" data-aos="fade-up">
+        <h1>Нашият екип</h1>
+    </div>
+</div>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center g-5">
+
+            <!-- Jessica -->
+            <div class="col-md-4 text-center" data-aos="fade-up">
+                <img src="{% static 'images/jessicaa.jpeg' %}" class="img-fluid rounded-circle shadow" alt="Jessica" style="width: 200px; height: 200px; object-fit: cover;">
+                <h5 class="mt-3 text-white">Jessica Fenix</h5>
+                <p class="text-white">( Експерт по данни и изкуствен интелект )</p>
+                <a href="https://www.linkedin.com/in/jessicavillarroel/" target="_blank" class="btn btn-outline-light btn-sm mt-2">LinkedIn профил</a>
+            </div>
+
+            <!-- Cengizhan -->
+            <div class="col-md-4 text-center" data-aos="fade-up">
+                <img src="{% static 'images/CGLG5321.jpg' %}" class="img-fluid rounded-circle shadow" alt="Cengizhan" style="width: 200px; height: 200px; object-fit: cover;">
+                <h5 class="mt-3 text-white">Cengizhan Genç</h5>
+                <p class="text-white">( Разработчик на данни и уеб )</p>
+                <a href="https://www.linkedin.com/in/cengizhan-genc/" target="_blank" class="btn btn-outline-light btn-sm mt-2">LinkedIn профил</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="container text-center my-5" data-aos="zoom-in">
+    <img src="{% static 'images/logoweb.png' %}" alt="G-FENIX Logo" 
+        style="width: 160px; max-width: 100%; height: auto;">
+</div>
 
 {% endblock imera %}
