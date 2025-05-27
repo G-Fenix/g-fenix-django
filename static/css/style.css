@@ -1,12 +1,15 @@
 html, body {
-  height: 100%;
+  height: auto;
+  min-height: 100vh;
   overflow-x: hidden;
+  overflow-y: auto;
   margin: 0;
   padding: 0;
 }
 
 /* Genel Gövde Stili */
 body {
+  position: relative;
   background-image: url('../images/dara.png'); /* senin genel resmin */
   background-size: cover;
   background-repeat: no-repeat;
