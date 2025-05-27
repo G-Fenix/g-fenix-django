@@ -38,16 +38,16 @@ def misyonumuz(request):
     return render(request, 'tr/ourmission_tr.html')
 
 def ourteam(request):
-    return render(request, 'aus/enenenglish.html')
+    return render(request, 'en/ourteam.html')
 
 def turkia(request):
-    return render(request, 'aus/hakkimizda.html')
+    return render(request, 'tr/ourteam.html')
 
 def espanyole(request):
-    return render(request, 'aus/spaa.html')
+    return render(request, 'es/ourteam.html')
 
 def bulgaria(request):
-    return render(request, 'aus/bul.html')
+    return render(request, 'bg/ourteam.html')
 
 def socialmedia(request):
     return render(request, 'en/socialmedia_en.html')
