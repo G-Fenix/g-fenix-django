@@ -60,27 +60,3 @@ def sosyalmedyaes(request):
 
 def socialmediabg(request):
     return render(request, 'bg/socialmedia_bg.html')
-
-def jessica(request):
-    return render(request, 'en/jessica_en.html')
-
-def jessicaa(request):
-    return render(request, 'tr/jessica_tr.html')
-
-def jessicaaes(request):
-    return render(request, 'es/jessica_es.html')
-
-def jessicaabg(request):
-    return render(request, 'bg/jessica_bg.html')
-
-def cengizhan(request):
-    return render(request, 'en/cengizhan_en.html')
-
-def cengizhann(request):
-    return render(request, 'tr/cengizhan_tr.html')
-
-def cengizhannes(request):
-    return render(request, 'es/cengizhan_es.html')
-
-def cengizhannbg(request):
-    return render(request, 'bg/cengizhan_bg.html')

@@ -8,6 +8,4 @@ urlpatterns = [
     path('our-mission', views.ourmission),
     path('our-team', views.ourteam),
     path('social-media', views.socialmedia),
-    path('our-team/jessica/', views.jessica, name='jessica'),
-    path('our-team/cengizhan/', views.cengizhan, name='cengizhan'),
 ]

@@ -6,49 +6,38 @@
 {% block zaman %}
 
 <div class="container">
-        <div class="col" data-aos="fade-up">
-            <h1>Nuestro Equipo</h1>
-        </div>
+    <div class="col" data-aos="fade-up">
+        <h1>Nuestro Equipo</h1>
     </div>
+</div>
 
-    <section class="py-5">
-      <div class="container">
-        <div class="row justify-content-center g-5">
-          
-          <!-- Jessica -->
-          <div class="col-md-4 text-center" data-aos="fade-up">
-            <a href="{% url 'jessicaaes' %}" class="text-decoration-none">
-              <img src="{% static 'images/jessicaa.jpeg' %}" class="img-fluid rounded-circle shadow" alt="Jessica" style="width: 200px; height: 200px; object-fit: cover;">
-            </a>
-              <h5 class="mt-3">
-              <a href="{% url 'jessicaaes' %}" class="text-decoration-none text-white">Jessica Fenix</a>
-            </h5>
-            <p class="text-white">
-              <a href="{% url 'jessicaaes' %}" class="text-decoration-none text-white">( Especialista en Datos e Inteligencia Artificial )</a>
-            </p>
-          </div>
-    
-          <!-- Cengizhan -->
-          <div class="col-md-4 text-center" data-aos="fade-up">
-            <a href="{% url 'cengizhannes' %}" class="text-decoration-none">
-              <img src="{% static 'images/CGLG5321.jpg' %}" class="img-fluid rounded-circle shadow" alt="Cengizhan" style="width: 200px; height: 200px; object-fit: cover;">
-            </a>
-              <h5 class="mt-3">
-              <a href="{% url 'cengizhannes' %}" class="text-decoration-none text-white">Cengizhan Genç</a>
-            </h5>
-            <p class="text-white">
-              <a href="{% url 'cengizhannes' %}" class="text-decoration-none text-white">( Desarrollador de Datos y Web )</a>
-            </p>
-          </div>
-    
-        </div>
+<section class="py-5">
+  <div class="container">
+    <div class="row justify-content-center g-5">
+      
+      <!-- Jessica -->
+      <div class="col-md-4 text-center" data-aos="fade-up">
+        <img src="{% static 'images/jessicaa.jpeg' %}" class="img-fluid rounded-circle shadow" alt="Jessica" style="width: 200px; height: 200px; object-fit: cover;">
+        <h5 class="mt-3 text-white">Jessica Fenix</h5>
+        <p class="text-white">( Especialista en Datos e Inteligencia Artificial )</p>
+        <a href="https://www.linkedin.com/in/jessicavillarroel/" target="_blank" class="btn btn-outline-light btn-sm mt-2">Perfil en LinkedIn</a>
       </div>
-    </section>
 
-    <div class="container text-center my-5" data-aos="zoom-in">
-      <img src="{% static 'images/logoweb.png' %}" alt="G-FENIX Logo" 
-          style="width: 160px; max-width: 100%; height: auto;">
-     </div>
+      <!-- Cengizhan -->
+      <div class="col-md-4 text-center" data-aos="fade-up">
+        <img src="{% static 'images/CGLG5321.jpg' %}" class="img-fluid rounded-circle shadow" alt="Cengizhan" style="width: 200px; height: 200px; object-fit: cover;">
+        <h5 class="mt-3 text-white">Cengizhan Genç</h5>
+        <p class="text-white">( Desarrollador de Datos y Web )</p>
+        <a href="https://www.linkedin.com/in/cengizhan-genc/" target="_blank" class="btn btn-outline-light btn-sm mt-2">Perfil en LinkedIn</a>
+      </div>
 
+    </div>
+  </div>
+</section>
+
+<div class="container text-center my-5" data-aos="zoom-in">
+  <img src="{% static 'images/logoweb.png' %}" alt="G-FENIX Logo" 
+      style="width: 160px; max-width: 100%; height: auto;">
+</div>
 
 {% endblock zaman %}

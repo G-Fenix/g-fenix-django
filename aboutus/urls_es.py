@@ -8,6 +8,4 @@ urlpatterns = [
     path('nuestra-mision', views.ourmissiones),
     path('nuestro-equipo', views.ourteames),
     path('redes-sociales', views.sosyalmedyaes),
-    path('nuestro-equipo/jessica/', views.jessicaaes, name='jessicaaes'),
-    path('nuestro-equipo/cengizhan/', views.cengizhannes, name='cengizhannes'),
 ]
