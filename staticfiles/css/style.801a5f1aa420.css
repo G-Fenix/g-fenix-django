@@ -1131,3 +1131,21 @@ transform: scale(1.2);
 .section-divider {
   border-top: 2px solid #6c5ce7; /* Mor çizgi */
 }
+
+@media (max-width: 768px) {
+  #hero-section-image .container-fluid {
+    flex-direction: column !important;
+    text-align: center;
+    padding: 20px !important;
+  }
+
+  #hero-section-image h1 {
+    font-size: 1.5rem;
+  }
+
+  #hero-section-image img {
+    width: 70%;
+    height: auto;
+    margin-top: 15px;
+  }
+}
