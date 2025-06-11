@@ -16,77 +16,83 @@
   <div class="container-fluid position-relative">
 
     <!-- Masaüstü Görünüm -->
-    <div class="d-none d-lg-flex w-100 justify-content-between align-items-center position-relative">
+<div class="d-none d-lg-flex w-100 justify-content-between align-items-center position-relative">
 
-      <!-- Sol Menü -->
-      <ul class="navbar-nav flex-row align-items-center left-menu ms-3">
-        <!-- 🌐 Dil -->
-        <li class="nav-item dropdown me-3">
-          <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">🌐</a>
-          <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-            <li><a class="dropdown-item" href="/">🇬🇧 English</a></li>
-            <li><a class="dropdown-item" href="/tr/">🇹🇷 Türkçe</a></li>
-            <li><a class="dropdown-item" href="/es/">🇪🇸 Español</a></li>
-            <li><a class="dropdown-item" href="/bg/">🇧🇬 Български</a></li>
-          </ul>
-        </li>
-        <!-- Ne Yapıyoruz -->
-        <li class="nav-item dropdown me-3">
-          <a class="nav-link dropdown-toggle" href="#" id="whatwedoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ne Yapıyoruz</a>
-          <ul class="dropdown-menu" aria-labelledby="whatwedoDropdown">
-            <li><a class="dropdown-item" href="/tr/ne-yapiyoruz/veri-analiz">Veri Analizi</a></li>
-            <li><a class="dropdown-item" href="/tr/ne-yapiyoruz/web-gelistirme">Web Geliştirme</a></li>
-            <li><a class="dropdown-item" href="/tr/ne-yapiyoruz/yapay-zeka-uygulamalari">Yapay Zekâ Uygulamaları</a></li>
-            <li><a class="dropdown-item" href="/tr/ne-yapiyoruz/python-gelistirme">Python Geliştirme</a></li>
-            <li><a class="dropdown-item" href="/tr/ne-yapiyoruz/kullanici-durumlari">Kullanıcı Durumları</a></li>
-            <li><a class="dropdown-item" href="/tr/ne-yapiyoruz/egitim">Eğitim</a></li>
-          </ul>
-        </li>
-        <!-- Projeler -->
-        <li class="nav-item dropdown me-3">
-          <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projeler</a>
-          <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
-            <li><a class="dropdown-item" href="/tr/projeler/tamamlanmis-projeler">Tamamlanmış Projeler</a></li>
-            <li><a class="dropdown-item" href="/tr/projeler/devam-eden-projeler">Devam Eden Projeler</a></li>
-            <li><a class="dropdown-item" href="/tr/projeler/gelecek-projeler">Gelecek Projeler</a></li>
-            <li><a class="dropdown-item" href="/tr/projeler/musteri-projeler">Müşteri Projeleri</a></li>
-          </ul>
-        </li>
-        <!-- Ürünler -->
-        <li class="nav-item me-3">
-          <a class="nav-link" href="/tr/urunler">Ürünler</a>
-        </li>
-      </ul>
+  <!-- Sol Menü -->
+  <ul class="navbar-nav flex-row align-items-center left-menu ms-3">
 
-      <!-- Logo Ortada -->
-      <a class="navbar-brand position-absolute top-50 start-50 translate-middle d-flex align-items-center" href="/tr/">
-        <img src="{% static 'images/gfenix-logos.png' %}" alt="G-Fenix Logo" width="45" height="45" class="me-2">
-        <span class="fs-5 fw-bold">G-Fenix</span>
-      </a>
+    <!-- 🌐 Dil -->
+    <li class="nav-item dropdown me-3 position-relative">
+        <a class="nav-link dropdown-toggle" href="#">🌐</a>
+        <div class="dropdown-menu-large dropdown-menu-left">
+        <a href="/" class="dropdown-box"><i class="bi bi-flag-fill"></i><strong>English</strong><p>🇬🇧 /EN</p></a>
+        <a href="/tr/" class="dropdown-box"><i class="bi bi-flag"></i><strong>Türkçe</strong><p>🇹🇷 /TR</p></a>
+        <a href="/es/" class="dropdown-box"><i class="bi bi-flag-fill"></i><strong>Español</strong><p>🇪🇸 /ES</p></a>
+        <a href="/bg/" class="dropdown-box"><i class="bi bi-flag-fill"></i><strong>Bulgarian</strong><p>🇧🇬 /BG</p></a>
+      </div>
+    </li>
 
-      <!-- Sağ Menü -->
-      <ul class="navbar-nav flex-row align-items-center right-menu me-3">
-        <!-- Blog -->
-        <li class="nav-item me-3">
-          <a class="nav-link" href="/tr/blog">Blog</a>
-        </li>
-        <!-- Hakkımızda -->
-        <li class="nav-item dropdown me-3">
-          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Hakkımızda</a>
-          <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-            <li><a class="dropdown-item" href="/tr/hakkimizda/ekibimiz">Ekibimiz</a></li>
-            <li><a class="dropdown-item" href="/tr/hakkimizda/vizyonumuz">Vizyonumuz</a></li>
-            <li><a class="dropdown-item" href="/tr/hakkimizda/misyonumuz">Misyonumuz</a></li>
-            <li><a class="dropdown-item" href="/tr/hakkimizda/sosyal-medya">Sosyal Medya</a></li>
-          </ul>
-        </li>
-        <!-- Bize Ulaşın -->
-        <li class="nav-item">
-          <a class="nav-link" href="/tr/bize-ulasin">Bize Ulaşın</a>
-        </li>
-      </ul>
+    <!-- Ne Yapıyoruz -->
+    <li class="nav-item dropdown me-3 position-relative">
+        <a class="nav-link dropdown-toggle" href="#">Ne Yapıyoruz</a>
+        <div class="dropdown-menu-large dropdown-menu-left">
+        <a href="/tr/ne-yapiyoruz/veri-analiz" class="dropdown-box"><i class="bi bi-bar-chart-line-fill"></i><strong>Veri Analizi</strong><p>Verilerden içgörü üretin</p></a>
+        <a href="/tr/ne-yapiyoruz/web-gelistirme" class="dropdown-box"><i class="bi bi-code-slash"></i><strong>Web Geliştirme</strong><p>Modern web çözümleri</p></a>
+        <a href="/tr/ne-yapiyoruz/yapay-zeka-uygulamalari" class="dropdown-box"><i class="bi bi-cpu-fill"></i><strong>Yapay Zeka</strong><p>Akıllı sistemler</p></a>
+        <a href="/tr/ne-yapiyoruz/python-gelistirme" class="dropdown-box"><i class="bi bi-terminal-fill"></i><strong>Python</strong><p>Otomasyon & analiz</p></a>
+        <a href="/tr/ne-yapiyoruz/kullanici-durumlari" class="dropdown-box"><i class="bi bi-people-fill"></i><strong>Kullanıcı Durumları</strong><p>Gerçek senaryolar</p></a>
+        <a href="/tr/ne-yapiyoruz/egitim" class="dropdown-box"><i class="bi bi-book-fill"></i><strong>Eğitim</strong><p>Bilgiye yatırım yapın</p></a>
+      </div>
+    </li>
 
-    </div>
+    <!-- Projeler -->
+    <li class="nav-item dropdown me-3 position-relative">
+      <a class="nav-link dropdown-toggle" href="#">Projeler</a>
+      <div class="dropdown-menu-large">
+        <a href="/tr/projeler/tamamlanmis-projeler" class="dropdown-box"><i class="bi bi-check-circle-fill"></i><strong>Tamamlanmış</strong><p>Bitmiş projelerimiz</p></a>
+        <a href="/tr/projeler/devam-eden-projeler" class="dropdown-box"><i class="bi bi-hourglass-split"></i><strong>Devam Eden</strong><p>Sürdürülen projeler</p></a>
+        <a href="/tr/projeler/gelecek-projeler" class="dropdown-box"><i class="bi bi-calendar-event-fill"></i><strong>Gelecek</strong><p>Planlananlar</p></a>
+        <a href="/tr/projeler/musteri-projeler" class="dropdown-box"><i class="bi bi-person-workspace"></i><strong>Müşteri</strong><p>Özel çalışmalar</p></a>
+      </div>
+    </li>
+
+    <!-- Ürünler -->
+    <li class="nav-item me-3">
+      <a class="nav-link" href="/tr/urunler">Ürünler</a>
+    </li>
+  </ul>
+
+  <!-- Logo Ortada -->
+  <a class="navbar-brand position-absolute top-50 start-50 translate-middle d-flex align-items-center" href="/tr/">
+    <img src="{% static 'images/gfenix-logos.png' %}" alt="G-Fenix Logo" width="45" height="45" class="me-2">
+    <span class="fs-5 fw-bold">G-Fenix</span>
+  </a>
+
+  <!-- Sağ Menü -->
+  <ul class="navbar-nav flex-row align-items-center right-menu me-3">
+
+    <!-- Blog -->
+    <li class="nav-item me-3">
+      <a class="nav-link" href="/tr/blog">Blog</a>
+    </li>
+
+    <!-- Hakkımızda -->
+    <li class="nav-item dropdown me-3 position-relative">
+      <a class="nav-link dropdown-toggle" href="#">Hakkımızda</a>
+      <div class="dropdown-menu-large">
+        <a href="/tr/hakkimizda/ekibimiz" class="dropdown-box"><i class="bi bi-people-fill"></i><strong>Ekibimiz</strong><p>Biz kimiz?</p></a>
+        <a href="/tr/hakkimizda/vizyonumuz" class="dropdown-box"><i class="bi bi-eye-fill"></i><strong>Vizyonumuz</strong><p>Gelecek hedefimiz</p></a>
+        <a href="/tr/hakkimizda/misyonumuz" class="dropdown-box"><i class="bi bi-compass-fill"></i><strong>Misyonumuz</strong><p>Amacımız</p></a>
+        <a href="/tr/hakkimizda/sosyal-medya" class="dropdown-box"><i class="bi bi-instagram"></i><strong>Sosyal Medya</strong><p>Bizi takip edin</p></a>
+      </div>
+    </li>
+
+    <!-- Bize Ulaşın -->
+    <li class="nav-item">
+      <a class="nav-link" href="/tr/bize-ulasin">Bize Ulaşın</a>
+    </li>
+  </ul>
+</div>
 
     <!-- Mobil Görünüm -->
     <div class="d-lg-none w-100">
@@ -141,25 +147,25 @@
         </li>
       </ul>
       <!-- Sağ Menü -->
-      <ul class="navbar-nav flex-row align-items-center right-menu me-3">
-        <!-- Blog -->
-        <li class="nav-item me-3">
-          <a class="nav-link" href="/tr/blog">Blog</a>
-        </li>
-        <!-- Hakkımızda -->
-        <li class="nav-item dropdown me-3">
-          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Hakkımızda</a>
-          <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-            <li><a class="dropdown-item" href="/tr/hakkimizda/ekibimiz">Ekibimiz</a></li>
-            <li><a class="dropdown-item" href="/tr/hakkimizda/vizyonumuz">Vizyonumuz</a></li>
-            <li><a class="dropdown-item" href="/tr/hakkimizda/misyonumuz">Misyonumuz</a></li>
-            <li><a class="dropdown-item" href="/tr/hakkimizda/sosyal-medya">Sosyal Medya</a></li>
-          </ul>
-        </li>
-        <!-- Bize Ulaşın -->
-        <li class="nav-item">
-          <a class="nav-link" href="/tr/bize-ulasin">Bize Ulaşın</a>
-        </li>
+        <ul class="navbar-nav flex-row align-items-center right-menu me-3">
+          <!-- Blog -->
+          <li class="nav-item me-3">
+            <a class="nav-link" href="/tr/blog">Blog</a>
+          </li>
+          <!-- Hakkımızda -->
+          <li class="nav-item dropdown me-3">
+            <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Hakkımızda</a>
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="/tr/hakkimizda/ekibimiz">Ekibimiz</a></li>
+              <li><a class="dropdown-item" href="/tr/hakkimizda/vizyonumuz">Vizyonumuz</a></li>
+              <li><a class="dropdown-item" href="/tr/hakkimizda/misyonumuz">Misyonumuz</a></li>
+              <li><a class="dropdown-item" href="/tr/hakkimizda/sosyal-medya">Sosyal Medya</a></li>
+            </ul>
+          </li>
+          <!-- Bize Ulaşın -->
+          <li class="nav-item">
+            <a class="nav-link" href="/tr/bize-ulasin">Bize Ulaşın</a>
+          </li>
         </ul>
       </div>
     </div>

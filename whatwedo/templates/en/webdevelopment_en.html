@@ -5,7 +5,17 @@
 
 {% block icerik %}
 
-  <section class="py-5 text-center bg-blur text-white section-spacer">
+  <div class="banner-section-2">
+    <div class="banner-overlay"></div>
+    <div class="banner-content" data-aos="fade-up">
+      <h1>Empower Your Business with G-Fenix</h1>
+      <p>We create modern, fast, and user-centered web solutions.</p>
+      <a href="#neden-web" class="btn">Learn More</a>
+    </div>
+  </div>
+
+
+  <section id="neden-web" class="py-5 text-center bg-blur text-white section-spacer">
     <div class="container">
       <div class="row align-items-center mb-5" data-aos="fade-right">
         <div class="col-md-6">
@@ -85,7 +95,7 @@
             <p>Every website we develop is optimized for search engines and designed to deliver fast loading times, ensuring a smooth user experience and better visibility online.</p>
           </div>
         </div>
-        <div class="col-md-6 d-none d-md-flex justify-content-center align-items-center" style="height: 100%;">
+        <div class="col-md-6 d-flex justify-content-center align-items-center mb-4 mb-md-0" style="height: 100%;">
           <img src="{% static 'images/websitecomputer2.png' %}" alt="Custom solution visual" class="img-fluid rounded">
         </div>
       </div>
@@ -103,7 +113,7 @@
         </div>
       
         <!-- Teknoloji ikonları kısmı -->
-        <div class="col-md-6 d-none d-md-flex justify-content-center align-items-center" style="height: 100%;">
+        <div class="col-md-6 d-flex justify-content-center align-items-center flex-wrap mb-4 mb-md-0" style="height: 100%;">
           <div class="tech-logos-container">
             <img src="{% static 'tech_logos/vscode.svg' %}" alt="VsCode" class="tech-icon" data-aos="zoom-in" data-aos-delay="0"/>
             <img src="{% static 'tech_logos/python-svgrepo-com.svg' %}" alt="Python" class="tech-icon" data-aos="zoom-in" data-aos-delay="100"/>
@@ -190,11 +200,11 @@
             padding: 10px 20px;
             font-size: 16px;
             color: white;
-            background-color: #00ADB5;
+            background-color: #6c5ce7;
             text-decoration: none;
             border-radius: 6px;
             transition: background-color 0.3s ease;
-          " onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#00ADB5'">
+          " onmouseover="this.style.backgroundColor='#333'" onmouseout="this.style.backgroundColor='#6c5ce7'">
           Contact Us
         </a>
       </div>

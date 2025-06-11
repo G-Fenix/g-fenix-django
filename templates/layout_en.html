@@ -19,40 +19,40 @@
     <div class="d-none d-lg-flex w-100 justify-content-between align-items-center position-relative">
 
       <!-- Left Menu -->
-      <ul class="navbar-nav flex-row align-items-center left-menu">
+      <ul class="navbar-nav flex-row align-items-center left-menu ms-3">
         <!-- Language Dropdown -->
-        <li class="nav-item dropdown me-3">
-          <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">🌐</a>
-          <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-            <li><a class="dropdown-item" href="/">🇬🇧 English</a></li>
-            <li><a class="dropdown-item" href="/tr/">🇹🇷 Türkçe</a></li>
-            <li><a class="dropdown-item" href="/es/">🇪🇸 Español</a></li>
-            <li><a class="dropdown-item" href="/bg/">🇧🇬 Български</a></li>
-          </ul>
+        <li class="nav-item dropdown me-3 position-relative">
+          <a class="nav-link dropdown-toggle" href="#">🌐</a>
+          <div class="dropdown-menu-large dropdown-menu-left">
+            <a href="/" class="dropdown-box"><i class="bi bi-flag"></i><strong>English</strong><p>🇬🇧 /EN</p></a>
+            <a href="/tr/" class="dropdown-box"><i class="bi bi-flag-fill"></i><strong>Türkçe</strong><p>🇹🇷 /TR</p></a>
+            <a href="/es/" class="dropdown-box"><i class="bi bi-flag-fill"></i><strong>Español</strong><p>🇪🇸 /ES</p></a>
+            <a href="/bg/" class="dropdown-box"><i class="bi bi-flag-fill"></i><strong>Bulgarian</strong><p>🇧🇬 /BG</p></a>
+          </div>
         </li>
 
         <!-- What We Do -->
-        <li class="nav-item dropdown me-3">
-          <a class="nav-link dropdown-toggle" href="#" id="whatwedoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">What We Do</a>
-          <ul class="dropdown-menu" aria-labelledby="whatwedoDropdown">
-            <li><a class="dropdown-item" href="/what-we-do/data-analysis">Data Analysis</a></li>
-            <li><a class="dropdown-item" href="/what-we-do/web-development">Web Development</a></li>
-            <li><a class="dropdown-item" href="/what-we-do/ai">AI Applications</a></li>
-            <li><a class="dropdown-item" href="/what-we-do/python-development">Python Development</a></li>
-            <li><a class="dropdown-item" href="/what-we-do/usercases">User Cases</a></li>
-            <li><a class="dropdown-item" href="/what-we-do/training">Training</a></li>
-          </ul>
+        <li class="nav-item dropdown me-3 position-relative">
+          <a class="nav-link dropdown-toggle" href="#">What We Do</a>
+          <div class="dropdown-menu-large dropdown-menu-left">
+            <a href="/what-we-do/data-analysis" class="dropdown-box"><i class="bi bi-bar-chart-line-fill"></i><strong>Data Analysis</strong><p>Get insights from data</p></a>
+            <a href="/what-we-do/web-development" class="dropdown-box"><i class="bi bi-code-slash"></i><strong>Web Development</strong><p>Modern web solutions</p></a>
+            <a href="/what-we-do/ai" class="dropdown-box"><i class="bi bi-cpu-fill"></i><strong>AI Applications</strong><p>Smart systems</p></a>
+            <a href="/what-we-do/python-development" class="dropdown-box"><i class="bi bi-terminal-fill"></i><strong>Python</strong><p>Automation & analysis</p></a>
+            <a href="/what-we-do/usercases" class="dropdown-box"><i class="bi bi-people-fill"></i><strong>User Cases</strong><p>Real scenarios</p></a>
+            <a href="/what-we-do/training" class="dropdown-box"><i class="bi bi-book-fill"></i><strong>Training</strong><p>Invest in knowledge</p></a>
+          </div>
         </li>
 
         <!-- Projects -->
-        <li class="nav-item dropdown me-3">
-          <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
-          <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
-            <li><a class="dropdown-item" href="/projects/completed-projects">Completed Projects</a></li>
-            <li><a class="dropdown-item" href="/projects/ongoing-projects">Ongoing Projects</a></li>
-            <li><a class="dropdown-item" href="/projects/future-projects">Future Projects</a></li>
-            <li><a class="dropdown-item" href="/projects/client-projects">Client Projects</a></li>
-          </ul>
+        <li class="nav-item dropdown me-3 position-relative">
+          <a class="nav-link dropdown-toggle" href="#">Projects</a>
+          <div class="dropdown-menu-large">
+            <a href="/projects/completed-projects" class="dropdown-box"><i class="bi bi-check-circle-fill"></i><strong>Completed</strong><p>Our finished projects</p></a>
+            <a href="/projects/ongoing-projects" class="dropdown-box"><i class="bi bi-hourglass-split"></i><strong>Ongoing</strong><p>Ongoing projects</p></a>
+            <a href="/projects/future-projects" class="dropdown-box"><i class="bi bi-calendar-event-fill"></i><strong>Future</strong><p>Planned ones</p></a>
+            <a href="/projects/client-projects" class="dropdown-box"><i class="bi bi-person-workspace"></i><strong>Client</strong><p>Custom work</p></a>
+          </div>
         </li>
 
         <!-- Products -->
@@ -68,18 +68,18 @@
       </a>
 
       <!-- Right Menu -->
-      <ul class="navbar-nav flex-row align-items-center right-menu">
+      <ul class="navbar-nav flex-row align-items-center right-menu me-3">
         <li class="nav-item me-3">
           <a class="nav-link" href="/blog">Blog</a>
         </li>
-        <li class="nav-item dropdown me-3">
-          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
-          <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-            <li><a class="dropdown-item" href="/about-us/our-team">Our Team</a></li>
-            <li><a class="dropdown-item" href="/about-us/our-vision">Our Vision</a></li>
-            <li><a class="dropdown-item" href="/about-us/our-mission">Our Mission</a></li>
-            <li><a class="dropdown-item" href="/about-us/social-media">Social Media</a></li>
-          </ul>
+        <li class="nav-item dropdown me-3 position-relative">
+          <a class="nav-link dropdown-toggle" href="#">About Us</a>
+          <div class="dropdown-menu-large">
+            <a href="/about-us/our-team" class="dropdown-box"><i class="bi bi-people-fill"></i><strong>Our Team</strong><p>Who we are</p></a>
+            <a href="/about-us/our-vision" class="dropdown-box"><i class="bi bi-eye-fill"></i><strong>Our Vision</strong><p>Future goals</p></a>
+            <a href="/about-us/our-mission" class="dropdown-box"><i class="bi bi-compass-fill"></i><strong>Our Mission</strong><p>Our purpose</p></a>
+            <a href="/about-us/social-media" class="dropdown-box"><i class="bi bi-instagram"></i><strong>Social Media</strong><p>Follow us</p></a>
+          </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/contact-us">Contact Us</a>
@@ -213,9 +213,9 @@
         <a href="https://x.com/g_fenix44823" class="text-white-50 me-3"><i class="fab fa-x-twitter"></i></a>
         <a href="https://www.linkedin.com/company/106604996/admin/dashboard/" class="text-white-50 me-3"><i class="bi bi-linkedin"></i></a>
         <a href="https://www.instagram.com/heygfenix/" class="text-white-50 me-3"><i class="bi bi-instagram"></i></a>
-        <a href="https://wa.me/905396102361?text=Hello%20GFenix%2C%20I%20visited%20website!" class="text-white-50 me-3"><i class="bi bi-whatsapp"></i></a>
-        <a href="https://t.me/cengizhangenc" class="text-white-50 me-3"><i class="bi bi-telegram"></i></a>
-        <a href="viber://chat?number=+359887663892" class="text-white-50 me-3"><i class="fab fa-viber"></i></a>
+        <a href="https://wa.me/359882839085?text=Hello%20GFenix%2C%20I%20visited%20website!" class="text-white-50 me-3"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://t.me/+359882839085" class="text-white-50 me-3"><i class="bi bi-telegram"></i></a>
+        <a href="viber://chat?number=+359882839085" class="text-white-50 me-3"><i class="fab fa-viber"></i></a>
         <a href="mailto:hello@g-fenix.com?subject=Website%20Contact&body=Hi%20GFenix%2C%20I%20just%20visited%20your%20website..." class="text-white-50 me-3"><i class="bi bi-envelope-fill"></i></a>
         <a href="#" class="text-white-50 me-3"><i class="bi bi-github"></i></a>
       </div>

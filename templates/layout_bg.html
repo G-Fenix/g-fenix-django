@@ -19,60 +19,67 @@
     <div class="d-none d-lg-flex w-100 justify-content-between align-items-center position-relative">
 
       <!-- Sol Menü -->
-      <ul class="navbar-nav flex-row align-items-center left-menu">
-        <li class="nav-item dropdown me-3">
-          <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">🌐</a>
-          <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-            <li><a class="dropdown-item" href="/">🇬🇧 English</a></li>
-            <li><a class="dropdown-item" href="/tr/">🇹🇷 Türkçe</a></li>
-            <li><a class="dropdown-item" href="/es/">🇪🇸 Español</a></li>
-            <li><a class="dropdown-item" href="/bg/">🇧🇬 Български</a></li>
-          </ul>
+      <ul class="navbar-nav flex-row align-items-center left-menu ms-3">
+        <!-- Language Dropdown -->
+        <li class="nav-item dropdown me-3 position-relative">
+          <a class="nav-link dropdown-toggle" href="#">🌐</a>
+          <div class="dropdown-menu-large dropdown-menu-left">
+            <a href="/" class="dropdown-box"><i class="bi bi-flag-fill"></i><strong>English</strong><p>🇬🇧 /en</p></a>
+            <a href="/tr/" class="dropdown-box"><i class="bi bi-flag-fill"></i><strong>Türkçe</strong><p>🇹🇷 /TR</p></a>
+            <a href="/es/" class="dropdown-box"><i class="bi bi-flag-fill"></i><strong>Español</strong><p>🇪🇸 /ES</p></a>
+            <a href="/bg/" class="dropdown-box"><i class="bi bi-flag"></i><strong>Bulgarian</strong><p>🇧🇬 /BG</p></a>
+          </div>
         </li>
-        <li class="nav-item dropdown me-3">
-          <a class="nav-link dropdown-toggle" href="#" id="whatwedoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Какво Правим</a>
-          <ul class="dropdown-menu" aria-labelledby="whatwedoDropdown">
-            <li><a class="dropdown-item" href="/bg/kakvo-pravim/analiz-na-danni">Анализ на Данни</a></li>
-            <li><a class="dropdown-item" href="/bg/kakvo-pravim/web-razrabotka">Уеб Разработка</a></li>
-            <li><a class="dropdown-item" href="/bg/kakvo-pravim/izkustven-intellekt">Приложения с Изкуствен Интелект</a></li>
-            <li><a class="dropdown-item" href="/bg/kakvo-pravim/python-razrabotka">Пайтън Разработка</a></li>
-            <li><a class="dropdown-item" href="/bg/kakvo-pravim/primeri">Потребителски Примери</a></li>
-            <li><a class="dropdown-item" href="/bg/kakvo-pravim/obuchenie">Обучение</a></li>
-          </ul>
+
+        <!-- Какво Правим -->
+        <li class="nav-item dropdown me-3 position-relative">
+          <a class="nav-link dropdown-toggle" href="#">Какво Правим</a>
+          <div class="dropdown-menu-large dropdown-menu-left">
+            <a href="/bg/kakvo-pravim/analiz-na-danni" class="dropdown-box"><i class="bi bi-bar-chart-line-fill"></i><strong>Анализ на Данни</strong><p>Прозрения от данни</p></a>
+            <a href="/bg/kakvo-pravim/web-razrabotka" class="dropdown-box"><i class="bi bi-code-slash"></i><strong>Уеб Разработка</strong><p>Модерни уеб решения</p></a>
+            <a href="/bg/kakvo-pravim/izkustven-intellekt" class="dropdown-box"><i class="bi bi-cpu-fill"></i><strong>Приложения с ИИ</strong><p>Интелигентни системи</p></a>
+            <a href="/bg/kakvo-pravim/python-razrabotka" class="dropdown-box"><i class="bi bi-terminal-fill"></i><strong>Пайтън</strong><p>Автоматизация и анализ</p></a>
+            <a href="/bg/kakvo-pravim/primeri" class="dropdown-box"><i class="bi bi-people-fill"></i><strong>Потребителски Примери</strong><p>Реални сценарии</p></a>
+            <a href="/bg/kakvo-pravim/obuchenie" class="dropdown-box"><i class="bi bi-book-fill"></i><strong>Обучение</strong><p>Инвестирайте в знания</p></a>
+          </div>
         </li>
-        <li class="nav-item dropdown me-3">
-          <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Проекти</a>
-          <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
-            <li><a class="dropdown-item" href="/bg/proekti/zavarsheni-proekti">Завършени  Проекти</a></li>
-            <li><a class="dropdown-item" href="/bg/proekti/tekushti-proekti">Текущи  Проекти</a></li>
-            <li><a class="dropdown-item" href="/bg/proekti/badeshti-proekti"> Бъдещи  Проекти</a></li>
-            <li><a class="dropdown-item" href="/bg/proekti/klientski-proekti">Клиентски  Проекти</a></li>
-          </ul>
+
+        <!-- Проекти -->
+        <li class="nav-item dropdown me-3 position-relative">
+          <a class="nav-link dropdown-toggle" href="#">Проекти</a>
+          <div class="dropdown-menu-large">
+            <a href="/bg/proekti/zavarsheni-proekti" class="dropdown-box"><i class="bi bi-check-circle-fill"></i><strong>Завършени</strong><p>Приключени проекти</p></a>
+            <a href="/bg/proekti/tekushti-proekti" class="dropdown-box"><i class="bi bi-hourglass-split"></i><strong>Текущи</strong><p>Активни проекти</p></a>
+            <a href="/bg/proekti/badeshti-proekti" class="dropdown-box"><i class="bi bi-calendar-event-fill"></i><strong>Бъдещи</strong><p>Планирани</p></a>
+            <a href="/bg/proekti/klientski-proekti" class="dropdown-box"><i class="bi bi-person-workspace"></i><strong>Клиентски</strong><p>Индивидуални проекти</p></a>
+          </div>
         </li>
+
+        <!-- Продукти -->
         <li class="nav-item me-3">
           <a class="nav-link" href="/bg/produkti">Продукти</a>
         </li>
       </ul>
 
-      <!-- Logo Ortada -->
+      <!-- Centered Logo -->
       <a class="navbar-brand position-absolute top-50 start-50 translate-middle d-flex align-items-center" href="/bg/">
         <img src="{% static 'images/gfenix-logos.png' %}" alt="G-Fenix Logo" width="45" height="45" class="me-2">
         <span class="fs-5 fw-bold">G-Fenix</span>
       </a>
 
-      <!-- Sağ Menü -->
-      <ul class="navbar-nav flex-row align-items-center right-menu">
+      <!-- Right Menu -->
+      <ul class="navbar-nav flex-row align-items-center right-menu me-3">
         <li class="nav-item me-3">
           <a class="nav-link" href="/bg/blog">Блог</a>
         </li>
-        <li class="nav-item dropdown me-3">
-          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">За Нас</a>
-          <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-            <li><a class="dropdown-item" href="/bg/za-nas/nashiyat-ekip">Нашият Екип</a></li>
-            <li><a class="dropdown-item" href="/bg/za-nas/nashata-viziya">Нашата Визия</a></li>
-            <li><a class="dropdown-item" href="/bg/za-nas/nashata-misiya">Нашата Мисия</a></li>
-            <li><a class="dropdown-item" href="/bg/za-nas/sotsialni-mrezhi">Социални Мрежи</a></li>
-          </ul>
+        <li class="nav-item dropdown me-3 position-relative">
+          <a class="nav-link dropdown-toggle" href="#">За Нас</a>
+          <div class="dropdown-menu-large">
+            <a href="/bg/za-nas/nashiyat-ekip" class="dropdown-box"><i class="bi bi-people-fill"></i><strong>Нашият Екип</strong><p>Кои сме ние</p></a>
+            <a href="/bg/za-nas/nashata-viziya" class="dropdown-box"><i class="bi bi-eye-fill"></i><strong>Нашата Визия</strong><p>Целите ни</p></a>
+            <a href="/bg/za-nas/nashata-misiya" class="dropdown-box"><i class="bi bi-compass-fill"></i><strong>Нашата Мисия</strong><p>Нашата цел</p></a>
+            <a href="/bg/za-nas/sotsialni-mrezhi" class="dropdown-box"><i class="bi bi-instagram"></i><strong>Социални Мрежи</strong><p>Последвайте ни</p></a>
+          </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/bg/kontakt">Свържете се с нас</a>
@@ -199,9 +206,9 @@
         <a href="https://x.com/g_fenix44823" class="text-white-50 me-3"><i class="fab fa-x-twitter"></i></a>
         <a href="https://www.linkedin.com/company/106604996/admin/dashboard/" class="text-white-50 me-3"><i class="bi bi-linkedin"></i></a>
         <a href="https://www.instagram.com/heygfenix/" class="text-white-50 me-3"><i class="bi bi-instagram"></i></a>
-        <a href="https://wa.me/905396102361?text=Hello%20GFenix%2C%20I%20visited%20website!" class="text-white-50 me-3"><i class="bi bi-whatsapp"></i></a>
-        <a href="https://t.me/cengizhangenc" class="text-white-50 me-3"><i class="bi bi-telegram"></i></a>
-        <a href="viber://chat?number=+359887663892" class="text-white-50 me-3"><i class="fab fa-viber"></i></a>
+        <a href="https://wa.me/359882839085?text=Hello%20GFenix%2C%20I%20visited%20website!" class="text-white-50 me-3"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://t.me/+359882839085" class="text-white-50 me-3"><i class="bi bi-telegram"></i></a>
+        <a href="viber://chat?number=+359882839085" class="text-white-50 me-3"><i class="fab fa-viber"></i></a>
         <a href="mailto:hello@g-fenix.com?subject=Website%20Contact&body=Hi%20GFenix%2C%20I%20just%20visited%20your%20website..." class="text-white-50 me-3"><i class="bi bi-envelope-fill"></i></a>
         <a href="#" class="text-white-50 me-3"><i class="bi bi-github"></i></a>
       </div>
