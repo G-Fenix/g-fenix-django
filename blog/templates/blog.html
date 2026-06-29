@@ -1,0 +1,419 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "G-Fenix | Blog" %}{% endblock %}
+
+{% block content %}
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="bl-hero">
+  <canvas id="bl-particle-canvas"></canvas>
+
+  <img src="{% static 'images/kardd.jpeg' %}"
+       class="bl-hero-side-image"
+       alt="">
+
+  <div class="bl-hero-inner">
+    <div class="bl-hero-badge" data-aos="fade-down">
+      <span class="bl-badge-dot"></span>
+      {% trans "Stories" %} · {% trans "Events" %} · {% trans "Technology" %}
+    </div>
+
+    <h1 class="bl-hero-h1" data-aos="fade-up" data-aos-delay="100">
+      {% trans "Ideas that" %}<br>
+      <span class="bl-gradient-text">{% trans "Shape the" %}</span><br>
+      {% trans "Future." %}
+    </h1>
+
+    <p class="bl-hero-p" data-aos="fade-up" data-aos-delay="250">
+      {% trans "From the floors of MWC Barcelona to the depths of data engineering — we write about what we build, what we learn, and where tech is heading." %}
+    </p>
+
+    <!-- Inline stat pills — no more floating cards -->
+    <div class="bl-hero-stats" data-aos="fade-up" data-aos-delay="380">
+      <div class="bl-hero-stat">
+        <i class="fa-solid fa-newspaper"></i>
+        <strong>9+</strong>
+        <span>{% trans "Curated Resources" %}</span>
+      </div>
+      <div class="bl-hero-stat-sep"></div>
+      <div class="bl-hero-stat">
+        <i class="fa-solid fa-earth-europe"></i>
+        <strong>MWC 2025</strong>
+        <span>Barcelona</span>
+      </div>
+      <div class="bl-hero-stat-sep"></div>
+      <div class="bl-hero-stat">
+        <i class="fa-solid fa-bolt"></i>
+        <strong>{% trans "Live" %}</strong>
+        <span>{% trans "Field Reports" %}</span>
+      </div>
+    </div>
+
+    <div class="bl-hero-scroll" data-aos="fade-up" data-aos-delay="480">
+      <div class="bl-scroll-line"></div>
+      <span>{% trans "Scroll to explore" %}</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ MWC FEATURE ═══════════════ -->
+<section class="bl-mwc-section">
+  <div class="bl-mwc-glow"></div>
+  <div class="container position-relative" style="z-index:2;">
+
+    <div class="text-center mb-5">
+      <span class="bl-eyebrow" data-aos="fade-up">
+        <i class="fa-solid fa-location-dot"></i> {% trans "Field Report" %}
+      </span>
+      <h2 class="bl-section-h2" data-aos="fade-up" data-aos-delay="100">
+        {% trans "We attended MWC Barcelona 2025" %}<br>{% trans "as" %} <span class="bl-gradient-text">G‑FENIX</span>
+      </h2>
+    </div>
+
+    <!-- Top row: photo + text -->
+    <div class="bl-mwc-top" data-aos="fade-up">
+
+      <div class="bl-mwc-photo-wrap">
+        <img src="{% static 'images/mwc.jpg' %}" alt="MWC Barcelona 2025" class="bl-mwc-photo">
+        <div class="bl-mwc-photo-overlay"></div>
+        <div class="bl-mwc-badge">
+          <i class="fa-solid fa-location-dot"></i> {% trans "Fira Gran Via, Barcelona" %}
+        </div>
+        <div class="bl-mwc-year">2025</div>
+      </div>
+
+      <div class="bl-mwc-text-col">
+        <div class="bl-mwc-tag-row">
+          <span class="bl-tag"><i class="fa-solid fa-microchip"></i> {% trans "AI" %}</span>
+          <span class="bl-tag"><i class="fa-solid fa-signal"></i> {% trans "5G" %}</span>
+          <span class="bl-tag"><i class="fa-solid fa-city"></i> {% trans "Smart City" %}</span>
+          <span class="bl-tag"><i class="fa-solid fa-heart-pulse"></i> {% trans "Digital Health" %}</span>
+        </div>
+        <p class="bl-mwc-body">
+          {% trans "In March, we participated in" %} <strong>{% trans "MWC Barcelona 2025" %}</strong> {% trans "(Mobile World Congress), held in Barcelona. At the world's largest mobile technology fair, we explored cutting-edge innovations — from AI-powered products and 5G solutions to smart city systems and digital health applications." %}
+        </p>
+        <p class="bl-mwc-body">
+          {% trans "Seeing the technologies shaping the future up close was truly inspiring. The scale, the energy, the sheer density of innovation — MWC reminded us exactly why we do what we do at G‑Fenix." %}
+        </p>
+        <div class="bl-mwc-stats">
+          <div class="bl-mwc-stat">
+            <div class="bl-mwc-stat-num">101k+</div>
+            <div class="bl-mwc-stat-label">{% trans "Attendees" %}</div>
+          </div>
+          <div class="bl-mwc-stat">
+            <div class="bl-mwc-stat-num">200+</div>
+            <div class="bl-mwc-stat-label">{% trans "Countries" %}</div>
+          </div>
+          <div class="bl-mwc-stat">
+            <div class="bl-mwc-stat-num">2,800+</div>
+            <div class="bl-mwc-stat-label">{% trans "Exhibitors" %}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom row: videos as landscape strips -->
+    <div class="bl-mwc-videos" data-aos="fade-up" data-aos-delay="100">
+      <div class="bl-video-wrap">
+        <video autoplay muted loop playsinline>
+          <source src="{% static 'videos/aihead.mp4' %}" type="video/mp4">
+        </video>
+        <div class="bl-video-overlay"></div>
+        <div class="bl-video-label"><i class="fa-solid fa-microchip"></i> {% trans "AI Innovation" %}</div>
+      </div>
+      <div class="bl-video-wrap">
+        <video autoplay muted loop playsinline>
+          <source src="{% static 'videos/airobottt.mp4' %}" type="video/mp4">
+        </video>
+        <div class="bl-video-overlay"></div>
+        <div class="bl-video-label"><i class="fa-solid fa-robot"></i> {% trans "Robotics & AI" %}</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ READING LIST ═══════════════ -->
+<section id="blog-section" class="bl-articles-section">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <span class="bl-eyebrow" data-aos="fade-up">
+        <i class="fa-solid fa-book-open"></i> {% trans "Curated Reading" %}
+      </span>
+      <h2 class="bl-section-h2" data-aos="fade-up" data-aos-delay="100">
+        {% trans "Data & Software" %}<br><span class="bl-gradient-text">{% trans "Reading List" %}</span>
+      </h2>
+      <p class="bl-section-sub" data-aos="fade-up" data-aos-delay="200">
+        {% trans "9 hand-picked resources from the G‑Fenix team — the blogs, docs and communities we actually read." %}
+      </p>
+    </div>
+
+    <!-- Filter tabs -->
+    <div class="bl-filter-tabs" data-aos="fade-up" data-aos-delay="150">
+      <button class="bl-filter-tab active" onclick="blFilter(this,'all')">{% trans "All" %}</button>
+      <button class="bl-filter-tab" onclick="blFilter(this,'ai')"><i class="fa-solid fa-robot"></i> {% trans "AI" %}</button>
+      <button class="bl-filter-tab" onclick="blFilter(this,'python')"><i class="fa-solid fa-code"></i> {% trans "Python" %}</button>
+      <button class="bl-filter-tab" onclick="blFilter(this,'data')"><i class="fa-solid fa-chart-bar"></i> {% trans "Data" %}</button>
+      <button class="bl-filter-tab" onclick="blFilter(this,'cloud')"><i class="fa-solid fa-cloud"></i> {% trans "Cloud" %}</button>
+    </div>
+
+    <!-- Cards grid -->
+    <div class="bl-cards-grid" id="blGrid">
+
+      <a class="bl-card bl-card-featured" href="https://cloud.google.com/learn/what-is-artificial-intelligence"
+         target="_blank" rel="noopener" data-cat="ai" data-aos="fade-up">
+        <div class="bl-card-img-wrap">
+          <img src="{% static 'images/openai.jpg' %}" alt="AI Article" class="bl-card-img">
+          <div class="bl-card-img-overlay"></div>
+          <div class="bl-feat-badge"><i class="fa-solid fa-star"></i> {% trans "Featured" %}</div>
+        </div>
+        <div class="bl-card-body">
+          <div class="bl-card-cats"><span class="bl-cat-tag bl-cat-ai">{% trans "AI" %}</span></div>
+          <h4 class="bl-card-title">{% trans "What Is Artificial Intelligence?" %}</h4>
+          <p class="bl-card-desc">{% trans "Explore the fundamentals of AI and its growing role in our lives and industries. A comprehensive primer from Google Cloud covering ML to neural networks." %}</p>
+          <div class="bl-card-footer">
+            <span class="bl-card-source"><i class="fa-solid fa-globe"></i> cloud.google.com</span>
+            <span class="bl-card-cta">{% trans "Read" %} <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <a class="bl-card" href="https://www.python.org/doc/essays/blurb/"
+         target="_blank" rel="noopener" data-cat="python" data-aos="fade-up" data-aos-delay="60">
+        <div class="bl-card-img-wrap">
+          <img src="{% static 'images/pythonweb.jpg' %}" alt="Python" class="bl-card-img">
+          <div class="bl-card-img-overlay"></div>
+        </div>
+        <div class="bl-card-body">
+          <div class="bl-card-cats"><span class="bl-cat-tag bl-cat-python">{% trans "Python" %}</span></div>
+          <h4 class="bl-card-title">{% trans "Python for Automation" %}</h4>
+          <p class="bl-card-desc">{% trans "Learn how Python simplifies tasks and accelerates workflows through scripting." %}</p>
+          <div class="bl-card-footer">
+            <span class="bl-card-source"><i class="fa-solid fa-globe"></i> python.org</span>
+            <span class="bl-card-cta">{% trans "Read" %} <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <a class="bl-card" href="https://techcommunity.microsoft.com/t5/azure-ai/bg-p/AzureAI"
+         target="_blank" rel="noopener" data-cat="cloud ai" data-aos="fade-up" data-aos-delay="120">
+        <div class="bl-card-img-wrap">
+          <img src="{% static 'images/microsoft.jpg' %}" alt="Microsoft" class="bl-card-img">
+          <div class="bl-card-img-overlay"></div>
+        </div>
+        <div class="bl-card-body">
+          <div class="bl-card-cats">
+            <span class="bl-cat-tag bl-cat-cloud">{% trans "Cloud" %}</span>
+            <span class="bl-cat-tag bl-cat-ai">{% trans "AI" %}</span>
+          </div>
+          <h4 class="bl-card-title">{% trans "Microsoft Azure AI Blog" %}</h4>
+          <p class="bl-card-desc">{% trans "Insights, case studies and news from Azure's AI division." %}</p>
+          <div class="bl-card-footer">
+            <span class="bl-card-source"><i class="fa-solid fa-globe"></i> microsoft.com</span>
+            <span class="bl-card-cta">{% trans "Read" %} <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <a class="bl-card" href="https://towardsdatascience.com"
+         target="_blank" rel="noopener" data-cat="data" data-aos="fade-up" data-aos-delay="60">
+        <div class="bl-card-img-wrap">
+          <img src="{% static 'images/data2.jpg' %}" alt="Data Science" class="bl-card-img">
+          <div class="bl-card-img-overlay"></div>
+        </div>
+        <div class="bl-card-body">
+          <div class="bl-card-cats"><span class="bl-cat-tag bl-cat-data">{% trans "Data" %}</span></div>
+          <h4 class="bl-card-title">{% trans "Towards Data Science" %}</h4>
+          <p class="bl-card-desc">{% trans "Stories and insights from data science practitioners around the world." %}</p>
+          <div class="bl-card-footer">
+            <span class="bl-card-source"><i class="fa-solid fa-globe"></i> towardsdatascience.com</span>
+            <span class="bl-card-cta">{% trans "Read" %} <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <a class="bl-card" href="https://dev.to/"
+         target="_blank" rel="noopener" data-cat="python" data-aos="fade-up" data-aos-delay="120">
+        <div class="bl-card-img-wrap">
+          <img src="{% static 'images/aiweb.jpg' %}" alt="DEV" class="bl-card-img">
+          <div class="bl-card-img-overlay"></div>
+        </div>
+        <div class="bl-card-body">
+          <div class="bl-card-cats"><span class="bl-cat-tag bl-cat-python">{% trans "Dev" %}</span></div>
+          <h4 class="bl-card-title">{% trans "DEV Community" %}</h4>
+          <p class="bl-card-desc">{% trans "Share and discover projects, code and dev experiences from a global community." %}</p>
+          <div class="bl-card-footer">
+            <span class="bl-card-source"><i class="fa-solid fa-globe"></i> dev.to</span>
+            <span class="bl-card-cta">{% trans "Read" %} <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <a class="bl-card" href="https://openai.com/blog"
+         target="_blank" rel="noopener" data-cat="ai" data-aos="fade-up" data-aos-delay="60">
+        <div class="bl-card-img-wrap">
+          <img src="{% static 'images/chatgbt.jpg' %}" alt="OpenAI" class="bl-card-img">
+          <div class="bl-card-img-overlay"></div>
+        </div>
+        <div class="bl-card-body">
+          <div class="bl-card-cats"><span class="bl-cat-tag bl-cat-ai">{% trans "AI" %}</span></div>
+          <h4 class="bl-card-title">{% trans "OpenAI Blog" %}</h4>
+          <p class="bl-card-desc">{% trans "Cutting-edge advancements in artificial intelligence from the frontier lab." %}</p>
+          <div class="bl-card-footer">
+            <span class="bl-card-source"><i class="fa-solid fa-globe"></i> openai.com</span>
+            <span class="bl-card-cta">{% trans "Read" %} <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <a class="bl-card" href="https://cloud.google.com/blog"
+         target="_blank" rel="noopener" data-cat="cloud data" data-aos="fade-up" data-aos-delay="120">
+        <div class="bl-card-img-wrap">
+          <img src="{% static 'images/google.jpg' %}" alt="Google" class="bl-card-img">
+          <div class="bl-card-img-overlay"></div>
+        </div>
+        <div class="bl-card-body">
+          <div class="bl-card-cats">
+            <span class="bl-cat-tag bl-cat-cloud">{% trans "Cloud" %}</span>
+            <span class="bl-cat-tag bl-cat-data">{% trans "Data" %}</span>
+          </div>
+          <h4 class="bl-card-title">{% trans "Google Cloud AI & Data Blog" %}</h4>
+          <p class="bl-card-desc">{% trans "Technical deep dives and real-world use cases from Google Cloud." %}</p>
+          <div class="bl-card-footer">
+            <span class="bl-card-source"><i class="fa-solid fa-globe"></i> cloud.google.com</span>
+            <span class="bl-card-cta">{% trans "Read" %} <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <a class="bl-card" href="https://realpython.com/"
+         target="_blank" rel="noopener" data-cat="python" data-aos="fade-up" data-aos-delay="60">
+        <div class="bl-card-img-wrap">
+          <img src="{% static 'images/codesss.jpg' %}" alt="Real Python" class="bl-card-img">
+          <div class="bl-card-img-overlay"></div>
+        </div>
+        <div class="bl-card-body">
+          <div class="bl-card-cats"><span class="bl-cat-tag bl-cat-python">{% trans "Python" %}</span></div>
+          <h4 class="bl-card-title">{% trans "Real Python: Learn by Doing" %}</h4>
+          <p class="bl-card-desc">{% trans "In-depth Python tutorials on everything from automation to web development." %}</p>
+          <div class="bl-card-footer">
+            <span class="bl-card-source"><i class="fa-solid fa-globe"></i> realpython.com</span>
+            <span class="bl-card-cta">{% trans "Read" %} <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <a class="bl-card" href="https://www.investopedia.com/terms/d/data-analytics.asp"
+         target="_blank" rel="noopener" data-cat="data" data-aos="fade-up" data-aos-delay="120">
+        <div class="bl-card-img-wrap">
+          <img src="{% static 'images/dataanalweb.jpg' %}" alt="Business Analysis" class="bl-card-img">
+          <div class="bl-card-img-overlay"></div>
+        </div>
+        <div class="bl-card-body">
+          <div class="bl-card-cats"><span class="bl-cat-tag bl-cat-data">{% trans "Data" %}</span></div>
+          <h4 class="bl-card-title">{% trans "Business Analysis & Data Analytics" %}</h4>
+          <p class="bl-card-desc">{% trans "Discover how ERP data powers smarter decisions with BI dashboards." %}</p>
+          <div class="bl-card-footer">
+            <span class="bl-card-source"><i class="fa-solid fa-globe"></i> investopedia.com</span>
+            <span class="bl-card-cta">{% trans "Read" %} <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SCRIPTS ═══════════════ -->
+<script>
+/* ── Particle canvas ── */
+(function(){
+  const cv = document.getElementById('bl-particle-canvas');
+  if(!cv) return;
+  const ctx = cv.getContext('2d');
+  let W, H, mx = -9999, my = -9999;
+
+  function resize(){
+    W = cv.width  = cv.parentElement.offsetWidth;
+    H = cv.height = cv.parentElement.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const particles = Array.from({length: 65}, () => ({
+    x: Math.random(), y: Math.random(),
+    vx: (Math.random() - .5) * .3,
+    vy: (Math.random() - .5) * .3,
+    r: Math.random() * 1.8 + .4,
+    pulse: Math.random() * Math.PI * 2
+  }));
+
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+
+  (function draw(){
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach(p => {
+      p.x += p.vx / W; p.y += p.vy / H;
+      if(p.x < 0 || p.x > 1) p.vx *= -1;
+      if(p.y < 0 || p.y > 1) p.vy *= -1;
+    });
+
+    for(let i = 0; i < particles.length; i++){
+      for(let j = i+1; j < particles.length; j++){
+        const ax = particles[i].x * W, ay = particles[i].y * H;
+        const bx = particles[j].x * W, by = particles[j].y * H;
+        const d  = Math.hypot(ax-bx, ay-by);
+        if(d < 130){
+          ctx.beginPath();
+          ctx.moveTo(ax, ay); ctx.lineTo(bx, by);
+          ctx.strokeStyle = `rgba(245,158,11,${(1-d/130)*.14})`;
+          ctx.lineWidth = .7; ctx.stroke();
+        }
+      }
+    }
+
+    particles.forEach(p => {
+      const px = p.x * W, py = p.y * H;
+      const dist  = Math.hypot(px - mx, py - my);
+      const boost = Math.max(0, 1 - dist/200) * .6;
+      p.pulse += .018;
+      const a = Math.min(1, .1 + Math.sin(p.pulse) * .14 + boost);
+
+      if(boost > .05){
+        ctx.beginPath();
+        ctx.arc(px, py, (p.r + boost*2)*3, 0, Math.PI*2);
+        ctx.fillStyle = `rgba(245,158,11,${boost*.1})`;
+        ctx.fill();
+      }
+
+      ctx.beginPath();
+      ctx.arc(px, py, p.r + boost*1.8, 0, Math.PI*2);
+      ctx.fillStyle = boost > .05
+        ? `rgba(255,${Math.round(190+boost*65)},${Math.round(60+boost*20)},${a})`
+        : `rgba(245,158,11,${a})`;
+      ctx.fill();
+    });
+
+    requestAnimationFrame(draw);
+  })();
+})();
+
+/* ── Filter ── */
+function blFilter(btn, cat){
+  document.querySelectorAll('.bl-filter-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#blGrid .bl-card').forEach(card => {
+    const cats = card.dataset.cat || '';
+    if(cat === 'all' || cats.includes(cat)){
+      card.classList.remove('bl-hidden');
+    } else {
+      card.classList.add('bl-hidden');
+    }
+  });
+}
+</script>
+
+{% endblock content %}

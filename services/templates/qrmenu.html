@@ -1,0 +1,492 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}G-Fenix | QR Menu & Digital Card Solutions{% endblock %}
+
+{% block content %}
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="qr-hero section-dark">
+  <div class="qr-grid-bg"></div>
+  <div class="qr-deco-wrap" aria-hidden="true">
+    <div class="qr-deco-code"><div class="qr-pixel-grid" id="qrPixelGrid"></div></div>
+  </div>
+
+  <div class="container position-relative" style="z-index:2;">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <span class="gf-eyebrow qr-eyebrow-in">{% trans "Build — QR Solutions" %}</span>
+        <h1 class="qr-hero-h1">
+          <span class="qr-line">{% trans "Scan. Explore." %}</span>
+          <span class="qr-line qr-grad">{% trans "Impress." %}</span>
+        </h1>
+        <p class="qr-hero-sub" data-aos="fade-up" data-aos-delay="500">
+          {% trans "From restaurant menus to hotel lounges and personal brand cards — G‑Fenix builds smart QR experiences that work on any device, in any language, and update in real time without reprinting a single sheet." %}
+        </p>
+        <div class="qr-hero-tags" data-aos="fade-up" data-aos-delay="650">
+          <span class="qr-tag"><i class="fa-solid fa-utensils"></i> {% trans "Restaurants" %}</span>
+          <span class="qr-tag"><i class="fa-solid fa-hotel"></i> {% trans "Hotels" %}</span>
+          <span class="qr-tag"><i class="fa-solid fa-spa"></i> {% trans "Spas" %}</span>
+          <span class="qr-tag"><i class="fa-solid fa-id-card"></i> {% trans "Business Cards" %}</span>
+          <span class="qr-tag"><i class="fa-solid fa-store"></i> {% trans "Retail" %}</span>
+        </div>
+        <div class="d-flex flex-wrap gap-3 mt-4" data-aos="fade-up" data-aos-delay="800">
+          <a href="#restaurant" class="btn btn-accent btn-lg">{% trans "See Solutions" %}</a>
+        </div>
+      </div>
+
+      <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-delay="300">
+        <div class="qr-hero-mockup">
+          <div class="qr-phone-frame">
+            <div class="qr-phone-notch"></div>
+            <div class="qr-phone-screen">
+              <div class="qr-screen-header">
+                <div class="qr-screen-logo">🍽 G‑Menu</div>
+                <div class="qr-screen-lang">EN | TR | DE</div>
+              </div>
+              <div class="qr-screen-category active">{% trans "Starters" %}</div>
+              <div class="qr-screen-category">{% trans "Mains" %}</div>
+              <div class="qr-screen-category">{% trans "Desserts" %}</div>
+              <div class="qr-screen-item">
+                <div><div class="qr-item-name">Bruschetta al Pomodoro</div><div class="qr-item-desc">{% trans "Tomato, basil, aged balsamic" %}</div></div>
+                <div class="qr-item-price">€ 8</div>
+              </div>
+              <div class="qr-screen-item">
+                <div><div class="qr-item-name">Burrata &amp; Prosciutto</div><div class="qr-item-desc">{% trans "Creamy burrata, San Daniele" %}</div></div>
+                <div class="qr-item-price">€ 14</div>
+              </div>
+              <div class="qr-screen-item">
+                <div><div class="qr-item-name">Zuppa del Giorno</div><div class="qr-item-desc">{% trans "Chef's daily soup" %}</div></div>
+                <div class="qr-item-price">€ 7</div>
+              </div>
+              <div class="qr-screen-bar">
+                <span><i class="fa-solid fa-house"></i></span>
+                <span class="active"><i class="fa-solid fa-utensils"></i></span>
+                <span><i class="fa-solid fa-wine-glass"></i></span>
+                <span><i class="fa-solid fa-circle-info"></i></span>
+              </div>
+            </div>
+          </div>
+          <div class="qr-float-badge qr-fb-1" data-aos="zoom-in" data-aos-delay="900"><i class="fa-solid fa-language"></i> {% trans "12 Languages" %}</div>
+          <div class="qr-float-badge qr-fb-2" data-aos="zoom-in" data-aos-delay="1050"><i class="fa-solid fa-bolt"></i> {% trans "Real-time Updates" %}</div>
+          <div class="qr-float-badge qr-fb-3" data-aos="zoom-in" data-aos-delay="1200"><i class="fa-solid fa-mobile-screen"></i> {% trans "Any Device" %}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ RESTAURANT & BAR ═══════════════ -->
+<section id="restaurant" class="qr-rest-section" style="background:rgba(20,24,34,.7);">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- Tab menu visual -->
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="qr-hotel-tabs">
+          <div class="qr-hotel-tab active" onclick="qrTabSwitch(this,'food')">🍽 {% trans "Restaurant" %}</div>
+          <div class="qr-hotel-tab" onclick="qrTabSwitch(this,'bar')">🍸 {% trans "Bar & Cocktails" %}</div>
+          <div class="qr-hotel-tab" onclick="qrTabSwitch(this,'specials')">⭐ {% trans "Daily Specials" %}</div>
+        </div>
+        <div class="qr-hotel-panel" id="panel-food">
+          <div class="qr-hotel-item"><span>🥗 {% trans "Burrata & Arugula" %}</span><span>€ 16</span></div>
+          <div class="qr-hotel-item"><span>🍝 {% trans "Pasta Carbonara" %}</span><span>€ 18</span></div>
+          <div class="qr-hotel-item"><span>🥩 {% trans "Grilled Ribeye (250g)" %}</span><span>€ 34</span></div>
+          <div class="qr-hotel-item"><span>🐟 {% trans "Sea Bass Fillet" %}</span><span>€ 28</span></div>
+          <div class="qr-hotel-item"><span>🍰 {% trans "Crème Brûlée" %}</span><span>€ 9</span></div>
+        </div>
+        <div class="qr-hotel-panel" id="panel-bar" style="display:none">
+          <div class="qr-hotel-item"><span>🍸 Aperol Spritz</span><span>€ 11</span></div>
+          <div class="qr-hotel-item"><span>🍹 Mojito</span><span>€ 12</span></div>
+          <div class="qr-hotel-item"><span>🍺 {% trans "Craft IPA" %}</span><span>€ 8</span></div>
+          <div class="qr-hotel-item"><span>🍷 {% trans "House Red Wine" %}</span><span>€ 7</span></div>
+          <div class="qr-hotel-item"><span>🥂 {% trans "Prosecco (glass)" %}</span><span>€ 9</span></div>
+        </div>
+        <div class="qr-hotel-panel" id="panel-specials" style="display:none">
+          <div class="qr-hotel-item"><span>⭐ {% trans "Catch of the Day" %}</span><span>€ 32</span></div>
+          <div class="qr-hotel-item"><span>🫕 {% trans "Seasonal Risotto" %}</span><span>€ 24</span></div>
+          <div class="qr-hotel-item"><span>🥩 {% trans "Chef's Steak Special" %}</span><span>€ 38</span></div>
+          <div class="qr-hotel-item"><span>🍰 {% trans "Dessert of the Week" %}</span><span>€ 9</span></div>
+        </div>
+      </div>
+
+      <!-- Renkli text/feature tarafı -->
+      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="150">
+        <div class="qr-rest-eyebrow">
+          <span class="qr-rest-badge"><i class="fa-solid fa-qrcode"></i> QR Menu</span>
+        </div>
+        <h2 class="qr-rest-title">{% trans "Your Menu." %}<br>
+          <span class="qr-rest-grad">{% trans "Always Fresh." %}</span><br>
+          {% trans "Never Reprinted." %}
+        </h2>
+        <p class="qr-rest-sub">
+          {% trans "Guests scan the QR code on their table and instantly browse your full menu with photos, descriptions and prices — in their own language." %}
+        </p>
+
+        <div class="qr-rest-feats">
+
+          <div class="qr-rf-card qr-rf-lime">
+            <div class="qr-rf-icon"><i class="fa-solid fa-camera"></i></div>
+            <div>
+              <div class="qr-rf-title">{% trans "Photo Menus" %}</div>
+              <div class="qr-rf-desc">{% trans "Every dish shown with a photo. Guests see exactly what they're choosing." %}</div>
+            </div>
+          </div>
+
+          <div class="qr-rf-card qr-rf-teal">
+            <div class="qr-rf-icon"><i class="fa-solid fa-earth-europe"></i></div>
+            <div>
+              <div class="qr-rf-title">{% trans "Multilingual" %}</div>
+              <div class="qr-rf-desc">{% trans "Menu auto-detects the guest's language. Switch with one tap — 12+ languages." %}</div>
+            </div>
+          </div>
+
+          <div class="qr-rf-card qr-rf-purple">
+            <div class="qr-rf-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <div>
+              <div class="qr-rf-title">{% trans "Allergen Info" %}</div>
+              <div class="qr-rf-desc">{% trans "Display allergens and dietary tags per item — gluten-free, vegan, nuts, dairy." %}</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ QR BUSINESS CARD ═══════════════ -->
+<section id="digitalcard" class="gf-section-dark py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="gf-eyebrow" data-aos="fade-up">{% trans "QR Business Card" %}</span>
+      <h2 data-aos="fade-up" data-aos-delay="100">{% trans "Your Card. Always Up to Date." %}</h2>
+      <p class="section-sub mx-auto" data-aos="fade-up" data-aos-delay="200">{% trans "One QR code — your CV, your app, your site, your profile. All in one scan." %}</p>
+    </div>
+
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5" data-aos="fade-right">
+        <div class="qr-dcard-wrap">
+          <div class="qr-dcard">
+            <div class="qr-dcard-top">
+              <div class="qr-dcard-avatar">GF</div>
+              <div>
+                <div class="qr-dcard-name">Alex Rivera</div>
+                <div class="qr-dcard-role">{% trans "Founder & CEO · G-Fenix" %}</div>
+              </div>
+            </div>
+            <div class="qr-dcard-links">
+              <a class="qr-dcard-link"><i class="fa-solid fa-file-pdf"></i> {% trans "Download CV (PDF)" %}</a>
+              <a class="qr-dcard-link"><i class="fa-solid fa-mobile-screen"></i> {% trans "Download App" %} · App Store / Play</a>
+              <a class="qr-dcard-link"><i class="fa-solid fa-globe"></i> g-fenix.com</a>
+              <a class="qr-dcard-link"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/alexrivera</a>
+            </div>
+            <div class="qr-dcard-actions">
+              <button class="qr-dcard-btn"><i class="fa-solid fa-user-plus"></i> {% trans "Save Contact" %}</button>
+              <button class="qr-dcard-btn qr-dcard-btn-outline"><i class="fa-solid fa-share-nodes"></i> {% trans "Share" %}</button>
+            </div>
+            <div class="qr-dcard-qr">
+              <div class="qr-mini-pixels" id="qrMiniCard"></div>
+            </div>
+          </div>
+          <div class="qr-dcard-glow"></div>
+        </div>
+      </div>
+
+      <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200">
+        <div class="row g-3">
+          <div class="col-sm-6 d-flex">
+            <div class="gf-card p-4 qr-perk-card h-100 w-100">
+              <div class="gf-ico mb-3"><i class="fa-solid fa-file-pdf"></i></div>
+              <h6>{% trans "CV & Portfolio PDF" %}</h6>
+              <p class="mb-0 small">{% trans "Guests scan and download your CV or portfolio as a PDF instantly — no email needed." %}</p>
+            </div>
+          </div>
+          <div class="col-sm-6 d-flex">
+            <div class="gf-card p-4 qr-perk-card h-100 w-100" style="animation-delay:.12s">
+              <div class="gf-ico mb-3"><i class="fa-solid fa-mobile-screen"></i></div>
+              <h6>{% trans "App Download Link" %}</h6>
+              <p class="mb-0 small">{% trans "Direct users straight to App Store or Google Play. One QR for both platforms." %}</p>
+            </div>
+          </div>
+          <div class="col-sm-6 d-flex">
+            <div class="gf-card p-4 qr-perk-card h-100 w-100" style="animation-delay:.24s">
+              <div class="gf-ico mb-3"><i class="fa-solid fa-globe"></i></div>
+              <h6>{% trans "Website & Links" %}</h6>
+              <p class="mb-0 small">{% trans "Redirect to your website, booking page, Linktree, or any landing page you choose." %}</p>
+            </div>
+          </div>
+          <div class="col-sm-6 d-flex">
+            <div class="gf-card p-4 qr-perk-card h-100 w-100" style="animation-delay:.36s">
+              <div class="gf-ico mb-3"><i class="fa-solid fa-pen-to-square"></i></div>
+              <h6>{% trans "Edit Anytime" %}</h6>
+              <p class="mb-0 small">{% trans "Changed your number or job? Update once — everyone who scans sees the new info immediately." %}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SIMPLE PROCESS ═══════════════ -->
+<section class="py-5" style="background:rgba(20,24,34,.7);">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="gf-eyebrow" data-aos="fade-up">{% trans "Simple Process" %}</span>
+      <h2 data-aos="fade-up" data-aos-delay="100">{% trans "From Setup to Live in 48 Hours" %}</h2>
+      <p class="section-sub mx-auto" data-aos="fade-up" data-aos-delay="200">{% trans "No technical knowledge needed. We handle everything." %}</p>
+    </div>
+    <div class="qr-steps-wrap">
+      <div class="qr-step" data-aos="fade-up" data-aos-delay="100">
+        <div class="qr-step-num">01</div>
+        <div class="qr-step-icon"><i class="fa-solid fa-file-lines"></i></div>
+        <h5>{% trans "Send Your Menu" %}</h5>
+        <p>{% trans "Share your current menu as PDF, photo, or spreadsheet. We import everything for you." %}</p>
+      </div>
+      <div class="qr-step-arrow" data-aos="fade-up" data-aos-delay="150"><i class="fa-solid fa-arrow-right"></i></div>
+      <div class="qr-step" data-aos="fade-up" data-aos-delay="200">
+        <div class="qr-step-num">02</div>
+        <div class="qr-step-icon"><i class="fa-solid fa-palette"></i></div>
+        <h5>{% trans "We Design It" %}</h5>
+        <p>{% trans "We match your brand colours, fonts, and logo. You approve the look before we go live." %}</p>
+      </div>
+      <div class="qr-step-arrow" data-aos="fade-up" data-aos-delay="250"><i class="fa-solid fa-arrow-right"></i></div>
+      <div class="qr-step" data-aos="fade-up" data-aos-delay="300">
+        <div class="qr-step-num">03</div>
+        <div class="qr-step-icon"><i class="fa-solid fa-qrcode"></i></div>
+        <h5>{% trans "Get Your QR Codes" %}</h5>
+        <p>{% trans "We generate print-ready QR codes for each table, room, or location. Ready to stick and scan." %}</p>
+      </div>
+      <div class="qr-step-arrow" data-aos="fade-up" data-aos-delay="350"><i class="fa-solid fa-arrow-right"></i></div>
+      <div class="qr-step" data-aos="fade-up" data-aos-delay="400">
+        <div class="qr-step-num">04</div>
+        <div class="qr-step-icon"><i class="fa-solid fa-sliders"></i></div>
+        <h5>{% trans "Manage Yourself" %}</h5>
+        <p>{% trans "Log in to your admin panel and update prices, photos, or availability anytime — from your phone." %}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PAGE STYLES ═══════════════ -->
+<style>
+/* ── Hero ── */
+.qr-hero {
+  position:relative; overflow:hidden; display:flex; align-items:center;
+  min-height:100svh; padding:clamp(70px,12svh,120px) 0 clamp(40px,7svh,80px);
+}
+@media(max-height:850px) and (min-width:992px){
+  .qr-hero{min-height:100svh;padding:90px 0 30px!important;align-items:flex-start!important;}
+  .qr-hero-h1{font-size:clamp(1.8rem,4vw,3rem)!important;line-height:1.05!important;margin:6px 0 10px!important;}
+  .qr-hero-sub{font-size:.85rem!important;line-height:1.55!important;margin-bottom:0!important;}
+  .qr-hero-tags{margin:8px 0!important;}
+  .qr-hero .d-flex.gap-3.mt-4{margin-top:10px!important;}
+  .qr-hero [data-aos]{opacity:1!important;transform:none!important;transition:none!important;}
+}
+@media(max-width:991px){.qr-hero{padding:75px 0 30px;}}
+@media(max-width:767px){.qr-hero{padding:75px 0 30px;}.qr-hero-h1{font-size:clamp(2rem,8vw,3rem);}}
+@media(max-height:500px) and (max-width:991px){
+  .qr-hero{padding:70px 0 16px;}
+  .qr-hero-h1{font-size:clamp(1.6rem,5vw,2.4rem);margin:4px 0 10px;}
+  .qr-hero-sub{font-size:.82rem;line-height:1.5;}
+  .qr-hero-tags{margin:8px 0;display:none;}
+}
+
+/* ── Grid BG ── */
+.qr-grid-bg{position:absolute;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(245,158,11,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(245,158,11,.04) 1px,transparent 1px);background-size:40px 40px;animation:qrGridPan 20s linear infinite;}
+@keyframes qrGridPan{0%{background-position:0 0}100%{background-position:40px 40px}}
+
+/* ── Hero heading ── */
+.qr-hero-h1{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,6vw,4.5rem);font-weight:800;line-height:1.05;margin:16px 0 24px;}
+.qr-line{display:block;overflow:hidden;}
+.qr-line:nth-child(1){animation:qrLineIn .7s .2s cubic-bezier(.16,1,.3,1) both;}
+.qr-line:nth-child(2){animation:qrLineIn .7s .4s cubic-bezier(.16,1,.3,1) both;}
+@keyframes qrLineIn{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+.qr-line.qr-grad{animation:qrLineIn .7s .4s cubic-bezier(.16,1,.3,1) both,qrGrad 4s linear infinite;}
+.qr-hero-sub{font-size:1.05rem;color:var(--text-secondary);line-height:1.75;max-width:520px;}
+.qr-eyebrow-in{animation:qrEyeIn .6s .05s cubic-bezier(.16,1,.3,1) both;}
+@keyframes qrEyeIn{from{opacity:0;transform:translateX(-20px)}to{opacity:1;transform:translateX(0)}}
+
+/* ── Tags ── */
+.qr-hero-tags{display:flex;flex-wrap:wrap;gap:9px;margin:24px 0;}
+.qr-tag{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:999px;background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.18);font-size:.78rem;font-weight:600;color:var(--text-secondary);transition:all .2s ease;}
+.qr-tag:hover{background:rgba(245,158,11,.18);color:var(--text-primary);transform:translateY(-2px);}
+.qr-tag i{color:var(--accent);font-size:.75rem;}
+
+/* ── Phone mockup ── */
+.qr-hero-mockup{position:relative;display:inline-block;}
+.qr-phone-frame{width:230px;margin:0 auto;position:relative;background:var(--bg-elevated);border:2px solid rgba(245,158,11,.3);border-radius:36px;padding:14px 10px 10px;box-shadow:0 32px 80px rgba(0,0,0,.6),0 0 40px rgba(245,158,11,.1);animation:qrPhoneFloat 5s ease-in-out infinite;}
+@keyframes qrPhoneFloat{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-12px) rotate(.5deg)}}
+.qr-phone-notch{width:60px;height:8px;background:var(--bg-page);border-radius:4px;margin:0 auto 10px;}
+.qr-phone-screen{background:var(--bg-page);border-radius:18px;padding:12px;min-height:320px;}
+.qr-screen-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border);}
+.qr-screen-logo{font-family:'Syne',sans-serif;font-size:.8rem;font-weight:700;color:var(--accent);}
+.qr-screen-lang{font-size:.62rem;color:var(--text-muted);}
+.qr-screen-category{display:inline-block;font-size:.68rem;font-weight:700;padding:4px 10px;border-radius:999px;margin:0 3px 8px 0;background:var(--bg-elevated);border:1px solid var(--border);color:var(--text-secondary);cursor:pointer;}
+.qr-screen-category.active{background:var(--accent);color:#000;border-color:var(--accent);}
+.qr-screen-item{display:flex;justify-content:space-between;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--border);gap:6px;}
+.qr-item-name{font-size:.72rem;font-weight:600;color:var(--text-primary);}
+.qr-item-desc{font-size:.62rem;color:var(--text-muted);margin-top:2px;}
+.qr-item-price{font-family:'Syne',sans-serif;font-size:.78rem;font-weight:800;color:var(--accent);white-space:nowrap;}
+.qr-screen-bar{display:flex;justify-content:space-around;margin-top:10px;padding-top:8px;border-top:1px solid var(--border);}
+.qr-screen-bar span{font-size:.9rem;color:var(--text-muted);cursor:pointer;padding:4px;}
+.qr-screen-bar span.active{color:var(--accent);}
+
+/* ── Float badges ── */
+.qr-float-badge{position:absolute;display:flex;align-items:center;gap:7px;padding:8px 14px;background:rgba(11,13,20,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(245,158,11,.28);border-radius:var(--r-md);font-size:.75rem;font-weight:700;color:var(--text-primary);white-space:nowrap;}
+.qr-float-badge i{color:var(--accent);}
+.qr-fb-1{top:-10px;right:-20px;animation:qrBadgeFloat 4s ease-in-out infinite;}
+.qr-fb-2{bottom:60px;right:-30px;animation:qrBadgeFloat 4s 1.4s ease-in-out infinite;}
+.qr-fb-3{bottom:-10px;left:-20px;animation:qrBadgeFloat 4s 2.8s ease-in-out infinite;}
+@keyframes qrBadgeFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+/* ── Restaurant & Bar section ── */
+.qr-rest-section {
+  padding: 90px 0;
+}
+.qr-rest-eyebrow { margin-bottom: 14px; }
+.qr-rest-badge {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 6px 14px; border-radius: 999px;
+  background: rgba(173,255,47,.1); border: 1px solid rgba(173,255,47,.25);
+  font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: #adff2f;
+}
+.qr-rest-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  font-weight: 800; line-height: 1.12; margin-bottom: 16px; color: #fff;
+}
+.qr-rest-grad {
+  background: linear-gradient(90deg, #adff2f 0%, #22d3ee 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.qr-rest-sub { font-size: .94rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 28px; max-width: 460px; }
+
+.qr-rest-feats { display: flex; flex-direction: column; gap: 12px; }
+.qr-rf-card {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 16px 18px; border-radius: var(--r-md);
+  border: 1px solid transparent;
+  transition: transform .2s, box-shadow .2s;
+}
+.qr-rf-card:hover { transform: translateX(4px); }
+.qr-rf-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; flex-shrink: 0;
+}
+.qr-rf-title { font-family: 'Syne', sans-serif; font-size: .88rem; font-weight: 700; margin-bottom: 3px; }
+.qr-rf-desc { font-size: .8rem; line-height: 1.55; }
+
+.qr-rf-lime { background: rgba(173,255,47,.06); border-color: rgba(173,255,47,.15); }
+.qr-rf-lime .qr-rf-icon { background: rgba(173,255,47,.15); color: #adff2f; }
+.qr-rf-lime .qr-rf-title { color: #adff2f; }
+.qr-rf-lime .qr-rf-desc { color: rgba(173,255,47,.65); }
+
+.qr-rf-teal { background: rgba(34,211,238,.06); border-color: rgba(34,211,238,.15); }
+.qr-rf-teal .qr-rf-icon { background: rgba(34,211,238,.15); color: #22d3ee; }
+.qr-rf-teal .qr-rf-title { color: #22d3ee; }
+.qr-rf-teal .qr-rf-desc { color: rgba(34,211,238,.65); }
+
+.qr-rf-purple { background: rgba(139,92,246,.06); border-color: rgba(139,92,246,.15); }
+.qr-rf-purple .qr-rf-icon { background: rgba(139,92,246,.15); color: #a78bfa; }
+.qr-rf-purple .qr-rf-title { color: #a78bfa; }
+.qr-rf-purple .qr-rf-desc { color: rgba(167,139,250,.65); }
+
+.qr-rf-amber { background: rgba(245,158,11,.06); border-color: rgba(245,158,11,.15); }
+.qr-rf-amber .qr-rf-icon { background: rgba(245,158,11,.15); color: #fbbf24; }
+.qr-rf-amber .qr-rf-title { color: #fbbf24; }
+.qr-rf-amber .qr-rf-desc { color: rgba(251,191,36,.65); }
+
+/* ── Restaurant / Bar tab menu ── */
+.qr-hotel-tabs{display:flex;gap:4px;margin-bottom:0;border-bottom:1px solid var(--border);}
+.qr-hotel-tab{padding:10px 16px;font-size:.82rem;font-weight:600;color:var(--text-secondary);cursor:pointer;border-bottom:2px solid transparent;transition:all .2s ease;margin-bottom:-1px;}
+.qr-hotel-tab.active{color:var(--accent);border-bottom-color:var(--accent);}
+.qr-hotel-tab:hover:not(.active){color:var(--text-primary);}
+.qr-hotel-panel{background:var(--bg-elevated);border:1px solid var(--border);border-top:none;border-radius:0 0 var(--r-lg) var(--r-lg);padding:6px 16px 10px;}
+.qr-hotel-item{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);font-size:.88rem;color:var(--text-secondary);gap:12px;}
+.qr-hotel-item:last-child{border-bottom:none;}
+.qr-hotel-item span:last-child{color:var(--accent);font-family:'Syne',sans-serif;font-weight:700;white-space:nowrap;}
+
+/* ── Digital card ── */
+.qr-dcard-wrap{position:relative;max-width:320px;margin:0 auto;}
+.qr-dcard{background:linear-gradient(145deg,var(--bg-elevated),var(--bg-surface));border:1px solid rgba(245,158,11,.25);border-radius:20px;padding:28px;position:relative;z-index:1;animation:qrPhoneFloat 5s ease-in-out infinite;}
+.qr-dcard-glow{position:absolute;inset:-2px;border-radius:22px;background:linear-gradient(145deg,rgba(245,158,11,.15),transparent);z-index:0;filter:blur(8px);}
+.qr-dcard-top{display:flex;align-items:center;gap:14px;margin-bottom:20px;}
+.qr-dcard-avatar{width:52px;height:52px;border-radius:50%;background:var(--accent);color:#000;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;flex-shrink:0;}
+.qr-dcard-name{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--text-primary);}
+.qr-dcard-role{font-size:.75rem;color:var(--text-muted);margin-top:2px;}
+.qr-dcard-links{display:flex;flex-direction:column;gap:8px;margin-bottom:20px;}
+.qr-dcard-link{display:flex;align-items:center;gap:10px;font-size:.8rem;color:var(--text-secondary);padding:8px 10px;border-radius:var(--r-sm);background:rgba(255,255,255,.03);border:1px solid var(--border);transition:all .2s;}
+.qr-dcard-link:hover{border-color:rgba(245,158,11,.3);color:var(--text-primary);background:rgba(245,158,11,.05);}
+.qr-dcard-link i{color:var(--accent);width:14px;text-align:center;}
+.qr-dcard-actions{display:flex;gap:8px;margin-bottom:16px;}
+.qr-dcard-btn{flex:1;padding:9px;border-radius:var(--r-sm);font-size:.78rem;font-weight:700;cursor:pointer;border:none;background:var(--accent);color:#000;transition:all .2s;font-family:'DM Sans',sans-serif;display:flex;align-items:center;justify-content:center;gap:6px;}
+.qr-dcard-btn:hover{background:var(--accent-light);}
+.qr-dcard-btn-outline{background:transparent;border:1px solid rgba(245,158,11,.35);color:var(--text-primary);}
+.qr-dcard-btn-outline:hover{background:rgba(245,158,11,.1);}
+.qr-dcard-qr{display:flex;justify-content:center;margin-top:4px;}
+.qr-mini-pixels{width:70px;height:70px;display:grid;grid-template-columns:repeat(7,1fr);gap:1.5px;}
+
+/* ── Perk cards ── */
+.qr-perk-card{animation:qrPerkPulse 3.5s ease-in-out infinite;}
+@keyframes qrPerkPulse{0%,100%{border-color:var(--border)}50%{border-color:rgba(245,158,11,.22)}}
+
+/* ── Steps ── */
+.qr-steps-wrap{display:flex;align-items:flex-start;gap:0;flex-wrap:wrap;justify-content:center;}
+.qr-step{flex:1;min-width:180px;max-width:220px;text-align:center;padding:0 12px;position:relative;}
+.qr-step-num{font-family:'Syne',sans-serif;font-size:3rem;font-weight:800;color:rgba(173,255,47,.12);line-height:1;margin-bottom:-8px;}
+.qr-step-icon{width:60px;height:60px;border-radius:50%;background:rgba(173,255,47,.07);border:2px solid rgba(173,255,47,.25);display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#adff2f;margin:0 auto 14px;transition:all .3s ease;}
+.qr-step:hover .qr-step-icon{background:rgba(173,255,47,.15);transform:scale(1.1);box-shadow:0 0 20px rgba(173,255,47,.2);}
+.qr-step h5{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;margin-bottom:8px;}
+.qr-step p{font-size:.82rem;color:var(--text-secondary);line-height:1.6;}
+.qr-step-arrow{color:rgba(173,255,47,.3);font-size:1.2rem;padding:0 4px;margin-top:30px;flex-shrink:0;}
+
+/* ── Deco ── */
+.qr-deco-wrap{position:absolute;right:-60px;top:50%;transform:translateY(-50%);opacity:.07;pointer-events:none;z-index:0;}
+.qr-deco-code{width:280px;height:280px;}
+.qr-pixel-grid{width:100%;height:100%;display:grid;grid-template-columns:repeat(11,1fr);gap:3px;}
+
+@media(max-width:1200px){.qr-hero-h1{font-size:clamp(2.4rem,5vw,3.8rem);}}
+@media(max-width:991px){.qr-deco-wrap{display:none;}.qr-fb-1,.qr-fb-2,.qr-fb-3{display:none;}.qr-rest-section{padding:60px 0;}}
+@media(max-width:767px){.qr-steps-wrap{flex-direction:column;align-items:center;}.qr-step-arrow{transform:rotate(90deg);}.qr-rest-sub{max-width:100%;}}
+</style>
+
+<!-- ═══════════════ PAGE SCRIPTS ═══════════════ -->
+<script>
+/* ── Generate pixel QR art ── */
+(function(){
+  const pattern=[1,1,1,1,1,1,1,0,1,0,1,1,0,0,0,0,0,1,0,0,1,0,1,0,1,1,1,0,1,0,1,0,1,1,1,0,1,1,1,0,1,0,0,1,1,1,0,1,0,1,1,1,0,1,1,1,0,1,0,1,1,0,0,0,0,0,1,0,1,1,0,1,1,1,1,1,1,1,0,1,0,1,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,1,1,1,0,1,0,1,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,1];
+  const decoColors=['#adff2f','#22d3ee','#a78bfa'];
+  let dci=0;
+  function makeGrid(id){
+    const el=document.getElementById(id); if(!el)return;
+    el.innerHTML=''; dci=0;
+    pattern.forEach(v=>{const d=document.createElement('div');const c=v?decoColors[dci++%3]:'transparent';d.style.cssText=`border-radius:2px;background:${c};`;el.appendChild(d);});
+  }
+  makeGrid('qrPixelGrid');
+
+  /* Mini 7x7 for business card — multicolor */
+  const el=document.getElementById('qrMiniCard'); if(!el)return;
+  const p7=[1,1,1,1,1,1,1,1,0,0,0,0,0,1,1,0,1,1,1,0,1,1,0,1,0,1,0,1,1,0,1,1,1,0,1,1,0,0,0,0,0,1,1,1,1,1,1,1,1];
+  const cardColors=['#adff2f','#22d3ee','#a78bfa'];
+  let cci=0;
+  el.innerHTML='';
+  p7.forEach(v=>{const d=document.createElement('div');const c=v?cardColors[cci++%3]:'transparent';d.style.cssText=`border-radius:1px;background:${c};`;el.appendChild(d);});
+})();
+
+/* ── Restaurant / Bar tab switch ── */
+function qrTabSwitch(btn, key) {
+  document.querySelectorAll('.qr-hotel-tab').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.qr-hotel-panel').forEach(p=>p.style.display='none');
+  btn.classList.add('active');
+  const panel=document.getElementById('panel-'+key);
+  if(panel){panel.style.display='block';}
+}
+</script>
+
+{% endblock content %}

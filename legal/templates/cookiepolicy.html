@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% load static i18n %}
+{% block title %}{% trans "G-Fenix | Cookie Policy" %}{% endblock %}
+
+{% block content %}
+<section class="container py-5 page-dark">
+  <h1>{% trans "Cookie Policy" %}</h1>
+  <p><strong>{% trans "Last updated:" %}</strong> {% trans "June 2025" %}</p>
+
+  <h2>{% trans "1. What Are Cookies?" %}</h2>
+  {% blocktrans %}Cookies are small text files placed on your device. They help keep you signed in, secure the Platform, and improve performance.{% endblocktrans %}
+
+  <h2>{% trans "2. Who Sets Cookies?" %}</h2>
+  <ul>
+    <li><strong>{% trans "First-party cookies" %}</strong> — {% trans "set by G-Fenix." %}</li>
+    <li><strong>{% trans "Third-party cookies" %}</strong> — {% blocktrans %}set by our providers (e.g., analytics, payment).{% endblocktrans %}</li>
+  </ul>
+
+  <h2>{% trans "3. Types of Cookies We Use" %}</h2>
+  <ul>
+    <li><strong>{% trans "Strictly necessary" %}</strong> — {% trans "session, CSRF, authentication." %}</li>
+    <li><strong>{% trans "Preferences" %}</strong> — {% trans "remembers language and UI choices." %}</li>
+    <li><strong>{% trans "Analytics" %}</strong> — {% trans "helps us understand usage to improve the Platform (consent-based)." %}</li>
+    <li><strong>{% trans "Security & fraud prevention" %}</strong></li>
+    <li><strong>{% trans "Marketing (optional)" %}</strong> — {% trans "only if you opt-in." %}</li>
+  </ul>
+
+  <h2>{% trans "4. Cookies in Use (examples)" %}</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>{% trans "Name" %}</th>
+        <th>{% trans "Purpose" %}</th>
+        <th>{% trans "Type" %}</th>
+        <th>{% trans "Retention" %}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>sessionid</td>
+        <td>{% trans "Keeps you logged in (strictly necessary)." %}</td>
+        <td>{% trans "First-party" %}</td>
+        <td>{% trans "Session" %}</td>
+      </tr>
+      <tr>
+        <td>csrftoken</td>
+        <td>{% trans "Protects against cross-site request forgery." %}</td>
+        <td>{% trans "First-party" %}</td>
+        <td>{% trans "1 year" %}</td>
+      </tr>
+      <tr>
+        <td>django_language</td>
+        <td>{% trans "Stores your language preference." %}</td>
+        <td>{% trans "First-party" %}</td>
+        <td>{% trans "1 year" %}</td>
+      </tr>
+      <tr>
+        <td>_ga, _gid</td>
+        <td>{% trans "Analytics (only with your consent)." %}</td>
+        <td>{% trans "Third-party" %}</td>
+        <td>{% trans "26 months" %}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>{% trans "5. Legal Basis" %}</h2>
+  {% blocktrans %}We use strictly necessary cookies without consent. All other cookies (e.g., analytics/marketing) are used only with your consent, which you can withdraw at any time.{% endblocktrans %}
+
+</section>
+{% endblock %}

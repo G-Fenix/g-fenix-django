@@ -1,0 +1,613 @@
+{% extends "layout.html" %}
+{% load static i18n %}
+
+{% block title %}G-Fenix | Jessica Fénix{% endblock %}
+
+{% block extra_head %}
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+.jsc-page { color: #fff; }
+
+
+/* ── HERO ── */
+.jsc-hero {
+  position: relative; z-index: 1;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex; align-items: center;
+  padding: 120px 24px 100px;
+  /* NO overflow — blobs in .jsc-hero-bg so wheel events pass through */
+}
+.jsc-hero-bg {
+  position: absolute; inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.jsc-hero-bg::before {
+  content: '';
+  position: absolute; top: -200px; right: -150px;
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(139,92,246,.2) 0%, transparent 70%);
+  animation: jscPulse 7s ease-in-out infinite alternate;
+}
+.jsc-hero-bg::after {
+  content: '';
+  position: absolute; bottom: -100px; left: -80px;
+  width: 480px; height: 480px;
+  background: radial-gradient(circle, rgba(236,72,153,.1) 0%, transparent 70%);
+  animation: jscPulse 9s ease-in-out infinite alternate-reverse;
+}
+@keyframes jscPulse { from { transform: scale(1); } to { transform: scale(1.3); } }
+
+.jsc-hero-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 80px; align-items: center;
+  position: relative; z-index: 2;
+}
+
+.jsc-photo-col { display: flex; flex-direction: column; align-items: center; gap: 28px; }
+.jsc-photo-frame {
+  position: relative;
+  width: 280px; height: 340px;
+  border-radius: 28px; overflow: hidden;
+  animation: jscFloat 5.5s ease-in-out infinite;
+}
+@keyframes jscFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+.jsc-photo-frame::before {
+  content: '';
+  position: absolute; inset: -3px;
+  background: conic-gradient(#8b5cf6, #ec4899, #a78bfa, #8b5cf6);
+  border-radius: 30px; z-index: -1;
+  animation: jscBorderSpin 4s linear infinite;
+}
+@keyframes jscBorderSpin { to { transform: rotate(360deg); } }
+.jsc-photo-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+  display: block; border-radius: 28px;
+}
+
+.jsc-social { display: flex; gap: 14px; }
+.jsc-social-link {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 20px; border-radius: 100px;
+  border: 1px solid rgba(139,92,246,.35);
+  color: rgba(255,255,255,.75); text-decoration: none;
+  font-size: 0.82rem; font-weight: 500; letter-spacing: 0.04em;
+  transition: background-color .3s, border-color .3s, color .3s, box-shadow .3s, transform .3s;
+  background: rgba(139,92,246,.12);
+}
+.jsc-social-link:hover {
+  background: rgba(139,92,246,.2); border-color: #8b5cf6;
+  color: #c4b5fd; transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(139,92,246,.3);
+}
+
+.jsc-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: #a78bfa; margin-bottom: 18px;
+}
+.jsc-eyebrow::before { content: ''; display: block; width: 30px; height: 1px; background: #8b5cf6; }
+
+.jsc-name {
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  font-weight: 900; letter-spacing: -0.04em;
+  line-height: 1.0; margin-bottom: 8px;
+}
+.jsc-name span {
+  background: linear-gradient(90deg, #a78bfa 0%, #ec4899 50%, #c084fc 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+
+.jsc-title {
+  font-size: 1rem; font-weight: 500;
+  color: rgba(255,255,255,.45);
+  letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 28px;
+}
+.jsc-bio {
+  font-size: 1.05rem; line-height: 1.8;
+  color: rgba(255,255,255,.62); max-width: 520px; margin-bottom: 36px;
+}
+.jsc-meta { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 32px; }
+.jsc-meta-item {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.85rem; color: rgba(255,255,255,.55);
+}
+.jsc-meta-item i { color: #a78bfa; font-size: 0.9rem; }
+
+.jsc-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.jsc-chip {
+  display: inline-block; padding: 6px 14px; border-radius: 100px;
+  background: rgba(139,92,246,.08); border: 1px solid rgba(139,92,246,.25);
+  color: rgba(255,255,255,.75); font-size: 0.78rem; font-weight: 500;
+  letter-spacing: 0.04em; transition: all .3s;
+}
+.jsc-chip:hover { background: rgba(139,92,246,.2); border-color: #8b5cf6; color: #c4b5fd; transform: translateY(-2px); }
+
+/* ── SECTIONS ── */
+.jsc-section { position: relative; z-index: 1; padding: 90px 24px; }
+.jsc-section:nth-child(even) { background: rgba(255,255,255,.02); }
+.jsc-section-inner { max-width: 1140px; margin: 0 auto; }
+
+.jsc-sec-label {
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+  color: #a78bfa; margin-bottom: 10px; display: flex; align-items: center; gap: 12px;
+}
+.jsc-sec-label::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(139,92,246,.5), transparent); }
+.jsc-sec-title { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 52px; color: #fff; }
+
+/* ── EXPERTISE ── */
+.jsc-exp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.jsc-exp-card {
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+  border-radius: 20px; padding: 28px; transition: all .35s; position: relative; overflow: hidden;
+}
+.jsc-exp-card::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+  height: 2px; background: linear-gradient(90deg, #8b5cf6, #ec4899);
+  transform: scaleX(0); transform-origin: left; transition: transform .4s ease;
+}
+.jsc-exp-card:hover::after { transform: scaleX(1); }
+.jsc-exp-card:hover {
+  background: rgba(139,92,246,.08); border-color: rgba(139,92,246,.3);
+  transform: translateY(-6px); box-shadow: 0 24px 60px rgba(139,92,246,.12);
+}
+.jsc-exp-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: rgba(139,92,246,.12);
+  display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
+}
+.jsc-exp-icon i { color: #a78bfa; font-size: 1.2rem; }
+.jsc-exp-name { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.jsc-exp-desc { font-size: 0.86rem; line-height: 1.65; color: rgba(255,255,255,.5); }
+
+/* ── SKILLS ── */
+.jsc-skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 14px; }
+.jsc-skill-card {
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px; padding: 18px 14px; text-align: center; transition: all .35s;
+}
+.jsc-skill-card:hover {
+  background: rgba(139,92,246,.1); border-color: rgba(139,92,246,.4);
+  transform: translateY(-5px); box-shadow: 0 18px 38px rgba(139,92,246,.12);
+}
+.jsc-skill-card i { font-size: 1.6rem; margin-bottom: 8px; display: block; }
+.jsc-skill-card span { font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,.75); }
+
+/* ── TIMELINE ── */
+.jsc-timeline { position: relative; padding-left: 36px; }
+.jsc-timeline::before {
+  content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px;
+  background: linear-gradient(180deg, #8b5cf6 0%, #ec4899 60%, rgba(139,92,246,.1) 100%);
+}
+.jsc-tl-item {
+  position: relative; margin-bottom: 48px;
+  opacity: 0; transform: translateX(-20px); transition: opacity .5s ease, transform .5s ease;
+}
+.jsc-tl-item.is-visible { opacity: 1; transform: translateX(0); }
+.jsc-tl-dot {
+  position: absolute; left: -36px; top: 4px;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: #8b5cf6; border: 3px solid #070611;
+  box-shadow: 0 0 12px rgba(139,92,246,.7);
+}
+.jsc-tl-period { font-size: 0.72rem; font-weight: 600; color: #a78bfa; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px; }
+.jsc-tl-role { font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.jsc-tl-company { font-size: 0.88rem; color: rgba(255,255,255,.5); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.jsc-tl-company i { color: #ec4899; font-size: 0.8rem; }
+.jsc-tl-list { list-style: none; padding: 0; }
+.jsc-tl-list li { position: relative; padding-left: 18px; font-size: 0.9rem; color: rgba(255,255,255,.58); line-height: 1.6; margin-bottom: 6px; }
+.jsc-tl-list li::before { content: '→'; position: absolute; left: 0; color: #a78bfa; font-size: 0.75rem; }
+
+/* ── PROJECTS ── */
+.jsc-proj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.jsc-proj-card {
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+  border-radius: 18px; padding: 22px; transition: all .35s;
+}
+.jsc-proj-card:hover {
+  background: rgba(139,92,246,.07); border-color: rgba(139,92,246,.3);
+  transform: translateY(-5px); box-shadow: 0 20px 50px rgba(139,92,246,.1);
+}
+.jsc-proj-period { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #a78bfa; margin-bottom: 6px; }
+.jsc-proj-name { font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 8px; line-height: 1.4; }
+.jsc-proj-desc { font-size: 0.83rem; color: rgba(255,255,255,.45); line-height: 1.55; margin-bottom: 10px; }
+.jsc-proj-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.jsc-proj-tag { font-size: 0.7rem; font-weight: 600; padding: 3px 9px; border-radius: 100px; background: rgba(139,92,246,.12); color: #a78bfa; }
+
+/* ── CERTS ── */
+.jsc-cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.jsc-cert-item {
+  display: flex; align-items: flex-start; gap: 14px;
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px; padding: 18px; transition: all .3s;
+}
+.jsc-cert-item:hover { border-color: rgba(139,92,246,.35); background: rgba(139,92,246,.07); transform: translateX(4px); }
+.jsc-cert-icon { width: 36px; height: 36px; border-radius: 8px; background: rgba(139,92,246,.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.jsc-cert-icon i { color: #a78bfa; font-size: 0.9rem; }
+.jsc-cert-name { font-size: 0.85rem; font-weight: 700; color: #fff; margin-bottom: 3px; }
+.jsc-cert-issuer { font-size: 0.75rem; color: rgba(255,255,255,.4); }
+
+/* ── EDUCATION ── */
+.jsc-edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.jsc-edu-card {
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+  border-radius: 20px; padding: 28px; transition: all .35s;
+}
+.jsc-edu-card:hover { border-color: rgba(139,92,246,.3); transform: translateY(-4px); box-shadow: 0 20px 50px rgba(139,92,246,.1); }
+.jsc-edu-icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(139,92,246,.1); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+.jsc-edu-icon i { color: #a78bfa; font-size: 1.2rem; }
+.jsc-edu-school { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.jsc-edu-degree { font-size: 0.85rem; color: rgba(255,255,255,.5); }
+
+/* ── LANGUAGES ── */
+.jsc-lang-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.jsc-lang-card {
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
+  border-radius: 20px; padding: 24px 18px; text-align: center; transition: all .35s;
+}
+.jsc-lang-card:hover { border-color: rgba(139,92,246,.35); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(139,92,246,.1); }
+.jsc-lang-flag { font-size: 2.2rem; margin-bottom: 10px; }
+.jsc-lang-name { font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.jsc-lang-level { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #a78bfa; }
+
+/* ── CTA ── */
+.jsc-cta { position: relative; z-index: 1; padding: 80px 24px; text-align: center; }
+.jsc-cta-inner { max-width: 600px; margin: 0 auto; padding: 48px; background: rgba(139,92,246,.06); border: 1px solid rgba(139,92,246,.2); border-radius: 28px; }
+.jsc-cta h3 { font-size: 1.6rem; font-weight: 800; margin-bottom: 12px; }
+.jsc-cta p { color: rgba(255,255,255,.55); margin-bottom: 28px; font-size: 0.95rem; line-height: 1.7; }
+.jsc-cta-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 32px; border-radius: 100px;
+  background: linear-gradient(90deg, #8b5cf6, #ec4899);
+  color: #fff; font-weight: 700; font-size: 0.9rem;
+  text-decoration: none; transition: all .3s; letter-spacing: 0.04em;
+}
+.jsc-cta-btn:hover { transform: translateY(-3px); box-shadow: 0 20px 50px rgba(139,92,246,.5); }
+
+/* ── FLAG IMAGES ── */
+.jsc-flag-img {
+  width: 58px; height: 38px; object-fit: cover;
+  border-radius: 6px; display: block;
+  margin: 0 auto 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,.45);
+}
+
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .jsc-hero { padding: 100px 20px 80px; }
+  .jsc-hero-inner { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+  .jsc-hero-text { text-align: center; }
+  .jsc-name { font-size: clamp(2.4rem, 9vw, 4rem); word-break: break-word; }
+  .jsc-photo-col { align-items: center; order: -1; }
+  .jsc-bio { margin: 0 auto 36px; max-width: 100%; }
+  .jsc-meta { justify-content: center; }
+  .jsc-chips { justify-content: center; }
+  .jsc-edu-grid { grid-template-columns: 1fr; }
+  .jsc-lang-grid { grid-template-columns: 1fr 1fr; }
+  .jsc-eyebrow { justify-content: center; }
+}
+@media(max-width:600px){
+  .jsc-hero { padding: 90px 16px 70px; }
+  .jsc-name { font-size: clamp(2rem, 10vw, 3rem); }
+  .jsc-lang-grid { grid-template-columns: 1fr; }
+  .jsc-photo-frame { width: 200px; height: 250px; }
+  .jsc-social { flex-wrap: wrap; justify-content: center; }
+}
+
+[data-jsc-reveal] {
+  opacity: 0; transform: translateY(20px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+[data-jsc-reveal].is-visible { opacity: 1; transform: translateY(0); }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="jsc-page">
+
+<!-- ═══ HERO ═══ -->
+<section class="jsc-hero">
+  <div class="jsc-hero-bg" aria-hidden="true"></div>
+  <div class="jsc-hero-inner">
+
+    <div class="jsc-photo-col">
+      <div class="jsc-photo-frame">
+        <img src="{% static 'images/jessicaa.jpeg' %}" alt="Jessica Fénix">
+      </div>
+      <div class="jsc-social">
+        <a href="https://www.linkedin.com/in/jessicavillarroel/" target="_blank" rel="noopener" class="jsc-social-link">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="mailto:hello@jessicafenix.com" class="jsc-social-link">
+          <i class="fa-solid fa-envelope"></i> {% trans "Email" %}
+        </a>
+      </div>
+    </div>
+
+    <div class="jsc-hero-text">
+      <div class="jsc-eyebrow">{% trans "DATA & AI EXPERT · G·FÉNIX" %}</div>
+      <h1 class="jsc-name">Jessica<br><span>Fénix</span></h1>
+      <p class="jsc-title">{% trans "Data & Analytics Professional · 10+ Years in Consulting" %}</p>
+      <p class="jsc-bio">
+        {% blocktrans %}I help companies turn complex data into clear insights and real business value through AI and analytics. My goal is always clear: empower teams, simplify complexity, and deliver data products that people understand and actually use.{% endblocktrans %}
+      </p>
+      <div class="jsc-meta">
+        <span class="jsc-meta-item"><i class="fa-solid fa-location-dot"></i> {% trans "Barcelona, Spain" %}</span>
+        <span class="jsc-meta-item"><i class="fa-solid fa-chart-line"></i> {% trans "Data · AI · Governance" %}</span>
+        <span class="jsc-meta-item"><i class="fa-solid fa-globe"></i> g-fenix.com</span>
+      </div>
+      <div class="jsc-chips">
+        <span class="jsc-chip">{% trans "Artificial Intelligence" %}</span>
+        <span class="jsc-chip">{% trans "Data Governance" %}</span>
+        <span class="jsc-chip">{% trans "Master Data Management" %}</span>
+        <span class="jsc-chip">{% trans "Business Intelligence" %}</span>
+        <span class="jsc-chip">{% trans "Data Strategy" %}</span>
+        <span class="jsc-chip">Power BI</span>
+        <span class="jsc-chip">Azure</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ EXPERTISE ═══ -->
+<section class="jsc-section" data-jsc-reveal>
+  <div class="jsc-section-inner">
+    <p class="jsc-sec-label">{% trans "Core Areas" %}</p>
+    <h2 class="jsc-sec-title">{% trans "Areas of Expertise" %}</h2>
+    <div class="jsc-exp-grid">
+      <div class="jsc-exp-card">
+        <div class="jsc-exp-icon"><i class="fa-solid fa-brain"></i></div>
+        <p class="jsc-exp-name">{% trans "AI & Analytics" %}</p>
+        <p class="jsc-exp-desc">{% trans "Identifying practical AI opportunities" %}, {% trans "implementing effective analytics solutions" %}, {% trans "integrating technology into daily operations without disruption" %}.</p>
+      </div>
+      <div class="jsc-exp-card">
+        <div class="jsc-exp-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <p class="jsc-exp-name">{% trans "Data Governance" %}</p>
+        <p class="jsc-exp-desc">{% trans "Building governance frameworks that guarantee Data Quality, Data Integrity, and Compliance & Security across the entire organization." %}</p>
+      </div>
+      <div class="jsc-exp-card">
+        <div class="jsc-exp-icon"><i class="fa-solid fa-database"></i></div>
+        <p class="jsc-exp-name">{% trans "Data Manager & Strategy" %}</p>
+        <p class="jsc-exp-desc">{% trans "Defining roadmaps, aligning strategies with objectives, and managing data products that drive strategic decision-making at the executive level." %}</p>
+      </div>
+      <div class="jsc-exp-card">
+        <div class="jsc-exp-icon"><i class="fa-solid fa-users"></i></div>
+        <p class="jsc-exp-name">{% trans "Team Development" %}</p>
+        <p class="jsc-exp-desc">{% trans "Mentoring teams, aligning individual strengths to project goals, and proactively identifying and addressing misalignment or lack of engagement." %}</p>
+      </div>
+      <div class="jsc-exp-card">
+        <div class="jsc-exp-icon"><i class="fa-solid fa-chart-column"></i></div>
+        <p class="jsc-exp-name">{% trans "Business Intelligence" %}</p>
+        <p class="jsc-exp-desc">{% trans "End-to-end BI implementations — data warehouses, ETL pipelines, QlikView, Qlik Sense, Power BI dashboards and RRHH KPI models." %}</p>
+      </div>
+      <div class="jsc-exp-card">
+        <div class="jsc-exp-icon"><i class="fa-solid fa-rotate"></i></div>
+        <p class="jsc-exp-name">{% trans "Digital Transformation" %}</p>
+        <p class="jsc-exp-desc">{% trans "Leading full data transformation programs: user involvement, continuous training, and strategic adoption to ensure long-term success." %}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SKILLS ═══ -->
+<section class="jsc-section" data-jsc-reveal>
+  <div class="jsc-section-inner">
+    <p class="jsc-sec-label">{% trans "Tech Stack" %}</p>
+    <h2 class="jsc-sec-title">{% trans "Tools & Technologies" %}</h2>
+    <div class="jsc-skills-grid">
+      <div class="jsc-skill-card"><i class="fa-brands fa-python" style="color:#3b82f6;"></i><span>Python</span></div>
+      <div class="jsc-skill-card"><i class="fa-solid fa-chart-bar" style="color:#f59e0b;"></i><span>Power BI</span></div>
+      <div class="jsc-skill-card"><i class="fa-solid fa-database" style="color:#a78bfa;"></i><span>SQL Server</span></div>
+      <div class="jsc-skill-card"><i class="fa-brands fa-microsoft" style="color:#00a4ef;"></i><span>Azure AI</span></div>
+      <div class="jsc-skill-card"><i class="fa-solid fa-sitemap" style="color:#ec4899;"></i><span>Collibra</span></div>
+      <div class="jsc-skill-card"><i class="fa-solid fa-layer-group" style="color:#f97316;"></i><span>Informatica</span></div>
+      <div class="jsc-skill-card"><i class="fa-solid fa-eye" style="color:#10b981;"></i><span>QlikView / Sense</span></div>
+      <div class="jsc-skill-card"><i class="fa-solid fa-table-cells" style="color:#22d3ee;"></i><span>Talend</span></div>
+      <div class="jsc-skill-card"><i class="fa-brands fa-salesforce" style="color:#00a1e0;"></i><span>Salesforce</span></div>
+      <div class="jsc-skill-card"><i class="fa-solid fa-circle-nodes" style="color:#c084fc;"></i><span>Oracle</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EXPERIENCE ═══ -->
+<section class="jsc-section" data-jsc-reveal>
+  <div class="jsc-section-inner">
+    <p class="jsc-sec-label">{% trans "Career" %}</p>
+    <h2 class="jsc-sec-title">{% trans "Work Experience" %}</h2>
+    <div class="jsc-timeline">
+
+      <div class="jsc-tl-item">
+        <div class="jsc-tl-dot" style="background:#8b5cf6; box-shadow:0 0 14px rgba(139,92,246,.8);"></div>
+        <p class="jsc-tl-period">{% trans "Apr 2025 – Present · 1 yr 3 mos" %}</p>
+        <p class="jsc-tl-role">{% trans "Business Data Analyst" %}</p>
+        <p class="jsc-tl-company"><i class="fa-solid fa-building"></i> Molins · {% trans "Full-time" %} · Barcelona, {% trans "Hybrid" %}</p>
+        <ul class="jsc-tl-list">
+          <li>{% trans "Molins is undergoing a full digital transformation — joined the internal data team to collaborate on the definition, development, and management of data products" %}</li>
+          <li>{% trans "Drive strategic decision-making through data product delivery" %}</li>
+          <li>{% trans "Skills" %}: Data Strategy · Data Analytics</li>
+        </ul>
+      </div>
+
+      <div class="jsc-tl-item">
+        <div class="jsc-tl-dot" style="background:#ec4899;"></div>
+        <p class="jsc-tl-period">{% trans "Apr 2023 – Mar 2025 · 2 yrs" %}</p>
+        <p class="jsc-tl-role">{% trans "Data Manager" %}</p>
+        <p class="jsc-tl-company"><i class="fa-solid fa-building"></i> zenital · {% trans "Full-time" %} · Barcelona, {% trans "Remote" %}</p>
+        <ul class="jsc-tl-list">
+          <li>{% trans "Turned data into strategic solutions that drive real business impact" %}</li>
+          <li>{% trans "Defined roadmaps and aligned data strategies with client objectives" %}</li>
+          <li>{% trans "Ensured data quality, security, and compliance across programs" %}</li>
+          <li>{% trans "Skills" %}: Client Relations · Change Management</li>
+        </ul>
+      </div>
+
+      <div class="jsc-tl-item">
+        <div class="jsc-tl-dot" style="background:#c084fc;"></div>
+        <p class="jsc-tl-period">{% trans "May 2021 – Apr 2023 · 2 yrs" %}</p>
+        <p class="jsc-tl-role">{% trans "Analytics Specialist and Advisor" %}</p>
+        <p class="jsc-tl-company"><i class="fa-solid fa-building"></i> ABAST · {% trans "Full-time" %} · Barcelona, Spain</p>
+        <ul class="jsc-tl-list">
+          <li>{% trans "Led Data Analytics strategy for a multinational company" %}</li>
+          <li>{% trans "Contributed to the creation of a new Data & Analytics department" %}</li>
+          <li>{% trans "Ensured strong Data Governance foundations and scalable BI solutions" %}</li>
+          <li>{% trans "Skills" %}: Data Strategy · Business Process Improvement</li>
+        </ul>
+      </div>
+
+      <div class="jsc-tl-item">
+        <div class="jsc-tl-dot"></div>
+        <p class="jsc-tl-period">{% trans "Sep 2016 – Aug 2020 · 4 yrs" %}</p>
+        <p class="jsc-tl-role">{% trans "Project Delivery Manager" %}</p>
+        <p class="jsc-tl-company"><i class="fa-solid fa-building"></i> SDG Group · {% trans "Full-time" %} · Barcelona, Spain</p>
+        <ul class="jsc-tl-list">
+          <li>{% trans "Progressed from Data Engineer to Delivery Manager over four years" %}</li>
+          <li>{% trans "Deep hands-on expertise in Data Analytics, Data Governance, and MDM" %}</li>
+          <li>{% trans "Initially focused on technical ETL and DWH execution, later managing full project delivery" %}</li>
+          <li>{% trans "Skills" %}: Business Intelligence · Functional Analysis</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROJECTS ═══ -->
+<section class="jsc-section" data-jsc-reveal>
+  <div class="jsc-section-inner">
+    <p class="jsc-sec-label">{% trans "Case Studies" %}</p>
+    <h2 class="jsc-sec-title">{% trans "Selected Projects" %}</h2>
+    <div class="jsc-proj-grid">
+
+      <div class="jsc-proj-card">
+        <p class="jsc-proj-period">{% trans "Feb 2020 – Apr 2020" %}</p>
+        <p class="jsc-proj-name">{% trans "Definición del Modelo de Gobierno del Dato — Sector Seguros" %}</p>
+        <p class="jsc-proj-desc">{% trans "Identified governance needs and data maturity. Analysed process and data maps. Defined and validated the governance model for a business area." %}</p>
+        <div class="jsc-proj-tags"><span class="jsc-proj-tag">{% trans "Data Governance" %}</span><span class="jsc-proj-tag">{% trans "Insurance" %}</span></div>
+      </div>
+
+      <div class="jsc-proj-card">
+        <p class="jsc-proj-period">{% trans "Sep 2019 – Jan 2020" %}</p>
+        <p class="jsc-proj-name">{% trans "Data Warehouse con SQL Server y Talend" %}</p>
+        <p class="jsc-proj-desc">{% trans "Audit of DWH integration for insurance sector. ETL corrections and improvements, DWH automation, UAT support." %}</p>
+        <div class="jsc-proj-tags"><span class="jsc-proj-tag">SQL Server</span><span class="jsc-proj-tag">Talend</span><span class="jsc-proj-tag">ETL</span></div>
+      </div>
+
+      <div class="jsc-proj-card">
+        <p class="jsc-proj-period">{% trans "Oct 2017 – Sep 2019" %}</p>
+        <p class="jsc-proj-name">{% trans "Implantación DWH SQL Server — Visión 360° Personas & Actividades" %}</p>
+        <p class="jsc-proj-desc">{% trans "Led full project. ETL design across all layers (Staging, ODS, exploitation). Data quality rules, matching/consolidation processes, Salesforce API integration." %}</p>
+        <div class="jsc-proj-tags"><span class="jsc-proj-tag">SQL Server</span><span class="jsc-proj-tag">Informatica</span><span class="jsc-proj-tag">Qlikview</span><span class="jsc-proj-tag">Salesforce</span></div>
+      </div>
+
+      <div class="jsc-proj-card">
+        <p class="jsc-proj-period">{% trans "Sep 2018 – Sep 2019" %}</p>
+        <p class="jsc-proj-name">{% trans "Gestión de Proyectos Verticales" %}</p>
+        <p class="jsc-proj-desc">{% trans "Data model design, information ingestion automation, exploitation layer, application development, and user training." %}</p>
+        <div class="jsc-proj-tags"><span class="jsc-proj-tag">SQL Server</span><span class="jsc-proj-tag">Informatica PowerCenter</span><span class="jsc-proj-tag">Qlik Sense</span></div>
+      </div>
+
+      <div class="jsc-proj-card">
+        <p class="jsc-proj-period">{% trans "Apr 2017 – Jun 2017" %}</p>
+        <p class="jsc-proj-name">{% trans "Cuadro de Mando Integral en Power BI" %}</p>
+        <p class="jsc-proj-desc">{% trans "Oracle data model design. Advisory on KPI design and implementation for RRHH model. Built integral Power BI dashboard." %}</p>
+        <div class="jsc-proj-tags"><span class="jsc-proj-tag">Power BI</span><span class="jsc-proj-tag">Oracle</span><span class="jsc-proj-tag">KPIs</span></div>
+      </div>
+
+      <div class="jsc-proj-card">
+        <p class="jsc-proj-period">{% trans "Sep 2016 – Feb 2017" %}</p>
+        <p class="jsc-proj-name">{% trans "Cuadro de Mando QlikView — Sector Sanitario" %}</p>
+        <p class="jsc-proj-desc">{% trans "Data analysis from Excel sources. Healthcare sector data model definition. Two management dashboards for operational exploitation." %}</p>
+        <div class="jsc-proj-tags"><span class="jsc-proj-tag">QlikView</span><span class="jsc-proj-tag">Healthcare</span><span class="jsc-proj-tag">Data Modelling</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CERTIFICATIONS ═══ -->
+<section class="jsc-section" data-jsc-reveal>
+  <div class="jsc-section-inner">
+    <p class="jsc-sec-label">{% trans "Credentials" %}</p>
+    <h2 class="jsc-sec-title">{% trans "Licenses & Certifications" %}</h2>
+    <div class="jsc-cert-grid">
+      <div class="jsc-cert-item">
+        <div class="jsc-cert-icon"><i class="fa-brands fa-microsoft"></i></div>
+        <div>
+          <p class="jsc-cert-name">{% trans "Microsoft Certified: Azure AI Fundamentals" %}</p>
+          <p class="jsc-cert-issuer">Microsoft · {% trans "Issued Jul 2025" %}</p>
+        </div>
+      </div>
+      <div class="jsc-cert-item">
+        <div class="jsc-cert-icon"><i class="fa-solid fa-certificate"></i></div>
+        <div>
+          <p class="jsc-cert-name">{% trans "Collibra Expert: Level III Certification" %}</p>
+          <p class="jsc-cert-issuer">Collibra · {% trans "Issued Jan 2020" %} · ID: CELIC-20200102-2124</p>
+        </div>
+      </div>
+      <div class="jsc-cert-item">
+        <div class="jsc-cert-icon"><i class="fa-solid fa-certificate"></i></div>
+        <div>
+          <p class="jsc-cert-name">{% trans "PowerCenter Data Integration 10: Developer, Specialist" %}</p>
+          <p class="jsc-cert-issuer">Informatica · {% trans "Issued Jul 2019" %}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LANGUAGES ═══ -->
+<section class="jsc-section" data-jsc-reveal>
+  <div class="jsc-section-inner">
+    <p class="jsc-sec-label">{% trans "Communication" %}</p>
+    <h2 class="jsc-sec-title">{% trans "Languages" %}</h2>
+    <div class="jsc-lang-grid">
+      <div class="jsc-lang-card">
+        <img class="jsc-flag-img" src="https://flagcdn.com/w80/es.png" alt="Spain">
+        <p class="jsc-lang-name">{% trans "Spanish" %}</p>
+        <p class="jsc-lang-level">{% trans "Native" %}</p>
+      </div>
+      <div class="jsc-lang-card">
+        <img class="jsc-flag-img" src="https://flagcdn.com/w80/gb.png" alt="United Kingdom">
+        <p class="jsc-lang-name">{% trans "English" %}</p>
+        <p class="jsc-lang-level">{% trans "Fluent" %}</p>
+      </div>
+      <div class="jsc-lang-card">
+        <img class="jsc-flag-img" src="https://flagcdn.com/w80/es-ct.png" onerror="this.src='https://flagcdn.com/w80/es.png'" alt="Catalan">
+        <p class="jsc-lang-name">{% trans "Catalan" %}</p>
+        <p class="jsc-lang-level">{% trans "Fluent" %}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+/* Scroll reveal */
+(function(){
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('[data-jsc-reveal], .jsc-tl-item').forEach(function(el){ el.classList.add('is-visible'); });
+    return;
+  }
+  function makeObs(opts){
+    return new IntersectionObserver(function(entries,obs){ entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('is-visible'); obs.unobserve(e.target); } }); }, opts);
+  }
+  var io1 = makeObs({ threshold: 0.06, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('[data-jsc-reveal]').forEach(function(el){ io1.observe(el); });
+  var io2 = makeObs({ threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+  document.querySelectorAll('.jsc-tl-item').forEach(function(el){ io2.observe(el); });
+})();
+</script>
+{% endblock %}

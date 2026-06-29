@@ -1,0 +1,692 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}G-Fenix | Data & AI Training{% endblock %}
+
+{% block extra_head %}
+<style>
+  #gf-scroll-bar { background: linear-gradient(90deg, #7c3aed, #a78bfa) !important; }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<style>
+/* ── TITLE GRANITE FLOW ── */
+@keyframes tr-title-flow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ── SHARED ── */
+.tr-sec-label {
+  font-size:.68rem; letter-spacing:.18em; font-weight:700;
+  color:#7c3aed; text-transform:uppercase; margin-bottom:16px;
+}
+
+/* ── HERO ── */
+.tr-hero {
+  min-height:100vh;
+  display:flex; align-items:center;
+  padding:clamp(90px,10vh,120px) 0 clamp(60px,7vh,90px);
+  position:relative; overflow:hidden;
+}
+.tr-hero::before {
+  content:''; position:absolute; inset:0; z-index:1; pointer-events:none;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 50%, rgba(124,58,237,.12) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 10% 60%, rgba(34,211,238,.07) 0%, transparent 60%);
+}
+.tr-eyebrow {
+  font-size:.72rem; letter-spacing:.18em; font-weight:700;
+  color:#7c3aed; text-transform:uppercase;
+  display:flex; align-items:center; gap:10px; margin-bottom:14px;
+}
+.tr-eyebrow::before { content:''; display:block; width:28px; height:2px; background:#7c3aed; }
+.tr-hero-title {
+  font-size:clamp(1.9rem,3.5vw,3.2rem);
+  font-weight:900; line-height:1.06;
+  letter-spacing:-.025em; margin-bottom:16px;
+  background: linear-gradient(90deg, #fff 0%, #c4b5fd 18%, #67e8f9 36%, #fff 52%, #a78bfa 70%, #22d3ee 88%, #fff 100%);
+  background-size: 300% 100%;
+  animation: tr-title-flow 7s ease infinite;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.tr-hero-sub {
+  font-size:.93rem; color:var(--text-secondary);
+  max-width:480px; line-height:1.75; margin-bottom:22px;
+}
+.tr-pills { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:26px; }
+.tr-pill {
+  font-size:.75rem; font-weight:600; letter-spacing:.06em;
+  padding:5px 13px; border-radius:999px;
+  background:rgba(124,58,237,.12);
+  border:1px solid rgba(124,58,237,.3);
+  color:rgba(167,139,250,.95);
+}
+.tr-hero-stats {
+  display:flex; gap:32px; margin-top:32px;
+  padding-top:24px; border-top:1px solid rgba(255,255,255,.07);
+}
+.tr-stat-num { font-size:1.5rem; font-weight:900; color:#fff; line-height:1; }
+.tr-stat-num span { color:#adff2f; }
+.tr-stat-lbl { font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.35); margin-top:4px; }
+
+/* ── SESSION VISUAL ── */
+.tr-visual-wrap { position:relative; display:flex; align-items:center; justify-content:center; }
+.tr-session-card {
+  width:100%; max-width:460px;
+  background:rgba(14,16,24,.92);
+  border:1px solid rgba(124,58,237,.28);
+  border-radius:16px;
+  box-shadow:0 0 60px rgba(124,58,237,.18), 0 30px 80px rgba(0,0,0,.5);
+  overflow:hidden;
+}
+.tr-card-bar {
+  display:flex; align-items:center; gap:8px;
+  padding:12px 16px;
+  background:rgba(8,10,15,.6);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.tr-card-dot { width:10px; height:10px; border-radius:50%; }
+.tr-card-dot.r{background:#ef4444;} .tr-card-dot.y{background:#f59e0b;} .tr-card-dot.g{background:#22c55e;}
+.tr-card-title { margin-left:8px; font-size:.72rem; color:rgba(255,255,255,.35); font-family:monospace; letter-spacing:.04em; }
+.tr-card-body { padding:22px; }
+
+/* module rows */
+.tr-module {
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:10px; padding:14px 16px; margin-bottom:10px;
+}
+.tr-mod-top { display:flex; align-items:center; justify-content:space-between; margin-bottom:9px; }
+.tr-mod-tag { font-size:.6rem; letter-spacing:.12em; font-weight:700; text-transform:uppercase; }
+.tr-mod-pct { font-size:.72rem; font-weight:700; color:#fff; }
+.tr-mod-title { font-size:.85rem; font-weight:700; color:#fff; margin-bottom:8px; }
+.tr-mod-bar-bg { width:100%; height:5px; background:rgba(255,255,255,.07); border-radius:3px; overflow:hidden; }
+.tr-mod-fill {
+  height:100%; border-radius:3px;
+  width:0; transition:width 1.4s cubic-bezier(.22,.61,.36,1);
+}
+.tr-mod-fill.animate { width:var(--w); }
+
+/* live row */
+.tr-live-row {
+  display:flex; flex-direction:column; gap:6px; margin-top:16px;
+  padding-top:14px; border-top:1px solid rgba(255,255,255,.06);
+}
+.tr-live-item {
+  display:flex; align-items:center; gap:8px;
+  font-size:.74rem; color:rgba(255,255,255,.5);
+}
+.tr-live-item .ok { color:#10b981; font-size:.7rem; }
+
+/* participant counter */
+.tr-pax-row {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:14px;
+}
+.tr-pax-box {
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:10px; padding:12px 10px; text-align:center;
+}
+.tr-pax-num { font-size:1.25rem; font-weight:800; line-height:1; }
+.tr-pax-lbl { font-size:.6rem; color:rgba(255,255,255,.3); letter-spacing:.07em; text-transform:uppercase; margin-top:4px; }
+
+/* float badge */
+.tr-float-badge {
+  position:absolute; bottom:-18px; right:-18px;
+  background:linear-gradient(135deg,#7c3aed,#5b21b6);
+  border-radius:12px; padding:14px 18px;
+  box-shadow:0 8px 30px rgba(124,58,237,.4);
+  border:1px solid rgba(255,255,255,.1);
+  color:#fff; font-size:.8rem; font-weight:700; white-space:nowrap;
+}
+.tr-float-badge span { display:block; font-size:.62rem; font-weight:400; opacity:.7; margin-top:2px; }
+
+/* ── WHO IT'S FOR ── */
+.tr-pain-section { padding:90px 0; background:rgba(20,24,34,.7); }
+.tr-pain-title {
+  font-size:clamp(1.7rem,3vw,2.5rem);
+  font-weight:800; color:#fff; line-height:1.15; margin-bottom:50px;
+}
+.tr-pain-card {
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:14px; padding:28px 24px; height:100%;
+  transition:border-color .3s, background .3s;
+}
+.tr-pain-card:hover { border-color:rgba(124,58,237,.35); background:rgba(124,58,237,.05); }
+.tr-pain-tag { font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:#7c3aed; margin-bottom:12px; }
+.tr-pain-head { font-size:1.1rem; font-weight:700; color:#fff; margin-bottom:10px; }
+.tr-pain-body { font-size:.88rem; color:var(--text-secondary); line-height:1.65; }
+
+/* ── WHAT YOU GET ── */
+.tr-get-section { padding:90px 0; }
+.tr-get-title {
+  font-size:clamp(1.7rem,3vw,2.5rem);
+  font-weight:800; color:#fff; line-height:1.15; margin-bottom:40px;
+}
+.tr-check-list { display:grid; grid-template-columns:repeat(2,1fr); gap:16px 40px; }
+@media(max-width:640px){ .tr-check-list { grid-template-columns:1fr; } }
+.tr-check-row {
+  display:flex; gap:12px; align-items:flex-start;
+  padding:14px 0; border-bottom:1px solid rgba(255,255,255,.05);
+}
+.tr-check-icon {
+  width:28px; height:28px; flex-shrink:0;
+  border-radius:7px; background:rgba(124,58,237,.15);
+  border:1px solid rgba(124,58,237,.3);
+  display:flex; align-items:center; justify-content:center;
+  color:#a78bfa; font-size:.8rem; margin-top:1px;
+}
+.tr-check-title { font-size:.9rem; font-weight:700; color:#fff; margin-bottom:4px; }
+.tr-check-desc { font-size:.8rem; color:var(--text-secondary); line-height:1.65; }
+
+/* ── HOW IT WORKS ── */
+.tr-how-section { padding:90px 0; background:rgba(20,24,34,.7); }
+.tr-how-title {
+  font-size:clamp(1.7rem,3vw,2.5rem);
+  font-weight:800; color:#fff; line-height:1.15; margin-bottom:60px;
+}
+.tr-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+@media(max-width:900px){ .tr-steps { grid-template-columns:repeat(2,1fr); } }
+@media(max-width:540px){ .tr-steps { grid-template-columns:1fr; } }
+.tr-step-num {
+  font-size:3.5rem; font-weight:900; line-height:1;
+  color:rgba(124,58,237,.14); font-variant-numeric:tabular-nums; margin-bottom:8px;
+}
+.tr-step-divider { width:100%; height:1px; background:rgba(124,58,237,.22); margin-bottom:16px; }
+.tr-step-name { font-size:1.05rem; font-weight:700; color:#fff; margin-bottom:10px; }
+.tr-step-body { font-size:.85rem; color:var(--text-secondary); line-height:1.7; }
+
+/* ── FAQ ACCORDION ── */
+.tr-faq-section { padding:90px 0; }
+.tr-faq-title {
+  font-size:clamp(1.7rem,3vw,2.5rem);
+  font-weight:800; color:#fff; line-height:1.15; margin-bottom:50px;
+}
+.tr-acc-item {
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.tr-acc-btn {
+  width:100%; background:none; border:none; text-align:left;
+  padding:22px 0; cursor:pointer;
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+}
+.tr-acc-q { font-size:1rem; font-weight:700; color:#fff; }
+.tr-acc-icon {
+  flex-shrink:0; width:28px; height:28px; border-radius:50%;
+  border:1px solid rgba(124,58,237,.5);
+  display:flex; align-items:center; justify-content:center;
+  color:#7c3aed; font-size:.9rem; font-weight:700;
+  transition:transform .3s, background .3s;
+}
+.tr-acc-item.open .tr-acc-icon {
+  background:rgba(124,58,237,.15); transform:rotate(45deg);
+}
+.tr-acc-body {
+  display:none; padding:0 0 22px;
+  font-size:.88rem; color:var(--text-secondary); line-height:1.75;
+}
+.tr-acc-item.open .tr-acc-body { display:block; }
+
+/* ── WORKS WELL WITH ── */
+.tr-related-section { padding:90px 0; background:rgba(20,24,34,.7); }
+.tr-related-title {
+  font-size:clamp(1.7rem,3vw,2.5rem);
+  font-weight:800; color:#fff; line-height:1.15; margin-bottom:50px;
+}
+.tr-rel-card {
+  display:block; text-decoration:none;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:14px; padding:28px; height:100%;
+  transition:border-color .3s, background .3s, transform .3s;
+}
+.tr-rel-card:hover {
+  border-color:rgba(124,58,237,.35); background:rgba(124,58,237,.05);
+  transform:translateY(-4px); text-decoration:none;
+}
+.tr-rel-tag { font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; font-weight:700; margin-bottom:12px; }
+.tr-rel-tag.data  { color:#8b5cf6; }
+.tr-rel-tag.build { color:#22d3ee; }
+.tr-rel-name { font-size:1.05rem; font-weight:700; color:#fff; margin-bottom:10px; }
+.tr-rel-body { font-size:.85rem; color:var(--text-secondary); line-height:1.65; }
+
+/* ── CTA BAND ── */
+.tr-cta-band {
+  padding:100px 0; text-align:center;
+  position:relative; overflow:hidden;
+}
+.tr-cta-band::before {
+  content:''; position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(ellipse 60% 60% at 50% 50%, rgba(124,58,237,.1) 0%, transparent 70%);
+}
+.tr-cta-eyebrow {
+  display:flex; align-items:center; justify-content:center; gap:10px;
+  font-size:.68rem; letter-spacing:.18em; font-weight:700;
+  color:#7c3aed; text-transform:uppercase; margin-bottom:22px;
+}
+.tr-cta-eyebrow::before,.tr-cta-eyebrow::after {
+  content:''; display:block; width:32px; height:1px; background:#7c3aed;
+}
+.tr-cta-title {
+  font-size:clamp(2rem,4.5vw,3.4rem); font-weight:900; color:#fff;
+  line-height:1.08; margin-bottom:18px; letter-spacing:-.025em;
+}
+.tr-cta-sub {
+  font-size:.93rem; color:var(--text-secondary); line-height:1.75;
+  max-width:500px; margin:0 auto 36px;
+}
+.tr-cta-btns { display:flex; gap:16px; flex-wrap:wrap; justify-content:center; }
+.gf-btn-gold {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:13px 28px; border-radius:999px;
+  background:linear-gradient(135deg,#f59e0b,#d97706);
+  color:#000; font-weight:700; font-size:.95rem;
+  text-decoration:none; transition:transform .2s, box-shadow .2s;
+  box-shadow:0 4px 20px rgba(245,158,11,.3);
+}
+.gf-btn-gold:hover { transform:translateY(-2px); box-shadow:0 8px 28px rgba(245,158,11,.4); color:#000; text-decoration:none; }
+</style>
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+<section class="tr-hero">
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="row align-items-center g-5">
+
+      <!-- LEFT -->
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="tr-eyebrow">{% trans "DATA" %} · {% trans "TRAINING" %}</div>
+        <h1 class="tr-hero-title">{% trans "Make your team fluent in data and AI." %}</h1>
+        <p class="tr-hero-sub">
+          {% trans "The hard part is rarely the technology — it's that nobody explains it clearly. We teach your non-technical team to read data and use AI tools with confidence, using your real work, not generic slides. No gurus, no jargon." %}
+        </p>
+        <div class="tr-pills">
+          <span class="tr-pill">Power BI</span>
+          <span class="tr-pill">{% trans "Data literacy" %}</span>
+          <span class="tr-pill">{% trans "Applied AI" %}</span>
+          <span class="tr-pill">{% trans "On-site / remote" %}</span>
+          <span class="tr-pill">EN · ES</span>
+        </div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+          <a href="/contact-us" class="gf-btn-primary">{% trans "Start a project" %} →</a>
+          <a href="#tr-session" class="gf-btn-outline">{% trans "Plan a session" %}</a>
+        </div>
+        <div class="tr-hero-stats">
+          <div>
+            <div class="tr-stat-num">10<span>+</span></div>
+            <div class="tr-stat-lbl">{% trans "YEARS IN DATA" %}</div>
+          </div>
+          <div>
+            <div class="tr-stat-num">4</div>
+            <div class="tr-stat-lbl">{% trans "LANGUAGES" %}</div>
+          </div>
+          <div>
+            <div class="tr-stat-num">100<span>%</span></div>
+            <div class="tr-stat-lbl">{% trans "ON TIME" %}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT — session visual -->
+      <div class="col-lg-6 d-flex justify-content-center" data-aos="fade-left" data-aos-delay="200" id="tr-session">
+        <div class="tr-visual-wrap w-100" style="max-width:460px;">
+          <div class="tr-session-card">
+            <div class="tr-card-bar">
+              <span class="tr-card-dot r"></span>
+              <span class="tr-card-dot y"></span>
+              <span class="tr-card-dot g"></span>
+              <span class="tr-card-title">session.planner — g·fenix</span>
+            </div>
+            <div class="tr-card-body">
+
+              <!-- module 1 -->
+              <div class="tr-module">
+                <div class="tr-mod-top">
+                  <span class="tr-mod-tag" style="color:#a78bfa;">MODULE 1</span>
+                  <span class="tr-mod-pct" id="tr-p1">0%</span>
+                </div>
+                <div class="tr-mod-title">{% trans "Power BI & Dashboards" %}</div>
+                <div class="tr-mod-bar-bg">
+                  <div class="tr-mod-fill" id="tr-b1" style="--w:85%;background:linear-gradient(90deg,#7c3aed,#a78bfa);"></div>
+                </div>
+              </div>
+
+              <!-- module 2 -->
+              <div class="tr-module">
+                <div class="tr-mod-top">
+                  <span class="tr-mod-tag" style="color:#22d3ee;">MODULE 2</span>
+                  <span class="tr-mod-pct" id="tr-p2">0%</span>
+                </div>
+                <div class="tr-mod-title">{% trans "Applied AI for Non-Techies" %}</div>
+                <div class="tr-mod-bar-bg">
+                  <div class="tr-mod-fill" id="tr-b2" style="--w:70%;background:linear-gradient(90deg,#0e9898,#22d3ee);"></div>
+                </div>
+              </div>
+
+              <!-- module 3 -->
+              <div class="tr-module">
+                <div class="tr-mod-top">
+                  <span class="tr-mod-tag" style="color:#adff2f;">MODULE 3</span>
+                  <span class="tr-mod-pct" id="tr-p3">0%</span>
+                </div>
+                <div class="tr-mod-title">{% trans "Data Literacy Basics" %}</div>
+                <div class="tr-mod-bar-bg">
+                  <div class="tr-mod-fill" id="tr-b3" style="--w:55%;background:linear-gradient(90deg,#6b8a00,#adff2f);"></div>
+                </div>
+              </div>
+
+              <!-- live info -->
+              <div class="tr-live-row">
+                <div class="tr-live-item"><span class="ok">✓</span> {% trans "8 participants confirmed" %}</div>
+                <div class="tr-live-item"><span class="ok">✓</span> {% trans "On-site · Barcelona" %}</div>
+                <div class="tr-live-item"><span class="ok">✓</span> {% trans "Materials included" %}</div>
+              </div>
+
+              <!-- counters -->
+              <div class="tr-pax-row">
+                <div class="tr-pax-box">
+                  <div class="tr-pax-num" style="color:#a78bfa;" id="tr-c1">0</div>
+                  <div class="tr-pax-lbl">{% trans "Sessions run" %}</div>
+                </div>
+                <div class="tr-pax-box">
+                  <div class="tr-pax-num" style="color:#22d3ee;" id="tr-c2">0</div>
+                  <div class="tr-pax-lbl">{% trans "People trained" %}</div>
+                </div>
+                <div class="tr-pax-box">
+                  <div class="tr-pax-num" style="color:#adff2f;">EN·ES</div>
+                  <div class="tr-pax-lbl">{% trans "Languages" %}</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="tr-float-badge" data-aos="zoom-in" data-aos-delay="600">
+            <i class="fa-solid fa-graduation-cap me-1"></i> {% trans "10+ Years in Data" %}
+            <span>{% trans "Expert-led, tailored to you" %}</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ WHO IT'S FOR ═══════════════════════ -->
+<section class="tr-pain-section">
+  <div class="container">
+    <div class="tr-sec-label" data-aos="fade-up">{% trans "WHO IT'S FOR" %}</div>
+    <h2 class="tr-pain-title" data-aos="fade-up" data-aos-delay="60">
+      {% trans "For teams who feel left behind" %}<br>{% trans "by their own tools." %}
+    </h2>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+        <div class="tr-pain-card">
+          <div class="tr-pain-tag">{% trans "NON-TECHNICAL TEAMS" %}</div>
+          <div class="tr-pain-head">{% trans '"Data" makes us freeze' %}</div>
+          <p class="tr-pain-body">{% trans "Your people are great at their jobs but go blank at charts and dashboards. They need the basics, taught without condescension." %}</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+        <div class="tr-pain-card">
+          <div class="tr-pain-tag">{% trans "MANAGERS & OPS" %}</div>
+          <div class="tr-pain-head">{% trans "We want to use AI well" %}</div>
+          <p class="tr-pain-body">{% trans "You want your team using AI tools properly — saving real time — instead of either ignoring them or pasting everything into ChatGPT." %}</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="240">
+        <div class="tr-pain-card">
+          <div class="tr-pain-tag">{% trans "ROLLING OUT A TOOL" %}</div>
+          <div class="tr-pain-head">{% trans "We bought it, now what?" %}</div>
+          <p class="tr-pain-body">{% trans "You're rolling out Power BI or a new system and adoption is stalling. People need a reason and the skills to actually use it." %}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ WHAT YOU GET ═══════════════════════ -->
+<section class="tr-get-section">
+  <div class="container">
+    <div data-aos="fade-up">
+      <div class="tr-sec-label">{% trans "WHAT YOU GET" %}</div>
+      <h2 class="tr-get-title">
+        {% trans "Training that sticks because" %}<br>{% trans "it's built on your work." %}
+      </h2>
+    </div>
+
+    <div class="tr-check-list" data-aos="fade-up" data-aos-delay="80">
+      <div class="tr-check-row">
+        <div class="tr-check-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <div>
+          <div class="tr-check-title">{% trans "Sessions around your real work" %}</div>
+          <p class="tr-check-desc">{% trans "Your data and tasks, not textbook examples." %}</p>
+        </div>
+      </div>
+      <div class="tr-check-row">
+        <div class="tr-check-icon"><i class="fa-solid fa-chart-bar"></i></div>
+        <div>
+          <div class="tr-check-title">{% trans "Hands-on data literacy" %}</div>
+          <p class="tr-check-desc">{% trans "Reading charts, Power BI basics, asking the right questions." %}</p>
+        </div>
+      </div>
+      <div class="tr-check-row">
+        <div class="tr-check-icon"><i class="fa-solid fa-brain"></i></div>
+        <div>
+          <div class="tr-check-title">{% trans "Practical AI skills" %}</div>
+          <p class="tr-check-desc">{% trans "Prompts, assistants and small automations they'll actually use." %}</p>
+        </div>
+      </div>
+      <div class="tr-check-row">
+        <div class="tr-check-icon"><i class="fa-solid fa-book"></i></div>
+        <div>
+          <div class="tr-check-title">{% trans "Materials they keep" %}</div>
+          <p class="tr-check-desc">{% trans "Guides, templates and recordings to revisit anytime." %}</p>
+        </div>
+      </div>
+      <div class="tr-check-row">
+        <div class="tr-check-icon"><i class="fa-solid fa-bolt"></i></div>
+        <div>
+          <div class="tr-check-title">{% trans "A confidence shift" %}</div>
+          <p class="tr-check-desc">{% trans 'From "the data team handles that" to "I can do this myself".' %}</p>
+        </div>
+      </div>
+      <div class="tr-check-row">
+        <div class="tr-check-icon"><i class="fa-solid fa-rotate-right"></i></div>
+        <div>
+          <div class="tr-check-title">{% trans "Optional follow-up" %}</div>
+          <p class="tr-check-desc">{% trans "A check-in to make sure it sticks once the room empties." %}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ HOW IT WORKS ═══════════════════════ -->
+<section class="tr-how-section">
+  <div class="container">
+    <div class="tr-sec-label" data-aos="fade-up">{% trans "HOW IT WORKS" %}</div>
+    <h2 class="tr-how-title" data-aos="fade-up" data-aos-delay="60">{% trans "Tailored, not off-the-shelf." %}</h2>
+    <div class="tr-steps">
+      <div data-aos="fade-up" data-aos-delay="60">
+        <div class="tr-step-num">01</div>
+        <div class="tr-step-divider"></div>
+        <div class="tr-step-name">{% trans "Scope" %}</div>
+        <div class="tr-step-body">{% trans "We learn your team's level, tools and goals — and where data fits their day-to-day." %}</div>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="120">
+        <div class="tr-step-num">02</div>
+        <div class="tr-step-divider"></div>
+        <div class="tr-step-name">{% trans "Tailor" %}</div>
+        <div class="tr-step-body">{% trans "We build the session around your real data and tasks, at the right depth for the room." %}</div>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="180">
+        <div class="tr-step-num">03</div>
+        <div class="tr-step-divider"></div>
+        <div class="tr-step-name">{% trans "Teach" %}</div>
+        <div class="tr-step-body">{% trans "Hands-on, on-site or remote, in English or Spanish — people doing, not just watching." %}</div>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="240">
+        <div class="tr-step-num">04</div>
+        <div class="tr-step-divider"></div>
+        <div class="tr-step-name">{% trans "Reinforce" %}</div>
+        <div class="tr-step-body">{% trans "They keep the materials, and an optional follow-up turns a good day into a lasting habit." %}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FAQ ═══════════════════════ -->
+<section class="tr-faq-section">
+  <div class="container">
+    <div class="tr-sec-label" data-aos="fade-up">{% trans "FAQ" %}</div>
+    <h2 class="tr-faq-title" data-aos="fade-up" data-aos-delay="60">
+      {% trans "What people ask" %}<br>{% trans "before booking." %}
+    </h2>
+
+    <div data-aos="fade-up" data-aos-delay="100">
+
+      <div class="tr-acc-item open">
+        <button class="tr-acc-btn" onclick="trToggle(this)">
+          <span class="tr-acc-q">{% trans "Our team really isn't technical." %}</span>
+          <span class="tr-acc-icon">+</span>
+        </button>
+        <div class="tr-acc-body">{% trans "Perfect — that's exactly who this is for. We teach without jargon and start from zero, building real confidence rather than showing off." %}</div>
+      </div>
+
+      <div class="tr-acc-item">
+        <button class="tr-acc-btn" onclick="trToggle(this)">
+          <span class="tr-acc-q">{% trans "On-site or online?" %}</span>
+          <span class="tr-acc-icon">+</span>
+        </button>
+        <div class="tr-acc-body">{% trans "Both. We do on-site sessions in Barcelona and the surrounding area, and fully remote sessions anywhere in the world. The format is chosen to fit your team — smaller groups often prefer in-person; distributed teams go remote." %}</div>
+      </div>
+
+      <div class="tr-acc-item">
+        <button class="tr-acc-btn" onclick="trToggle(this)">
+          <span class="tr-acc-q">{% trans "What languages?" %}</span>
+          <span class="tr-acc-icon">+</span>
+        </button>
+        <div class="tr-acc-body">{% trans "English and Spanish. Materials can be prepared in both. We're also comfortable switching mid-session when the room is mixed." %}</div>
+      </div>
+
+      <div class="tr-acc-item">
+        <button class="tr-acc-btn" onclick="trToggle(this)">
+          <span class="tr-acc-q">{% trans "Why learn from you?" %}</span>
+          <span class="tr-acc-icon">+</span>
+        </button>
+        <div class="tr-acc-body">{% trans "Because we're practitioners, not course-sellers. Jessica has 10+ years turning complex data into something people actually use — from engineering pipelines to training C-level teams. We teach what we do, on your real work." %}</div>
+      </div>
+
+      <div class="tr-acc-item">
+        <button class="tr-acc-btn" onclick="trToggle(this)">
+          <span class="tr-acc-q">{% trans "How long is a session?" %}</span>
+          <span class="tr-acc-icon">+</span>
+        </button>
+        <div class="tr-acc-body">{% trans "Typically half-day (3–4 hours) or full-day (6 hours), depending on scope. We've also run shorter focused workshops (90 min) when the goal is very specific. We scope this with you before anything is booked." %}</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ WORKS WELL WITH ═══════════════════════ -->
+<section class="tr-related-section">
+  <div class="container">
+    <div class="tr-sec-label" data-aos="fade-up">{% trans "WORKS WELL WITH" %}</div>
+    <h2 class="tr-related-title" data-aos="fade-up" data-aos-delay="60">
+      {% trans "Training makes" %}<br>{% trans "everything else land." %}
+    </h2>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+        <a href="/services/data/data-expert-consultancy" class="tr-rel-card">
+          <div class="tr-rel-tag data">{% trans "DATA" %}</div>
+          <div class="tr-rel-name">{% trans "Data Consultancy" %}</div>
+          <p class="tr-rel-body">{% trans "We build the dashboards; training keeps them in daily use." %}</p>
+        </a>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+        <a href="/services/data/automation-ai" class="tr-rel-card">
+          <div class="tr-rel-tag data">{% trans "DATA" %}</div>
+          <div class="tr-rel-name">{% trans "Automation & AI" %}</div>
+          <p class="tr-rel-body">{% trans "Teach your team to run and tweak their own automations." %}</p>
+        </a>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="240">
+        <a href="/services/build/web-development" class="tr-rel-card">
+          <div class="tr-rel-tag build">{% trans "BUILD" %}</div>
+          <div class="tr-rel-name">{% trans "Web Development" %}</div>
+          <p class="tr-rel-body">{% trans "Hand your team a site or tool they're confident managing." %}</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ CTA ═══════════════════════ -->
+<section class="tr-cta-band">
+  <div class="container">
+    <div class="tr-cta-eyebrow" data-aos="fade-up">{% trans "LET'S BUILD" %}</div>
+    <h2 class="tr-cta-title" data-aos="fade-up" data-aos-delay="60">{% trans "Your data, finally working for you." %}</h2>
+    <p class="tr-cta-sub" data-aos="fade-up" data-aos-delay="120">
+      {% trans "Tell us where you're stuck. We'll come back with a plan in plain language — and an honest view of what's worth doing first." %}
+    </p>
+    <div class="tr-cta-btns" data-aos="fade-up" data-aos-delay="180">
+      <a href="/contact-us" class="gf-btn-primary">{% trans "Start a project" %} →</a>
+      <a href="#footer-cta" class="gf-btn-gold">{% trans "Book a free data audit" %} →</a>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}
+
+{% block extra_js %}
+<script>
+/* FAQ accordion */
+function trToggle(btn) {
+  var item = btn.closest('.tr-acc-item');
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.tr-acc-item').forEach(function(i){ i.classList.remove('open'); });
+  if (!isOpen) item.classList.add('open');
+}
+
+/* count-up + progress bars */
+(function(){
+  function countUp(el, target, suffix, duration){
+    var start = null;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts-start)/duration, 1);
+      var ease = 1 - Math.pow(1-p, 3);
+      el.textContent = Math.round(ease * target) + (suffix||'');
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        countUp(document.getElementById('tr-c1'), 24, '', 1400);
+        countUp(document.getElementById('tr-c2'), 180, '', 1600);
+        countUp(document.getElementById('tr-p1'), 85, '%', 1400);
+        countUp(document.getElementById('tr-p2'), 70, '%', 1400);
+        countUp(document.getElementById('tr-p3'), 55, '%', 1400);
+        document.querySelectorAll('.tr-mod-fill').forEach(function(b){ b.classList.add('animate'); });
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+
+  var card = document.querySelector('.tr-session-card');
+  if(card) observer.observe(card);
+})();
+</script>
+{% endblock %}

@@ -1,0 +1,773 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}G-Fenix | {% trans "Use Cases" %}{% endblock %}
+
+{% block extra_head %}
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+
+/* ── HERO ── */
+.uc-hero {
+  padding: 140px 24px 80px;
+  text-align: center;
+}
+.uc-hero-eyebrow {
+  font-size: 0.68rem; font-weight: 800; letter-spacing: 0.24em;
+  text-transform: uppercase; color: #8b5cf6;
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+  margin-bottom: 22px;
+}
+.uc-hero-eyebrow::before, .uc-hero-eyebrow::after {
+  content: ''; display: block; height: 1px; width: 36px; background: #8b5cf6;
+}
+.uc-hero-title {
+  font-size: clamp(2.6rem, 6vw, 4.4rem); font-weight: 900;
+  letter-spacing: -0.04em; line-height: 1.08; color: #fff; margin-bottom: 20px;
+}
+.uc-hero-title span {
+  background: linear-gradient(90deg, #8b5cf6, #22d3ee);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.uc-hero-sub {
+  font-size: 1.05rem; color: rgba(255,255,255,.52);
+  max-width: 680px; margin: 0 auto 60px; line-height: 1.8;
+}
+.uc-hero-badges {
+  display: flex; flex-wrap: wrap; gap: 18px; justify-content: center;
+  max-width: 900px; margin: 0 auto;
+}
+.uc-hero-badge {
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.09);
+  border-radius: 16px; padding: 22px 26px; text-align: left; min-width: 190px;
+  position: relative; overflow: hidden; flex: 1; max-width: 220px;
+}
+.uc-hero-badge::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+}
+.uc-hero-badge:nth-child(1)::after { background: #8b5cf6; }
+.uc-hero-badge:nth-child(2)::after { background: #22d3ee; }
+.uc-hero-badge:nth-child(3)::after { background: #3b82f6; }
+.uc-hero-badge:nth-child(4)::after { background: #10b981; }
+.uc-badge-label {
+  font-size: 0.6rem; font-weight: 800; letter-spacing: 0.2em;
+  text-transform: uppercase; margin-bottom: 6px; display: block;
+}
+.uc-hero-badge:nth-child(1) .uc-badge-label { color: #8b5cf6; }
+.uc-hero-badge:nth-child(2) .uc-badge-label { color: #22d3ee; }
+.uc-hero-badge:nth-child(3) .uc-badge-label { color: #3b82f6; }
+.uc-hero-badge:nth-child(4) .uc-badge-label { color: #10b981; }
+.uc-badge-desc { font-size: 0.83rem; color: rgba(255,255,255,.55); }
+
+/* ── ACCORDION WRAPPER ── */
+.uc-accordion {
+  max-width: 900px; margin: 0 auto;
+  padding: 0 24px 100px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+
+/* ── ACCORDION ITEM ── */
+.uc-acc-item {
+  border-radius: 18px; overflow: hidden;
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(255,255,255,.025);
+  transition: border-color .25s;
+}
+.uc-acc-item.is-open {
+  border-color: rgba(139,92,246,.35);
+  border-top: 2px solid #8b5cf6;
+}
+
+/* ── ACCORDION HEADER (BUTTON) ── */
+.uc-acc-header {
+  width: 100%; background: none; border: none; cursor: pointer;
+  padding: 22px 28px; display: flex; align-items: center; gap: 18px;
+  text-align: left;
+  transition: background .2s;
+}
+.uc-acc-header:hover { background: rgba(139,92,246,.06); }
+.uc-acc-item.is-open .uc-acc-header { background: rgba(139,92,246,.08); }
+
+.uc-acc-num {
+  width: 46px; height: 46px; border-radius: 12px; flex-shrink: 0;
+  background: linear-gradient(135deg, #7c3aed, #22d3ee);
+  color: #fff; font-size: 1.1rem; font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
+}
+.uc-acc-meta { flex: 1; min-width: 0; }
+.uc-acc-industry {
+  font-size: 0.58rem; font-weight: 800; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #22d3ee; display: block; margin-bottom: 5px;
+}
+.uc-acc-title {
+  font-size: clamp(0.95rem, 2vw, 1.18rem); font-weight: 700;
+  color: #fff; line-height: 1.3; display: block;
+}
+.uc-acc-arrow {
+  font-size: 0.85rem; color: rgba(255,255,255,.4); flex-shrink: 0;
+  transition: transform .3s ease, color .2s;
+}
+.uc-acc-item.is-open .uc-acc-arrow {
+  transform: rotate(180deg); color: #8b5cf6;
+}
+
+/* ── ACCORDION BODY (CSS GRID TRICK FOR SMOOTH ANIMATION) ── */
+.uc-acc-body-wrap {
+  display: grid; grid-template-rows: 0fr;
+  transition: grid-template-rows .35s ease;
+}
+.uc-acc-item.is-open .uc-acc-body-wrap {
+  grid-template-rows: 1fr;
+}
+.uc-acc-body {
+  overflow: hidden;
+}
+.uc-acc-body-inner {
+  padding: 8px 28px 28px;
+  display: flex; flex-direction: column; gap: 22px;
+  border-top: 1px solid rgba(255,255,255,.06);
+  padding-top: 24px;
+}
+
+/* ── SECTION BLOCKS INSIDE BODY ── */
+.uc-block-label {
+  font-size: 0.58rem; font-weight: 800; letter-spacing: 0.2em;
+  text-transform: uppercase; color: rgba(255,255,255,.42); margin-bottom: 9px;
+  display: flex; align-items: center; gap: 10px;
+}
+.uc-block-label::before {
+  content: ''; display: block; width: 3px; height: 13px;
+  border-radius: 2px; background: #8b5cf6; flex-shrink: 0;
+}
+.uc-block p {
+  font-size: 0.9rem; line-height: 1.8; color: rgba(255,255,255,.58); margin: 0;
+}
+
+/* Quick wins */
+.uc-qw-box {
+  background: rgba(34,211,238,.06); border: 1px solid rgba(34,211,238,.18);
+  border-radius: 12px; padding: 18px 22px;
+}
+.uc-qw-label {
+  font-size: 0.58rem; font-weight: 800; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #22d3ee; margin-bottom: 12px;
+  display: flex; align-items: center; gap: 10px;
+}
+.uc-qw-label::before {
+  content: ''; display: block; width: 3px; height: 13px;
+  border-radius: 2px; background: #22d3ee; flex-shrink: 0;
+}
+.uc-qw-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.uc-qw-list li {
+  font-size: 0.88rem; color: rgba(255,255,255,.7);
+  display: flex; align-items: flex-start; gap: 10px; line-height: 1.6;
+}
+.uc-qw-list li::before {
+  content: ''; display: block; width: 6px; height: 6px; border-radius: 50%;
+  background: #22d3ee; flex-shrink: 0; margin-top: 8px;
+}
+
+/* Roadmap */
+.uc-rm-label {
+  font-size: 0.58rem; font-weight: 800; letter-spacing: 0.2em;
+  text-transform: uppercase; color: rgba(255,255,255,.42); margin-bottom: 12px;
+  display: flex; align-items: center; gap: 10px;
+}
+.uc-rm-label::before {
+  content: ''; display: block; width: 3px; height: 13px;
+  border-radius: 2px; background: #3b82f6; flex-shrink: 0;
+}
+.uc-roadmap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.uc-rm-card {
+  background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px; padding: 16px 18px;
+}
+.uc-rm-header {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding-bottom: 9px; margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  flex-wrap: wrap; gap: 4px;
+}
+.uc-rm-term { font-size: 0.58rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; }
+.uc-rm-card.short .uc-rm-term { color: #22d3ee; }
+.uc-rm-card.medium .uc-rm-term { color: #a78bfa; }
+.uc-rm-period { font-size: 0.7rem; color: rgba(255,255,255,.3); font-style: italic; }
+.uc-rm-card p { font-size: 0.85rem; color: rgba(255,255,255,.52); margin: 0; line-height: 1.6; }
+
+/* Outcome */
+.uc-outcome {
+  background: rgba(16,185,129,.08); border: 1px solid rgba(16,185,129,.22);
+  border-radius: 12px; padding: 16px 20px;
+  display: flex; align-items: flex-start; gap: 12px;
+}
+.uc-outcome-label {
+  font-size: 0.56rem; font-weight: 800; letter-spacing: 0.2em;
+  text-transform: uppercase; color: #10b981; white-space: nowrap; padding-top: 2px;
+}
+.uc-outcome strong { font-size: 0.92rem; color: #fff; font-weight: 700; line-height: 1.55; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .uc-accordion { padding: 0 14px 60px; }
+  .uc-acc-header { padding: 16px 18px; gap: 12px; }
+  .uc-acc-body-inner { padding: 20px 18px 22px; gap: 18px; }
+  .uc-roadmap-grid { grid-template-columns: 1fr; }
+  .uc-hero-badge { min-width: 140px; }
+}
+</style>
+{% endblock %}
+
+{% block content %}
+
+<!-- ═══ HERO ═══ -->
+<section class="uc-hero">
+  <div class="uc-hero-eyebrow" data-aos="fade-down">{% trans "DATA & ANALYTICS" %}</div>
+  <h1 class="uc-hero-title" data-aos="fade-up" data-aos-delay="80">{% trans "Use Cases" %} <span>{% trans "we solve." %}</span></h1>
+  <p class="uc-hero-sub" data-aos="fade-up" data-aos-delay="160">{% trans "10 real problems companies face when data starts piling up — and how we turn scattered spreadsheets, ad-hoc extracts and rogue dashboards into clean, reliable, available data and confident decisions." %}</p>
+  <div class="uc-hero-badges">
+    <div class="uc-hero-badge" data-aos="fade-up" data-aos-delay="240">
+      <span class="uc-badge-label">{% trans "ASSESS" %}</span>
+      <div class="uc-badge-desc">{% trans "Inventory & diagnose" %}</div>
+    </div>
+    <div class="uc-hero-badge" data-aos="fade-up" data-aos-delay="320">
+      <span class="uc-badge-label">{% trans "QUICK WINS" %}</span>
+      <div class="uc-badge-desc">{% trans "Value in 0–90 days" %}</div>
+    </div>
+    <div class="uc-hero-badge" data-aos="fade-up" data-aos-delay="400">
+      <span class="uc-badge-label">{% trans "ROADMAP" %}</span>
+      <div class="uc-badge-desc">{% trans "Short & medium term" %}</div>
+    </div>
+    <div class="uc-hero-badge" data-aos="fade-up" data-aos-delay="480">
+      <span class="uc-badge-label">{% trans "DATA-DRIVEN" %}</span>
+      <div class="uc-badge-desc">{% trans "Decisions on clean data" %}</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ACCORDION ═══ -->
+<div class="uc-accordion" data-aos="fade-up" data-aos-delay="100">
+
+  <!-- 01 -->
+  <div class="uc-acc-item">
+    <button class="uc-acc-header" onclick="ucToggle(this)">
+      <div class="uc-acc-num">01</div>
+      <div class="uc-acc-meta">
+        <span class="uc-acc-industry">{% trans "PROFESSIONAL SERVICES · ANY SECTOR" %}</span>
+        <span class="uc-acc-title">{% trans "From scattered spreadsheets to a single source of truth" %}</span>
+      </div>
+      <i class="fa-solid fa-chevron-down uc-acc-arrow"></i>
+    </button>
+    <div class="uc-acc-body-wrap">
+      <div class="uc-acc-body">
+        <div class="uc-acc-body-inner">
+          <div class="uc-block">
+            <div class="uc-block-label">{% trans "THE SITUATION" %}</div>
+            <p>{% trans "No real data platform. Excels, manual extractions and a few Power BI reports built by different people keep piling up. Numbers don't match between teams, and decisions depend on whoever happens to hold the latest file." %}</p>
+          </div>
+          <div class="uc-block">
+            <div class="uc-block-label">{% trans "OUR APPROACH" %}</div>
+            <p>{% trans "We run a data assessment: we inventory every source, map how data flows, and diagram the current situation in plain, non-technical language so leadership can actually decide. Then we deliver a prioritized action plan — quick wins now plus a roadmap toward clean, reliable, available data." %}</p>
+          </div>
+          <div class="uc-qw-box">
+            <div class="uc-qw-label">{% trans "QUICK WINS · 0–90 DAYS" %}</div>
+            <ul class="uc-qw-list">
+              <li>{% trans "Consolidate the 3 most critical reports into one trusted dashboard." %}</li>
+              <li>{% trans "Define metric owners and a shared glossary so everyone counts the same way." %}</li>
+              <li>{% trans "Retire duplicate and contradictory files." %}</li>
+            </ul>
+          </div>
+          <div class="uc-block">
+            <div class="uc-rm-label">{% trans "ROADMAP" %}</div>
+            <div class="uc-roadmap-grid">
+              <div class="uc-rm-card short">
+                <div class="uc-rm-header"><span class="uc-rm-term">{% trans "SHORT TERM" %}</span><span class="uc-rm-period">{% trans "3–6 months" %}</span></div>
+                <p>{% trans "Central data store with automated refresh; one trusted version of key reports." %}</p>
+              </div>
+              <div class="uc-rm-card medium">
+                <div class="uc-rm-header"><span class="uc-rm-term">{% trans "MEDIUM TERM" %}</span><span class="uc-rm-period">{% trans "6–18 months" %}</span></div>
+                <p>{% trans "Governed self-service BI and a culture of decisions made on clean data." %}</p>
+              </div>
+            </div>
+          </div>
+          <div class="uc-outcome">
+            <span class="uc-outcome-label">{% trans "OUTCOME" %}</span>
+            <strong>{% trans "One version of the truth, faster and calmer decisions, far less manual rework." %}</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 02 -->
+  <div class="uc-acc-item">
+    <button class="uc-acc-header" onclick="ucToggle(this)">
+      <div class="uc-acc-num">02</div>
+      <div class="uc-acc-meta">
+        <span class="uc-acc-industry">{% trans "RETAIL · E-COMMERCE" %}</span>
+        <span class="uc-acc-title">{% trans "A unified sales & inventory view across channels" %}</span>
+      </div>
+      <i class="fa-solid fa-chevron-down uc-acc-arrow"></i>
+    </button>
+    <div class="uc-acc-body-wrap">
+      <div class="uc-acc-body">
+        <div class="uc-acc-body-inner">
+          <div class="uc-block">
+            <div class="uc-block-label">{% trans "THE SITUATION" %}</div>
+            <p>{% trans "Sales live separately in the POS, the online store and the marketplace. Inventory is reconciled by hand, so stockouts and overstock are discovered far too late." %}</p>
+          </div>
+          <div class="uc-block">
+            <div class="uc-block-label">{% trans "OUR APPROACH" %}</div>
+            <p>{% trans "We integrate every channel into one model, standardize SKUs into a clean product master, and build a near-real-time sales & stock dashboard with alerts on the products that matter most." %}</p>
+          </div>
+          <div class="uc-qw-box">
+            <div class="uc-qw-label">{% trans "QUICK WINS · 0–90 DAYS" %}</div>
+            <ul class="uc-qw-list">
+              <li>{% trans "Daily consolidated sales report across all channels." %}</li>
+              <li>{% trans "Low-stock alerts on best-sellers." %}</li>
+              <li>{% trans "Clean, de-duplicated product master." %}</li>
+            </ul>
+          </div>
+          <div class="uc-block">
+            <div class="uc-rm-label">{% trans "ROADMAP" %}</div>
+            <div class="uc-roadmap-grid">
+              <div class="uc-rm-card short">
+                <div class="uc-rm-header"><span class="uc-rm-term">{% trans "SHORT TERM" %}</span><span class="uc-rm-period">{% trans "3–6 months" %}</span></div>
+                <p>{% trans "Automated channel ingestion feeding one sales & stock model." %}</p>
+              </div>
+              <div class="uc-rm-card medium">
+                <div class="uc-rm-header"><span class="uc-rm-term">{% trans "MEDIUM TERM" %}</span><span class="uc-rm-period">{% trans "6–18 months" %}</span></div>
+                <p>{% trans "Demand-aware replenishment and margin analytics by product and store." %}</p>
+              </div>
+            </div>
+          </div>
+          <div class="uc-outcome">
+            <span class="uc-outcome-label">{% trans "OUTCOME" %}</span>
+            <strong>{% trans "Fewer stockouts, less dead stock, and clear margin visibility per channel." %}</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 03 -->
+  <div class="uc-acc-item">
+    <button class="uc-acc-header" onclick="ucToggle(this)">
+      <div class="uc-acc-num">03</div>
+      <div class="uc-acc-meta">
+        <span class="uc-acc-industry">{% trans "MANUFACTURING" %}</span>
+        <span class="uc-acc-title">{% trans "Turning machine & shop-floor logs into OEE" %}</span>
+      </div>
+      <i class="fa-solid fa-chevron-down uc-acc-arrow"></i>
+    </button>
+    <div class="uc-acc-body-wrap">
+      <div class="uc-acc-body">
+        <div class="uc-acc-body-inner">
+          <div class="uc-block">
+            <div class="uc-block-label">{% trans "THE SITUATION" %}</div>
+            <p>{% trans "Production data is trapped inside machines and paper or Excel logs. Downtime causes are anecdotal, and OEE is unknown or roughly estimated." %}</p>
+          </div>
+          <div class="uc-block">
+            <div class="uc-block-label">{% trans "OUR APPROACH" %}</div>
+            <p>{% trans "We capture and clean production data, define OEE (availability, performance, quality) consistently, and visualize where losses happen by line and shift." %}</p>
+          </div>
+          <div class="uc-qw-box">
+            <div class="uc-qw-label">{% trans "QUICK WINS · 0–90 DAYS" %}</div>
+            <ul class="uc-qw-list">
+              <li>{% trans "Automated daily output and downtime report." %}</li>
+              <li>{% trans "Pareto of the top stoppage causes." %}</li>
+              <li>{% trans "Reliable OEE baseline per line." %}</li>
+            </ul>
+          </div>
+          <div class="uc-block">
+            <div class="uc-rm-label">{% trans "ROADMAP" %}</div>
+            <div class="uc-roadmap-grid">
+              <div class="uc-rm-card short">
+                <div class="uc-rm-header"><span class="uc-rm-term">{% trans "SHORT TERM" %}</span><span class="uc-rm-period">{% trans "3–6 months" %}</span></div>
+                <p>{% trans "Trustworthy OEE per line, refreshed automatically." %}</p>
+              </div>
+              <div class="uc-rm-card medium">
+                <div class="uc-rm-header"><span class="uc-rm-term">{% trans "MEDIUM TERM" %}</span><span class="uc-rm-period">{% trans "6–18 months" %}</span></div>
+                <p>{% trans "Predictive maintenance signals and scrap-reduction analytics." %}</p>
+              </div>
+            </div>
+          </div>
+          <div class="uc-outcome">
+            <span class="uc-outcome-label">{% trans "OUTCOME" %}</span>
+            <strong>{% trans "Visible bottlenecks, targeted improvements, and measurable throughput gains." %}</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04 -->
+  <div class="uc-acc-item">
+    <button class="uc-acc-header" onclick="ucToggle(this)">
+      <div class="uc-acc-num">04</div>
+      <div class="uc-acc-meta">
+        <span class="uc-acc-industry">{% trans "LOGISTICS · DISTRIBUTION" %}</span>
+        <span class="uc-acc-title">{% trans "An operations KPI cockpit you can trust" %}</span>
+      </div>
+      <i class="fa-solid fa-chevron-down uc-acc-arrow"></i>
+    </button>
+    <div class="uc-acc-body-wrap">
+      <div class="uc-acc-body">
+        <div class="uc-acc-body-inner">
+          <div class="uc-block">
+            <div class="uc-block-label">{% trans "THE SITUATION" %}</div>
+            <p>{% trans "Deliveries, routes and costs are tracked in personal spreadsheets. There are no reliable on-time or cost-per-delivery KPIs to manage the operation." %}</p>
+          </div>
+          <div class="uc-block">
+            <div class="uc-block-label">{% trans "OUR APPROACH" %}</div>
+            <p>{% trans "We model the operational data into one dataset and build a KPI cockpit — on-time %, cost per delivery, route efficiency — with drill-down to the problem cases." %}</p>
+          </div>
+          <div class="uc-qw-box">
+            <div class="uc-qw-label">{% trans "QUICK WINS · 0–90 DAYS" %}</div>
+            <ul class="uc-qw-list">
+              <li>{% trans "Automated on-time and cost dashboard." %}</li>
+              <li>{% trans "Exception list of late or expensive deliveries." %}</li>
+              <li>{% trans "Single, agreed operational dataset." %}</li>
+            </ul>
+          </div>
+          <div class="uc-block">
+            <div class="uc-rm-label">{% trans "ROADMAP" %}</div>
+            <div class="uc-roadmap-grid">
+              <div class="uc-rm-card short">
+                <div class="uc-rm-header"><span class="uc-rm-term">{% trans "SHORT TERM" %}</span><span class="uc-rm-period">{% trans "3–6 months" %}</span></div>
+                <p>{% trans "One operational data model powering daily KPIs." %}</p>
+              </div>
+              <div class="uc-rm-card medium">
+                <div class="uc-rm-header"><span class="uc-rm-term">{% trans "MEDIUM TERM" %}</span><span class="uc-rm-period">{% trans "6–18 months" %}</span></div>
+                <p>{% trans "Route optimization and SLA forecasting." %}</p>
+              </div>
+            </div>
+          </div>
+          <div class="uc-outcome">
+            <span class="uc-outcome-label">{% trans "OUTCOME" %}</span>
+            <strong>{% trans "Tighter SLAs, lower cost per delivery, and accountable operations." %}</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05 -->
+  <div class="uc-acc-item">
+    <button class="uc-acc-header" onclick="ucToggle(this)">
+      <div class="uc-acc-num">05</div>
+      <div class="uc-acc-meta">
+        <span class="uc-acc-industry">{% trans "HEALTHCARE · CLINICS" %}</span>
+        <span class="uc-acc-title">{% trans "Clean, compliant operational reporting" %}</span>
+      </div>
+      <i class="fa-solid fa-chevron-down uc-acc-arrow"></i>
+    </button>
+    <div class="uc-acc-body-wrap">
+      <div class="uc-acc-body">
+        <div class="uc-acc-body-inner">
+          <div class="uc-block">
+            <div class="uc-block-label">{% trans "THE SITUATION" %}</div>
+            <p>{% trans "Patient, appointment and billing data sit in separate systems. Monthly reports are built by hand, while data quality and privacy remain ongoing concerns." %}</p>
+          </div>
+          <div class="uc-block">
+            <div class="uc-block-label">{% trans "OUR APPROACH" %}</div>
+            <p>{% trans "We consolidate sources with privacy by design, clean and standardize records, and automate the operational and financial reporting that today eats hours every month." %}</p>
+          </div>
+          <div class="uc-qw-box">
+            <div class="uc-qw-label">{% trans "QUICK WINS · 0–90 DAYS" %}</div>
+            <ul class="uc-qw-list">
+              <li>{% trans "Automated occupancy and no-show report." %}</li>
+              <li>{% trans "De-duplicated patient master record." %}</li>
+              <li>{% trans "Access-controlled reporting layer." %}</li>
+            </ul>
+          </div>
+          <div class="uc-block">
+            <div class="uc-rm-label">{% trans "ROADMAP" %}</div>
+            <div class="uc-roadmap-grid">
+              <div class="uc-rm-card short">
+                <div class="uc-rm-header"><span class="uc-rm-term">{% trans "SHORT TERM" %}</span><span class="uc-rm-period">{% trans "3–6 months" %}</span></div>
+                <p>{% trans "Governed reporting layer with role-based access." %}</p>
+              </div>
+              <div class="uc-rm-card medium">
+                <div class="uc-rm-header"><span class="uc-rm-term">{% trans "MEDIUM TERM" %}</span><span class="uc-rm-period">{% trans "6–18 months" %}</span></div>
+                <p>{% trans "Capacity planning and clinical outcome analytics." %}</p>
+              </div>
+            </div>
+          </div>
+          <div class="uc-outcome">
+            <span class="uc-outcome-label">{% trans "OUTCOME" %}</span>
+            <strong>{% trans "Hours saved every month, trustworthy KPIs, and audit-ready data." %}</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 06 -->
+  <div class="uc-acc-item">
+    <button class="uc-acc-header" onclick="ucToggle(this)">
+      <div class="uc-acc-num">06</div>
+      <div class="uc-acc-meta">
+        <span class="uc-acc-industry">{% trans "E-COMMERCE · MARKETING" %}</span>
+        <span class="uc-acc-title">{% trans "Knowing what actually drives sales" %}</span>
+      </div>
+      <i class="fa-solid fa-chevron-down uc-acc-arrow"></i>
+    </button>
+    <div class="uc-acc-body-wrap">
+      <div class="uc-acc-body">
+        <div class="uc-acc-body-inner">
+          <div class="uc-block">
+            <div class="uc-block-label">{% trans "THE SITUATION" %}</div>
+            <p>{% trans "Ad spend is spread across channels and ROAS is argued from each platform's own numbers. There is no unified, comparable attribution." %}</p>
+          </div>
+          <div class="uc-block">
+            <div class="uc-block-label">{% trans "OUR APPROACH" %}</div>
+            <p>{% trans "We unify spend and revenue into one marketing mart, build a comparable channel attribution and ROAS model, and deliver a marketing performance dashboard the whole team trusts." %}</p>
+          </div>
+          <div class="uc-qw-box">
+            <div class="uc-qw-label">{% trans "QUICK WINS · 0–90 DAYS" %}</div>
+            <ul class="uc-qw-list">
+              <li>{% trans "Blended ROAS and CAC dashboard." %}</li>
+              <li>{% trans "Weekly channel performance view." %}</li>
+              <li>{% trans "Unified spend and revenue dataset." %}</li>
+            </ul>
+          </div>
+          <div class="uc-block">
+            <div class="uc-rm-label">{% trans "ROADMAP" %}</div>
+            <div class="uc-roadmap-grid">
+              <div class="uc-rm-card short">
+                <div class="uc-rm-header"><span class="uc-rm-term">{% trans "SHORT TERM" %}</span><span class="uc-rm-period">{% trans "3–6 months" %}</span></div>
+                <p>{% trans "Single marketing data mart across channels." %}</p>
+              </div>
+              <div class="uc-rm-card medium">
+                <div class="uc-rm-header"><span class="uc-rm-term">{% trans "MEDIUM TERM" %}</span><span class="uc-rm-period">{% trans "6–18 months" %}</span></div>
+                <p>{% trans "Attribution modeling and budget-allocation scenarios." %}</p>
+              </div>
+            </div>
+          </div>
+          <div class="uc-outcome">
+            <span class="uc-outcome-label">{% trans "OUTCOME" %}</span>
+            <strong>{% trans "Smarter budget allocation, lower CAC, and defensible marketing decisions." %}</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 07 -->
+  <div class="uc-acc-item">
+    <button class="uc-acc-header" onclick="ucToggle(this)">
+      <div class="uc-acc-num">07</div>
+      <div class="uc-acc-meta">
+        <span class="uc-acc-industry">{% trans "FINANCE · SAAS" %}</span>
+        <span class="uc-acc-title">{% trans "Automating the monthly close & board reporting" %}</span>
+      </div>
+      <i class="fa-solid fa-chevron-down uc-acc-arrow"></i>
+    </button>
+    <div class="uc-acc-body-wrap">
+      <div class="uc-acc-body">
+        <div class="uc-acc-body-inner">
+          <div class="uc-block">
+            <div class="uc-block-label">{% trans "THE SITUATION" %}</div>
+            <p>{% trans "The monthly close and board reporting run on fragile Excel files — slow, error-prone, and dependent on one person who holds all the knowledge." %}</p>
+          </div>
+          <div class="uc-block">
+            <div class="uc-block-label">{% trans "OUR APPROACH" %}</div>
+            <p>{% trans "We model finance data in a warehouse, automate the core metrics (MRR, churn, margin), and deliver board reports that update themselves and reconcile to the source." %}</p>
+          </div>
+          <div class="uc-qw-box">
+            <div class="uc-qw-label">{% trans "QUICK WINS · 0–90 DAYS" %}</div>
+            <ul class="uc-qw-list">
+              <li>{% trans "Automated MRR and churn dashboard." %}</li>
+              <li>{% trans "Reconciled revenue report." %}</li>
+              <li>{% trans "Documented, repeatable metric definitions." %}</li>
+            </ul>
+          </div>
+          <div class="uc-block">
+            <div class="uc-rm-label">{% trans "ROADMAP" %}</div>
+            <div class="uc-roadmap-grid">
+              <div class="uc-rm-card short">
+                <div class="uc-rm-header"><span class="uc-rm-term">{% trans "SHORT TERM" %}</span><span class="uc-rm-period">{% trans "3–6 months" %}</span></div>
+                <p>{% trans "One finance data model feeding self-updating reports." %}</p>
+              </div>
+              <div class="uc-rm-card medium">
+                <div class="uc-rm-header"><span class="uc-rm-term">{% trans "MEDIUM TERM" %}</span><span class="uc-rm-period">{% trans "6–18 months" %}</span></div>
+                <p>{% trans "Scenario planning and forecasting." %}</p>
+              </div>
+            </div>
+          </div>
+          <div class="uc-outcome">
+            <span class="uc-outcome-label">{% trans "OUTCOME" %}</span>
+            <strong>{% trans "A faster close, fewer errors, and no key-person risk." %}</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 08 -->
+  <div class="uc-acc-item">
+    <button class="uc-acc-header" onclick="ucToggle(this)">
+      <div class="uc-acc-num">08</div>
+      <div class="uc-acc-meta">
+        <span class="uc-acc-industry">{% trans "HR · PEOPLE ANALYTICS" %}</span>
+        <span class="uc-acc-title">{% trans "From HR spreadsheets to people insight" %}</span>
+      </div>
+      <i class="fa-solid fa-chevron-down uc-acc-arrow"></i>
+    </button>
+    <div class="uc-acc-body-wrap">
+      <div class="uc-acc-body">
+        <div class="uc-acc-body-inner">
+          <div class="uc-block">
+            <div class="uc-block-label">{% trans "THE SITUATION" %}</div>
+            <p>{% trans "Headcount, turnover and recruiting are tracked in disconnected spreadsheets, leaving leadership without a clear, current picture of the workforce." %}</p>
+          </div>
+          <div class="uc-block">
+            <div class="uc-block-label">{% trans "OUR APPROACH" %}</div>
+            <p>{% trans "We consolidate HR data with privacy in mind, define the core people KPIs, and build a leadership people dashboard that answers the recurring questions instantly." %}</p>
+          </div>
+          <div class="uc-qw-box">
+            <div class="uc-qw-label">{% trans "QUICK WINS · 0–90 DAYS" %}</div>
+            <ul class="uc-qw-list">
+              <li>{% trans "Headcount and turnover dashboard." %}</li>
+              <li>{% trans "Time-to-hire report." %}</li>
+              <li>{% trans "Clean, consolidated people data model." %}</li>
+            </ul>
+          </div>
+          <div class="uc-block">
+            <div class="uc-rm-label">{% trans "ROADMAP" %}</div>
+            <div class="uc-roadmap-grid">
+              <div class="uc-rm-card short">
+                <div class="uc-rm-header"><span class="uc-rm-term">{% trans "SHORT TERM" %}</span><span class="uc-rm-period">{% trans "3–6 months" %}</span></div>
+                <p>{% trans "Reliable people data model with core KPIs." %}</p>
+              </div>
+              <div class="uc-rm-card medium">
+                <div class="uc-rm-header"><span class="uc-rm-term">{% trans "MEDIUM TERM" %}</span><span class="uc-rm-period">{% trans "6–18 months" %}</span></div>
+                <p>{% trans "Attrition-risk analytics and workforce planning." %}</p>
+              </div>
+            </div>
+          </div>
+          <div class="uc-outcome">
+            <span class="uc-outcome-label">{% trans "OUTCOME" %}</span>
+            <strong>{% trans "Proactive retention, faster hiring, and data-backed people decisions." %}</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 09 -->
+  <div class="uc-acc-item">
+    <button class="uc-acc-header" onclick="ucToggle(this)">
+      <div class="uc-acc-num">09</div>
+      <div class="uc-acc-meta">
+        <span class="uc-acc-industry">{% trans "HOSPITALITY · MULTI-LOCATION" %}</span>
+        <span class="uc-acc-title">{% trans "Consolidating POS data across every venue" %}</span>
+      </div>
+      <i class="fa-solid fa-chevron-down uc-acc-arrow"></i>
+    </button>
+    <div class="uc-acc-body-wrap">
+      <div class="uc-acc-body">
+        <div class="uc-acc-body-inner">
+          <div class="uc-block">
+            <div class="uc-block-label">{% trans "THE SITUATION" %}</div>
+            <p>{% trans "Each venue runs its own POS and performance is compared by emailing spreadsheets around. There is no timely, fair cross-location view." %}</p>
+          </div>
+          <div class="uc-block">
+            <div class="uc-block-label">{% trans "OUR APPROACH" %}</div>
+            <p>{% trans "We centralize POS data, standardize the menu and product catalog, and build per-location and group dashboards so every site is measured the same way." %}</p>
+          </div>
+          <div class="uc-qw-box">
+            <div class="uc-qw-label">{% trans "QUICK WINS · 0–90 DAYS" %}</div>
+            <ul class="uc-qw-list">
+              <li>{% trans "Daily group sales with per-venue ranking." %}</li>
+              <li>{% trans "Labor-versus-sales view by site." %}</li>
+              <li>{% trans "Standardized menu and product catalog." %}</li>
+            </ul>
+          </div>
+          <div class="uc-block">
+            <div class="uc-rm-label">{% trans "ROADMAP" %}</div>
+            <div class="uc-roadmap-grid">
+              <div class="uc-rm-card short">
+                <div class="uc-rm-header"><span class="uc-rm-term">{% trans "SHORT TERM" %}</span><span class="uc-rm-period">{% trans "3–6 months" %}</span></div>
+                <p>{% trans "Automated multi-venue ingestion into one model." %}</p>
+              </div>
+              <div class="uc-rm-card medium">
+                <div class="uc-rm-header"><span class="uc-rm-term">{% trans "MEDIUM TERM" %}</span><span class="uc-rm-period">{% trans "6–18 months" %}</span></div>
+                <p>{% trans "Menu engineering and demand forecasting per site." %}</p>
+              </div>
+            </div>
+          </div>
+          <div class="uc-outcome">
+            <span class="uc-outcome-label">{% trans "OUTCOME" %}</span>
+            <strong>{% trans "Fair comparison across sites, faster reactions, and protected margins." %}</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="uc-acc-item">
+    <button class="uc-acc-header" onclick="ucToggle(this)">
+      <div class="uc-acc-num">10</div>
+      <div class="uc-acc-meta">
+        <span class="uc-acc-industry">{% trans "AGENCIES · PROFESSIONAL SERVICES" %}</span>
+        <span class="uc-acc-title">{% trans "Finally seeing project & client profitability" %}</span>
+      </div>
+      <i class="fa-solid fa-chevron-down uc-acc-arrow"></i>
+    </button>
+    <div class="uc-acc-body-wrap">
+      <div class="uc-acc-body">
+        <div class="uc-acc-body-inner">
+          <div class="uc-block">
+            <div class="uc-block-label">{% trans "THE SITUATION" %}</div>
+            <p>{% trans "Time tracking, costs and invoicing are scattered. Nobody knows which projects or clients are actually profitable until it is too late to act." %}</p>
+          </div>
+          <div class="uc-block">
+            <div class="uc-block-label">{% trans "OUR APPROACH" %}</div>
+            <p>{% trans "We join time, cost and revenue data, define project and client profitability consistently, and build a live margin dashboard that flags trouble early." %}</p>
+          </div>
+          <div class="uc-qw-box">
+            <div class="uc-qw-label">{% trans "QUICK WINS · 0–90 DAYS" %}</div>
+            <ul class="uc-qw-list">
+              <li>{% trans "Project margin and utilization dashboard." %}</li>
+              <li>{% trans "Automatic flag of loss-making projects." %}</li>
+              <li>{% trans "Unified delivery and finance dataset." %}</li>
+            </ul>
+          </div>
+          <div class="uc-block">
+            <div class="uc-rm-label">{% trans "ROADMAP" %}</div>
+            <div class="uc-roadmap-grid">
+              <div class="uc-rm-card short">
+                <div class="uc-rm-header"><span class="uc-rm-term">{% trans "SHORT TERM" %}</span><span class="uc-rm-period">{% trans "3–6 months" %}</span></div>
+                <p>{% trans "One delivery-and-finance dataset powering margin views." %}</p>
+              </div>
+              <div class="uc-rm-card medium">
+                <div class="uc-rm-header"><span class="uc-rm-term">{% trans "MEDIUM TERM" %}</span><span class="uc-rm-period">{% trans "6–18 months" %}</span></div>
+                <p>{% trans "Pricing insights and capacity forecasting." %}</p>
+              </div>
+            </div>
+          </div>
+          <div class="uc-outcome">
+            <span class="uc-outcome-label">{% trans "OUTCOME" %}</span>
+            <strong>{% trans "Protected margins, better pricing, and clear utilization visibility." %}</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /uc-accordion -->
+
+{% endblock content %}
+
+{% block extra_js %}
+<script>
+function ucToggle(btn) {
+  var item = btn.closest('.uc-acc-item');
+  item.classList.toggle('is-open');
+}
+</script>
+{% endblock %}

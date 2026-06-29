@@ -1,0 +1,237 @@
+{% extends "layout.html" %}
+{% load static i18n %}
+{% block title %}G-Fenix | Data · AI · Web Studio{% endblock %}
+
+
+{% block content %}
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+<section class="gf-hero2">
+  <div class="container">
+    <div class="gf-hero2-inner">
+
+      <div class="gf-hero2-eyebrow" data-aos="fade-up">
+        {% trans "DATA" %} · {% trans "AI" %} · {% trans "WEB" %}
+      </div>
+
+      <h1 class="gf-hero2-title" data-aos="fade-up" data-aos-delay="80">
+        <span class="gf-h2-white">{% trans "Technical doesn't" %}<br>{% trans "have to be cold." %}</span>
+        <span class="gf-h2-grad">{% trans "Human doesn't" %}<br>{% trans "have to be shallow." %}</span>
+      </h1>
+
+      <p class="gf-hero2-sub" data-aos="fade-up" data-aos-delay="160">
+        {% trans "We're a data, AI and web studio for businesses that want to modernize — without the jargon, the hype, or the corporate distance. Real technical depth, explained in plain language." %}
+      </p>
+
+      <div class="gf-hero2-actions" data-aos="fade-up" data-aos-delay="240">
+        <a href="/contact-us" class="gf-btn-primary">{% trans "Start a project" %} →</a>
+        <a href="/portfolio/references" class="gf-btn-outline">{% trans "See what we build" %}</a>
+      </div>
+
+      <div class="gf-stats2-bar" data-aos="fade-up" data-aos-delay="320">
+        <div class="gf-stat2">
+          <div class="gf-stat2-num">10+</div>
+          <div class="gf-stat2-lbl">{% trans "YEARS IN DATA" %}</div>
+        </div>
+        <div class="gf-stat2">
+          <div class="gf-stat2-num">100%</div>
+          <div class="gf-stat2-lbl">{% trans "DELIVERED ON TIME" %}</div>
+        </div>
+        <div class="gf-stat2">
+          <div class="gf-stat2-num">4</div>
+          <div class="gf-stat2-lbl">{% trans "LANGUAGES" %}</div>
+        </div>
+        <div class="gf-stat2">
+          <div class="gf-stat2-num">BCN</div>
+          <div class="gf-stat2-lbl">{% trans "BUILT IN BARCELONA" %}</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ SVG LOGO TICKER ═══════════════════════ -->
+<div class="gf-logo-ticker">
+  <div class="strip-mask">
+    <div class="tech-track">
+      <div class="tech-item"><img src="{% static 'images/logos/Python.svg' %}" alt="Python"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/Django.svg' %}" alt="Django"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/azure-svgrepo-com.svg' %}" alt="Azure"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/databricks-svgrepo-com.svg' %}" alt="Databricks"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/PostgresSQL.svg' %}" alt="PostgreSQL"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/MySQL.svg' %}" alt="MySQL"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/Docker.svg' %}" alt="Docker"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/GitHub.svg' %}" alt="GitHub"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/JavaScript.svg' %}" alt="JavaScript"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/FastAPI.svg' %}" alt="FastAPI"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/SQLDeveloper.svg' %}" alt="SQL Server"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/Bootstrap.svg' %}" alt="Bootstrap"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/Pandas.svg' %}" alt="Pandas"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/Selenium.svg' %}" alt="Selenium"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/VSCode.svg' %}" alt="VS Code"></div>
+      <!-- duplicate for seamless loop -->
+      <div class="tech-item"><img src="{% static 'images/logos/Python.svg' %}" alt="Python"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/Django.svg' %}" alt="Django"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/azure-svgrepo-com.svg' %}" alt="Azure"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/databricks-svgrepo-com.svg' %}" alt="Databricks"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/PostgresSQL.svg' %}" alt="PostgreSQL"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/MySQL.svg' %}" alt="MySQL"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/Docker.svg' %}" alt="Docker"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/GitHub.svg' %}" alt="GitHub"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/JavaScript.svg' %}" alt="JavaScript"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/FastAPI.svg' %}" alt="FastAPI"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/SQLDeveloper.svg' %}" alt="SQL Server"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/Bootstrap.svg' %}" alt="Bootstrap"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/Pandas.svg' %}" alt="Pandas"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/Selenium.svg' %}" alt="Selenium"></div>
+      <div class="tech-item"><img src="{% static 'images/logos/VSCode.svg' %}" alt="VS Code"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ WHAT WE DO ═══════════════════════ -->
+<section class="gf-services2 section-bg"
+         style="--section-bg: url('{% static 'images/aiweb.jpg' %}'); --section-bg-opacity:.07;">
+  <div class="container">
+    <div class="gf-services2-head" data-aos="fade-up">
+      <div class="gf-sec-label">{% trans "WHAT WE DO" %}</div>
+      <h2 class="gf-sec-title2">
+        {% trans "Two worlds," %} <span class="gf-t-grad">{% trans "one" %}</span><br>
+        <span class="gf-t-teal">{% trans "studio" %}</span>
+      </h2>
+      <p class="gf-sec-sub2">
+        {% trans "We build the thing, and we make sense of your data. Then we explain both so you stay in control." %}
+      </p>
+    </div>
+
+    <div class="gf-services2-grid">
+      <a href="/services/build/web-development" class="gf-svc-card" data-aos="fade-up" data-aos-delay="60">
+        <div class="gf-svc-icon" style="background:linear-gradient(135deg,#22d3ee,#06b6d4);">
+          <i class="fa-solid fa-globe"></i>
+        </div>
+        <div class="gf-svc-title">{% trans "Web development" %}</div>
+        <div class="gf-svc-desc">{% trans "Modern, fast, responsive sites built to convert." %}</div>
+      </a>
+      <a href="/services/build/qr-menu" class="gf-svc-card" data-aos="fade-up" data-aos-delay="120">
+        <div class="gf-svc-icon" style="background:linear-gradient(135deg,#22d3ee,#0ea5e9);">
+          <i class="fa-solid fa-qrcode"></i>
+        </div>
+        <div class="gf-svc-title">{% trans "QR menu solutions" %}</div>
+        <div class="gf-svc-desc">{% trans "Restaurants & hotels, multilingual CMS." %}</div>
+      </a>
+      <a href="/services/build/chatbots" class="gf-svc-card" data-aos="fade-up" data-aos-delay="180">
+        <div class="gf-svc-icon" style="background:linear-gradient(135deg,#22d3ee,#8b5cf6);">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+        <div class="gf-svc-title">{% trans "Chatbots & AI agents" %}</div>
+        <div class="gf-svc-desc">{% trans "AI chat widgets that actually help." %}</div>
+      </a>
+      <a href="/services/data/data-expert-consultancy" class="gf-svc-card" data-aos="fade-up" data-aos-delay="60">
+        <div class="gf-svc-icon" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9);">
+          <i class="fa-solid fa-magnifying-glass-chart"></i>
+        </div>
+        <div class="gf-svc-title">{% trans "Data consultancy" %}</div>
+        <div class="gf-svc-desc">{% trans "Turn raw data into decisions." %}</div>
+      </a>
+      <a href="/services/data/data-expert-consultancy" class="gf-svc-card" data-aos="fade-up" data-aos-delay="120">
+        <div class="gf-svc-icon" style="background:linear-gradient(135deg,#8b5cf6,#a78bfa);">
+          <i class="fa-solid fa-brain"></i>
+        </div>
+        <div class="gf-svc-title">{% trans "Data & AI Training" %}</div>
+        <div class="gf-svc-desc">{% trans "Upskill your team on data tools and AI workflows." %}</div>
+      </a>
+      <a href="/services/data/automation-ai" class="gf-svc-card" data-aos="fade-up" data-aos-delay="180">
+        <div class="gf-svc-icon" style="background:linear-gradient(135deg,#4f46e5,#818cf8);">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <div class="gf-svc-title">{% trans "Automation & AI" %}</div>
+        <div class="gf-svc-desc">{% trans "Smart workflows and AI-powered automation for your business." %}</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ WHY FÉNIX ═══════════════════════ -->
+<section class="gf-why-fenix">
+  <div class="container">
+    <div class="gf-sec-label" style="justify-content:center;" data-aos="fade-up">{% trans "WHY FÉNIX" %}</div>
+    <h2 class="gf-why-fenix-title" data-aos="fade-up" data-aos-delay="80">
+      {% trans "We don't start from" %} <span class="gf-t-teal">{% trans "zero." %}</span> {% trans "We" %} <span class="gf-t-grad">{% trans "rebuild" %}</span><br>
+      <span class="gf-t-teal">{% trans "what" %}</span><br>
+      <span class="gf-t-teal">{% trans "you already have" %}</span> –<br>
+      {% trans "better." %}
+    </h2>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════ WHY US ═══════════════════════ -->
+<section class="gf-why-us">
+  <div class="container">
+    <div class="gf-sec-label" data-aos="fade-up">{% trans "WHY US" %}</div>
+    <h2 class="gf-why-us-title" data-aos="fade-up" data-aos-delay="60">
+      {% trans "Technical" %} <span class="gf-t-teal">+</span><br>
+      {% trans "human. Both." %}<br>
+      {% trans "Always." %}
+    </h2>
+    <p class="gf-why-us-sub" data-aos="fade-up" data-aos-delay="120">
+      {% trans "Most studios make you choose: technical but cold, or friendly but hollow. We exist so you don't have to." %}
+    </p>
+
+    <div class="gf-compare-grid" data-aos="fade-up" data-aos-delay="180">
+      <div class="gf-compare-card">
+        <div class="gf-compare-label" style="color:#8b5cf6;">{% trans "THE COLD ONES" %}</div>
+        <div class="gf-compare-title">{% trans "All slides, zero warmth" %}</div>
+        <p>{% trans "Deeply technical, but they speak a language you don't. You end up with data nobody reads." %}</p>
+      </div>
+      <div class="gf-compare-card">
+        <div class="gf-compare-label" style="color:#f59e0b;">{% trans "THE SHALLOW ONES" %}</div>
+        <div class="gf-compare-title">{% trans "Pretty sites, no spine" %}</div>
+        <p>{% trans "Friendly and polished, but no technical muscle to hold a real project together." %}</p>
+      </div>
+    </div>
+
+    <div class="gf-middle-card" data-aos="fade-up" data-aos-delay="240">
+      <h3>{% trans "We sit in the" %} <span class="gf-t-grad">{% trans "gap in the middle." %}</span></h3>
+      <p>{% trans "The depth of a serious consultancy, told so you actually understand it — with people who genuinely care." %}</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ TEAM ═══════════════════════ -->
+<section class="gf-team2">
+  <div class="container">
+    <div class="gf-sec-label" data-aos="fade-up">{% trans "THE TEAM" %}</div>
+    <h2 class="gf-team2-title" data-aos="fade-up" data-aos-delay="60">
+      {% trans "A black belt and" %}<br>{% trans "a data architect" %}<br>
+      <span class="gf-t-grad">{% trans "walk into a" %}</span><br>
+      <span class="gf-t-teal" style="background:linear-gradient(90deg,#22d3ee,#8b5cf6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">{% trans "studio" %}</span>
+    </h2>
+    <p class="gf-team2-sub" data-aos="fade-up" data-aos-delay="120">{% trans "Not the start of a joke. It's G·Fénix." %}</p>
+
+    <div class="gf-team2-grid" data-aos="fade-up" data-aos-delay="180">
+      <a href="{% url 'jessica_profile' %}" class="gf-team2-card" style="text-decoration:none;color:inherit;cursor:pointer;">
+        <img class="gf-team-avatar" src="{% static 'images/jessicaa.jpeg' %}" alt="Jessica Fénix Perez">
+        <div>
+          <div class="gf-team2-tags">{% trans "DATA · AI · STRATEGY" %}</div>
+          <div class="gf-team2-name">Jessica Fénix</div>
+          <p>{% trans "She lands the technology. 10+ years turning complexity into something people understand and use." %}</p>
+        </div>
+      </a>
+      <a href="{% url 'cengizhan_profile' %}" class="gf-team2-card" style="text-decoration:none;color:inherit;cursor:pointer;">
+        <img class="gf-team-avatar" src="{% static 'images/cengizhann.jpeg' %}" alt="Cengizhan Genç">
+        <div>
+          <div class="gf-team2-tags">{% trans "DEVELOPMENT · WEB" %}</div>
+          <div class="gf-team2-name">Cengizhan Genç</div>
+          <p>{% trans "Discipline made product. From the tatami to the codebase — clean, demanding, no shortcuts." %}</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}
+
+

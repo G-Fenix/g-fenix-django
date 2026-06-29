@@ -1,0 +1,246 @@
+{% extends "layout.html" %}
+{% load static i18n %}
+
+{% block title %}G-Fenix | Our Mission{% endblock %}
+
+{% block content %}
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="om-hero">
+  <div class="om-hero-glow"></div>
+
+  <div class="container position-relative" style="z-index:2;">
+    <div class="row align-items-center g-5 om-hero-row">
+
+      <!-- Left -->
+      <div class="col-lg-6">
+        <div class="om-eyebrow" data-aos="fade-down">
+          <i class="fa-solid fa-bullseye"></i> {% trans "Our Mission" %}
+        </div>
+        <h1 class="om-hero-h1" data-aos="fade-up" data-aos-delay="80">
+          {% trans "Technology That" %}<br>
+          <span class="om-grad">{% trans "Works for People" %}</span>
+        </h1>
+        <p class="om-hero-p" data-aos="fade-up" data-aos-delay="180">
+          {% trans "We exist to build web applications that genuinely make life easier — for individuals, teams and businesses. And to help companies grow by turning their raw data into clear, actionable strategy." %}
+        </p>
+        <div class="d-flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="300">
+          <a href="/services/build/web-development" class="btn btn-accent btn-lg">
+            {% trans "See What We Build" %} <i class="fa-solid fa-arrow-right ms-1"></i>
+          </a>
+          <a href="/contact-us" class="cp-ghost-btn btn-lg">{% trans "Work with Us" %}</a>
+        </div>
+      </div>
+
+      <!-- Right: CSS Robot -->
+      <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center"
+           data-aos="fade-left" data-aos-delay="200">
+        <div style="position:relative;display:inline-block;">
+
+          <div class="om-chip om-chip-1">
+            <i class="fa-solid fa-code"></i> {% trans "Web App Deployed" %}
+          </div>
+          <div class="om-chip om-chip-2">
+            <i class="fa-solid fa-chart-line"></i> {% trans "+28% Revenue Growth" %}
+          </div>
+          <div class="om-chip om-chip-3">
+            <i class="fa-solid fa-database"></i> {% trans "Data Pipeline Live" %}
+          </div>
+
+          <div class="om-robot-wrap">
+            <div class="om-antenna"></div>
+            <div class="om-head">
+              <div class="om-eye"></div>
+              <div class="om-eye"></div>
+            </div>
+            <div class="om-neck"></div>
+            <div class="om-body" style="position:relative;">
+              <div class="om-arms">
+                <div class="om-arm"></div>
+                <div class="om-arm right"></div>
+              </div>
+              <div class="om-core"></div>
+              <div class="om-bscreen">
+                <div class="om-bline">{% trans "$ build --app platform" %}</div>
+                <div class="om-bline accent">&#10003; {% trans "PostgreSQL connected" %}</div>
+                <div class="om-bline accent">&#10003; {% trans "Django 5 running" %}</div>
+                <div class="om-bline">&#10003; {% trans "Deploy ready" %}<span class="om-cursor-blink">_</span></div>
+              </div>
+            </div>
+            <div class="om-legs">
+              <div class="om-leg"></div>
+              <div class="om-leg"></div>
+            </div>
+            <div class="om-halo"></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ WHAT WE DO ═══════════════ -->
+<section class="om-pillars-section">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="om-eyebrow"><i class="fa-solid fa-rocket"></i> {% trans "What We Do" %}</span>
+      <h2 class="om-section-h2">{% trans "Three ways we make an impact" %}</h2>
+      <p class="om-section-sub">{% trans "Everything we do flows from one belief: technology should simplify, not complicate." %}</p>
+    </div>
+    <div class="om-pillars-grid">
+
+      <div class="om-pillar" data-aos="fade-up" data-aos-delay="0" style="--pl-color:#2563eb;">
+        <div class="om-pillar-num">01</div>
+        <div class="om-pillar-icon" style="background:linear-gradient(135deg,#2563eb,#06b6d4);">
+          <i class="fa-solid fa-globe"></i>
+        </div>
+        <h4>{% trans "Web Applications" %}</h4>
+        <p>{% trans "We design and build full-stack web apps — business websites, e-commerce platforms, custom admin panels and SaaS tools — that solve real problems and ship on time." %}</p>
+      </div>
+
+      <div class="om-pillar" data-aos="fade-up" data-aos-delay="100" style="--pl-color:#f59e0b;">
+        <div class="om-pillar-num">02</div>
+        <div class="om-pillar-icon" style="background:linear-gradient(135deg,#b45309,#f59e0b);">
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
+        <h4>{% trans "Data Consultancy" %}</h4>
+        <p>{% trans "We turn messy spreadsheets and siloed databases into clear insights and automated dashboards. Growth decisions backed by data, not guesswork." %}</p>
+      </div>
+
+      <div class="om-pillar" data-aos="fade-up" data-aos-delay="200" style="--pl-color:#7c3aed;">
+        <div class="om-pillar-num">03</div>
+        <div class="om-pillar-icon" style="background:linear-gradient(135deg,#7c3aed,#a855f7);">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+        <h4>{% trans "AI &amp; Automation" %}</h4>
+        <p>{% trans "Intelligent chatbots, automated workflows and AI-assisted analysis tools that save your team hours every week and keep you ahead of the curve." %}</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ IMPACT NUMBERS ═══════════════ -->
+<section class="om-impact-section">
+  <div class="container">
+    <div class="om-impact-grid">
+      <div data-aos="zoom-in" data-aos-delay="0">
+        <div class="om-impact-n" data-count="12">0</div>
+        <div class="om-impact-l">{% trans "Projects delivered" %}</div>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="100">
+        <div class="om-impact-n" data-count="8">0</div>
+        <div class="om-impact-l">{% trans "Businesses grown" %}</div>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="200">
+        <div class="om-impact-n" data-count="4">0</div>
+        <div class="om-impact-l">{% trans "Countries reached" %}</div>
+      </div>
+      <div data-aos="zoom-in" data-aos-delay="300">
+        <div class="om-impact-n">100<span style="font-size:1.4rem;">%</span></div>
+        <div class="om-impact-l">{% trans "On-time delivery" %}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ CORE VALUES ═══════════════ -->
+<section class="om-values-section">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="om-eyebrow"><i class="fa-solid fa-heart"></i> {% trans "What Drives Us" %}</span>
+      <h2 class="om-section-h2">{% trans "Our Core Values" %}</h2>
+      <p class="om-section-sub">{% trans "The principles that shape every line of code we write and every conversation we have with a client." %}</p>
+    </div>
+    <div class="om-values-grid">
+
+      <div class="om-value-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="om-value-ico"><i class="fa-solid fa-shield-halved"></i></div>
+        <div>
+          <h5>{% trans "Simplicity First" %}</h5>
+          <p>{% blocktrans %}We resist unnecessary complexity. Every feature we build has a clear purpose, and if it doesn't make the user's life simpler, we don't ship it.{% endblocktrans %}</p>
+        </div>
+      </div>
+
+      <div class="om-value-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="om-value-ico"><i class="fa-solid fa-handshake"></i></div>
+        <div>
+          <h5>{% trans "Radical Transparency" %}</h5>
+          <p>{% blocktrans %}No hidden costs, no surprise pivots. We tell our clients exactly what we're building, when it'll be ready and why we made each decision.{% endblocktrans %}</p>
+        </div>
+      </div>
+
+      <div class="om-value-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="om-value-ico"><i class="fa-solid fa-bolt"></i></div>
+        <div>
+          <h5>{% trans "Speed with Quality" %}</h5>
+          <p>{% blocktrans %}We move fast because we plan well. Good architecture means you can iterate quickly without breaking things — and users never have to wait.{% endblocktrans %}</p>
+        </div>
+      </div>
+
+      <div class="om-value-card" data-aos="fade-up" data-aos-delay="240">
+        <div class="om-value-ico"><i class="fa-solid fa-earth-europe"></i></div>
+        <div>
+          <h5>{% trans "Impact at Scale" %}</h5>
+          <p>{% blocktrans %}We think beyond the single client. Every tool we build is designed to be maintained, extended and scaled — today's project is tomorrow's platform.{% endblocktrans %}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ CTA ═══════════════ -->
+<section class="cp-cta-section">
+  <div class="cp-cta-grid-bg"></div>
+  <div class="container position-relative" style="z-index:2;">
+    <div class="cp-cta-inner" data-aos="zoom-in">
+      <div class="cp-cta-icon"><i class="fa-solid fa-bullseye"></i></div>
+      <h2>{% trans "Ready to make an impact?" %}</h2>
+      <p>{% trans "Tell us about your business challenge and we'll come back with a clear plan — no jargon, no fluff, just a real solution." %}</p>
+      <div class="d-flex gap-3 justify-content-center flex-wrap mt-4">
+        <a href="/contact-us" class="btn btn-accent btn-lg">
+          {% trans "Get in Touch" %} <i class="fa-solid fa-arrow-right ms-1"></i>
+        </a>
+        <a href="/about-us/our-vision" class="cp-ghost-btn btn-lg">
+          {% trans "See Our Vision" %}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}
+
+
+{% block extra_js %}
+<script>
+(function () {
+  function countUp(el) {
+    const t = parseInt(el.dataset.count, 10);
+    if (!t) return;
+    const gen = (el._gfCountGen = (el._gfCountGen || 0) + 1);
+    const dur = 1600, s = performance.now();
+    (function step(now) {
+      if (el._gfCountGen !== gen) return;
+      const p = Math.min((now - s) / dur, 1);
+      el.textContent = Math.round((1 - Math.pow(1 - p, 3)) * t);
+      if (p < 1) requestAnimationFrame(step);
+    })(s);
+  }
+  const obs = new IntersectionObserver(entries => {
+    const els = document.querySelectorAll('[data-count]');
+    if (!entries[0].isIntersecting) { els.forEach(el => { el._gfCountGen = (el._gfCountGen || 0) + 1; el.textContent = '0'; }); return; }
+    els.forEach(countUp);
+  }, { threshold: 0.4 });
+  const sec = document.querySelector('.om-impact-section');
+  if (sec) obs.observe(sec);
+})();
+</script>
+{% endblock %}

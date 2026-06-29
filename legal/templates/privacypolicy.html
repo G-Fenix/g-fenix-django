@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% load static i18n %}
+{% block title %}{% trans "G-Fenix | Privacy Policy" %}{% endblock %}
+
+{% block content %}
+<section class="container py-5 page-dark">
+  <h1>{% trans "Privacy Policy" %}</h1>
+  <p><strong>{% trans "Last updated:" %}</strong> {% trans "June 2025" %}</p>
+
+  <h2>{% trans "1. Who We Are" %}</h2>
+  <p>{% blocktrans %}G-Fénix is a web development and data studio based in Barcelona, Spain. We provide services including web development, AI integration, data consultancy, and digital solutions. Contact: hello@g-fenix.com{% endblocktrans %}</p>
+
+  <h2>{% trans "2. What Data We Collect" %}</h2>
+  <ul>
+    <li><strong>{% trans "Contact form data" %}:</strong> {% trans "first name, last name, email address, subject, and message." %}</li>
+    <li><strong>{% trans "Newsletter subscription" %}:</strong> {% trans "email address only." %}</li>
+    <li><strong>{% trans "AI chat messages" %}:</strong> {% trans "messages you send to our AI assistant. These are processed in real time and not stored permanently." %}</li>
+    <li><strong>{% trans "Technical data" %}:</strong> {% trans "IP address, browser type, device information, and session cookies." %}</li>
+  </ul>
+
+  <h2>{% trans "3. How We Use Your Data" %}</h2>
+  <ul>
+    <li><strong>{% trans "To respond to your enquiries" %}</strong> — {% trans "contact form messages are reviewed by our team and used solely to reply to you." %}</li>
+    <li><strong>{% trans "To send updates" %}</strong> — {% trans "newsletter emails are sent only if you opted in. You can unsubscribe at any time." %}</li>
+    <li><strong>{% trans "To improve our services" %}</strong> — {% trans "technical data helps us keep the website secure and performant." %}</li>
+  </ul>
+
+  <h2>{% trans "4. Legal Basis (GDPR)" %}</h2>
+  <ul>
+    <li><strong>{% trans "Consent" %}</strong> — {% trans "for newsletter subscriptions and optional communications." %}</li>
+    <li><strong>{% trans "Legitimate interests" %}</strong> — {% trans "for responding to contact enquiries and website security." %}</li>
+    <li><strong>{% trans "Legal obligations" %}</strong> — {% trans "where required by Spanish or EU law." %}</li>
+  </ul>
+
+  <h2>{% trans "5. Cookies" %}</h2>
+  <p>{% blocktrans %}We use cookies for session management, security (CSRF protection), and language preference. See our{% endblocktrans %} <a href="{% url 'cookiepolicy' %}">{% trans "Cookie Policy" %}</a>.</p>
+
+  <h2>{% trans "6. Sharing Your Data" %}</h2>
+  <p>{% blocktrans %}We do not sell your data. We may share it with trusted service providers (e.g., hosting, email delivery) under strict data processing agreements. If data is transferred outside the EEA, we apply appropriate safeguards such as Standard Contractual Clauses.{% endblocktrans %}</p>
+
+  <h2>{% trans "7. Data Retention" %}</h2>
+  <p>{% blocktrans %}Contact form messages are kept for up to 2 years or until you request deletion. Newsletter emails are kept until you unsubscribe. Technical logs are retained for up to 90 days.{% endblocktrans %}</p>
+
+  <h2>{% trans "8. Your Rights" %}</h2>
+  <p>{% blocktrans %}Under GDPR you have the right to access, correct, delete, or restrict your data, and to object to processing or request portability. To exercise any right, contact us at hello@g-fenix.com. You may also lodge a complaint with the Spanish Data Protection Authority (AEPD).{% endblocktrans %}</p>
+
+  <h2>{% trans "9. Security" %}</h2>
+  <p>{% blocktrans %}All data is transmitted over TLS (HTTPS). We apply role-based access controls and maintain regular backups.{% endblocktrans %}</p>
+
+  <h2>{% trans "10. Changes to this Policy" %}</h2>
+  <p>{% blocktrans %}We may update this policy. Material changes will be communicated via a notice on our website.{% endblocktrans %}</p>
+
+  <p><strong>{% trans "Contact:" %}</strong> hello@g-fenix.com</p>
+</section>
+{% endblock %}

@@ -1,0 +1,292 @@
+{% extends "layout.html" %}
+{% load static i18n %}
+
+{% block title %}G-Fenix | Our Vision{% endblock %}
+
+{% block content %}
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="ov-hero">
+
+  <div class="container position-relative" style="z-index:2;">
+    <div class="row align-items-center g-5 ov-hero-row">
+
+      <!-- Left -->
+      <div class="col-lg-6">
+        <div class="ov-eyebrow" data-aos="fade-down">
+          <i class="fa-solid fa-star"></i> {% trans "Our Vision" %}
+        </div>
+        <h1 class="ov-hero-h1" data-aos="fade-up" data-aos-delay="80">
+          {% trans "Building the" %}<br>
+          <span class="ov-grad">{% trans "Global Tech Future" %}</span>
+        </h1>
+        <p class="ov-hero-p" data-aos="fade-up" data-aos-delay="180">
+          {% trans "We see a world where AI and technology are tools of empowerment — accessible, ethical and designed around the people who use them. G&#8209;Fenix is building toward that future, one product at a time, from Barcelona to the world." %}
+        </p>
+
+        <!-- Vision pillars inline -->
+        <div class="d-flex flex-column gap-3 mb-4" data-aos="fade-up" data-aos-delay="280">
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent);">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <span style="font-size:.9rem;color:var(--text-secondary);">{% trans "AI that" %} <strong style="color:var(--text-primary);">{% trans "assists" %}</strong>{% trans ", never replaces human judgement" %}</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:rgba(96,165,250,.1);border:1px solid rgba(96,165,250,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#60a5fa;">
+              <i class="fa-solid fa-earth-europe"></i>
+            </div>
+            <span style="font-size:.9rem;color:var(--text-secondary);">{% trans "Products built for" %} <strong style="color:var(--text-primary);">{% trans "international" %}</strong> {% trans "teams and markets" %}</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:36px;height:36px;border-radius:50%;background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#a78bfa;">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <span style="font-size:.9rem;color:var(--text-secondary);">{% trans "Technology that" %} <strong style="color:var(--text-primary);">{% trans "grows with" %}</strong> {% trans "your business" %}</span>
+          </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-3" data-aos="fade-up" data-aos-delay="360">
+          <a href="/partnership" class="btn btn-accent btn-lg">
+            {% trans "Partner with Us" %} <i class="fa-solid fa-arrow-right ms-1"></i>
+          </a>
+          <a href="/about-us/our-mission" class="cp-ghost-btn btn-lg">
+            {% trans "Our Mission" %}
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: CSS Globe / Orbit -->
+      <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center"
+           data-aos="fade-left" data-aos-delay="200">
+
+        <div class="ov-globe-wrap">
+          <!-- Stars -->
+          <div class="ov-star" style="width:2px;height:2px;top:10%;left:15%;--dur:2.8s;--del:0s;"></div>
+          <div class="ov-star" style="width:3px;height:3px;top:20%;left:80%;--dur:3.5s;--del:.5s;"></div>
+          <div class="ov-star" style="width:2px;height:2px;top:75%;left:12%;--dur:2.2s;--del:1s;"></div>
+          <div class="ov-star" style="width:2px;height:2px;top:85%;left:75%;--dur:3.8s;--del:.3s;"></div>
+          <div class="ov-star" style="width:3px;height:3px;top:45%;left:5%;--dur:2.6s;--del:.8s;"></div>
+          <div class="ov-star" style="width:2px;height:2px;top:35%;left:92%;--dur:3.1s;--del:1.5s;"></div>
+          <div class="ov-star" style="width:2px;height:2px;top:60%;left:88%;--dur:2.4s;--del:.2s;"></div>
+          <div class="ov-star" style="width:3px;height:3px;top:5%;left:55%;--dur:3.6s;--del:1.1s;"></div>
+          <div class="ov-star" style="width:2px;height:2px;top:90%;left:40%;--dur:2.9s;--del:.6s;"></div>
+          <div class="ov-star" style="width:2px;height:2px;top:15%;left:35%;--dur:3.3s;--del:1.8s;"></div>
+
+          <!-- Orbit ring 1 (closest) -->
+          <div class="ov-orbit ov-o1">
+            <div class="ov-node amber">
+              <div class="ov-node-label">{% trans "Web" %}</div>
+            </div>
+          </div>
+
+          <!-- Orbit ring 2 (medium) -->
+          <div class="ov-orbit ov-o2">
+            <div class="ov-node blue">
+              <div class="ov-node-label">{% trans "Data" %}</div>
+            </div>
+          </div>
+
+          <!-- Orbit ring 3 (outer) -->
+          <div class="ov-orbit ov-o3">
+            <div class="ov-node purple">
+              <div class="ov-node-label">{% trans "AI" %}</div>
+            </div>
+          </div>
+
+          <!-- Center planet -->
+          <div class="ov-planet">
+            <img src="{% static 'images/l1no.png' %}" alt="G-Fenix" class="ov-planet-logo">
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ ROADMAP ═══════════════ -->
+<section class="ov-roadmap-section">
+  <div class="container">
+
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="ov-eyebrow"><i class="fa-solid fa-map"></i> {% trans "Roadmap" %}</span>
+      <h2 class="ov-section-h2">{% trans "Where We've Been &amp; Where We're Going" %}</h2>
+      <p class="ov-section-sub">{% trans "Our journey from a small dev team to an international technology partner — and the milestones still ahead." %}</p>
+    </div>
+
+    <div class="ov-timeline">
+
+      <div class="ov-tm-item" data-aos="fade-right">
+        <div class="ov-tm-content">
+          <span class="ov-tm-era">&#127774; {% trans "2022 — Founded" %}</span>
+          <h4>{% trans "G&#8209;Fenix is born" %}</h4>
+          <p>{% trans "Started as a small team of developers and data engineers with a simple goal: build software that actually solves business problems. First three clients. First three deliveries. Zero late projects." %}</p>
+          <div class="ov-tm-tags">
+            <span class="ov-tm-tag">Django</span>
+            <span class="ov-tm-tag">PostgreSQL</span>
+            <span class="ov-tm-tag">Web Dev</span>
+          </div>
+        </div>
+        <div class="ov-tm-dot"></div>
+        <div class="ov-tm-content ov-tm-spacer" aria-hidden="true"></div>
+      </div>
+
+      <div class="ov-tm-item right" data-aos="fade-left">
+        <div class="ov-tm-content ov-tm-spacer" aria-hidden="true"></div>
+        <div class="ov-tm-dot"></div>
+        <div class="ov-tm-content">
+          <span class="ov-tm-era">&#127757; {% trans "2023 — Growth" %}</span>
+          <h4>{% trans "Expanding into Data &amp; AI" %}</h4>
+          <p>{% trans "We added a full Data Consultancy practice. BI dashboards, ETL pipelines, Power BI and predictive analytics for clients in Spain, Bulgaria and beyond. MWC Barcelona attendance — connecting with global innovators." %}</p>
+          <div class="ov-tm-tags">
+            <span class="ov-tm-tag">Power BI</span>
+            <span class="ov-tm-tag">Python</span>
+            <span class="ov-tm-tag">MWC 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ov-tm-item" data-aos="fade-right">
+        <div class="ov-tm-content">
+          <span class="ov-tm-era">&#128640; {% trans "2024 — Scale" %}</span>
+          <h4>{% trans "Enterprise Products &amp; AI Tooling" %}</h4>
+          <p>{% trans "Launched our MDM Enterprise Portal, StockSense inventory platform and first AI chatbot integrations. Team grew. Industries diversified. Clients now span four countries." %}</p>
+          <div class="ov-tm-tags">
+            <span class="ov-tm-tag">MDM</span>
+            <span class="ov-tm-tag">AI Chatbots</span>
+            <span class="ov-tm-tag">4 Countries</span>
+          </div>
+        </div>
+        <div class="ov-tm-dot"></div>
+        <div class="ov-tm-content ov-tm-spacer" aria-hidden="true"></div>
+      </div>
+
+      <div class="ov-tm-item right" data-aos="fade-left">
+        <div class="ov-tm-content ov-tm-spacer" aria-hidden="true"></div>
+        <div class="ov-tm-dot" style="border-color:rgba(245,158,11,.4);box-shadow:0 0 18px rgba(245,158,11,.3);background:rgba(245,158,11,.1);"></div>
+        <div class="ov-tm-content" style="border-color:rgba(245,158,11,.22);">
+          <span class="ov-tm-era">&#127775; {% trans "2025–2026 — Vision" %}</span>
+          <h4>{% trans "Global AI-First Platform" %}</h4>
+          <p>{% trans "Building an AI-native product suite available internationally. Proprietary analytics platform, multi-language support for 10+ regions, a partner network across Europe and beyond. Technology for people, at global scale." %}</p>
+          <div class="ov-tm-tags">
+            <span class="ov-tm-tag" style="background:rgba(245,158,11,.15);border-color:rgba(245,158,11,.3);">{% trans "AI Platform" %}</span>
+            <span class="ov-tm-tag" style="background:rgba(245,158,11,.15);border-color:rgba(245,158,11,.3);">{% trans "10+ Markets" %}</span>
+            <span class="ov-tm-tag" style="background:rgba(245,158,11,.15);border-color:rgba(245,158,11,.3);">{% trans "Partner Network" %}</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ FOCUS AREAS ═══════════════ -->
+<section class="ov-focus-section">
+  <div class="container">
+
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="ov-eyebrow"><i class="fa-solid fa-crosshairs"></i> {% trans "Strategic Focus" %}</span>
+      <h2 class="ov-section-h2">{% trans "Three pillars of our future" %}</h2>
+      <p class="ov-section-sub">{% trans "These are the areas we are investing in most — because we believe they represent the biggest opportunity to help people." %}</p>
+    </div>
+
+    <div class="ov-focus-grid">
+
+      <div class="ov-focus-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="ov-fc-glow" style="background:radial-gradient(circle,rgba(245,158,11,.3),transparent 70%);"></div>
+        <div class="ov-fc-icon" style="background:linear-gradient(135deg,#b45309,#f59e0b);">
+          <i class="fa-solid fa-brain"></i>
+        </div>
+        <h4>{% trans "AI for Everyone" %}</h4>
+        <p>{% blocktrans %}We're building AI tools that are practical, explainable and affordable for small and medium businesses — not just tech giants. Intelligent automation that your team can actually use and trust.{% endblocktrans %}</p>
+      </div>
+
+      <div class="ov-focus-card" data-aos="fade-up" data-aos-delay="120">
+        <div class="ov-fc-glow" style="background:radial-gradient(circle,rgba(59,130,246,.3),transparent 70%);"></div>
+        <div class="ov-fc-icon" style="background:linear-gradient(135deg,#1d4ed8,#3b82f6);">
+          <i class="fa-solid fa-earth-europe"></i>
+        </div>
+        <h4>{% trans "International Scale" %}</h4>
+        <p>{% blocktrans %}Our products are built multilingual and multi-currency from day one. We're expanding our client base across Europe, with a focus on Spain, Bulgaria, Turkey and the UK — and growing further.{% endblocktrans %}</p>
+      </div>
+
+      <div class="ov-focus-card" data-aos="fade-up" data-aos-delay="240">
+        <div class="ov-fc-glow" style="background:radial-gradient(circle,rgba(139,92,246,.3),transparent 70%);"></div>
+        <div class="ov-fc-icon" style="background:linear-gradient(135deg,#6d28d9,#a78bfa);">
+          <i class="fa-solid fa-microchip"></i>
+        </div>
+        <h4>{% trans "Human-Centred Tech" %}</h4>
+        <p>{% blocktrans %}Every product we build is evaluated by one question: does this genuinely help the person using it? We focus on usability, accessibility and real-world outcomes — not feature lists.{% endblocktrans %}</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ CTA ═══════════════ -->
+<section class="cp-cta-section">
+  <div class="cp-cta-grid-bg"></div>
+  <div class="container position-relative" style="z-index:2;">
+    <div class="cp-cta-inner" data-aos="zoom-in">
+      <div class="cp-cta-icon"><i class="fa-solid fa-star"></i></div>
+      <h2>{% trans "Be part of the vision" %}</h2>
+      <p>{% trans "Whether you're a client, a partner or a developer who shares our values — there's a place for you in this journey. Let's build the future together." %}</p>
+      <div class="d-flex gap-3 justify-content-center flex-wrap mt-4">
+        <a href="/partnership" class="btn btn-accent btn-lg">
+          {% trans "Become a Partner" %} <i class="fa-solid fa-arrow-right ms-1"></i>
+        </a>
+        <a href="/contact-us" class="cp-ghost-btn btn-lg">
+          {% trans "Get in Touch" %}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}
+
+
+{% block extra_js %}
+<script>
+(function () {
+
+  /* Orbit node labels counter-rotate so text stays upright */
+  const o1 = document.querySelector('.ov-o1');
+  const o2 = document.querySelector('.ov-o2');
+  const o3 = document.querySelector('.ov-o3');
+
+  let deg1 = 0, deg2 = 60, deg3 = -40;
+
+  function rotateOrbits() {
+    deg1 += 360 / 8 / 60;       /* 8s period */
+    deg2 += 360 / 14 / 60;      /* 14s period */
+    deg3 += 360 / 22 / 60;      /* 22s period */
+
+    if (o1) {
+      o1.style.transform = `rotate(${deg1}deg)`;
+      const n1 = o1.querySelector('.ov-node');
+      if (n1) n1.style.transform = `translateX(-50%) rotate(${-deg1}deg)`;
+    }
+    if (o2) {
+      o2.style.transform = `rotate(${deg2}deg)`;
+      const n2 = o2.querySelector('.ov-node');
+      if (n2) n2.style.transform = `translateX(-50%) rotate(${-deg2}deg)`;
+    }
+    if (o3) {
+      o3.style.transform = `rotate(${deg3}deg)`;
+      const n3 = o3.querySelector('.ov-node');
+      if (n3) n3.style.transform = `translateX(-50%) rotate(${-deg3}deg)`;
+    }
+    requestAnimationFrame(rotateOrbits);
+  }
+
+  if (o1 || o2 || o3) rotateOrbits();
+
+})();
+</script>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% load static i18n %}
+
+{% block title %}G-Fenix | Our Team{% endblock %}
+
+{% block extra_head %}
+<script>
+  /* Runs synchronously in <head> — before browser scroll-restoration fires */
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+</script>
+<link rel="stylesheet" href="{% static 'css/team-showcase.css' %}">
+<script>
+  window.FRAME_PATH   = "{% static 'images/frames/' %}";
+  window.TOTAL_FRAMES = 91;
+</script>
+{% endblock %}
+
+{% block content %}
+
+<!-- ── Frame animation + overlaid headline ─────────────── -->
+<section id="frameSequenceSection" class="frame-sequence-section">
+  <canvas id="frameCanvas"></canvas>
+
+  <h2 class="ts-headline" id="tsHeadline">
+    <span class="ts-word" style="--i:0">{% trans "Building" %}</span>
+    <span class="ts-word" style="--i:1">{% trans "smarter" %}</span>
+    <span class="ts-word" style="--i:2">{% trans "digital" %}</span>
+    <span class="ts-word" style="--i:3">{% trans "experiences," %}</span>
+    <span class="ts-word" style="--i:4">{% trans "together." %}</span>
+  </h2>
+</section>
+
+<!-- ── Team cards ─────────────────────────────────────── -->
+<section class="ts-cards-section">
+  <div class="ts-cards-row">
+
+    <a href="{% url 'jessica_profile' %}" class="ts-profile-card">
+      <div class="ts-card-img">
+        <img src="{% static 'images/jessicaa.jpeg' %}" alt="Jessica Fénix Perez">
+      </div>
+      <div class="ts-card-body">
+        <div class="ts-card-role">{% trans "Data & AI Expert" %}</div>
+        <div class="ts-card-name">Jessica Fénix Perez</div>
+        <div class="ts-card-arrow">→</div>
+      </div>
+    </a>
+
+    <a href="{% url 'cengizhan_profile' %}" class="ts-profile-card">
+      <div class="ts-card-img">
+        <img src="{% static 'images/cengizhann.jpeg' %}" alt="Cengizhan Genç">
+      </div>
+      <div class="ts-card-body">
+        <div class="ts-card-role">{% trans "Web Developer" %}</div>
+        <div class="ts-card-name">Cengizhan Genç</div>
+        <div class="ts-card-arrow">→</div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+{% endblock content %}
+
+{% block extra_js %}
+<script src="{% static 'js/team-showcase.js' %}"></script>
+{% endblock %}

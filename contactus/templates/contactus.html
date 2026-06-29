@@ -1,0 +1,273 @@
+{% extends "layout.html" %}
+{% load static i18n %}
+
+{% block title %}G-Fenix | Contact Us{% endblock %}
+
+{% block content %}
+
+<div class="cu-wrap">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+
+      <!-- SOL: Başlık + Form -->
+      <div class="col-lg-7" data-aos="fade-right">
+
+        <h1 class="cu-title">{% trans "Get in" %} <span class="gf-grad">{% trans "Touch" %}</span></h1>
+        <p class="cu-desc">{% trans "Have a project in mind? Send us a message and we'll get back to you within a few hours." %}</p>
+
+        <div class="cu-form-card">
+
+          <!-- Form -->
+          <div id="cuBody">
+            <h2 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--text-primary);margin-bottom:6px;">{% trans "Send a Message" %}</h2>
+            <p style="font-size:14px;color:var(--text-secondary);margin-bottom:24px;">{% trans "We'll get back to you with a free consultation." %}</p>
+
+            <form id="cuForm" novalidate>
+              {% csrf_token %}
+
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="cu-f">
+                    <label class="cu-lbl" for="cuFirst">{% trans "First name" %}</label>
+                    <input type="text" id="cuFirst" name="first_name" class="cu-inp" placeholder="{% trans 'Jane' %}" required>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="cu-f">
+                    <label class="cu-lbl" for="cuLast">{% trans "Last name" %}</label>
+                    <input type="text" id="cuLast" name="last_name" class="cu-inp" placeholder="{% trans 'Smith' %}" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cu-f">
+                <label class="cu-lbl" for="cuEmail">{% trans "Email address" %}</label>
+                <input type="email" id="cuEmail" name="email" class="cu-inp" placeholder="{% trans 'jane@company.com' %}" required>
+              </div>
+
+              <div class="cu-f">
+                <label class="cu-lbl" for="cuSubject">{% trans "Subject" %}</label>
+                <input type="text" id="cuSubject" name="subject" class="cu-inp" placeholder="{% trans 'Project enquiry, partnership…' %}" required>
+              </div>
+
+              <div class="cu-f">
+                <label class="cu-lbl" for="cuMsg">{% trans "Message" %}</label>
+                <textarea id="cuMsg" name="message" class="cu-txt" placeholder="{% trans 'Tell us about your project…' %}" required></textarea>
+              </div>
+
+              <div class="cu-consent">
+                <input type="checkbox" id="cuConsent" name="consent" required>
+                <label for="cuConsent">
+                  {% trans "I agree that my details will be kept private and not shared with third parties." %}
+                  <a href="{% url 'privacypolicy' %}" target="_blank" rel="noopener">{% trans "Privacy Policy" %}</a>
+                </label>
+              </div>
+
+              <button type="submit" class="cu-btn" id="cuBtn">
+                <i class="fa-regular fa-paper-plane"></i>
+                {% trans "Send Message" %}
+                <span class="cu-arr">→</span>
+              </button>
+
+            </form>
+          </div>
+
+          <!-- Başarı -->
+          <div class="cu-success" id="cuSuccess">
+            <div class="cu-success-top">
+              <div class="cu-success-ring cu-ring-1"></div>
+              <div class="cu-success-ring cu-ring-2"></div>
+              <div class="cu-success-ico"><i class="fa-solid fa-check"></i></div>
+            </div>
+            <h4>{% trans "Message Sent!" %}</h4>
+            <p>{% trans "Thanks for reaching out! On weekdays we reply within 2 hours. Weekend messages will be answered on Monday." %}</p>
+            <div class="cu-success-divider"></div>
+            <div class="cu-success-langs">
+              <div class="cu-sl"><span class="fi fi-gb"></span><span>Weekdays: reply within 2 h. Weekends: Monday!</span></div>
+              <div class="cu-sl"><span class="fi fi-tr"></span><span>Hafta içi 2 saatte, hafta sonu Pazartesi yanıt!</span></div>
+              <div class="cu-sl"><span class="fi fi-es"></span><span>Días laborables: 2 h. Fin de semana: el lunes.</span></div>
+              <div class="cu-sl"><span class="fi fi-es-ct"></span><span>Dies feiners: 2 h. Cap de setmana: dilluns!</span></div>
+            </div>
+            <button class="cu-resend" id="cuResend" type="button">
+              <i class="fa-regular fa-paper-plane"></i>
+              {% trans "Send another message" %}
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SAĞ: Info + Diller + Harita -->
+      <div class="col-lg-5" data-aos="fade-left" data-aos-delay="100">
+
+        <!-- Info items -->
+        <div class="cu-info">
+          <a href="mailto:hello@g-fenix.com" class="cu-info-item">
+            <div class="cu-info-icon"><i class="fa-regular fa-envelope"></i></div>
+            <div>
+              <p class="cu-info-lbl">{% trans "Email" %}</p>
+              <p class="cu-info-val">hello@g-fenix.com</p>
+            </div>
+          </a>
+
+          <a href="tel:+34630176674" class="cu-info-item">
+            <div class="cu-info-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <p class="cu-info-lbl">{% trans "Phone" %}</p>
+              <p class="cu-info-val">+34 630 176 674</p>
+            </div>
+          </a>
+
+          <div class="cu-info-item" style="cursor:default;">
+            <div class="cu-info-icon"><i class="fa-regular fa-clock"></i></div>
+            <div>
+              <p class="cu-info-lbl">{% trans "Working Hours" %}</p>
+              <p class="cu-info-val">{% trans "Mon – Fri, 9am – 6pm GMT" %}</p>
+            </div>
+          </div>
+
+          <div class="cu-info-item" style="cursor:default;">
+            <div class="cu-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <p class="cu-info-lbl">{% trans "Location" %}</p>
+              <p class="cu-info-val">{% trans "Barcelona, Spain" %}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dil Badge'leri -->
+        <div class="cu-langs" data-aos="fade-up" data-aos-delay="100">
+          <div class="cu-langs-label">{% trans "We work in your language" %}</div>
+          <div class="cu-langs-row">
+            <span class="cu-lang-badge"><span class="fi fi-gb"></span> English</span>
+            <span class="cu-lang-badge"><span class="fi fi-es"></span> Español</span>
+            <span class="cu-lang-badge"><span class="fi fi-tr"></span> Türkçe</span>
+            <span class="cu-lang-badge"><span class="fi fi-es-ct"></span> Català</span>
+          </div>
+        </div>
+
+        <!-- Harita -->
+        <div class="cu-map" data-aos="fade-up" data-aos-delay="150">
+            <div class="cu-map-overlay" id="cuMapOverlay">
+              <div class="cu-map-overlay-hint">
+                <i class="fa-solid fa-hand-pointer"></i>
+                <span>{% trans "Tap to interact" %}</span>
+              </div>
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2710.358884257943!2d2.1037110755320554!3d41.351395998227716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDIxJzA1LjAiTiAywrAwNicyMi42IkU!5e1!3m2!1sen!2ses!4v1781772068922!5m2!1sen!2ses"
+                loading="lazy"
+                allowfullscreen
+                title="{% trans 'G-Fenix Location' %}"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <a class="cu-map-open" href="https://maps.google.com/?q=41.351395998227716,2.1037110755320554&t=k" target="_blank" rel="noopener">
+          <i class="fa-solid fa-map-location-dot"></i> {% trans "Open in Google Maps" %} <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:.7rem;"></i>
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="cu-toast" id="cuToast">
+  <i class="fa-solid fa-circle-check" style="color:#10b981;font-size:17px;"></i>
+  <span>{% trans "Message sent successfully!" %}</span>
+</div>
+
+{% endblock content %}
+
+{% block extra_js %}
+<script>
+/* Map tap-to-interact overlay — mobile only */
+(function(){
+  const overlay = document.getElementById('cuMapOverlay');
+  if (!overlay) return;
+  var timer;
+  overlay.addEventListener('click', function() {
+    overlay.classList.add('cu-map-overlay--active');
+    clearTimeout(timer);
+    timer = setTimeout(function() {
+      overlay.classList.remove('cu-map-overlay--active');
+    }, 5000);
+  });
+})();
+</script>
+
+<script>
+(function(){
+  const form    = document.getElementById('cuForm');
+  const btn     = document.getElementById('cuBtn');
+  const body    = document.getElementById('cuBody');
+  const success = document.getElementById('cuSuccess');
+
+  if (!form) return;
+
+  /* Validation messages in page language */
+  const lang = document.documentElement.lang || 'en';
+  const vMsgs = {
+    en: { required: 'Please fill in this field.', checkbox: 'Please accept the privacy policy to continue.' },
+    tr: { required: 'Bu alanı lütfen doldurun.', checkbox: 'Devam etmek için gizlilik politikasını kabul edin.' },
+    es: { required: 'Por favor, rellena este campo.', checkbox: 'Acepta la política de privacidad para continuar.' },
+    ca: { required: "Si us plau, omple aquest camp.", checkbox: "Accepta la política de privadesa per continuar." },
+  };
+  const vm = vMsgs[lang] || vMsgs.en;
+  form.querySelectorAll('[required]').forEach(el => {
+    const msg = el.type === 'checkbox' ? vm.checkbox : vm.required;
+    el.addEventListener('invalid', () => el.setCustomValidity(msg));
+    el.addEventListener('input',  () => el.setCustomValidity(''));
+    el.addEventListener('change', () => el.setCustomValidity(''));
+  });
+
+  const resend = document.getElementById('cuResend');
+  if (resend) {
+    resend.addEventListener('click', () => {
+      success.classList.remove('on');
+      body.style.display = '';
+      body.style.cssText = '';
+      form.reset();
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fa-regular fa-paper-plane"></i> {% trans "Send Message" %} <span class="cu-arr">→</span>';
+    });
+  }
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> {% trans "Sending…" %}';
+
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch('{% url "contact_submit" %}', {
+        method: 'POST',
+        body: data,
+        headers: { 'X-CSRFToken': data.get('csrfmiddlewaretoken') }
+      });
+
+      if (res.ok) {
+        body.style.cssText = 'opacity:0;transform:translateY(-8px);transition:opacity .3s,transform .3s;';
+        setTimeout(() => {
+          body.style.display = 'none';
+          success.classList.add('on');
+        }, 300);
+        const t = document.getElementById('cuToast');
+        t.classList.add('on');
+        setTimeout(() => t.classList.remove('on'), 4000);
+      } else {
+        throw new Error();
+      }
+    } catch {
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fa-regular fa-paper-plane"></i> {% trans "Send Message" %} <span class="cu-arr">→</span>';
+      alert('{% trans "Something went wrong. Please email us at hello@g-fenix.com" %}');
+    }
+  });
+})();
+</script>
+{% endblock %}

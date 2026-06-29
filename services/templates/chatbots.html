@@ -1,0 +1,1024 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}G-Fenix | AI Chatbots{% endblock %}
+
+{% block content %}
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="cb-hero">
+  <canvas id="cb-wave-canvas"></canvas>
+  <div class="cb-hero-glow cb-glow-1"></div>
+  <div class="cb-hero-glow cb-glow-2"></div>
+
+  <div class="container position-relative" style="z-index:2;">
+    <div class="row align-items-center g-5 cb-hero-row">
+
+      <div class="col-lg-6">
+        <div class="cb-hero-badge" data-aos="fade-down">
+          <span class="cb-badge-pulse"></span>
+          {% trans "Build · AI Chatbots" %}
+        </div>
+
+        <h1 class="cb-hero-h1" data-aos="fade-up" data-aos-delay="100">
+          {% trans "Your Business" %}<br>
+          <span class="cb-typing-wrap">
+            <span id="cbHeroTyper" class="gf-grad"></span><span class="cb-cursor">|</span>
+          </span>
+        </h1>
+
+        <p class="cb-hero-p" data-aos="fade-up" data-aos-delay="300">
+          {% trans "We build AI-powered chatbots that handle appointments, answer questions, qualify leads, and never sleep — embedded directly on your website or connected to WhatsApp, Instagram, and Telegram." %}
+        </p>
+
+        <div class="cb-channel-row" data-aos="fade-up" data-aos-delay="450">
+          <div class="cb-channel cb-ch-web"><i class="fa-solid fa-globe"></i> {% trans "Website" %}</div>
+          <div class="cb-channel cb-ch-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</div>
+          <div class="cb-channel cb-ch-ig"><i class="fa-brands fa-instagram"></i> Instagram</div>
+          <div class="cb-channel cb-ch-tg"><i class="fa-brands fa-telegram"></i> Telegram</div>
+        </div>
+
+        <div class="d-flex gap-3 flex-wrap mt-4" data-aos="fade-up" data-aos-delay="600">
+          <a href="#usecases" class="btn btn-accent btn-lg">{% trans "See Use Cases" %}</a>
+          <a href="#demo" class="btn cb-btn-ghost btn-lg">{% trans "Live Demo" %} <i class="fa-solid fa-play ms-1" style="font-size:.75rem"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+        <div class="cb-chat-showcase">
+
+          <!-- Main chat window -->
+          <div class="cb-chat-window">
+            <div class="cb-chat-header">
+              <div class="cb-chat-avatar">
+                <i class="fa-solid fa-robot"></i>
+                <span class="cb-avatar-online"></span>
+              </div>
+              <div>
+                <div class="cb-chat-name">{% trans "G‑Bot Assistant" %}</div>
+                <div class="cb-chat-status">{% trans "● Online · responds instantly" %}</div>
+              </div>
+              <div class="cb-chat-actions">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </div>
+            </div>
+            <div class="cb-chat-body" id="cbChatBody"></div>
+            <div class="cb-chat-input">
+              <div class="cb-input-field">{% trans "Type a message..." %}</div>
+              <button class="cb-send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+          </div>
+
+          <!-- Floating stat cards -->
+          <div class="cb-stat-float cb-sf-1" data-aos="zoom-in" data-aos-delay="800">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <div class="cb-sf-num">24/7</div>
+              <div class="cb-sf-lbl">{% trans "Always On" %}</div>
+            </div>
+          </div>
+          <div class="cb-stat-float cb-sf-2" data-aos="zoom-in" data-aos-delay="950">
+            <i class="fa-solid fa-bolt"></i>
+            <div>
+              <div class="cb-sf-num">&lt;1s</div>
+              <div class="cb-sf-lbl">{% trans "Response" %}</div>
+            </div>
+          </div>
+          <div class="cb-stat-float cb-sf-3" data-aos="zoom-in" data-aos-delay="1100">
+            <i class="fa-solid fa-chart-line"></i>
+            <div>
+              <div class="cb-sf-num">+40%</div>
+              <div class="cb-sf-lbl">{% trans "Conversions" %}</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ RIBBON ═══════════════ -->
+<div class="cb-ribbon">
+  <div class="container">
+    <div class="cb-ribbon-inner">
+      <div class="cb-rib-item">
+        <span class="cb-rib-num" data-target="500">0</span><span>+</span>
+        <p>{% trans "Conversations / day" %}</p>
+      </div>
+      <div class="cb-rib-sep"></div>
+      <div class="cb-rib-item">
+        <span class="cb-rib-num" data-target="87">0</span><span>%</span>
+        <p>{% trans "Queries resolved" %}</p>
+      </div>
+      <div class="cb-rib-sep"></div>
+      <div class="cb-rib-item">
+        <span class="cb-rib-num" data-target="12">0</span><span>+</span>
+        <p>{% trans "Languages" %}</p>
+      </div>
+      <div class="cb-rib-sep"></div>
+      <div class="cb-rib-item">
+        <span class="cb-rib-num" data-target="3">0</span><span>x</span>
+        <p>{% trans "More leads captured" %}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ USE CASES ═══════════════ -->
+<section id="usecases" class="gf-section-dark py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="gf-eyebrow" data-aos="fade-up">{% trans "What It Can Do" %}</span>
+      <h2 data-aos="fade-up" data-aos-delay="100">{% trans "One Bot, Many Jobs" %}</h2>
+      <p class="section-sub mx-auto" data-aos="fade-up" data-aos-delay="200">
+        {% trans "Each chatbot is built around your specific workflows — not a generic FAQ widget." %}
+      </p>
+    </div>
+
+    <!-- Hexagon-inspired use case grid -->
+    <div class="cb-usecase-grid">
+
+      <div class="cb-uc-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="cb-uc-icon-wrap">
+          <div class="cb-uc-icon"><i class="fa-solid fa-moon"></i></div>
+          <div class="cb-uc-line"></div>
+        </div>
+        <div class="cb-uc-body">
+          <h5>{% trans "Out-of-Hours Cover" %}</h5>
+          <p>{% trans "When your team is offline the bot handles enquiries, captures contact details, and queues requests for morning review." %}</p>
+          <div class="cb-uc-tags">
+            <span>24/7</span><span>{% trans "Lead capture" %}</span><span>{% trans "Auto-reply" %}</span>
+          </div>
+        </div>
+        <div class="cb-uc-preview">
+          <div class="cb-mini-msg cb-bot">{% trans "We're closed right now 🌙" %}</div>
+          <div class="cb-mini-msg cb-bot">{% trans "Leave your number and we'll call back!" %}</div>
+          <div class="cb-mini-msg cb-user">{% trans "Sure, it's +34 612..." %}</div>
+        </div>
+      </div>
+
+      <div class="cb-uc-card" data-aos="fade-up" data-aos-delay="260">
+        <div class="cb-uc-icon-wrap">
+          <div class="cb-uc-icon"><i class="fa-solid fa-tags"></i></div>
+          <div class="cb-uc-line"></div>
+        </div>
+        <div class="cb-uc-body">
+          <h5>{% trans "Lead Qualification" %}</h5>
+          <p>{% trans "Asks the right questions, scores leads by interest and budget, and routes hot prospects directly to your sales team." %}</p>
+          <div class="cb-uc-tags">
+            <span>{% trans "Real estate" %}</span><span>B2B</span><span>SaaS</span>
+          </div>
+        </div>
+        <div class="cb-uc-preview">
+          <div class="cb-mini-msg cb-bot">{% trans "What's your monthly budget?" %}</div>
+          <div class="cb-mini-msg cb-user">{% trans "Around €2k" %}</div>
+          <div class="cb-mini-msg cb-bot">{% trans "Great fit! Connecting you now 🔥" %}</div>
+        </div>
+      </div>
+
+      <div class="cb-uc-card" data-aos="fade-up" data-aos-delay="340">
+        <div class="cb-uc-icon-wrap">
+          <div class="cb-uc-icon"><i class="fa-solid fa-headset"></i></div>
+          <div class="cb-uc-line"></div>
+        </div>
+        <div class="cb-uc-body">
+          <h5>{% trans "Customer Support" %}</h5>
+          <p>{% trans "Answers FAQs, tracks orders, resets passwords, and escalates to a human agent only when it genuinely needs to." %}</p>
+          <div class="cb-uc-tags">
+            <span>{% trans "E-commerce" %}</span><span>SaaS</span><span>{% trans "Telecom" %}</span>
+          </div>
+        </div>
+        <div class="cb-uc-preview">
+          <div class="cb-mini-msg cb-user">{% trans "Where's my order #4821?" %}</div>
+          <div class="cb-mini-msg cb-bot">{% trans "It shipped today! ETA: Friday 📦" %}</div>
+          <div class="cb-mini-msg cb-bot">Track: dhl.com/track/4821</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CHANNELS ═══════════════ -->
+<section class="cb-channels-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 data-aos="fade-up" data-aos-delay="100">{% trans "Wherever Your Customers Are" %}</h2>
+      <p class="section-sub mx-auto" data-aos="fade-up" data-aos-delay="200">
+        {% trans "We connect the bot to the channels you already use — no new apps for your customers." %}
+      </p>
+    </div>
+
+    <div class="cb-channels-grid">
+
+      <div class="cb-channel-card cb-ch-featured" data-aos="fade-up" data-aos-delay="100">
+        <div class="cb-chc-icon" style="background:rgba(37,211,102,.12);border-color:rgba(37,211,102,.3);">
+          <i class="fa-brands fa-whatsapp" style="color:#25d366;font-size:1.8rem;"></i>
+        </div>
+        <h5>{% trans "WhatsApp Business" %}</h5>
+        <p>{% trans "The most-used messaging app in Europe and beyond. Your customers already have it — your bot meets them there." %}</p>
+        <ul class="cb-chc-list">
+          <li><i class="fa-solid fa-check"></i> {% trans "Official WhatsApp Business API" %}</li>
+          <li><i class="fa-solid fa-check"></i> {% trans "Rich messages with buttons" %}</li>
+          <li><i class="fa-solid fa-check"></i> {% trans "Template message broadcasts" %}</li>
+          <li><i class="fa-solid fa-check"></i> {% trans "Human handoff when needed" %}</li>
+        </ul>
+        <div class="cb-chc-badge">{% trans "Most Requested" %}</div>
+      </div>
+
+      <div class="cb-channel-card" data-aos="fade-up" data-aos-delay="180">
+        <div class="cb-chc-icon" style="background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.25);">
+          <i class="fa-solid fa-globe" style="color:var(--accent);font-size:1.5rem;"></i>
+        </div>
+        <h5>{% trans "Website Widget" %}</h5>
+        <p>{% trans "A floating chat bubble embedded directly on your site — matches your brand, loads fast, works on mobile." %}</p>
+        <ul class="cb-chc-list">
+          <li><i class="fa-solid fa-check"></i> {% trans "One script tag install" %}</li>
+          <li><i class="fa-solid fa-check"></i> {% trans "Fully branded UI" %}</li>
+          <li><i class="fa-solid fa-check"></i> {% trans "Proactive triggers" %}</li>
+        </ul>
+      </div>
+
+      <div class="cb-channel-card" data-aos="fade-up" data-aos-delay="260">
+        <div class="cb-chc-icon" style="background:rgba(0,136,204,.1);border-color:rgba(0,136,204,.25);">
+          <i class="fa-brands fa-telegram" style="color:#0088cc;font-size:1.5rem;"></i>
+        </div>
+        <h5>{% trans "Telegram" %}</h5>
+        <p>{% trans "Great for tech-savvy audiences, internal tools, and communities. Supports rich buttons, files, and inline keyboards." %}</p>
+        <ul class="cb-chc-list">
+          <li><i class="fa-solid fa-check"></i> {% trans "Inline keyboards" %}</li>
+          <li><i class="fa-solid fa-check"></i> {% trans "File & media sharing" %}</li>
+          <li><i class="fa-solid fa-check"></i> {% trans "Group & channel bots" %}</li>
+        </ul>
+      </div>
+
+      <div class="cb-channel-card" data-aos="fade-up" data-aos-delay="340">
+        <div class="cb-chc-icon" style="background:rgba(225,48,108,.1);border-color:rgba(225,48,108,.25);">
+          <i class="fa-brands fa-instagram" style="color:#e1306c;font-size:1.5rem;"></i>
+        </div>
+        <h5>{% trans "Instagram DM" %}</h5>
+        <p>{% trans "Auto-reply to story mentions, DMs, and comments. Turn your Instagram audience into booked appointments and paying customers." %}</p>
+        <ul class="cb-chc-list">
+          <li><i class="fa-solid fa-check"></i> {% trans "Story mention replies" %}</li>
+          <li><i class="fa-solid fa-check"></i> {% trans "Comment auto-response" %}</li>
+          <li><i class="fa-solid fa-check"></i> {% trans "DM flows" %}</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ LIVE DEMO ═══════════════ -->
+<section id="demo" class="gf-section-dark py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="gf-eyebrow" data-aos="fade-up">{% trans "Try It Now" %}</span>
+      <h2 data-aos="fade-up" data-aos-delay="100">{% trans "Live Chatbot Demo" %}</h2>
+      <p class="section-sub mx-auto" data-aos="fade-up" data-aos-delay="200">
+        {% trans "Click a scenario and watch the conversation unfold in real time." %}
+      </p>
+    </div>
+
+    <div class="cb-demo-wrap" data-aos="fade-up" data-aos-delay="200">
+
+      <!-- Scenario selector -->
+      <div class="cb-demo-scenarios">
+        <div class="cb-scenario-label">{% trans "Pick a scenario:" %}</div>
+        <button class="cb-scenario active" onclick="cbRunScenario(this,'support')">
+          <i class="fa-solid fa-headset"></i> {% trans "Support" %}
+        </button>
+        <button class="cb-scenario" onclick="cbRunScenario(this,'lead')">
+          <i class="fa-solid fa-tags"></i> {% trans "Lead Capture" %}
+        </button>
+        <button class="cb-scenario" onclick="cbRunScenario(this,'afterhours')">
+          <i class="fa-solid fa-moon"></i> {% trans "After Hours" %}
+        </button>
+      </div>
+
+      <!-- Chat window -->
+      <div class="cb-demo-window">
+        <div class="cb-demo-header">
+          <div class="cb-demo-avatar"><i class="fa-solid fa-robot"></i></div>
+          <div>
+            <div class="cb-demo-name">G‑Bot</div>
+            <div class="cb-demo-status" id="cbDemoStatus">{% trans "● Typing..." %}</div>
+          </div>
+          <button class="cb-demo-replay" onclick="cbReplayDemo()">
+            <i class="fa-solid fa-rotate-right"></i> {% trans "Replay" %}
+          </button>
+        </div>
+        <div class="cb-demo-body" id="cbDemoBody"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ COMPARISON ═══════════════ -->
+<section class="cb-compare-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="gf-eyebrow" data-aos="fade-up">{% trans "Bot vs No Bot" %}</span>
+      <p class="section-sub mx-auto" data-aos="fade-up" data-aos-delay="200">
+        {% trans "What changes when a chatbot handles your front line." %}
+      </p>
+    </div>
+
+    <div class="cb-compare-wrap" data-aos="fade-up" data-aos-delay="200">
+      <div class="cb-compare-side cb-side-before">
+        <div class="cb-compare-label">{% trans "Without a Bot" %}</div>
+        <div class="cb-compare-item cb-bad"><i class="fa-solid fa-xmark"></i> {% trans "Enquiries missed after hours" %}</div>
+        <div class="cb-compare-item cb-bad"><i class="fa-solid fa-xmark"></i> {% trans "Staff answer same questions daily" %}</div>
+        <div class="cb-compare-item cb-bad"><i class="fa-solid fa-xmark"></i> {% trans "Leads go cold waiting for a reply" %}</div>
+        <div class="cb-compare-item cb-bad"><i class="fa-solid fa-xmark"></i> {% trans "Booking errors and double-bookings" %}</div>
+        <div class="cb-compare-item cb-bad"><i class="fa-solid fa-xmark"></i> {% trans "No data on what customers ask" %}</div>
+        <div class="cb-compare-item cb-bad"><i class="fa-solid fa-xmark"></i> {% trans "Response time: hours or days" %}</div>
+      </div>
+
+      <div class="cb-compare-divider">
+        <div class="cb-compare-vs">VS</div>
+      </div>
+
+      <div class="cb-compare-side cb-side-after">
+        <div class="cb-compare-label" style="color:var(--accent);">{% trans "With G‑Bot" %}</div>
+        <div class="cb-compare-item cb-good"><i class="fa-solid fa-check"></i> {% trans "Handled 24/7, even on holidays" %}</div>
+        <div class="cb-compare-item cb-good"><i class="fa-solid fa-check"></i> {% trans "Bot handles 87% without human help" %}</div>
+        <div class="cb-compare-item cb-good"><i class="fa-solid fa-check"></i> {% trans "Instant reply, lead captured in seconds" %}</div>
+        <div class="cb-compare-item cb-good"><i class="fa-solid fa-check"></i> {% trans "Calendar sync prevents conflicts" %}</div>
+        <div class="cb-compare-item cb-good"><i class="fa-solid fa-check"></i> {% trans "Full analytics on every conversation" %}</div>
+        <div class="cb-compare-item cb-good"><i class="fa-solid fa-check"></i> {% trans "Response time: under 1 second" %}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ STYLES ═══════════════ -->
+<style>
+
+/* ── Hero ── */
+.cb-hero {
+  min-height: 100vh;
+  background: var(--bg-page);
+  position: relative;
+  overflow: hidden;
+}
+#cb-wave-canvas {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  pointer-events: none; z-index: 0;
+}
+.cb-hero-glow {
+  position: absolute; border-radius: 50%;
+  pointer-events: none; z-index: 0;
+  filter: blur(90px); opacity: .18;
+}
+.cb-glow-1 { width: 600px; height: 600px; background: var(--accent); top: -150px; right: -100px; animation: cbGlowPulse 6s ease-in-out infinite; }
+.cb-glow-2 { width: 400px; height: 400px; background: #a855f7; bottom: -100px; left: -50px; animation: cbGlowPulse 8s 2s ease-in-out infinite; }
+@keyframes cbGlowPulse { 0%,100%{opacity:.12} 50%{opacity:.22} }
+
+.cb-hero-badge {
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 7px 18px; border-radius: 999px;
+  background: rgba(245,158,11,.08);
+  border: 1px solid rgba(245,158,11,.2);
+  font-size: .75rem; font-weight: 700;
+  color: var(--accent); letter-spacing: .1em;
+  text-transform: uppercase; margin-bottom: 22px;
+}
+.cb-badge-pulse {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 0 rgba(245,158,11,.4);
+  animation: cbBadgePulse 2s ease-in-out infinite;
+}
+@keyframes cbBadgePulse {
+  0%   { box-shadow: 0 0 0 0 rgba(245,158,11,.5); }
+  70%  { box-shadow: 0 0 0 8px rgba(245,158,11,0); }
+  100% { box-shadow: 0 0 0 0 rgba(245,158,11,0); }
+}
+
+.cb-hero-h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+  font-weight: 800; line-height: 1.1; margin-bottom: 22px;
+}
+.cb-typing-wrap { display: block; color: var(--accent); min-height: 1.2em; }
+.cb-cursor {
+  color: var(--accent); font-weight: 200;
+  animation: cbBlink .7s step-end infinite;
+}
+@keyframes cbBlink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+.cb-hero-p {
+  font-size: 1rem; color: var(--text-secondary);
+  line-height: 1.8; max-width: 500px; margin-bottom: 28px;
+}
+
+/* ── Channel pills ── */
+.cb-channel-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.cb-channel {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 7px 15px; border-radius: var(--r-md);
+  font-size: .8rem; font-weight: 700;
+  transition: transform .2s ease;
+}
+.cb-channel:hover { transform: translateY(-3px); }
+.cb-ch-web { background: rgba(245,158,11,.1); border: 1px solid rgba(245,158,11,.2); color: var(--accent); }
+.cb-ch-wa  { background: rgba(37,211,102,.1); border: 1px solid rgba(37,211,102,.2); color: #25d366; }
+.cb-ch-ig  { background: rgba(225,48,108,.1); border: 1px solid rgba(225,48,108,.2); color: #e1306c; }
+.cb-ch-tg  { background: rgba(0,136,204,.1); border: 1px solid rgba(0,136,204,.2); color: #0088cc; }
+
+.cb-btn-ghost {
+  background: transparent; border: 1px solid rgba(255,255,255,.15);
+  color: var(--text-secondary); font-weight: 600;
+  transition: all .2s ease;
+}
+.cb-btn-ghost:hover { border-color: rgba(245,158,11,.35); color: var(--text-primary); }
+
+/* ── Chat window ── */
+.cb-chat-showcase { position: relative; }
+.cb-chat-window {
+  background: var(--bg-elevated);
+  border: 1px solid rgba(245,158,11,.2);
+  border-radius: 20px; overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,0,0,.6);
+  animation: cbWindowFloat 5s ease-in-out infinite;
+}
+@keyframes cbWindowFloat {
+  0%,100% { transform: translateY(0) rotate(0); }
+  50%      { transform: translateY(-10px) rotate(.2deg); }
+}
+.cb-chat-header {
+  background: rgba(245,158,11,.06);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 18px;
+  display: flex; align-items: center; gap: 12px;
+}
+.cb-chat-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--accent); color: #000;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; position: relative; flex-shrink: 0;
+}
+.cb-avatar-online {
+  position: absolute; bottom: 1px; right: 1px;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #22c55e; border: 2px solid var(--bg-elevated);
+  animation: cbBadgePulse 2s ease-in-out infinite;
+}
+.cb-chat-name { font-family: 'Syne', sans-serif; font-size: .88rem; font-weight: 700; color: var(--text-primary); }
+.cb-chat-status { font-size: .68rem; color: #22c55e; }
+.cb-chat-actions { margin-left: auto; color: var(--text-muted); cursor: pointer; }
+.cb-chat-body { padding: 14px; min-height: 220px; max-height: 260px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; }
+.cb-chat-body::-webkit-scrollbar { width: 4px; }
+.cb-chat-body::-webkit-scrollbar-thumb { background: var(--bg-hover); border-radius: 2px; }
+.cb-chat-input {
+  padding: 12px 14px;
+  display: flex; align-items: center; gap: 10px;
+  border-top: 1px solid var(--border);
+  background: var(--bg-surface);
+}
+.cb-input-field {
+  flex: 1; font-size: .8rem; color: var(--text-muted);
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  border-radius: 999px; padding: 8px 14px;
+}
+.cb-send-btn {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--accent); border: none; color: #000;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .8rem; cursor: pointer; flex-shrink: 0;
+  transition: background .2s, transform .2s;
+}
+.cb-send-btn:hover { background: var(--accent-light); transform: scale(1.1); }
+
+/* Chat message bubbles */
+.cb-msg {
+  max-width: 78%; padding: 9px 13px;
+  border-radius: 14px; font-size: .8rem; line-height: 1.55;
+  animation: cbMsgIn .3s ease;
+}
+@keyframes cbMsgIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+.cb-msg-bot {
+  background: var(--bg-hover); color: var(--text-primary);
+  border-radius: 14px 14px 14px 4px; align-self: flex-start;
+}
+.cb-msg-user {
+  background: var(--accent); color: #000; font-weight: 600;
+  border-radius: 14px 14px 4px 14px; align-self: flex-end;
+}
+.cb-typing-dots {
+  display: flex; gap: 4px; padding: 10px 13px;
+  background: var(--bg-hover); border-radius: 14px 14px 14px 4px;
+  align-self: flex-start; width: fit-content;
+}
+.cb-typing-dots span {
+  width: 6px; height: 6px; border-radius: 50%; background: var(--text-muted);
+  animation: cbDot .9s ease-in-out infinite;
+}
+.cb-typing-dots span:nth-child(2) { animation-delay: .15s; }
+.cb-typing-dots span:nth-child(3) { animation-delay: .3s; }
+@keyframes cbDot { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-5px)} }
+
+/* ── Floating stat cards ── */
+.cb-stat-float {
+  position: absolute;
+  background: rgba(11,13,20,.9);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(245,158,11,.25);
+  border-radius: var(--r-md); padding: 10px 15px;
+  display: flex; align-items: center; gap: 10px;
+  font-size: .75rem; color: var(--text-primary);
+}
+.cb-stat-float i { color: var(--accent); font-size: 1rem; flex-shrink: 0; }
+.cb-sf-num { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 800; color: var(--accent); }
+.cb-sf-lbl { font-size: .62rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: .07em; }
+.cb-sf-1 { top: -14px; right: -20px; animation: cbBadgeFloat 4s ease-in-out infinite; }
+.cb-sf-2 { bottom: 70px; right: -24px; animation: cbBadgeFloat 4s 1.3s ease-in-out infinite; }
+.cb-sf-3 { bottom: -14px; left: -20px; animation: cbBadgeFloat 4s 2.6s ease-in-out infinite; }
+@keyframes cbBadgeFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+
+/* ── Ribbon ── */
+.cb-ribbon {
+  background: linear-gradient(90deg, rgba(245,158,11,.07), rgba(245,158,11,.03));
+  border-top: 1px solid rgba(245,158,11,.1);
+  border-bottom: 1px solid rgba(245,158,11,.1);
+  padding: 24px 0;
+}
+.cb-ribbon-inner { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; }
+.cb-rib-item { text-align: center; padding: 10px 32px; flex: 1; min-width: 100px; }
+.cb-rib-item p { font-size: .68rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: .07em; margin: 2px 0 0; }
+.cb-rib-num { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; color: var(--accent); }
+.cb-rib-sep { width: 1px; height: 40px; background: var(--border); flex-shrink: 0; }
+
+/* ── Use case grid ── */
+.cb-usecase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.cb-uc-card {
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  border-radius: var(--r-lg); padding: 24px;
+  display: flex; flex-direction: column; gap: 14px;
+  transition: all .25s ease;
+  position: relative; overflow: hidden;
+}
+.cb-uc-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0; transition: opacity .3s ease;
+}
+.cb-uc-card:hover { border-color: rgba(245,158,11,.3); transform: translateY(-5px); box-shadow: 0 16px 50px rgba(0,0,0,.5); }
+.cb-uc-card:hover::before { opacity: 1; }
+
+.cb-uc-icon-wrap { display: flex; align-items: center; gap: 12px; }
+.cb-uc-icon {
+  width: 48px; height: 48px; border-radius: var(--r-md);
+  background: var(--accent-glow); color: var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; flex-shrink: 0;
+  transition: transform .25s, background .25s;
+}
+.cb-uc-card:hover .cb-uc-icon { transform: scale(1.1) rotate(-6deg); background: rgba(245,158,11,.28); }
+.cb-uc-line { flex: 1; height: 1px; background: var(--border); }
+.cb-uc-body h5 { font-family: 'Syne', sans-serif; font-size: .95rem; font-weight: 700; margin-bottom: 6px; }
+.cb-uc-body p  { font-size: .82rem; color: var(--text-secondary); line-height: 1.65; margin: 0; }
+.cb-uc-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.cb-uc-tags span { font-size: .68rem; padding: 3px 9px; border-radius: 999px; background: rgba(245,158,11,.08); border: 1px solid rgba(245,158,11,.15); color: var(--accent); font-weight: 600; }
+
+/* Mini chat preview */
+.cb-uc-preview {
+  background: var(--bg-surface); border: 1px solid var(--border);
+  border-radius: var(--r-md); padding: 10px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.cb-mini-msg {
+  font-size: .72rem; line-height: 1.4; padding: 6px 10px;
+  border-radius: 10px; max-width: 90%;
+}
+.cb-bot  { background: var(--bg-hover); color: var(--text-secondary); align-self: flex-start; }
+.cb-user { background: rgba(245,158,11,.15); color: var(--accent); align-self: flex-end; font-weight: 600; }
+
+/* ── Channels section ── */
+.cb-channels-section { background: rgba(18,22,32,.7); }
+.cb-channels-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.cb-channel-card {
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  border-radius: var(--r-lg); padding: 28px;
+  position: relative; overflow: hidden;
+  transition: all .25s ease;
+}
+.cb-channel-card:hover { border-color: rgba(255,255,255,.12); transform: translateY(-4px); box-shadow: 0 16px 50px rgba(0,0,0,.5); }
+.cb-ch-featured { border-color: rgba(37,211,102,.2) !important; }
+.cb-chc-icon {
+  width: 56px; height: 56px; border-radius: var(--r-md);
+  border: 1px solid; display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px;
+}
+.cb-channel-card h5 { font-family: 'Syne', sans-serif; font-weight: 700; margin-bottom: 8px; }
+.cb-channel-card p  { font-size: .86rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 14px; }
+.cb-chc-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 7px; }
+.cb-chc-list li { display: flex; align-items: center; gap: 8px; font-size: .82rem; color: var(--text-secondary); }
+.cb-chc-list li i { color: #22c55e; font-size: .75rem; flex-shrink: 0; }
+.cb-chc-badge {
+  position: absolute; top: 14px; right: 14px;
+  background: rgba(37,211,102,.15); color: #22c55e;
+  font-size: .62rem; font-weight: 800; padding: 4px 10px;
+  border-radius: 999px; letter-spacing: .08em; text-transform: uppercase;
+  border: 1px solid rgba(37,211,102,.25);
+}
+
+/* ── Live demo ── */
+.cb-demo-wrap {
+  max-width: 700px; margin: 0 auto;
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  border-radius: var(--r-lg); overflow: hidden;
+}
+.cb-demo-scenarios {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  padding: 14px 18px; border-bottom: 1px solid var(--border);
+  background: var(--bg-surface);
+}
+.cb-scenario-label { font-size: .72rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; }
+.cb-scenario {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 14px; border-radius: 999px;
+  background: var(--bg-hover); border: 1px solid var(--border);
+  color: var(--text-muted); font-size: .78rem; font-weight: 600;
+  cursor: pointer; transition: all .2s ease; font-family: 'DM Sans', sans-serif;
+}
+.cb-scenario i { font-size: .72rem; color: var(--accent); }
+.cb-scenario:hover { border-color: rgba(245,158,11,.3); color: var(--text-primary); }
+.cb-scenario.active { background: rgba(245,158,11,.1); border-color: rgba(245,158,11,.35); color: var(--text-primary); }
+.cb-demo-header {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 18px; border-bottom: 1px solid var(--border);
+  background: rgba(245,158,11,.04);
+}
+.cb-demo-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--accent); color: #000;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .9rem; flex-shrink: 0;
+}
+.cb-demo-name { font-family: 'Syne', sans-serif; font-size: .85rem; font-weight: 700; }
+.cb-demo-status { font-size: .65rem; color: #22c55e; }
+.cb-demo-replay {
+  margin-left: auto; display: flex; align-items: center; gap: 6px;
+  padding: 6px 12px; background: var(--bg-hover); border: 1px solid var(--border);
+  border-radius: var(--r-sm); color: var(--text-muted); font-size: .75rem; font-weight: 600;
+  cursor: pointer; transition: all .2s; font-family: 'DM Sans', sans-serif;
+}
+.cb-demo-replay:hover { border-color: rgba(245,158,11,.3); color: var(--text-primary); }
+.cb-demo-body {
+  padding: 18px; min-height: 260px; max-height: 320px;
+  overflow-y: auto; display: flex; flex-direction: column; gap: 8px;
+}
+.cb-demo-body::-webkit-scrollbar { width: 4px; }
+.cb-demo-body::-webkit-scrollbar-thumb { background: var(--bg-hover); border-radius: 2px; }
+
+/* ── Comparison ── */
+.cb-compare-section { background: rgba(20,24,34,.7); }
+.cb-compare-wrap {
+  display: flex; align-items: stretch; gap: 0;
+  background: var(--bg-elevated); border: 1px solid var(--border);
+  border-radius: var(--r-lg); overflow: hidden; max-width: 820px; margin: 0 auto;
+}
+.cb-compare-side { flex: 1; padding: 28px 24px; }
+.cb-compare-label { font-family: 'Syne', sans-serif; font-size: .8rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 18px; }
+.cb-compare-item { display: flex; align-items: flex-start; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: .86rem; }
+.cb-compare-item:last-child { border-bottom: none; }
+.cb-bad  i { color: #f87171; flex-shrink: 0; margin-top: 3px; }
+.cb-good i { color: #4ade80; flex-shrink: 0; margin-top: 3px; }
+.cb-bad  { color: var(--text-muted); }
+.cb-good { color: var(--text-secondary); }
+.cb-compare-divider {
+  width: 1px; background: var(--border); position: relative;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.cb-compare-vs {
+  position: absolute; background: var(--bg-elevated);
+  border: 1px solid rgba(245,158,11,.3); border-radius: 50%;
+  width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif; font-size: .72rem; font-weight: 800; color: var(--accent);
+}
+
+/* ── Pricing ── */
+.cb-price-card { position: relative; overflow: hidden; }
+.cb-price-featured { border-color: rgba(245,158,11,.4) !important; box-shadow: 0 0 0 1px rgba(245,158,11,.2), 0 24px 60px rgba(0,0,0,.5) !important; }
+.cb-featured-glow { position: absolute; top: -40px; right: -40px; width: 150px; height: 150px; border-radius: 50%; background: radial-gradient(circle, rgba(245,158,11,.15), transparent 70%); pointer-events: none; }
+.cb-plan-icon { width: 48px; height: 48px; border-radius: var(--r-md); background: var(--accent-glow); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; margin-bottom: 14px; }
+.cb-plan-name { font-family: 'Syne', sans-serif; font-size: .7rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+.cb-plan-price { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; color: var(--text-primary); margin-bottom: 10px; }
+.cb-plan-price span { font-size: .82rem; font-weight: 400; color: var(--text-muted); }
+.cb-plan-desc { font-size: .84rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px; }
+.cb-plan-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.cb-plan-list li { display: flex; align-items: center; gap: 8px; font-size: .83rem; color: var(--text-secondary); }
+.cb-plan-list li i { font-size: .75rem; color: var(--accent); flex-shrink: 0; width: 14px; }
+.cb-plan-no { opacity: .4; }
+.cb-plan-no i { color: var(--text-muted) !important; }
+.cb-plan-badge { position: absolute; bottom: 14px; right: 14px; background: rgba(245,158,11,.12); color: var(--accent); font-size: .62rem; font-weight: 800; padding: 4px 10px; border-radius: 999px; border: 1px solid rgba(245,158,11,.25); }
+
+/* ── CTA ── */
+.cb-cta-section { padding: 100px 0; position: relative; overflow: hidden; background: var(--bg-page); }
+#cb-cta-canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+.cb-cta-inner { max-width: 600px; margin: 0 auto; text-align: center; }
+.cb-cta-bot-avatar {
+  width: 76px; height: 76px; border-radius: 50%; position: relative;
+  background: var(--accent); color: #000;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem; margin: 0 auto 24px;
+  animation: cbBadgePulse 2.5s ease-in-out infinite;
+  box-shadow: 0 0 0 0 rgba(245,158,11,.4);
+}
+.cb-avatar-online-lg {
+  position: absolute; bottom: 3px; right: 3px;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: #22c55e; border: 3px solid var(--bg-page);
+}
+.cb-cta-inner h2 { font-family: 'Syne', sans-serif; font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin-bottom: 14px; }
+.cb-cta-inner p  { font-size: .95rem; color: var(--text-secondary); line-height: 1.75; }
+
+/* ── Hero row sizing ── */
+.cb-hero-row {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+@media (min-width: 992px) {
+  .cb-hero-row { min-height: 88vh; }
+}
+
+/* ── Responsive ── */
+@media (max-width: 1200px) {
+  .cb-hero-h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); }
+}
+@media (max-width: 991px) {
+  .cb-usecase-grid  { grid-template-columns: 1fr 1fr; }
+  .cb-channels-grid { grid-template-columns: 1fr 1fr; }
+  .cb-sf-1, .cb-sf-2, .cb-sf-3 { display: none; }
+  .cb-hero-row { padding-top: 100px; padding-bottom: 60px; }
+}
+@media (max-width: 767px) {
+  .cb-usecase-grid  { grid-template-columns: 1fr; }
+  .cb-channels-grid { grid-template-columns: 1fr; }
+  .cb-compare-wrap  { flex-direction: column; }
+  .cb-compare-divider { width: 100%; height: 1px; }
+  .cb-compare-vs { position: static; margin: -20px auto; z-index: 1; }
+  .cb-rib-sep { display: none; }
+  .cb-ribbon-inner { display: grid; grid-template-columns: 1fr 1fr; }
+  .cb-demo-scenarios { gap: 6px; }
+  .cb-scenario { font-size: .72rem; padding: 6px 10px; }
+  .cb-scenario-label { width: 100%; }
+  .cb-hero { min-height: auto; }
+  .cb-hero-row { padding-top: 90px; padding-bottom: 50px; }
+  .cb-hero-h1 { font-size: clamp(1.9rem, 8vw, 2.8rem); }
+}
+@media (max-height: 850px) and (min-width: 992px) {
+  .cb-hero     { min-height: 100svh; }
+  .cb-hero-row { min-height: auto; padding-top: 70px; padding-bottom: 40px; }
+  .cb-hero-h1  { font-size: clamp(1.8rem, 3.8vw, 2.8rem); }
+}
+</style>
+
+
+<!-- ═══════════════ SCRIPTS ═══════════════ -->
+<script>
+
+/* ── Wave canvas (hero bg) ─────────────────── */
+(function(){
+  const cv = document.getElementById('cb-wave-canvas');
+  if (!cv) return;
+  const ctx = cv.getContext('2d');
+  let W, H, t = 0;
+  function resize(){ W = cv.width = cv.parentElement.offsetWidth; H = cv.height = cv.parentElement.offsetHeight; }
+  resize(); window.addEventListener('resize', resize);
+
+  function draw(){
+    ctx.clearRect(0, 0, W, H);
+    for(let w = 0; w < 3; w++){
+      ctx.beginPath();
+      const amp   = 35 + w * 18;
+      const freq  = 0.006 - w * 0.001;
+      const speed = 0.012 + w * 0.006;
+      const yBase = H * (0.35 + w * 0.18);
+      for(let x = 0; x <= W; x += 4){
+        const y = yBase + Math.sin(x * freq + t * speed) * amp
+                        + Math.sin(x * freq * 2.3 + t * speed * 1.4) * (amp * .4);
+        x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      }
+      ctx.strokeStyle = `rgba(245,158,11,${0.05 - w * 0.013})`;
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+    }
+    t++;
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ── Hero typewriter ───────────────────────── */
+(function(){
+  const el = document.getElementById('cbHeroTyper');
+  if (!el) return;
+  const words = [`{% trans "Talks to Customers" %}`,`{% trans "Books Appointments" %}`,`{% trans "Never Misses a Lead" %}`,`{% trans "Works While You Sleep" %}`,`{% trans "Speaks Any Language" %}`];
+  let wi = 0, ci = 0, del = false;
+  function tick(){
+    const w = words[wi];
+    if(!del){ el.textContent = w.slice(0, ++ci); if(ci === w.length){ del = true; setTimeout(tick, 2000); return; } }
+    else { el.textContent = w.slice(0, --ci); if(ci === 0){ del = false; wi = (wi+1) % words.length; } }
+    setTimeout(tick, del ? 45 : 85);
+  }
+  tick();
+})();
+
+/* ── Hero chat animation ───────────────────── */
+(function(){
+  const body = document.getElementById('cbChatBody');
+  if (!body) return;
+  const conv = [
+    {role:'bot',  text:`{% trans "Hi! 👋 I'm G‑Bot. How can I help today?" %}`},
+    {role:'user', text:`{% trans "I need to book an appointment" %}`},
+    {role:'bot',  text:`{% trans "Sure! What day works for you?" %}`},
+    {role:'user', text:`{% trans "Tomorrow afternoon please" %}`},
+    {role:'bot',  text:`{% trans "✓ Booked for tomorrow at 3 PM. See you! 🎉" %}`},
+  ];
+  let i = 0;
+  function addMsg(){
+    if(i >= conv.length){ setTimeout(()=>{ body.innerHTML=''; i=0; addMsg(); }, 3000); return; }
+    const m = conv[i];
+    if(m.role === 'bot'){
+      const dots = document.createElement('div');
+      dots.className = 'cb-typing-dots';
+      dots.innerHTML = '<span></span><span></span><span></span>';
+      body.appendChild(dots);
+      body.scrollTop = body.scrollHeight;
+      setTimeout(()=>{
+        dots.remove();
+        const div = document.createElement('div');
+        div.className = 'cb-msg cb-msg-bot';
+        div.textContent = m.text;
+        body.appendChild(div);
+        body.scrollTop = body.scrollHeight;
+        i++; setTimeout(addMsg, 1200);
+      }, 900);
+    } else {
+      const div = document.createElement('div');
+      div.className = 'cb-msg cb-msg-user';
+      div.textContent = m.text;
+      body.appendChild(div);
+      body.scrollTop = body.scrollHeight;
+      i++; setTimeout(addMsg, 700);
+    }
+  }
+  setTimeout(addMsg, 1000);
+})();
+
+/* ── Ribbon counters (replays every time it scrolls into view) ───────────────────────── */
+(function(){
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      const el=e.target;
+      if(!e.isIntersecting){ clearInterval(el._gfCountTimer); el.textContent='0'; return; }
+      const t=+el.dataset.target;
+      let c=0; const s=t/(1200/16);
+      clearInterval(el._gfCountTimer);
+      el._gfCountTimer=setInterval(()=>{ c=Math.min(c+s,t); el.textContent=Math.floor(c); if(c>=t) clearInterval(el._gfCountTimer); },16);
+    });
+  },{threshold:.5});
+  document.querySelectorAll('.cb-rib-num[data-target]').forEach(e=>io.observe(e));
+})();
+
+/* ── Demo scenarios ────────────────────────── */
+const cbScenarios = {
+  support: [
+    {r:'bot',  t:`{% trans "Hi! How can I help you today?" %}`},
+    {r:'user', t:`{% trans "Where is my order #4821?" %}`},
+    {r:'bot',  t:`{% trans "Let me check that for you... 🔍" %}`},
+    {r:'bot',  t:`{% trans "Order #4821 shipped today via DHL. Estimated delivery: Friday 📦" %}`},
+    {r:'bot',  t:`{% trans "Track here: dhl.com/track/4821" %}`},
+    {r:'user', t:`{% trans "Perfect thanks!" %}`},
+    {r:'bot',  t:`{% trans "Happy to help! Anything else? 😊" %}`},
+  ],
+  lead: [
+    {r:'bot',  t:`{% trans "Hi! Interested in our services?" %}`},
+    {r:'user', t:`{% trans "Yes, tell me more" %}`},
+    {r:'bot',  t:`{% trans "What kind of project are you planning?" %}`},
+    {r:'user', t:`{% trans "A new website for my business" %}`},
+    {r:'bot',  t:`{% trans "Exciting! What's your approximate budget?" %}`},
+    {r:'user', t:`{% trans "Around €2,000 to €5,000" %}`},
+    {r:'bot',  t:`{% trans "🔥 Perfect fit! Our team will contact you within 2 hours. What's your email?" %}`},
+  ],
+  afterhours: [
+    {r:'bot',  t:`{% trans "Hey! We're closed right now 🌙 (Back at 09:00)" %}`},
+    {r:'bot',  t:`{% trans "But I can help! What do you need?" %}`},
+    {r:'user', t:`{% trans "I need a quote for a QR menu" %}`},
+    {r:'bot',  t:`{% trans "Got it! Leave your number and our team will call you first thing tomorrow 📞" %}`},
+    {r:'user', t:`{% trans "Sure, +34 612 345 678" %}`},
+    {r:'bot',  t:`{% trans "✅ Saved! Expect a call tomorrow before 10 AM. Sleep well! 😴" %}`},
+  ]
+};
+
+let cbCurrentScenario = 'booking';
+let cbDemoRunning = false;
+let cbDemoTimeouts = [];
+
+function cbClearTimeouts(){ cbDemoTimeouts.forEach(clearTimeout); cbDemoTimeouts=[]; }
+
+function cbRunScenario(btn, key){
+  document.querySelectorAll('.cb-scenario').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  cbCurrentScenario = key;
+  cbPlayDemo(key);
+}
+
+function cbReplayDemo(){ cbPlayDemo(cbCurrentScenario); }
+
+function cbPlayDemo(key){
+  cbClearTimeouts();
+  const body = document.getElementById('cbDemoBody');
+  const status = document.getElementById('cbDemoStatus');
+  body.innerHTML = '';
+  cbDemoRunning = true;
+  const msgs = cbScenarios[key];
+  let delay = 400;
+
+  msgs.forEach((m, idx) => {
+    const t1 = setTimeout(()=>{
+      if(m.r === 'bot'){
+        status.textContent = '● Typing...';
+        const dots = document.createElement('div');
+        dots.className = 'cb-typing-dots'; dots.id = 'cbDots';
+        dots.innerHTML = '<span></span><span></span><span></span>';
+        body.appendChild(dots); body.scrollTop = body.scrollHeight;
+        const t2 = setTimeout(()=>{
+          const d = document.getElementById('cbDots');
+          if(d) d.remove();
+          const div = document.createElement('div');
+          div.className = 'cb-msg cb-msg-bot';
+          div.textContent = m.t;
+          body.appendChild(div); body.scrollTop = body.scrollHeight;
+          if(idx === msgs.length-1){ status.textContent = '● Online'; }
+        }, 800);
+        cbDemoTimeouts.push(t2);
+      } else {
+        status.textContent = '● Online';
+        const div = document.createElement('div');
+        div.className = 'cb-msg cb-msg-user';
+        div.textContent = m.t;
+        body.appendChild(div); body.scrollTop = body.scrollHeight;
+      }
+    }, delay);
+    cbDemoTimeouts.push(t1);
+    delay += m.r === 'bot' ? 1800 : 1100;
+  });
+}
+
+/* ── CTA canvas (floating bubbles) ────────────── */
+(function(){
+  const cv = document.getElementById('cb-cta-canvas');
+  if(!cv) return;
+  const ctx = cv.getContext('2d');
+  let W, H;
+  function resize(){ W=cv.width=cv.parentElement.offsetWidth; H=cv.height=cv.parentElement.offsetHeight; }
+  resize(); window.addEventListener('resize', resize);
+
+  const bubbles = Array.from({length:30},()=>({
+    x: Math.random()*1200, y: Math.random()*300,
+    r: Math.random()*40+10, vx: (Math.random()-.5)*.4,
+    vy: (Math.random()-.5)*.3, a: Math.random()*.08+.02
+  }));
+
+  (function draw(){
+    ctx.clearRect(0,0,W,H);
+    bubbles.forEach(b=>{
+      b.x+=b.vx; b.y+=b.vy;
+      if(b.x<-b.r) b.x=W+b.r;
+      if(b.x>W+b.r) b.x=-b.r;
+      if(b.y<-b.r) b.y=H+b.r;
+      if(b.y>H+b.r) b.y=-b.r;
+      ctx.beginPath();
+      ctx.arc(b.x,b.y,b.r,0,Math.PI*2);
+      ctx.strokeStyle=`rgba(245,158,11,${b.a})`;
+      ctx.lineWidth=1; ctx.stroke();
+    });
+    requestAnimationFrame(draw);
+  })();
+})();
+
+// Kick off demo on load
+window.addEventListener('DOMContentLoaded',()=>{
+  setTimeout(()=>cbPlayDemo('support'), 800);
+});
+</script>
+
+{% endblock content %}

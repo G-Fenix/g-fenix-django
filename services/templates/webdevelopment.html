@@ -1,0 +1,872 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}G-Fenix | Web Development{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/web-showcase.css' %}">
+<script>
+  window.WEB_FRAME_PATH   = "{% static 'images/webframes/' %}";
+  window.WEB_TOTAL_FRAMES = 91;
+</script>
+{% endblock %}
+
+{% block content %}
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="wd-hero section-bg section-dark"
+         style="--section-bg: url('{% static 'images/web.png' %}'); --section-bg-opacity:.35;">
+  <span class="wd-glow g1"></span>
+  <span class="wd-glow g2"></span>
+  <canvas id="wd-code-rain" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.18;"></canvas>
+
+  <div class="container position-relative" style="z-index:2;">
+    <div class="row align-items-center g-4" style="padding-top:clamp(30px,5vh,70px);padding-bottom:clamp(30px,5vh,60px);">
+
+      <div class="col-lg-6 col-12" data-aos="fade-up">
+        {% get_current_language as LANG_CODE %}
+        {% if LANG_CODE == 'en' %}
+        <h1 class="wd-hero-title-split">
+          <span class="wd-word">Modern</span>
+          <span class="wd-word">Web</span>
+          <span class="wd-word wd-grad">Solutions</span><br>
+          <span class="wd-word">Built</span>
+          <span class="wd-word">for</span>
+          <span class="wd-word wd-grad">Business</span>
+        </h1>
+        {% else %}
+        <h1 class="wd-hero-title-split">
+          <span class="wd-word" style="--i:0">{% trans "Modern Web Solutions" %}</span><br>
+          <span class="wd-word wd-grad" style="--i:1">{% trans "Built for Business" %}</span>
+        </h1>
+        {% endif %}
+        <p class="wd-hero-sub">
+          {% trans "G‑Fenix plans, designs, and ships. From corporate sites to stock management apps to multilingual platforms — fast, secure, and built to scale." %}
+        </p>
+        <div class="wd-hero-pills">
+          <div class="wd-pill"><i class="fa-solid fa-shield-halved"></i> {% trans "Security First" %}</div>
+          <div class="wd-pill"><i class="fa-solid fa-magnifying-glass"></i> {% trans "SEO Ready" %}</div>
+          <div class="wd-pill"><i class="fa-solid fa-earth-europe"></i> {% trans "Multilingual" %}</div>
+          <div class="wd-pill"><i class="fa-brands fa-python"></i> Django + PostgreSQL</div>
+        </div>
+        <a href="#solutions" class="btn btn-accent btn-lg mt-2">{% trans "Explore Services" %}</a>
+      </div>
+
+      <div class="col-lg-6 col-12 d-flex justify-content-center align-items-center"
+           data-aos="fade-left" data-aos-delay="300">
+        <div class="wd-terminal">
+          <div class="wd-term-tabs">
+            <span class="wd-term-tab active">bash</span>
+            <span class="wd-term-tab">urls.py</span>
+            <span class="wd-term-tab">views.py</span>
+            <span class="wd-term-tab">models.py</span>
+          </div>
+          <div class="wd-term-bar">
+            <span class="wd-tdot wd-tdot-r"></span>
+            <span class="wd-tdot wd-tdot-y"></span>
+            <span class="wd-tdot wd-tdot-g"></span>
+            <span class="wd-term-title">~/projects/g-fenix-site</span>
+            <span class="wd-term-badge">Django 5.1</span>
+          </div>
+          <div class="wd-term-body" id="wdTermBody"></div>
+          <div class="wd-term-status">
+            <span class="wd-status-led"></span>
+            <span class="wd-status-ok">dev server running</span>
+            <span class="wd-status-url">localhost:8000</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ WHAT WE BUILD ═══════════════ -->
+<section id="solutions" class="gf-section-dark" style="padding:80px 0;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="gf-eyebrow" data-aos="fade-up">{% trans "What We Build" %}</span>
+      <h2 class="mb-3" data-aos="fade-up" data-aos-delay="100">
+        {% trans "Four types of projects." %}<br>{% trans "One clear outcome." %}
+      </h2>
+      <p class="section-sub mx-auto" data-aos="fade-up" data-aos-delay="200">
+        {% trans "Fast, secure, built to last — and explained so you stay in control." %}
+      </p>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="60">
+        <a href="#wd-tabs" onclick="wdTab('business')" class="wd-sol-card-link">
+          <article class="wd-sol-card h-100">
+            <div class="wd-sol-num-bg">01</div>
+            <div class="wd-sol-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <h5>{% trans "Business Website" %}</h5>
+            <p>{% trans "Speed, SEO, and conversion-focused company sites that build trust and win customers." %}</p>
+            <div class="wd-sol-tags"><span>Django</span><span>PostgreSQL</span><span>SEO</span></div>
+            <div class="wd-sol-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          </article>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="120">
+        <a href="#wd-tabs" onclick="wdTab('stock')" class="wd-sol-card-link">
+          <article class="wd-sol-card wd-c-cyan h-100">
+            <div class="wd-sol-num-bg">02</div>
+            <div class="wd-sol-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+            <h5>{% trans "Stock Management" %}</h5>
+            <p>{% trans "Online inventory tracking, low-stock alerts, supplier management and warehouse reporting." %}</p>
+            <div class="wd-sol-tags"><span>{% trans "Inventory" %}</span><span>{% trans "Alerts" %}</span><span>{% trans "Warehouse" %}</span></div>
+            <div class="wd-sol-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          </article>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="180">
+        <a href="#wd-tabs" onclick="wdTab('multilingual')" class="wd-sol-card-link">
+          <article class="wd-sol-card wd-c-purple h-100">
+            <div class="wd-sol-num-bg">03</div>
+            <div class="wd-sol-icon"><i class="fa-solid fa-earth-europe"></i></div>
+            <h5>{% trans "Multilingual Support" %}</h5>
+            <p>{% trans "We add languages to your existing site. Hreflang, SEO and auto-redirects included." %}</p>
+            <div class="wd-sol-tags"><span>i18n</span><span>Hreflang</span><span>{% trans "9+ Languages" %}</span></div>
+            <div class="wd-sol-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          </article>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="240">
+        <a href="#wd-tabs" onclick="wdTab('ecommerce')" class="wd-sol-card-link">
+          <article class="wd-sol-card wd-c-blue h-100">
+            <div class="wd-sol-num-bg">04</div>
+            <div class="wd-sol-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+            <h5>{% trans "E‑Commerce" %}</h5>
+            <p>{% trans "Fast storefronts, secure checkout, Shopify migration and analytics dashboard." %}</p>
+            <div class="wd-sol-tags"><span>{% trans "Payments" %}</span><span>Shopify</span><span>{% trans "Analytics" %}</span></div>
+            <div class="wd-sol-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          </article>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ DETAIL TABS ═══════════════ -->
+<div id="wd-tabs">
+
+  <!-- Tab nav -->
+  <div class="wd-tab-nav-wrap">
+    <div class="container">
+      <nav class="wd-tab-nav" role="tablist">
+        <button class="wd-tab-btn active" data-tab="business" onclick="wdTab('business')">
+          <i class="fa-solid fa-briefcase"></i>
+          <span class="wd-tab-num">01</span>
+          <span class="wd-tab-label">{% trans "Business Website" %}</span>
+        </button>
+        <button class="wd-tab-btn" data-tab="stock" onclick="wdTab('stock')">
+          <i class="fa-solid fa-boxes-stacked"></i>
+          <span class="wd-tab-num">02</span>
+          <span class="wd-tab-label">{% trans "Stock Management" %}</span>
+        </button>
+        <button class="wd-tab-btn" data-tab="multilingual" onclick="wdTab('multilingual')">
+          <i class="fa-solid fa-earth-europe"></i>
+          <span class="wd-tab-num">03</span>
+          <span class="wd-tab-label">{% trans "Multilingual Support" %}</span>
+        </button>
+        <button class="wd-tab-btn" data-tab="ecommerce" onclick="wdTab('ecommerce')">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="wd-tab-num">04</span>
+          <span class="wd-tab-label">{% trans "E‑Commerce" %}</span>
+        </button>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Panel 01 — Business Website -->
+  <div id="tab-business" class="wd-tab-panel active gf-section-dark wd-detail-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="wd-eyebrow">{% trans "01 — Business Website" %}</span>
+          <h2 class="mb-4">{% trans "A Site That Represents You" %}<br>{% trans "and Wins Customers" %}</h2>
+          <p class="opacity-85 mb-4">
+            {% trans "Clear messaging, fast loading, strong SEO, and measurable actions — your site becomes a sales tool that works around the clock." %}
+          </p>
+          <ul class="list-unstyled wd-checklist">
+            <li><i class="fa-solid fa-circle-check" style="color:var(--accent)"></i> {% trans "Quote request and booking forms" %}</li>
+            <li><i class="fa-solid fa-circle-check" style="color:#22d3ee"></i> {% trans "Click-to-call and live chat integration" %}</li>
+            <li><i class="fa-solid fa-circle-check" style="color:#a855f7"></i> {% trans "Email capture and lead funnels" %}</li>
+            <li><i class="fa-solid fa-circle-check" style="color:#60a5fa"></i> {% trans "Core Web Vitals and technical SEO" %}</li>
+            <li><i class="fa-solid fa-circle-check" style="color:#f59e0b"></i> {% trans "Google Analytics 4 + Meta Pixel setup" %}</li>
+          </ul>
+        </div>
+        <div class="col-lg-6 d-flex flex-column gap-3">
+          <div class="wd-info-card">
+            <div class="wd-ic-icon" style="background:rgba(173,255,47,.1);color:var(--accent)"><i class="fa-solid fa-bolt"></i></div>
+            <div>
+              <div class="wd-ic-title">{% trans "Speed kills bounce rates, not traffic" %}</div>
+              <div class="wd-ic-sub">{% trans "A 3-second load time loses 53% of visitors before they read a word. We optimize every page to load fast, on any device." %}</div>
+            </div>
+          </div>
+          <div class="wd-info-card">
+            <div class="wd-ic-icon" style="background:rgba(34,211,238,.1);color:#22d3ee"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div>
+              <div class="wd-ic-title">{% trans "SEO built in from day one" %}</div>
+              <div class="wd-ic-sub">{% trans "Clean URLs, structured data, hreflang, sitemaps — every page is search-ready at launch, not after the fact." %}</div>
+            </div>
+          </div>
+          <div class="wd-info-card">
+            <div class="wd-ic-icon" style="background:rgba(168,85,247,.1);color:#a855f7"><i class="fa-solid fa-mobile-screen"></i></div>
+            <div>
+              <div class="wd-ic-title">{% trans "Mobile-first, always" %}</div>
+              <div class="wd-ic-sub">{% trans "60%+ of web traffic is mobile. We design mobile-first and test across every screen size before shipping." %}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel 02 — Stock Management -->
+  <div id="tab-stock" class="wd-tab-panel gf-section-dark wd-detail-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 d-flex justify-content-center">
+          <div class="wd-mock-screen">
+            <div class="wd-mock-header">
+              <div class="wd-mock-dots">
+                <span class="wd-mock-dot" style="background:#ff5f57"></span>
+                <span class="wd-mock-dot" style="background:#ffbd2e"></span>
+                <span class="wd-mock-dot" style="background:#28ca41"></span>
+              </div>
+              <span class="wd-mock-title">{% trans "Stock Management — Dispatch" %}</span>
+            </div>
+            <div class="wd-mock-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span>{% trans "Search product or SKU..." %}</span>
+            </div>
+            <div class="wd-mock-table">
+              <div class="wd-mock-thead">
+                <span>{% trans "Product" %}</span><span>SKU</span><span>{% trans "Stock" %}</span><span>{% trans "Status" %}</span>
+              </div>
+              <div class="wd-mock-row wd-mock-row-dispatch">
+                <span class="wd-mr-name"><i class="fa-solid fa-box"></i> Wireless Headset X2</span>
+                <span class="wd-mr-sku">WH-X2-BLK</span>
+                <span class="wd-mr-stock">142</span>
+                <span class="wd-mock-badge wd-badge-out"><i class="fa-solid fa-arrow-up-from-bracket"></i> {% trans "Dispatching" %}</span>
+              </div>
+              <div class="wd-mock-row">
+                <span class="wd-mr-name"><i class="fa-solid fa-box"></i> USB-C Hub Pro</span>
+                <span class="wd-mr-sku">UC-HUB-7P</span>
+                <span class="wd-mr-stock">89</span>
+                <span class="wd-mock-badge wd-badge-ok">{% trans "In Stock" %}</span>
+              </div>
+              <div class="wd-mock-row wd-mock-row-low">
+                <span class="wd-mr-name"><i class="fa-solid fa-box"></i> Laptop Stand Alu</span>
+                <span class="wd-mr-sku">LS-ALU-S</span>
+                <span class="wd-mr-stock wd-mr-red">7</span>
+                <span class="wd-mock-badge wd-badge-low"><i class="fa-solid fa-triangle-exclamation"></i> {% trans "Low Stock" %}</span>
+              </div>
+              <div class="wd-mock-row">
+                <span class="wd-mr-name"><i class="fa-solid fa-box"></i> Mechanical Keyboard</span>
+                <span class="wd-mr-sku">KB-MEC-TKL</span>
+                <span class="wd-mr-stock">214</span>
+                <span class="wd-mock-badge wd-badge-ok">{% trans "In Stock" %}</span>
+              </div>
+            </div>
+            <div class="wd-mock-footer">
+              <div class="wd-mock-stat"><span class="wd-mstat-val">458</span><span class="wd-mstat-lbl">{% trans "Total Items" %}</span></div>
+              <div class="wd-mock-stat"><span class="wd-mstat-val" style="color:#ef4444">2</span><span class="wd-mstat-lbl">{% trans "Low Stock" %}</span></div>
+              <div class="wd-mock-stat"><span class="wd-mstat-val" style="color:#4ade80">1</span><span class="wd-mstat-lbl">{% trans "Dispatching" %}</span></div>
+              <button class="wd-mock-btn"><i class="fa-solid fa-arrow-up-from-bracket"></i> {% trans "New Dispatch" %}</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <span class="wd-eyebrow">{% trans "02 — Stock Management" %}</span>
+          <h2 class="mb-4">{% trans "Full Control Over" %}<br>{% trans "Your Inventory" %}</h2>
+          <p class="opacity-85 mb-4">
+            {% trans "Track every product, warehouse, and movement in real time. Browser-based, multi-user, and as simple or as detailed as your business needs." %}
+          </p>
+          <ul class="list-unstyled wd-checklist">
+            <li><i class="fa-solid fa-circle-check"></i> {% trans "Real-time stock level tracking" %}</li>
+            <li><i class="fa-solid fa-circle-check"></i> {% trans "Low-stock and expiry alerts" %}</li>
+            <li><i class="fa-solid fa-circle-check"></i> {% trans "Supplier and purchase order management" %}</li>
+            <li><i class="fa-solid fa-circle-check"></i> {% trans "Barcode / QR code support" %}</li>
+            <li><i class="fa-solid fa-circle-check"></i> {% trans "Multi-warehouse and location tracking" %}</li>
+            <li><i class="fa-solid fa-circle-check"></i> {% trans "Role-based access for staff and managers" %}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel 03 — Multilingual Support -->
+  <div id="tab-multilingual" class="wd-tab-panel section-bg section-dark wd-detail-section"
+       style="--section-bg: url('{% static 'images/web.png' %}'); --section-bg-opacity:.08;">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="wd-eyebrow">{% trans "03 — Multilingual Support" %}</span>
+          <h2 class="mb-4">{% trans "Add Languages" %}<br>{% trans "to Your Existing Site" %}</h2>
+          <p class="opacity-85 mb-4">
+            {% trans "We integrate i18n, hreflang tags, language-specific SEO, and auto-redirects into your existing Django site. No rewrite needed — just more reach." %}
+          </p>
+          <ul class="list-unstyled wd-checklist">
+            <li><i class="fa-solid fa-circle-check"></i> {% trans "Django i18n / gettext integration" %}</li>
+            <li><i class="fa-solid fa-circle-check"></i> {% trans "Hreflang and language-specific canonical URLs" %}</li>
+            <li><i class="fa-solid fa-circle-check"></i> {% trans "Per-language sitemaps and meta tags" %}</li>
+            <li><i class="fa-solid fa-circle-check"></i> {% trans "Language switcher widget and auto-redirect" %}</li>
+            <li><i class="fa-solid fa-circle-check"></i> {% trans "RTL support (Arabic, Persian)" %}</li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <div class="wd-flag-wall">
+            <div class="wd-flag-item"><img src="{% static 'images/tur.png' %}" alt="TR" loading="lazy"><span>TR</span></div>
+            <div class="wd-flag-item"><img src="{% static 'images/eng.png' %}" alt="EN" loading="lazy"><span>EN</span></div>
+            <div class="wd-flag-item"><img src="{% static 'images/ger.png' %}" alt="DE" loading="lazy"><span>DE</span></div>
+            <div class="wd-flag-item"><img src="{% static 'images/spa.png' %}" alt="ES" loading="lazy"><span>ES</span></div>
+            <div class="wd-flag-item"><img src="{% static 'images/it.png' %}" alt="IT" loading="lazy"><span>IT</span></div>
+            <div class="wd-flag-item"><img src="{% static 'images/den.png' %}" alt="DA" loading="lazy"><span>DA</span></div>
+            <div class="wd-flag-item"><img src="{% static 'images/fra.png' %}" alt="FR" loading="lazy"><span>FR</span></div>
+            <div class="wd-flag-item"><img src="{% static 'images/hir.png' %}" alt="JP" loading="lazy"><span>JP</span></div>
+            <div class="wd-flag-item"><img src="{% static 'images/suudi.png' %}" alt="AR" loading="lazy"><span>AR</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel 04 — E-Commerce -->
+  <div id="tab-ecommerce" class="wd-tab-panel section-bg section-dark wd-detail-section"
+       style="--section-bg: url('{% static 'images/123.jpg' %}'); --section-bg-opacity:.12;">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="wd-eyebrow">{% trans "04 — E‑Commerce" %}</span>
+          <h2 class="mb-4">{% trans "A Store Built" %}<br>{% trans "to Convert" %}</h2>
+          <p class="opacity-85 mb-4">
+            {% trans "Custom Django store or Shopify — we build, configure, and launch it. Theme, integrations, payments and SEO-ready product pages handled from day one." %}
+          </p>
+          <ul class="list-unstyled wd-checklist mb-4">
+            <li><i class="fa-solid fa-circle-check"></i> {% trans "Custom Django store or Shopify storefront" %}</li>
+            <li><i class="fa-solid fa-circle-check"></i> {% trans "Payment gateway integration (Stripe, iyzico, Paytr)" %}</li>
+            <li><i class="fa-solid fa-circle-check"></i> {% trans "Product pages, collections, filters and search" %}</li>
+            <li><i class="fa-solid fa-circle-check"></i> {% trans "Shopify theme development and app integration" %}</li>
+            <li><i class="fa-solid fa-circle-check"></i> {% trans "Analytics, funnels and conversion tracking" %}</li>
+          </ul>
+          <div class="wd-platform-cards">
+            <div class="wd-platform-card">
+              <div class="wd-pc-icon" style="background:rgba(245,158,11,.12);border-color:rgba(245,158,11,.25);">
+                <i class="fa-brands fa-python" style="color:var(--accent)"></i>
+              </div>
+              <div class="wd-pc-body">
+                <div class="wd-pc-name">{% trans "Django Store" %}</div>
+                <div class="wd-pc-desc">{% trans "Full custom — your rules, your data, your design." %}</div>
+              </div>
+              <div class="wd-pc-tag">{% trans "Custom" %}</div>
+            </div>
+            <div class="wd-platform-card">
+              <div class="wd-pc-icon" style="background:rgba(149,191,71,.1);border-color:rgba(149,191,71,.25);">
+                <i class="fa-brands fa-shopify" style="color:#95bf47"></i>
+              </div>
+              <div class="wd-pc-body">
+                <div class="wd-pc-name">{% trans "Shopify Store" %}</div>
+                <div class="wd-pc-desc">{% trans "Theme build, app setup, SEO and payment config." %}</div>
+              </div>
+              <div class="wd-pc-tag" style="color:#95bf47;border-color:rgba(149,191,71,.25);background:rgba(149,191,71,.08)">Shopify</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 d-flex justify-content-center">
+          <div class="wd-ecom-visual">
+            <div class="wd-ev-card">
+              <i class="fa-solid fa-lock"></i>
+              <div class="wd-ev-title">{% trans "Secure checkout" %}</div>
+              <div class="wd-ev-sub">{% trans "SSL, PCI-compliant payment processing and fraud protection built in from the start." %}</div>
+            </div>
+            <div class="wd-ev-card">
+              <i class="fa-solid fa-mobile-screen"></i>
+              <div class="wd-ev-title">{% trans "Mobile-first shopping" %}</div>
+              <div class="wd-ev-sub">{% trans "Optimized for thumb navigation, fast add-to-cart, and one-tap checkout." %}</div>
+            </div>
+            <div class="wd-ev-card">
+              <i class="fa-solid fa-arrow-trend-up"></i>
+              <div class="wd-ev-title">{% trans "Built to scale" %}</div>
+              <div class="wd-ev-sub">{% trans "From 10 to 10,000 products — architecture stays solid, performance stays fast." %}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- #wd-tabs -->
+
+<!-- ═══════════════ WEB FRAME SHOWCASE ═══════════════ -->
+<section id="webFrameSection">
+  <canvas id="webFrameCanvas"></canvas>
+
+  <!-- Phase 1 headline -->
+  <div class="wf-phase" id="wf-p1">
+    <span class="wf-word" id="wfw0">{% trans "Interactive" %}</span>
+    <span class="wf-word" id="wfw1">{% trans "3D" %}</span>
+    <span class="wf-word" id="wfw2">{% trans "Websites" %}</span>
+  </div>
+
+  <!-- Phase 2 headline -->
+  <div class="wf-phase" id="wf-p2">
+    <span class="wf-word" id="wfw3">{% trans "Bring" %}</span>
+    <span class="wf-word" id="wfw4">{% trans "your" %}</span>
+    <span class="wf-word" id="wfw5">{% trans "business" %}</span>
+    <span class="wf-word" id="wfw6">{% trans "to life" %}</span>
+  </div>
+</section>
+
+<!-- ═══════════════ PROCESS ═══════════════ -->
+<section id="process" class="gf-section-dark" style="padding:90px 0;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="gf-eyebrow" data-aos="fade-up">{% trans "How We Work" %}</span>
+      <h2 class="mb-3" data-aos="fade-up" data-aos-delay="100">
+        {% trans "Five steps." %}<br>{% trans "One working product." %}
+      </h2>
+      <p class="section-sub mx-auto" data-aos="fade-up" data-aos-delay="200">
+        {% trans "Every step delivers a measurable output. Transparent, fast, and outcome-driven." %}
+      </p>
+    </div>
+    <div class="wd-timeline">
+      <div class="wd-timeline-item" data-aos="fade-up" data-aos-delay="50">
+        <div class="wd-timeline-marker">1</div>
+        <div class="wd-timeline-card">
+          <h5><i class="fa-solid fa-compass me-2" style="color:#22d3ee"></i> {% trans "Discovery & Strategy" %}</h5>
+          <p>{% trans "Goals, audience, content map and success metrics. Technical scope and roadmap as output." %}</p>
+        </div>
+      </div>
+      <div class="wd-timeline-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="wd-timeline-marker">2</div>
+        <div class="wd-timeline-card">
+          <h5><i class="fa-solid fa-pen-ruler me-2" style="color:#a855f7"></i> {% trans "Design" %}</h5>
+          <p>{% trans "Wireframes → UI kit → responsive screens. Early prototype for quick feedback loops." %}</p>
+        </div>
+      </div>
+      <div class="wd-timeline-item" data-aos="fade-up" data-aos-delay="150">
+        <div class="wd-timeline-marker">3</div>
+        <div class="wd-timeline-card">
+          <h5><i class="fa-solid fa-code me-2" style="color:var(--accent)"></i> {% trans "Development" %}</h5>
+          <p>{% trans "Django + PostgreSQL, clean URLs, SEO foundations, key integrations and content templates." %}</p>
+        </div>
+      </div>
+      <div class="wd-timeline-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="wd-timeline-marker">4</div>
+        <div class="wd-timeline-card">
+          <h5><i class="fa-solid fa-vial me-2" style="color:#60a5fa"></i> {% trans "QA & Approval" %}</h5>
+          <p>{% trans "Lighthouse, accessibility, cross-browser and device testing — form and checkout flow validation." %}</p>
+        </div>
+      </div>
+      <div class="wd-timeline-item" data-aos="fade-up" data-aos-delay="250">
+        <div class="wd-timeline-marker">5</div>
+        <div class="wd-timeline-card">
+          <h5><i class="fa-solid fa-rocket me-2" style="color:#f59e0b"></i> {% trans "Launch & Aftercare" %}</h5>
+          <p>{% trans "Go-live, monitoring and maintenance plan. First 14 days under close watch, rollback ready." %}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ STYLES ═══════════════ -->
+<style>
+:root { --r-sm:6px; --r-md:10px; --r-lg:16px; }
+
+/* ── Hero ── */
+.wd-hero { position:relative; min-height:100svh; display:flex; align-items:center; }
+.wd-glow { position:absolute; border-radius:50%; filter:blur(80px); pointer-events:none; z-index:0; }
+.wd-glow.g1 { width:420px; height:420px; top:-80px; left:-100px; background:radial-gradient(circle,rgba(173,255,47,.06),transparent 70%); }
+.wd-glow.g2 { width:320px; height:320px; bottom:-60px; right:-60px; background:radial-gradient(circle,rgba(34,211,238,.05),transparent 70%); }
+
+.wd-hero-title-split { font-family:'Syne',sans-serif; font-size:clamp(1.9rem,4.5vw,3.6rem); font-weight:800; line-height:1.1; margin-bottom:20px; }
+.wd-word { display:inline-block; opacity:0; transform:translateY(30px); animation:wdWordIn .6s cubic-bezier(.16,1,.3,1) forwards; margin-right:6px; }
+.wd-word:nth-child(1){animation-delay:.1s}.wd-word:nth-child(2){animation-delay:.22s}
+.wd-word:nth-child(3){animation-delay:.34s}.wd-word:nth-child(4){animation-delay:.46s}
+.wd-word:nth-child(5){animation-delay:.58s}.wd-word:nth-child(6){animation-delay:.7s}
+@keyframes wdWordIn { to{opacity:1;transform:translateY(0)} }
+.wd-word.wd-grad { background:linear-gradient(90deg,#adff2f,#22d3ee); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; animation:wdWordIn .6s cubic-bezier(.16,1,.3,1) forwards; }.wd-hero-sub { font-size:.95rem; color:var(--text-secondary,#8892a4); line-height:1.8; max-width:520px; margin-bottom:24px; }
+
+/* ── Pills ── */
+.wd-hero-pills { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 28px; }
+.wd-pill { display:inline-flex; align-items:center; gap:7px; padding:6px 14px; background:rgba(173,255,47,.06); border:1px solid rgba(173,255,47,.2); border-radius:999px; font-size:.78rem; font-weight:600; animation:wdPillIn .7s cubic-bezier(.16,1,.3,1) both; transition:.2s ease; }
+.wd-pill i { color:var(--accent); }
+.wd-pill:hover { background:rgba(173,255,47,.14); border-color:rgba(173,255,47,.4); transform:translateY(-2px); }
+.wd-pill:nth-child(1){animation-delay:.55s}.wd-pill:nth-child(2){animation-delay:.68s}
+.wd-pill:nth-child(3){animation-delay:.81s}.wd-pill:nth-child(4){animation-delay:.94s}
+@keyframes wdPillIn { from{opacity:0;transform:scale(.85)} to{opacity:1;transform:scale(1)} }
+
+/* ── Terminal ── */
+.wd-terminal { width:420px; max-width:100%; border-radius:var(--r-lg); overflow:hidden; border:1px solid rgba(173,255,47,.18); box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 40px rgba(173,255,47,.05); animation:wdTermFloat 5s ease-in-out infinite; font-family:'Courier New',Courier,monospace; }
+@keyframes wdTermFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-9px)} }
+.wd-term-tabs { display:flex; background:#090b11; border-bottom:1px solid rgba(255,255,255,.04); }
+.wd-term-tab { padding:6px 14px; font-size:.68rem; color:#4a5368; border-right:1px solid rgba(255,255,255,.04); cursor:default; }
+.wd-term-tab.active { color:var(--accent); background:#0d0f16; border-top:1px solid rgba(173,255,47,.25); }
+.wd-term-bar { background:#1a1d28; padding:10px 16px; display:flex; align-items:center; gap:7px; border-bottom:1px solid rgba(255,255,255,.05); }
+.wd-tdot { width:11px; height:11px; border-radius:50%; flex-shrink:0; }
+.wd-tdot-r{background:#ff5f57}.wd-tdot-y{background:#ffbd2e}.wd-tdot-g{background:#28ca41}
+.wd-term-title { font-size:.7rem; color:#4a5368; margin-left:8px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:160px; }
+.wd-term-badge { margin-left:auto; font-size:.6rem; font-weight:700; padding:2px 9px; border-radius:999px; background:rgba(173,255,47,.08); border:1px solid rgba(173,255,47,.2); color:var(--accent); letter-spacing:.06em; text-transform:uppercase; }
+.wd-term-body { background:#0d0f16; padding:16px 18px; min-height:260px; max-height:260px; overflow-y:auto; font-size:.78rem; line-height:1.85; color:#a8b2cc; scrollbar-width:none; }
+.wd-term-body::-webkit-scrollbar{display:none}
+.wd-line { display:flex; align-items:flex-start; gap:5px; min-height:1.85em; }
+.wd-prompt{color:var(--accent);flex-shrink:0}.wd-cmd{color:#e2e8f0;white-space:pre-wrap;word-break:break-all}
+.wd-out{color:#5d6a80;white-space:pre-wrap;padding-left:2px}
+.t-ok{color:#4ade80}.t-url{color:#60a5fa}.t-dim{color:#3a4255}
+.wd-cursor { display:inline-block; width:7px; height:13px; background:var(--accent); vertical-align:middle; margin-left:1px; animation:wdCurBlink .7s step-end infinite; }
+@keyframes wdCurBlink{0%,100%{opacity:1}50%{opacity:0}}
+.wd-term-status { background:#080a10; border-top:1px solid rgba(255,255,255,.04); padding:5px 16px; display:flex; align-items:center; gap:10px; font-size:.65rem; font-family:monospace; color:#4a5368; }
+.wd-status-led { width:6px; height:6px; border-radius:50%; background:#4ade80; flex-shrink:0; box-shadow:0 0 6px #4ade80; }
+.wd-status-ok{color:#4ade80}.wd-status-url{margin-left:auto}
+
+/* ── Eyebrow ── */
+.wd-eyebrow { display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
+
+/* ── Solution cards ── */
+.wd-sol-card-link { text-decoration:none; display:block; height:100%; }
+.wd-sol-card { background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.08); border-radius:var(--r-lg); padding:24px; position:relative; overflow:hidden; transition:border-color .25s,transform .25s,box-shadow .25s; height:100%; }
+.wd-sol-card:hover { border-color:rgba(173,255,47,.3); transform:translateY(-5px); box-shadow:0 16px 50px rgba(0,0,0,.5),0 0 0 1px rgba(173,255,47,.08); }
+.wd-sol-num-bg { position:absolute; top:8px; right:12px; font-family:'Syne',sans-serif; font-size:3rem; font-weight:800; color:rgba(173,255,47,.05); line-height:1; pointer-events:none; transition:color .35s; }
+.wd-sol-card:hover .wd-sol-num-bg { color:rgba(173,255,47,.12); }
+.wd-sol-icon { width:44px; height:44px; border-radius:var(--r-md); background:rgba(173,255,47,.1); color:var(--accent); display:flex; align-items:center; justify-content:center; font-size:1.1rem; margin-bottom:14px; transition:transform .25s,background .25s; }
+.wd-sol-card:hover .wd-sol-icon { transform:scale(1.1) rotate(-5deg); background:rgba(173,255,47,.18); }
+.wd-sol-card h5 { font-family:'Syne',sans-serif; font-weight:700; margin-bottom:8px; color:#f0f2f8; font-size:.95rem; }
+.wd-sol-card p { font-size:.83rem; color:#8892a4; line-height:1.6; margin-bottom:14px; }
+.wd-sol-tags { display:flex; flex-wrap:wrap; gap:5px; margin-bottom:14px; }
+.wd-sol-tags span { font-size:.68rem; padding:2px 8px; border-radius:999px; background:rgba(173,255,47,.07); border:1px solid rgba(173,255,47,.15); color:var(--accent); font-weight:600; }
+.wd-sol-arrow { color:var(--accent); font-size:.82rem; opacity:0; transform:translateX(-6px); transition:all .25s; }
+.wd-sol-card:hover .wd-sol-arrow { opacity:1; transform:translateX(0); }
+/* ── Card colour variants ── */
+.wd-c-cyan .wd-sol-icon { background:rgba(34,211,238,.1); color:#22d3ee; }
+.wd-c-cyan:hover .wd-sol-icon { background:rgba(34,211,238,.18); }
+.wd-c-cyan .wd-sol-tags span { background:rgba(34,211,238,.07); border-color:rgba(34,211,238,.18); color:#22d3ee; }
+.wd-c-cyan .wd-sol-arrow { color:#22d3ee; }
+.wd-c-cyan:hover { border-color:rgba(34,211,238,.3) !important; box-shadow:0 16px 50px rgba(0,0,0,.5),0 0 0 1px rgba(34,211,238,.08) !important; }
+.wd-c-purple .wd-sol-icon { background:rgba(168,85,247,.1); color:#a855f7; }
+.wd-c-purple:hover .wd-sol-icon { background:rgba(168,85,247,.18); }
+.wd-c-purple .wd-sol-tags span { background:rgba(168,85,247,.07); border-color:rgba(168,85,247,.18); color:#a855f7; }
+.wd-c-purple .wd-sol-arrow { color:#a855f7; }
+.wd-c-purple:hover { border-color:rgba(168,85,247,.3) !important; box-shadow:0 16px 50px rgba(0,0,0,.5),0 0 0 1px rgba(168,85,247,.08) !important; }
+.wd-c-blue .wd-sol-icon { background:rgba(96,165,250,.1); color:#60a5fa; }
+.wd-c-blue:hover .wd-sol-icon { background:rgba(96,165,250,.18); }
+.wd-c-blue .wd-sol-tags span { background:rgba(96,165,250,.07); border-color:rgba(96,165,250,.18); color:#60a5fa; }
+.wd-c-blue .wd-sol-arrow { color:#60a5fa; }
+.wd-c-blue:hover { border-color:rgba(96,165,250,.3) !important; box-shadow:0 16px 50px rgba(0,0,0,.5),0 0 0 1px rgba(96,165,250,.08) !important; }
+
+/* ── Detail sections ── */
+.wd-detail-section { padding:90px 0; }
+
+/* ── Checklist ── */
+.wd-checklist li { display:flex; align-items:flex-start; gap:10px; padding:8px 0; font-size:.88rem; color:#8892a4; border-bottom:1px solid rgba(255,255,255,.04); }
+.wd-checklist li:last-child { border-bottom:none; }
+.wd-checklist li i { color:var(--accent); margin-top:3px; flex-shrink:0; }
+
+/* ── Info cards (business section) ── */
+.wd-info-card { display:flex; align-items:flex-start; gap:14px; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.07); border-radius:var(--r-md); padding:16px 18px; transition:border-color .2s,transform .2s; }
+.wd-info-card:hover { border-color:rgba(173,255,47,.2); transform:translateX(4px); }
+.wd-ic-icon { width:36px; height:36px; border-radius:var(--r-sm); background:rgba(173,255,47,.1); color:var(--accent); display:flex; align-items:center; justify-content:center; font-size:.9rem; flex-shrink:0; }
+.wd-ic-title { font-family:'Syne',sans-serif; font-weight:700; font-size:.88rem; color:#f0f2f8; margin-bottom:4px; }
+.wd-ic-sub { font-size:.8rem; color:#8892a4; line-height:1.6; }
+
+/* ── Mock Screen ── */
+.wd-mock-screen { width:100%; max-width:440px; background:#0d0f18; border:1px solid rgba(173,255,47,.18); border-radius:var(--r-lg); overflow:hidden; box-shadow:0 24px 70px rgba(0,0,0,.6),0 0 30px rgba(173,255,47,.05); animation:wdTermFloat 5s ease-in-out infinite; }
+.wd-mock-header { background:#1a1d28; padding:10px 16px; display:flex; align-items:center; gap:10px; border-bottom:1px solid rgba(255,255,255,.05); }
+.wd-mock-dots { display:flex; gap:6px; }
+.wd-mock-dot { width:10px; height:10px; border-radius:50%; }
+.wd-mock-title { font-size:.7rem; color:#4a5368; font-family:monospace; margin-left:4px; }
+.wd-mock-search { display:flex; align-items:center; gap:8px; padding:10px 16px; background:rgba(255,255,255,.03); border-bottom:1px solid rgba(255,255,255,.05); font-size:.74rem; color:#3a4255; font-family:monospace; }
+.wd-mock-search i { color:#3a4255; font-size:.78rem; }
+.wd-mock-table { padding:8px 0; }
+.wd-mock-thead { display:grid; grid-template-columns:2fr 1.2fr .7fr 1fr; padding:6px 16px; font-size:.62rem; color:#3a4255; text-transform:uppercase; letter-spacing:.08em; font-weight:700; }
+.wd-mock-row { display:grid; grid-template-columns:2fr 1.2fr .7fr 1fr; align-items:center; padding:9px 16px; border-bottom:1px solid rgba(255,255,255,.03); font-size:.74rem; font-family:monospace; transition:background .2s; }
+.wd-mock-row:last-child { border-bottom:none; }
+.wd-mock-row:hover { background:rgba(255,255,255,.02); }
+.wd-mock-row-dispatch { background:rgba(173,255,47,.04); animation:wdRowPulse 2s ease-in-out infinite; }
+.wd-mock-row-low { background:rgba(239,68,68,.04); }
+@keyframes wdRowPulse { 0%,100%{background:rgba(173,255,47,.04)} 50%{background:rgba(173,255,47,.08)} }
+.wd-mr-name { display:flex; align-items:center; gap:6px; color:#c8d0e0; }
+.wd-mr-name i { color:var(--accent); font-size:.7rem; }
+.wd-mr-sku { color:#4a5368; }
+.wd-mr-stock { color:#8892a4; font-weight:700; }
+.wd-mr-red { color:#f87171 !important; }
+.wd-mock-badge { display:inline-flex; align-items:center; gap:4px; font-size:.62rem; font-weight:700; padding:3px 8px; border-radius:999px; font-family:'DM Sans',sans-serif; }
+.wd-badge-ok  { background:rgba(74,222,128,.1); color:#4ade80; border:1px solid rgba(74,222,128,.2); }
+.wd-badge-out { background:rgba(173,255,47,.1); color:var(--accent); border:1px solid rgba(173,255,47,.2); }
+.wd-badge-low { background:rgba(239,68,68,.1); color:#f87171; border:1px solid rgba(239,68,68,.2); }
+.wd-mock-footer { background:#080a10; border-top:1px solid rgba(255,255,255,.05); padding:10px 16px; display:flex; align-items:center; gap:16px; }
+.wd-mock-stat { text-align:center; flex:1; }
+.wd-mstat-val { display:block; font-family:'Syne',sans-serif; font-size:1rem; font-weight:800; color:var(--accent); }
+.wd-mstat-lbl { font-size:.58rem; color:#3a4255; text-transform:uppercase; letter-spacing:.06em; }
+.wd-mock-btn { display:flex; align-items:center; gap:6px; padding:7px 14px; background:var(--accent); color:#000; border:none; border-radius:var(--r-sm); font-size:.72rem; font-weight:700; cursor:default; font-family:'DM Sans',sans-serif; white-space:nowrap; }
+
+/* ── Flag wall ── */
+.wd-flag-wall { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; }
+.wd-flag-item { display:flex; flex-direction:column; align-items:center; gap:5px; cursor:default; }
+.wd-flag-item img { width:62px; height:62px; border-radius:var(--r-md); object-fit:cover; border:1px solid rgba(255,255,255,.08); transition:transform .25s,border-color .25s,box-shadow .25s; }
+.wd-flag-item span { font-size:.65rem; font-weight:700; color:#4a5368; letter-spacing:.08em; text-transform:uppercase; transition:color .2s; }
+.wd-flag-item:hover img { transform:translateY(-5px) scale(1.1); border-color:var(--accent); box-shadow:0 8px 24px rgba(173,255,47,.2); }
+.wd-flag-item:hover span { color:var(--accent); }
+
+/* ── Platform cards ── */
+.wd-platform-cards { display:flex; flex-direction:column; gap:10px; }
+.wd-platform-card { display:flex; align-items:center; gap:14px; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.07); border-radius:var(--r-md); padding:14px 16px; transition:border-color .2s; }
+.wd-platform-card:hover { border-color:rgba(173,255,47,.2); }
+.wd-pc-icon { width:40px; height:40px; border-radius:var(--r-sm); border:1px solid; display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0; }
+.wd-pc-body { flex:1; }
+.wd-pc-name { font-family:'Syne',sans-serif; font-weight:700; font-size:.88rem; color:#f0f2f8; margin-bottom:2px; }
+.wd-pc-desc { font-size:.76rem; color:#8892a4; }
+.wd-pc-tag { font-size:.68rem; font-weight:700; padding:3px 10px; border-radius:999px; border:1px solid rgba(173,255,47,.2); color:var(--accent); background:rgba(173,255,47,.07); flex-shrink:0; }
+
+/* ── E-com visual cards ── */
+.wd-ecom-visual { display:flex; flex-direction:column; gap:14px; width:100%; max-width:380px; }
+.wd-ev-card { background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.07); border-radius:var(--r-md); padding:18px 20px; transition:border-color .2s,transform .2s; }
+.wd-ev-card:hover { border-color:rgba(173,255,47,.2); transform:translateX(4px); }
+.wd-ev-card i { color:var(--accent); font-size:1.1rem; margin-bottom:8px; display:block; }
+.wd-ev-title { font-family:'Syne',sans-serif; font-weight:700; font-size:.9rem; color:#f0f2f8; margin-bottom:4px; }
+.wd-ev-sub { font-size:.8rem; color:#8892a4; line-height:1.6; }
+
+/* ── Timeline ── */
+.wd-timeline { position:relative; max-width:700px; margin:0 auto; padding-left:50px; }
+.wd-timeline::before { content:''; position:absolute; left:19px; top:0; bottom:0; width:2px; background:linear-gradient(to bottom,var(--accent),rgba(173,255,47,.06)); }
+.wd-timeline-item { position:relative; padding:0 0 32px 26px; }
+.wd-timeline-item:last-child { padding-bottom:0; }
+.wd-timeline-marker { position:absolute; left:-42px; top:0; width:40px; height:40px; border-radius:50%; background:#0d0f18; border:2px solid rgba(173,255,47,.25); color:var(--accent); display:flex; align-items:center; justify-content:center; font-family:'Syne',sans-serif; font-weight:800; font-size:.82rem; transition:all .3s ease; }
+.wd-timeline-item:hover .wd-timeline-marker { background:var(--accent); color:#000; border-color:var(--accent); }
+.wd-timeline-card { background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.07); border-radius:var(--r-md); padding:16px 20px; transition:border-color .2s,box-shadow .2s,transform .2s; }
+.wd-timeline-item:hover .wd-timeline-card { border-color:rgba(173,255,47,.25); box-shadow:0 0 0 1px rgba(173,255,47,.06),0 10px 40px rgba(0,0,0,.4); transform:translateX(5px); }
+.wd-timeline-card h5 { font-family:'Syne',sans-serif; font-size:.92rem; font-weight:700; margin-bottom:6px; }
+.wd-timeline-card p { font-size:.83rem; color:#8892a4; line-height:1.65; margin:0; }
+
+/* ── Detail Tabs ── */
+.wd-tab-nav-wrap {
+  background: #080a0f;
+  border-bottom: 1px solid rgba(255,255,255,.05);
+  padding: 22px 0;
+  position: sticky;
+  top: var(--nav-h, 72px);
+  z-index: 50;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.wd-tab-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.wd-tab-nav::-webkit-scrollbar { display: none; }
+.wd-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 999px;
+  color: #7a8299;
+  font-family: 'Syne', sans-serif;
+  font-size: .84rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .22s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: .01em;
+}
+.wd-tab-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .55rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  font-family: 'DM Sans', sans-serif;
+  background: rgba(255,255,255,.07);
+  color: #4a5068;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: background .22s, color .22s;
+}
+.wd-tab-btn i { font-size: .88rem; opacity: .5; transition: opacity .22s; }
+.wd-tab-btn:hover {
+  color: #f0f4ff;
+  border-color: rgba(255,255,255,.22);
+  background: rgba(255,255,255,.07);
+}
+.wd-tab-btn:hover i { opacity: .8; }
+.wd-tab-btn.active {
+  background: rgba(173,255,47,.1);
+  border-color: rgba(173,255,47,.35);
+  color: #adff2f;
+  box-shadow: 0 0 20px rgba(173,255,47,.08), inset 0 0 16px rgba(173,255,47,.04);
+}
+.wd-tab-btn.active i { opacity: 1; }
+.wd-tab-btn.active .wd-tab-num {
+  background: rgba(173,255,47,.18);
+  color: #adff2f;
+}
+
+.wd-tab-panel { display: none; }
+.wd-tab-panel.active { display: block; animation: wdTabIn .32s ease; }
+@keyframes wdTabIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media(max-width:600px) {
+  .wd-tab-nav-wrap { padding: 14px 0; }
+  .wd-tab-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 0 4px;
+  }
+  .wd-tab-btn {
+    padding: 11px 10px;
+    font-size: .74rem;
+    gap: 6px;
+    justify-content: center;
+    border-radius: 12px;
+    white-space: normal;
+    text-align: center;
+    flex-shrink: unset;
+  }
+  .wd-tab-num { display: none; }
+}
+
+/* ── Responsive ── */
+@media(max-width:991px){
+  .wd-hero { min-height:auto; padding-top:calc(var(--nav-h,70px) + 30px); padding-bottom:40px; }
+  .wd-terminal { max-width:100%; }
+  .wd-term-tab:not(.active) { display:none; }
+  .wd-term-badge { display:none; }
+  .wd-mock-screen { max-width:100%; }
+  .wd-mock-thead span:nth-child(2), .wd-mock-row .wd-mr-sku { display:none; }
+  .wd-mock-thead, .wd-mock-row { grid-template-columns:2fr .7fr 1fr; }
+  .wd-ecom-visual { max-width:100%; }
+}
+@media(max-width:767px){
+  .wd-hero-title-split { font-size:clamp(1.7rem,7vw,2.6rem); }
+  .wd-detail-section { padding:60px 0; }
+  .wd-timeline { padding-left:38px; }
+  .wd-term-body { min-height:190px; max-height:190px; }
+}
+</style>
+
+
+<!-- ═══════════════ SCRIPTS ═══════════════ -->
+<script>
+/* ── Detail Tabs ── */
+window.wdTab = function(key) {
+  document.querySelectorAll('.wd-tab-btn').forEach(function(b){
+    b.classList.toggle('active', b.dataset.tab === key);
+  });
+  document.querySelectorAll('.wd-tab-panel').forEach(function(p){
+    p.classList.toggle('active', p.id === 'tab-' + key);
+  });
+};
+(function(){
+  const valid = ['business','stock','multilingual','ecommerce'];
+  const hash = location.hash.replace('#','');
+  if(valid.includes(hash)) wdTab(hash);
+})();
+
+/* ── Code Rain ── */
+(function(){
+  const cv=document.getElementById('wd-code-rain');
+  if(!cv) return;
+  const ctx=cv.getContext('2d');
+  const hero=cv.closest('section');
+  function resize(){ cv.width=hero.offsetWidth; cv.height=hero.offsetHeight; }
+  resize(); window.addEventListener('resize',resize);
+  const chars='01アイウエオカキクケコサシスセソタチツテトナニヌネノ{}[]<>/\\;:=+*#@!?'.split('');
+  const cols=Math.floor(cv.width/20);
+  const drops=Array(cols).fill(0).map(()=>Math.random()*-50);
+  setInterval(function(){
+    ctx.fillStyle='rgba(11,13,20,.06)'; ctx.fillRect(0,0,cv.width,cv.height);
+    ctx.font='13px monospace';
+    drops.forEach((y,i)=>{
+      const ch=chars[Math.floor(Math.random()*chars.length)];
+      ctx.fillStyle=Math.random()>.96?'rgba(173,255,47,.9)':`rgba(173,255,47,${Math.random()*.3+.08})`;
+      ctx.fillText(ch,i*20,y*20);
+      drops[i]=(y*20>cv.height&&Math.random()>.97)?0:y+.5;
+    });
+  },50);
+})();
+
+/* ── Terminal ── */
+(function(){
+  const body=document.getElementById('wdTermBody');
+  if(!body) return;
+  const SEQ=[
+    {type:'cmd',text:'django-admin startproject gfenix .'},
+    {type:'blank'},
+    {type:'cmd',text:'python manage.py startapp core'},
+    {type:'out',text:'✓  core/ created',cls:'t-ok'},
+    {type:'blank'},
+    {type:'cmd',text:'python manage.py makemigrations'},
+    {type:'out',text:"Migrations for 'core':"},
+    {type:'out',text:'  core/migrations/0001_initial.py',cls:'t-dim'},
+    {type:'out',text:'    + Create model Page',cls:'t-dim'},
+    {type:'out',text:'    + Create model BlogPost',cls:'t-dim'},
+    {type:'blank'},
+    {type:'cmd',text:'python manage.py migrate'},
+    {type:'out',text:'Running migrations:'},
+    {type:'out',text:'  Applying contenttypes.0001... OK',cls:'t-ok'},
+    {type:'out',text:'  Applying core.0001_initial.. OK',cls:'t-ok'},
+    {type:'blank'},
+    {type:'cmd',text:'python manage.py collectstatic --no-input'},
+    {type:'out',text:'128 static files copied → /staticfiles/',cls:'t-ok'},
+    {type:'blank'},
+    {type:'cmd',text:'python manage.py runserver'},
+    {type:'out',text:"Django version 5.1.4, settings 'gfenix'"},
+    {type:'out',text:'Starting development server at'},
+    {type:'out',text:'  http://127.0.0.1:8000/',cls:'t-url'},
+    {type:'out',text:'Quit the server with CTRL-BREAK.',cls:'t-dim'},
+    {type:'blank'},
+    {type:'out',text:'[GET] /           200 OK   12ms',cls:'t-ok'},
+    {type:'out',text:'[GET] /about/      200 OK    8ms',cls:'t-ok'},
+    {type:'out',text:'[GET] /blog/       200 OK   14ms',cls:'t-ok'},
+    {type:'out',text:'[GET] /contact/    200 OK    9ms',cls:'t-ok'},
+  ];
+  const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+  async function typeText(el,text,speed){ for(const ch of text){ el.textContent+=ch; await sleep(speed+Math.random()*16); } }
+  function scrollBot(){ body.scrollTop=body.scrollHeight; }
+  const cursor=document.createElement('span'); cursor.className='wd-cursor';
+  async function runSeq(){
+    body.innerHTML='';
+    for(const item of SEQ){
+      if(item.type==='blank'){ const bl=document.createElement('div'); bl.className='wd-line'; bl.style.minHeight='.5em'; body.appendChild(bl); await sleep(70); continue; }
+      const line=document.createElement('div'); line.className='wd-line';
+      if(item.type==='cmd'){
+        const pr=document.createElement('span'); pr.className='wd-prompt'; pr.textContent='$ ';
+        const tx=document.createElement('span'); tx.className='wd-cmd';
+        line.appendChild(pr); line.appendChild(tx); body.appendChild(line);
+        tx.appendChild(cursor); scrollBot(); await sleep(180+Math.random()*80); cursor.remove();
+        await typeText(tx,item.text,32); tx.appendChild(cursor); await sleep(240); cursor.remove();
+      } else {
+        const tx=document.createElement('span'); tx.className='wd-out '+(item.cls||'');
+        line.appendChild(tx); body.appendChild(line); await typeText(tx,item.text,16);
+      }
+      scrollBot(); await sleep(item.type==='cmd'?60:24);
+    }
+    const last=document.createElement('div'); last.className='wd-line';
+    const pr2=document.createElement('span'); pr2.className='wd-prompt'; pr2.textContent='$ ';
+    last.appendChild(pr2); last.appendChild(cursor); body.appendChild(last); scrollBot();
+    await sleep(4200); runSeq();
+  }
+  runSeq();
+})();
+</script>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/web-showcase.js' %}"></script>
+{% endblock %}

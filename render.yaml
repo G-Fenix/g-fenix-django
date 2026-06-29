@@ -1,0 +1,41 @@
+services:
+  - type: web
+    name: g-fenix
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: ALLOWED_HOSTS
+        value: ".g-fenix.com,.onrender.com,localhost"
+      - key: DB_NAME
+        fromDatabase:
+          name: g-fenix-db
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: g-fenix-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: g-fenix-db
+          property: password
+      - key: DB_HOST
+        fromDatabase:
+          name: g-fenix-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: g-fenix-db
+          property: port
+      - key: ANTHROPIC_API_KEY
+        sync: false
+
+databases:
+  - name: g-fenix-db
+    plan: free
+    databaseName: gfenix
+    user: postgres

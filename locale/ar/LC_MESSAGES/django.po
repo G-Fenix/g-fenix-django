@@ -1,0 +1,1687 @@
+# Arabic translations for G-Fenix
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar\n"
+
+# ── LAYOUT / NAV / FOOTER ──────────────────────────────────
+msgid "Services"
+msgstr "الخدمات"
+
+msgid "Portfolio"
+msgstr "أعمالنا"
+
+msgid "Blog"
+msgstr "المدونة"
+
+msgid "About Us"
+msgstr "من نحن"
+
+msgid "Partnership"
+msgstr "الشراكة"
+
+msgid "Contact Us"
+msgstr "اتصل بنا"
+
+msgid "Web Development"
+msgstr "تطوير المواقع"
+
+msgid "Modern, fast & responsive websites"
+msgstr "مواقع حديثة وسريعة ومتجاوبة"
+
+msgid "QR Menu Solutions"
+msgstr "حلول قائمة QR"
+
+msgid "Restaurants & hotels, multilingual CMS"
+msgstr "المطاعم والفنادق، نظام إدارة محتوى متعدد اللغات"
+
+msgid "Chatbot & AI Agents"
+msgstr "روبوت الدردشة وعوامل الذكاء الاصطناعي"
+
+msgid "AI-powered chat widgets"
+msgstr "أدوات دردشة مدعومة بالذكاء الاصطناعي"
+
+msgid "Data Expert Consultancy"
+msgstr "استشارات خبراء البيانات"
+
+msgid "Turn raw data into strategic decisions"
+msgstr "تحويل البيانات الخام إلى قرارات استراتيجية"
+
+msgid "Training"
+msgstr "التدريب"
+
+msgid "Upskill your team with expert-led courses"
+msgstr "طوّر فريقك بدورات يقودها الخبراء"
+
+msgid "Our Vision"
+msgstr "رؤيتنا"
+
+msgid "Where we're headed and why it matters"
+msgstr "إلى أين نتجه ولماذا يهم ذلك"
+
+msgid "Our Mission"
+msgstr "مهمتنا"
+
+msgid "The core purpose that drives every decision"
+msgstr "الغرض الأساسي الذي يقود كل قرار"
+
+msgid "Completed Projects"
+msgstr "المشاريع المنجزة"
+
+msgid "Quick Links"
+msgstr "روابط سريعة"
+
+msgid "Legal"
+msgstr "قانوني"
+
+msgid "Privacy Policy"
+msgstr "سياسة الخصوصية"
+
+msgid "Cookies Policy"
+msgstr "سياسة ملفات تعريف الارتباط"
+
+msgid "Terms of Service"
+msgstr "شروط الخدمة"
+
+msgid "Building modern web solutions, training future experts, and consulting businesses with data-driven strategies."
+msgstr "نبني حلولاً ويب حديثة، ونؤهّل خبراء المستقبل، ونستشير الشركات باستراتيجيات مبنية على البيانات."
+
+msgid "All rights reserved."
+msgstr "جميع الحقوق محفوظة."
+
+msgid "Stay in the loop"
+msgstr "ابقَ على اطلاع"
+
+msgid "Get weekly insights on tech, AI, and digital growth — no spam."
+msgstr "رؤى أسبوعية حول التكنولوجيا والذكاء الاصطناعي والنمو الرقمي — بدون بريد مزعج."
+
+msgid "Subscribe"
+msgstr "اشترك"
+
+msgid "Your email address"
+msgstr "عنوان بريدك الإلكتروني"
+
+# ── INDEX PAGE ─────────────────────────────────────────────
+msgid "Welcome to G-Fenix"
+msgstr "مرحباً بك في G-Fenix"
+
+msgid "Web & Data Solutions"
+msgstr "حلول الويب والبيانات"
+
+msgid "AI-Powered Products"
+msgstr "منتجات مدعومة بالذكاء الاصطناعي"
+
+msgid "Expert Consulting"
+msgstr "استشارات متخصصة"
+
+msgid "We build modern web experiences, deliver hands-on training and guide teams with data-driven consulting. Explore what we do, projects we delivered and how we can help your business grow."
+msgstr "نبني تجارب ويب حديثة، ونقدم تدريبات عملية، ونوجه الفرق بالاستشارة القائمة على البيانات. اكتشف ما نفعله وكيف يمكننا مساعدة نشاطك التجاري على النمو."
+
+msgid "Projects"
+msgstr "مشروع"
+
+msgid "Satisfaction"
+msgstr "رضا"
+
+msgid "Countries"
+msgstr "دولة"
+
+msgid "Explore more"
+msgstr "استكشف المزيد"
+
+msgid "What We Offer"
+msgstr "ما نقدمه"
+
+msgid "Comprehensive digital solutions tailored to your business needs"
+msgstr "حلول رقمية شاملة مصممة خصيصاً لاحتياجات عملك"
+
+msgid "Learn More"
+msgstr "اعرف المزيد"
+
+msgid "Why Choose Us"
+msgstr "لماذا تختارنا"
+
+msgid "We go beyond delivery and build partnerships that create lasting value"
+msgstr "نتجاوز التسليم ونبني شراكات تخلق قيمة دائمة"
+
+msgid "Expertise Across Technologies"
+msgstr "خبرة عبر التقنيات"
+
+msgid "We pick the right stack for your goals and deliver clean, secure and maintainable code."
+msgstr "نختار التقنية المناسبة لأهدافك ونسلّم كوداً نظيفاً وآمناً وقابلاً للصيانة."
+
+msgid "Transparent Communication"
+msgstr "تواصل شفاف"
+
+msgid "Clear milestones, frequent updates and a single point of contact from start to finish."
+msgstr "معالم واضحة وتحديثات متكررة ونقطة اتصال واحدة من البداية إلى النهاية."
+
+msgid "Quality Assurance"
+msgstr "ضمان الجودة"
+
+msgid "Automated checks, manual reviews and performance tests so your product runs smooth."
+msgstr "فحوصات آلية ومراجعات يدوية واختبارات أداء لضمان تشغيل منتجك بسلاسة."
+
+msgid "Support"
+msgstr "الدعم"
+
+msgid "Guidance when you need it"
+msgstr "التوجيه عندما تحتاجه"
+
+msgid "Speed"
+msgstr "السرعة"
+
+msgid "Efficient delivery with care"
+msgstr "تسليم فعّال بعناية"
+
+msgid "Security"
+msgstr "الأمان"
+
+msgid "Best practices by default"
+msgstr "أفضل الممارسات بشكل افتراضي"
+
+msgid "Value"
+msgstr "القيمة"
+
+msgid "Costs that make sense"
+msgstr "تكاليف منطقية"
+
+msgid "How We Work"
+msgstr "كيف نعمل"
+
+msgid "A simple path from idea to launch"
+msgstr "مسار بسيط من الفكرة إلى الإطلاق"
+
+msgid "Discovery"
+msgstr "الاستكشاف"
+
+msgid "Understand goals, users and success metrics"
+msgstr "فهم الأهداف والمستخدمين ومقاييس النجاح"
+
+msgid "Design"
+msgstr "التصميم"
+
+msgid "Clear flows, modern interface and strong content"
+msgstr "تدفقات واضحة وواجهة حديثة ومحتوى قوي"
+
+msgid "Development"
+msgstr "التطوير"
+
+msgid "Reliable stack, clean code and good docs"
+msgstr "تقنية موثوقة وكود نظيف وتوثيق جيد"
+
+msgid "Delivery"
+msgstr "التسليم"
+
+msgid "Smooth launch and ongoing care"
+msgstr "إطلاق سلس ورعاية مستمرة"
+
+msgid "The Tech Behind G-Fenix"
+msgstr "التقنية وراء G-Fenix"
+
+msgid "Always-on Insights"
+msgstr "رؤى دائمة"
+
+msgid "From office to on the go — your key numbers and alerts are always within reach"
+msgstr "من المكتب إلى التنقل — أرقامك الرئيسية وتنبيهاتك دائماً في متناول يدك"
+
+msgid "Got Questions?"
+msgstr "هل لديك أسئلة؟"
+
+msgid "Click any card to flip and reveal the answer"
+msgstr "انقر على أي بطاقة لقلبها والكشف عن الإجابة"
+
+msgid "How long does a typical project take?"
+msgstr "كم يستغرق المشروع النموذجي؟"
+
+msgid "A small site is ready in two to four weeks. Larger scopes with content creation, dashboards or integrations can take four to eight weeks. We share a clear timeline at kickoff and update it each week."
+msgstr "الموقع الصغير جاهز في أسبوعين إلى أربعة أسابيع. المشاريع الأكبر قد تستغرق أربعة إلى ثمانية أسابيع. نشارك جدولاً زمنياً واضحاً عند الانطلاق ونحدّثه أسبوعياً."
+
+msgid "Close ↩"
+msgstr "إغلاق ↩"
+
+msgid "What is included in the website package?"
+msgstr "ما الذي يتضمنه حزمة الموقع؟"
+
+msgid "Design, development, basic SEO setup, analytics, cookie banner, security hardening and training are included. We also provide documentation and a short video that explains how to edit content."
+msgstr "التصميم والتطوير وإعداد SEO الأساسي والتحليلات وبانر الكوكيز وتأمين الأمان والتدريب. نوفر أيضاً توثيقاً وفيديو قصيراً."
+
+msgid "Do you create the copy and visuals?"
+msgstr "هل تصنعون النصوص والمرئيات؟"
+
+msgid "Yes. We prepare page copy and micro messages. If you already have texts we refine them. For visuals we use your brand assets and create simple graphics when needed."
+msgstr "نعم. نُعدّ نصوص الصفحات والرسائل الصغيرة. إذا كانت لديك نصوص نقوم بتحسينها. للمرئيات نستخدم أصول علامتك التجارية."
+
+msgid "Can I manage content myself after launch?"
+msgstr "هل يمكنني إدارة المحتوى بنفسي بعد الإطلاق؟"
+
+msgid "Yes. You get an admin panel for pages, blog, media and menus. We include a one-hour training and a simple guide so your team can work with confidence."
+msgstr "نعم. تحصل على لوحة تحكم للصفحات والمدونة والوسائط والقوائم مع ساعة تدريب ودليل بسيط."
+
+msgid "Do you set up store, bookings or payments?"
+msgstr "هل تقومون بإعداد المتجر أو الحجوزات أو المدفوعات؟"
+
+msgid "Yes. We can add ecommerce, booking and payment gateways. We connect products, stock, shipping, taxes and invoices when required and we test real flows before launch."
+msgstr "نعم. يمكننا إضافة التجارة الإلكترونية وبوابات الحجز والدفع واختبار التدفقات الفعلية قبل الإطلاق."
+
+msgid "What about SEO and performance?"
+msgstr "ما الذي يتعلق بـ SEO والأداء؟"
+
+msgid "We ship Core Web Vitals basics, structured metadata, sitemap and image compression. We also set title and description templates and guide you on how to write search-friendly content."
+msgstr "نسلّم أساسيات Core Web Vitals والبيانات الوصفية المنظمة وخريطة الموقع وضغط الصور."
+
+msgid "Can you build the site in multiple languages?"
+msgstr "هل يمكنكم بناء الموقع بلغات متعددة؟"
+
+msgid "Yes. We implement a language switcher, translated routes, translation files and language-specific meta tags. You can add or edit languages from the admin panel at any time."
+msgstr "نعم. نُطبّق مبدّل اللغة والمسارات المترجمة وملفات الترجمة. يمكنك إضافة اللغات أو تعديلها في أي وقت."
+
+msgid "Do you handle analytics and privacy consent?"
+msgstr "هل تتولون التحليلات وموافقة الخصوصية؟"
+
+msgid "We install Google Analytics 4 or Matomo, set basic events and add a consent banner that follows GDPR rules. If you prefer privacy-first tracking we can use server-side logs and simple reports."
+msgstr "نثبّت Google Analytics 4 أو Matomo مع بانر موافقة يتوافق مع قواعد GDPR."
+
+msgid "Can you migrate my current website and keep SEO value?"
+msgstr "هل يمكنكم ترحيل موقعي الحالي مع الحفاظ على قيمة SEO؟"
+
+msgid "Yes. We import content, map old links to new pages, set redirects and move media. We check Search Console after launch to confirm that indexing remains healthy."
+msgstr "نعم. نستورد المحتوى ونربط الروابط القديمة بالصفحات الجديدة ونضع إعادة التوجيه ونتحقق من Search Console بعد الإطلاق."
+
+msgid "How do payments and revisions work?"
+msgstr "كيف تعمل المدفوعات والمراجعات؟"
+
+msgid "We use the 30/30/40 model. Two revision rounds are included for each milestone. Extra requests are quoted in advance so you always know the cost and the impact on the timeline."
+msgstr "نستخدم نموذج 30/30/40. جولتان مراجعة مدرجتان لكل معلم. الطلبات الإضافية تُقدَّر مسبقاً."
+
+msgid "What happens after launch?"
+msgstr "ماذا يحدث بعد الإطلاق؟"
+
+msgid "We monitor for one week, fix launch issues and hand over credentials. You can choose a care plan that covers updates, backups, uptime checks and a monthly improvement slot for small tasks."
+msgstr "نراقب لمدة أسبوع ونصلح مشاكل الإطلاق ونسلّم بيانات الاعتماد. يمكنك اختيار خطة رعاية تشمل التحديثات والنسخ الاحتياطية."
+
+msgid "Who owns the code and the content?"
+msgstr "من يملك الكود والمحتوى؟"
+
+msgid "You own your content, your domain and your data. Code created for your project is licensed for your business use. We host the repository in your version control account when possible."
+msgstr "أنت تمتلك محتواك ونطاقك وبياناتك. الكود مرخص للاستخدام التجاري الخاص بك."
+
+msgid "Businesses with websites grow 3x faster over 5 years."
+msgstr "الشركات التي لديها مواقع تنمو 3 مرات أسرع خلال 5 سنوات."
+
+# ── QR MENU ────────────────────────────────────────────────
+msgid "Build — QR Solutions"
+msgstr "البناء — حلول QR"
+
+msgid "Scan. Explore."
+msgstr "امسح. استكشف."
+
+msgid "Impress."
+msgstr "أبهر."
+
+msgid "From restaurant menus to hotel lounges and personal brand cards — G‑Fenix builds smart QR experiences that work on any device, in any language, and update in real time without reprinting a single sheet."
+msgstr "من قوائم المطاعم إلى صالات الفنادق وبطاقات العلامات الشخصية — G‑Fenix يبني تجارب QR ذكية تعمل على أي جهاز بأي لغة وتُحدَّث فورياً."
+
+msgid "Restaurants"
+msgstr "مطاعم"
+
+msgid "Hotels"
+msgstr "فنادق"
+
+msgid "Spas"
+msgstr "مراكز صحية"
+
+msgid "Business Cards"
+msgstr "بطاقات أعمال"
+
+msgid "Retail"
+msgstr "تجزئة"
+
+msgid "See Solutions"
+msgstr "عرض الحلول"
+
+msgid "Menus Live"
+msgstr "قوائم مباشرة"
+
+msgid "Languages"
+msgstr "لغة"
+
+msgid "Uptime SLA"
+msgstr "اتفاقية التشغيل"
+
+msgid "Avg. Load Time"
+msgstr "متوسط وقت التحميل"
+
+msgid "What We Build"
+msgstr "ما نبنيه"
+
+msgid "QR Solutions for Every Venue"
+msgstr "حلول QR لكل مكان"
+
+msgid "One platform, multiple use cases — all managed from a single admin panel."
+msgstr "منصة واحدة، استخدامات متعددة — كل شيء يُدار من لوحة تحكم واحدة."
+
+msgid "Restaurant QR Menu"
+msgstr "قائمة مطعم QR"
+
+msgid "Beautiful digital menus your guests scan at the table. Photos, allergens, specials — updated live from your phone."
+msgstr "قوائم رقمية جميلة يمسحها ضيوفك على الطاولة. صور ومسببات حساسية وعروض — تُحدَّث مباشرة من هاتفك."
+
+msgid "Categories, items & photos"
+msgstr "فئات وعناصر وصور"
+
+msgid "Daily specials toggle"
+msgstr "تبديل العروض اليومية"
+
+msgid "Allergen & calorie info"
+msgstr "معلومات مسببات الحساسية والسعرات"
+
+msgid "Table-specific QR codes"
+msgstr "رموز QR خاصة بكل طاولة"
+
+msgid "Hotel & Spa Menu"
+msgstr "قائمة فندق ومركز صحي"
+
+msgid "Most Popular"
+msgstr "الأكثر شعبية"
+
+msgid "Room service, spa treatments, pool bar, breakfast — all in one multilingual digital experience for your guests."
+msgstr "خدمة الغرف وعلاجات السبا وبار المسبح والفطور — كل ذلك في تجربة رقمية متعددة اللغات."
+
+msgid "Multiple menu sections"
+msgstr "أقسام قائمة متعددة"
+
+msgid "Branded per department"
+msgstr "علامة تجارية لكل قسم"
+
+msgid "Room number ordering"
+msgstr "طلب برقم الغرفة"
+
+msgid "Guest feedback form"
+msgstr "نموذج تعليقات الضيوف"
+
+msgid "Digital Business Card"
+msgstr "بطاقة أعمال رقمية"
+
+msgid "One link, one QR — your full profile, portfolio, social links and contact info. Share with a tap or a scan."
+msgstr "رابط واحد ورمز QR واحد — ملفك الكامل وحافظتك والروابط الاجتماعية ومعلومات الاتصال."
+
+msgid "One-tap contact save"
+msgstr "حفظ جهة الاتصال بنقرة واحدة"
+
+msgid "Portfolio & social links"
+msgstr "المحفظة والروابط الاجتماعية"
+
+msgid "NFC & QR compatible"
+msgstr "متوافق مع NFC وQR"
+
+msgid "Analytics dashboard"
+msgstr "لوحة تحكم تحليلية"
+
+msgid "Your Menu. Always Fresh. Never Reprinted."
+msgstr "قائمتك. دائماً طازجة. لا تُطبع مجدداً أبداً."
+
+msgid "Paper menus are expensive to reprint, easy to soil, and impossible to update on the fly. A G‑Fenix QR menu lives on your phone — change a price, add a photo, mark something sold out — and every table sees it instantly."
+msgstr "القوائم الورقية مكلفة لإعادة طباعتها وتتسخ بسهولة ويستحيل تحديثها فوراً. قائمة QR من G‑Fenix تعيش على هاتفك — كل طاولة ترى التغييرات فوراً."
+
+msgid "Scan to preview live demo"
+msgstr "امسح لمعاينة العرض التجريبي المباشر"
+
+msgid "Simple Process"
+msgstr "عملية بسيطة"
+
+msgid "From Setup to Live in 48 Hours"
+msgstr "من الإعداد إلى البث المباشر في 48 ساعة"
+
+msgid "No technical knowledge needed. We handle everything."
+msgstr "لا تحتاج معرفة تقنية. نحن نتولى كل شيء."
+
+msgid "Send Your Menu"
+msgstr "أرسل قائمتك"
+
+msgid "Share your current menu as PDF, photo, or spreadsheet. We import everything for you."
+msgstr "شارك قائمتك الحالية كـ PDF أو صورة أو جدول بيانات. نستورد كل شيء نيابةً عنك."
+
+msgid "We Design It"
+msgstr "نصمّمها"
+
+msgid "We match your brand colours, fonts, and logo. You approve the look before we go live."
+msgstr "نطابق ألوان علامتك التجارية وخطوطها وشعارها. تعتمد المظهر قبل الإطلاق."
+
+msgid "Get Your QR Codes"
+msgstr "احصل على رموز QR الخاصة بك"
+
+msgid "We generate print-ready QR codes for each table, room, or location. Ready to stick and scan."
+msgstr "نولّد رموز QR جاهزة للطباعة لكل طاولة أو غرفة أو موقع."
+
+msgid "Manage Yourself"
+msgstr "أدر بنفسك"
+
+msgid "Log in to your admin panel and update prices, photos, or availability anytime — from your phone."
+msgstr "سجّل الدخول للوحة التحكم وحدّث الأسعار والصور والتوافر في أي وقت من هاتفك."
+
+msgid "Hotels & Spas"
+msgstr "الفنادق والمراكز الصحية"
+
+msgid "One QR Code, Your Entire Property."
+msgstr "رمز QR واحد، ممتلكاتك بأكملها."
+
+msgid "Hotels have dozens of touch points — room service, spa bookings, pool bar, breakfast, concierge. We bring them all into one branded QR experience your guests never have to download an app for."
+msgstr "للفنادق عشرات نقاط التواصل. نجمعها في تجربة QR موحّدة لا تستلزم تنزيل تطبيق."
+
+msgid "Separate menu per department"
+msgstr "قائمة منفصلة لكل قسم"
+
+msgid "Room number & order routing"
+msgstr "رقم الغرفة وتوجيه الطلبات"
+
+msgid "Multilingual guest experience"
+msgstr "تجربة ضيف متعددة اللغات"
+
+msgid "Booking links for spa & activities"
+msgstr "روابط حجز السبا والأنشطة"
+
+msgid "Guest review & feedback widget"
+msgstr "أداة مراجعة الضيوف وتعليقاتهم"
+
+msgid "Your Card. Always Up to Date."
+msgstr "بطاقتك. دائماً محدّثة."
+
+msgid "One QR code or NFC tap — your full professional profile in their phone."
+msgstr "رمز QR واحد أو لمسة NFC — ملفك المهني الكامل في هاتفهم."
+
+msgid "NFC & QR Both"
+msgstr "NFC وQR معاً"
+
+msgid "Tap your phone on an NFC card or scan the QR — same experience either way."
+msgstr "المسّ هاتفك على بطاقة NFC أو امسح رمز QR — نفس التجربة في كلتا الحالتين."
+
+msgid "Edit Anytime"
+msgstr "عدّل في أي وقت"
+
+msgid "Changed your number or job title? Update once — everyone who scans gets the new info."
+msgstr "غيّرت رقمك أو مسمّاك الوظيفي؟ حدّث مرة واحدة — الجميع يرى المعلومات الجديدة."
+
+msgid "Scan Analytics"
+msgstr "تحليلات المسح"
+
+msgid "See who scanned, when, and from where. Know which networking events drive results."
+msgstr "اعرف من مسح، متى وأين. اكتشف أي فعاليات التواصل تحقق نتائج."
+
+msgid "Fully Branded"
+msgstr "بعلامتك التجارية الكاملة"
+
+msgid "Your brand colours, logo, and photo. Looks like you, not like a generic template."
+msgstr "ألوان علامتك وشعارك وصورتك. يبدو مثلك لا مثل قالب عام."
+
+msgid "Multilingual"
+msgstr "متعدد اللغات"
+
+msgid "Your Guests Speak Many Languages. So Do We."
+msgstr "ضيوفك يتكلمون لغات عديدة. نحن كذلك."
+
+msgid "Tourists don't always speak the local language. Our menus detect browser language automatically and let guests switch with one tap — no extra app, no extra cost."
+msgstr "السياح لا يتكلمون دائماً اللغة المحلية. قوائمنا تكتشف لغة المتصفح تلقائياً وتتيح التبديل بنقرة واحدة."
+
+msgid "FAQ"
+msgstr "أسئلة شائعة"
+
+msgid "Do guests need to download an app?"
+msgstr "هل يحتاج الضيوف تنزيل تطبيق؟"
+
+msgid "No app needed. Guests scan the QR code with their phone camera and the menu opens instantly in their browser. Works on iPhone, Android, and any modern device."
+msgstr "لا حاجة لتطبيق. الضيوف يمسحون رمز QR بكاميرا هواتفهم وتنفتح القائمة فوراً في المتصفح."
+
+msgid "How quickly can we go live?"
+msgstr "ما السرعة التي يمكننا الإطلاق بها؟"
+
+msgid "Most menus are live within 48 hours of receiving your content. For larger hotels with multiple sections we typically need 3–5 business days for setup and testing."
+msgstr "معظم القوائم تعمل في غضون 48 ساعة من استلام محتواك. للفنادق الكبيرة نحتاج 3-5 أيام عمل."
+
+msgid "Can I update the menu myself?"
+msgstr "هل يمكنني تحديث القائمة بنفسي؟"
+
+msgid "Yes. You get a simple admin panel where you can add, edit, or remove items, change prices, upload photos, and toggle daily specials — all from your phone or laptop."
+msgstr "نعم. تحصل على لوحة تحكم بسيطة لإضافة العناصر وتعديلها وحذفها وتغيير الأسعار ورفع الصور."
+
+msgid "What if there's no internet in the venue?"
+msgstr "ماذا لو لم يكن هناك إنترنت في المكان؟"
+
+msgid "Guests use their own mobile data or your venue WiFi. The menu loads quickly even on slow connections and caches in the browser for offline viewing after the first load."
+msgstr "الضيوف يستخدمون بياناتهم المحمولة أو WiFi المكان. القائمة تُحمَّل بسرعة حتى على اتصالات بطيئة."
+
+msgid "Is the menu GDPR compliant?"
+msgstr "هل القائمة متوافقة مع GDPR؟"
+
+msgid "Yes. We don't collect personal guest data without consent. Analytics are privacy-first — we track scans by count and location, not by individual user identifiers."
+msgstr "نعم. لا نجمع بيانات شخصية للضيوف بدون موافقة. التحليلات تُقدّم الخصوصية أولاً."
+
+msgid "Can I keep my existing printed menus?"
+msgstr "هل يمكنني الاحتفاظ بقوائمي المطبوعة الحالية؟"
+
+msgid "Of course. Many venues run both in parallel. QR is great for specials, drinks, and real-time updates while a shorter printed card covers the core menu. We help you plan the right split."
+msgstr "بالطبع. كثير من الأماكن تستخدم كليهما. QR رائع للعروض والتحديثات الفورية. نساعدك على التخطيط."
+
+# ── WEB DEV ────────────────────────────────────────────────
+msgid "Modern Web Solutions Built for Business"
+msgstr "حلول ويب حديثة مبنية للأعمال"
+
+msgid "G‑Fenix plans, designs, and ships. From corporate sites to custom admin panels, online accounting tools to multilingual platforms — fast, secure, and built to scale."
+msgstr "G‑Fenix يخطط ويصمم ويسلّم. من المواقع الشركية إلى لوحات التحكم المخصصة — سريع وآمن وقابل للتوسع."
+
+msgid "Security First"
+msgstr "الأمان أولاً"
+
+msgid "SEO Ready"
+msgstr "جاهز لـ SEO"
+
+msgid "Projects Delivered"
+msgstr "مشاريع مُسلَّمة"
+
+msgid "Core Service Areas"
+msgstr "مجالات الخدمة الأساسية"
+
+msgid "Languages Supported"
+msgstr "اللغات المدعومة"
+
+msgid "Uptime Guarantee"
+msgstr "ضمان وقت التشغيل"
+
+msgid "6 Core Services"
+msgstr "6 خدمات أساسية"
+
+msgid "From launch to scale — a tailored solution for every business need."
+msgstr "من الإطلاق إلى التوسع — حل مصمم لكل حاجة تجارية."
+
+msgid "Business Website"
+msgstr "موقع شركة"
+
+msgid "Speed, SEO, and conversion-focused company sites that build trust and win customers."
+msgstr "مواقع شركات مُركّزة على السرعة وSEO والتحويل لبناء الثقة وكسب العملاء."
+
+msgid "Custom Panel / Dashboard"
+msgstr "لوحة / لوحة تحكم مخصصة"
+
+msgid "Internal management panels — staff check-in/out, notifications, messaging, role-based access."
+msgstr "لوحات إدارة داخلية — تسجيل حضور الموظفين والإشعارات والمراسلة والوصول القائم على الأدوار."
+
+msgid "Online Accounting System"
+msgstr "نظام محاسبة عبر الإنترنت"
+
+msgid "Invoicing, income/expense tracking, reporting and tax calculation — browser-based and secure."
+msgstr "الفوترة وتتبع الدخل/المصروفات والتقارير وحساب الضرائب — قائم على المتصفح وآمن."
+
+msgid "Stock Management App"
+msgstr "تطبيق إدارة المخزون"
+
+msgid "Online inventory tracking, low-stock alerts, supplier management and warehouse reporting."
+msgstr "تتبع المخزون عبر الإنترنت وتنبيهات المخزون المنخفض وإدارة الموردين وتقارير المستودع."
+
+msgid "E‑Commerce"
+msgstr "التجارة الإلكترونية"
+
+msgid "Fast storefronts, secure checkout, Shopify migration and analytics dashboard."
+msgstr "واجهات متجر سريعة وسداد آمن وترحيل Shopify ولوحة تحليلات."
+
+msgid "A Site That Represents You and Wins Customers"
+msgstr "موقع يمثلك ويكسب العملاء"
+
+msgid "Looking good isn't enough. Clear messaging, fast loading, strong SEO, and measurable actions — together, your site becomes a sales tool that works around the clock."
+msgstr "المظهر الجيد لا يكفي. رسائل واضحة وتحميل سريع وSEO قوي — معاً يصبح موقعك أداة مبيعات دائمة."
+
+msgid "Why it matters"
+msgstr "لماذا يهم"
+
+msgid "Your website is open 24/7. A slow or confusing site loses visitors in under 3 seconds — and they rarely come back. We make sure every visit counts."
+msgstr "موقعك مفتوح 24/7. الموقع البطيء يفقد الزوار في أقل من 3 ثوانٍ. نضمن أن كل زيارة تُحسب."
+
+msgid "A Management Panel Built for Your Business"
+msgstr "لوحة إدارة مبنية لعملك"
+
+msgid "Off-the-shelf tools never fit your workflow. G‑Fenix builds everything from scratch — staff attendance tracking to internal messaging, check-in/out logs to role-based permissions."
+msgstr "الأدوات الجاهزة لا تناسب عملك أبداً. G‑Fenix يبني كل شيء من الصفر — من تتبع الحضور إلى الصلاحيات."
+
+msgid "Move Your Accounting to the Browser"
+msgstr "انقل محاسبتك إلى المتصفح"
+
+msgid "Full Control Over Your Inventory"
+msgstr "تحكم كامل في مخزونك"
+
+msgid "Track every product, warehouse, and movement in real time. Browser-based, multi-user, and integrated with your accounting system."
+msgstr "تتبع كل منتج ومستودع وحركة في الوقت الفعلي. متعدد المستخدمين ومدمج مع محاسبتك."
+
+msgid "Add Languages to Your Existing Site"
+msgstr "أضف لغات إلى موقعك الحالي"
+
+msgid "We integrate i18n, hreflang tags, language-specific SEO, and auto-redirects into your existing Django site. No rewrite needed."
+msgstr "ندمج i18n وعلامات hreflang وSEO خاص بكل لغة وإعادة التوجيه التلقائي. لا إعادة كتابة مطلوبة."
+
+msgid "A Store Built to Convert"
+msgstr "متجر مبني للتحويل"
+
+msgid "Whether you want a custom Django store or a Shopify-powered site — we build, configure, and launch it."
+msgstr "سواء أردت متجر Django مخصصاً أو موقعاً بـ Shopify — نبنيه ونضبطه ونطلقه."
+
+msgid "Every step delivers a measurable output. Transparent, fast, and outcome-driven."
+msgstr "كل خطوة تُسلِّم نتيجة قابلة للقياس. شفافة وسريعة ومدفوعة بالنتائج."
+
+msgid "Discovery & Strategy"
+msgstr "الاستكشاف والاستراتيجية"
+
+msgid "Goals, audience, content map and success metrics. Technical scope and roadmap as output."
+msgstr "الأهداف والجمهور وخريطة المحتوى ومقاييس النجاح. النطاق التقني وخارطة الطريق كمخرجات."
+
+msgid "QA & Approval"
+msgstr "ضبط الجودة والموافقة"
+
+msgid "Lighthouse, accessibility, cross-browser/device testing; form and checkout flow tests."
+msgstr "Lighthouse والإمكانية وإمكانية الوصول واختبارات متعددة المتصفحات والأجهزة."
+
+msgid "Launch & Aftercare"
+msgstr "الإطلاق والرعاية اللاحقة"
+
+msgid "Go-live, monitoring and maintenance plan. First 14 days under close watch, rollback ready."
+msgstr "الإطلاق المباشر وخطة المراقبة والصيانة. أول 14 يوماً تحت المراقبة الدقيقة."
+
+msgid "Technologies We Use"
+msgstr "التقنيات التي نستخدمها"
+
+# ── CHATBOTS ───────────────────────────────────────────────
+msgid "Build · AI Chatbots"
+msgstr "بناء · روبوتات دردشة ذكاء اصطناعي"
+
+msgid "We build AI-powered chatbots that handle appointments, answer questions, qualify leads, and never sleep — embedded directly on your website or connected to WhatsApp, Instagram, and Telegram."
+msgstr "نبني روبوتات دردشة بالذكاء الاصطناعي لإدارة المواعيد والإجابة على الأسئلة وتأهيل العملاء — مدمجة في موقعك أو متصلة بـ WhatsApp وInstagram وTelegram."
+
+msgid "See Use Cases"
+msgstr "عرض حالات الاستخدام"
+
+msgid "Live Demo"
+msgstr "عرض حي"
+
+msgid "Always On"
+msgstr "دائماً في الخدمة"
+
+msgid "Response"
+msgstr "استجابة"
+
+msgid "Conversions"
+msgstr "تحويلات"
+
+msgid "Conversations / day"
+msgstr "محادثات / يوم"
+
+msgid "Queries resolved"
+msgstr "استفسارات محلولة"
+
+msgid "More leads captured"
+msgstr "المزيد من العملاء المحتملين"
+
+msgid "What It Can Do"
+msgstr "ما يمكنه فعله"
+
+msgid "One Bot, Many Jobs"
+msgstr "روبوت واحد، وظائف عديدة"
+
+msgid "Each chatbot is built around your specific workflows — not a generic FAQ widget."
+msgstr "كل روبوت دردشة مبني حول سير عملك المحدد — وليس أداة FAQ عامة."
+
+msgid "Appointment Booking"
+msgstr "حجز المواعيد"
+
+msgid "Checks your calendar, offers available slots, confirms bookings and sends reminders — all without human involvement."
+msgstr "يتحقق من جدولك ويعرض المواعيد المتاحة ويؤكد الحجوزات ويرسل تذكيرات — دون تدخل بشري."
+
+msgid "Out-of-Hours Cover"
+msgstr "تغطية خارج أوقات العمل"
+
+msgid "When your team is offline the bot handles enquiries, captures contact details, and queues requests for morning review."
+msgstr "عندما يكون فريقك غير متصل، يتولى الروبوت الاستفسارات ويلتقط تفاصيل الاتصال."
+
+msgid "Lead Qualification"
+msgstr "تأهيل العملاء المحتملين"
+
+msgid "Asks the right questions, scores leads by interest and budget, and routes hot prospects directly to your sales team."
+msgstr "يطرح الأسئلة الصحيحة ويُنقّط العملاء المحتملين ويوجّه المرشحين الساخنين لفريق المبيعات."
+
+msgid "Restaurant & Hotel Orders"
+msgstr "طلبات المطاعم والفنادق"
+
+msgid "Table reservations, room service orders, special requests — guests interact naturally and staff get structured summaries."
+msgstr "حجوزات الطاولات وطلبات خدمة الغرف والطلبات الخاصة — تفاعل طبيعي للضيوف."
+
+msgid "Customer Support"
+msgstr "دعم العملاء"
+
+msgid "Answers FAQs, tracks orders, resets passwords, and escalates to a human agent only when it genuinely needs to."
+msgstr "يجيب على الأسئلة الشائعة ويتتبع الطلبات ويُعيد ضبط كلمات المرور ويُحال إلى إنسان عند الضرورة."
+
+msgid "Education & Onboarding"
+msgstr "التعليم والتهيئة"
+
+msgid "Guides new students or users through onboarding steps, answers course questions, and sends scheduled reminders."
+msgstr "يرشد الطلاب الجدد خلال خطوات التهيئة ويجيب على أسئلة الدورة ويرسل تذكيرات."
+
+msgid "Wherever Your Customers Are"
+msgstr "أينما كان عملاؤك"
+
+msgid "We connect the bot to the channels you already use — no new apps for your customers."
+msgstr "نربط الروبوت بالقنوات التي تستخدمها بالفعل — لا تطبيقات جديدة لعملائك."
+
+msgid "WhatsApp Business"
+msgstr "WhatsApp Business"
+
+msgid "The most-used messaging app in Europe and beyond. Your customers already have it — your bot meets them there."
+msgstr "أكثر تطبيقات المراسلة استخداماً في أوروبا. عملاؤك لديه بالفعل — روبوتك يلتقي بهم هناك."
+
+msgid "Official WhatsApp Business API"
+msgstr "واجهة برمجة WhatsApp Business الرسمية"
+
+msgid "Rich messages with buttons"
+msgstr "رسائل غنية بأزرار"
+
+msgid "Template message broadcasts"
+msgstr "بث رسائل القوالب"
+
+msgid "Human handoff when needed"
+msgstr "تحويل بشري عند الحاجة"
+
+msgid "Most Requested"
+msgstr "الأكثر طلباً"
+
+msgid "Website Widget"
+msgstr "أداة الموقع"
+
+msgid "A floating chat bubble embedded directly on your site — matches your brand, loads fast, works on mobile."
+msgstr "فقاعة دردشة عائمة مدمجة مباشرة في موقعك — تناسب علامتك وتُحمَّل بسرعة وتعمل على الهاتف."
+
+msgid "One script tag install"
+msgstr "تثبيت بعلامة script واحدة"
+
+msgid "Fully branded UI"
+msgstr "واجهة مستخدم بعلامتك الكاملة"
+
+msgid "Proactive triggers"
+msgstr "محفزات استباقية"
+
+msgid "Great for tech-savvy audiences, internal tools, and communities. Supports rich buttons, files, and inline keyboards."
+msgstr "رائع للجماهير التقنية والأدوات الداخلية. يدعم الأزرار والملفات ولوحات المفاتيح المضمّنة."
+
+msgid "Inline keyboards"
+msgstr "لوحات مفاتيح مضمّنة"
+
+msgid "File & media sharing"
+msgstr "مشاركة الملفات والوسائط"
+
+msgid "Group & channel bots"
+msgstr "روبوتات المجموعات والقنوات"
+
+msgid "Instagram DM"
+msgstr "رسائل Instagram المباشرة"
+
+msgid "Auto-reply to story mentions, DMs, and comments. Turn your Instagram audience into booked appointments and paying customers."
+msgstr "رد تلقائي على الإشارات في القصص والرسائل المباشرة والتعليقات. حوّل جمهور Instagram إلى مواعيد ومبيعات."
+
+msgid "Story mention replies"
+msgstr "ردود على إشارات القصص"
+
+msgid "Comment auto-response"
+msgstr "رد تلقائي على التعليقات"
+
+msgid "DM flows"
+msgstr "تدفقات الرسائل المباشرة"
+
+msgid "Try It Now"
+msgstr "جرّبه الآن"
+
+msgid "Live Chatbot Demo"
+msgstr "عرض روبوت الدردشة المباشر"
+
+msgid "Click a scenario and watch the conversation unfold in real time."
+msgstr "انقر على سيناريو وشاهد المحادثة تتكشف في الوقت الفعلي."
+
+msgid "Pick a scenario:"
+msgstr "اختر سيناريو:"
+
+msgid "Appointment"
+msgstr "موعد"
+
+msgid "Lead Capture"
+msgstr "التقاط عميل محتمل"
+
+msgid "After Hours"
+msgstr "بعد أوقات العمل"
+
+msgid "Replay"
+msgstr "إعادة تشغيل"
+
+msgid "How We Build Your Bot"
+msgstr "كيف نبني روبوتك"
+
+msgid "Discovery & Flow Design"
+msgstr "الاستكشاف وتصميم التدفق"
+
+msgid "We map your top 20 customer questions, design the conversation flows, and agree on tone of voice — formal, friendly, or somewhere in between."
+msgstr "نرسم أهم 20 سؤالاً من عملائك ونصمم تدفقات المحادثة ونتفق على نبرة الصوت."
+
+msgid "Training & Knowledge Base"
+msgstr "التدريب وقاعدة المعرفة"
+
+msgid "We feed the bot your FAQs, product catalogue, pricing, policies, and booking rules. It learns your business, not generic answers."
+msgstr "نُزوّد الروبوت بأسئلتك الشائعة وكتالوج المنتجات والأسعار والسياسات وقواعد الحجز."
+
+msgid "Integrations"
+msgstr "التكاملات"
+
+msgid "Connect to your CRM, calendar, booking system, or database. The bot reads and writes real data — not just text responses."
+msgstr "الاتصال بـ CRM والتقويم ونظام الحجز أو قاعدة البيانات. الروبوت يقرأ ويكتب بيانات حقيقية."
+
+msgid "Testing & Tuning"
+msgstr "الاختبار والضبط"
+
+msgid "We run hundreds of test conversations, fix edge cases, calibrate escalation triggers, and refine responses until confidence is high."
+msgstr "نجري مئات من محادثات الاختبار ونُصلح الحالات الخاصة ونُحسّن الاستجابات حتى تكون عالية الجودة."
+
+msgid "Launch & Monitor"
+msgstr "الإطلاق والمراقبة"
+
+msgid "Go live across all channels. We monitor conversations for the first two weeks, tweak responses, and hand over a simple admin dashboard."
+msgstr "الإطلاق عبر جميع القنوات. نراقب المحادثات لأسبوعين ونسلّم لوحة تحكم إدارية بسيطة."
+
+msgid "Under the Hood"
+msgstr "تحت الغطاء"
+
+msgid "What Every Bot Includes"
+msgstr "ما يتضمنه كل روبوت"
+
+msgid "GPT-4 Powered"
+msgstr "مدعوم بـ GPT-4"
+
+msgid "Natural, context-aware conversations — not rigid decision trees."
+msgstr "محادثات طبيعية واعية بالسياق — لا أشجار قرار صارمة."
+
+msgid "Detects visitor language and switches automatically. 12+ languages."
+msgstr "يكتشف لغة الزائر ويبدّل تلقائياً. أكثر من 12 لغة."
+
+msgid "Human Handoff"
+msgstr "التحويل البشري"
+
+msgid "Escalates gracefully when it can't help — no frustrating dead ends."
+msgstr "يُحيل بأناقة عندما لا يستطيع المساعدة — لا طرق مسدودة محبطة."
+
+msgid "Analytics Dashboard"
+msgstr "لوحة تحكم تحليلية"
+
+msgid "Conversation volume, resolution rate, drop-off points, top intents."
+msgstr "حجم المحادثات ومعدل الحل ونقاط التخلي والنوايا الرئيسية."
+
+msgid "Business Hours Logic"
+msgstr "منطق ساعات العمل"
+
+msgid "Different flows for open hours, closed, holidays, and peak times."
+msgstr "تدفقات مختلفة لساعات العمل والإغلاق والعطلات وأوقات الذروة."
+
+msgid "CRM Integration"
+msgstr "تكامل CRM"
+
+msgid "Writes leads, bookings, and notes directly into your existing tools."
+msgstr "يكتب العملاء المحتملين والحجوزات والملاحظات مباشرة في أدواتك الحالية."
+
+msgid "Smart Notifications"
+msgstr "إشعارات ذكية"
+
+msgid "Sends reminders, follow-ups, and confirmations automatically."
+msgstr "يرسل التذكيرات والمتابعات والتأكيدات تلقائياً."
+
+msgid "GDPR Compliant"
+msgstr "متوافق مع GDPR"
+
+msgid "Consent collection, data minimisation, and right-to-erasure built in."
+msgstr "جمع الموافقة وتقليل البيانات وحق الحذف مدمجة."
+
+msgid "Bot vs No Bot"
+msgstr "روبوت مقابل بدون روبوت"
+
+msgid "What changes when a chatbot handles your front line."
+msgstr "ما الذي يتغير عندما يتولى روبوت الدردشة خطك الأمامي."
+
+msgid "Without a Bot"
+msgstr "بدون روبوت"
+
+msgid "Enquiries missed after hours"
+msgstr "استفسارات مفوّتة بعد أوقات العمل"
+
+msgid "Staff answer same questions daily"
+msgstr "الموظفون يجيبون على نفس الأسئلة يومياً"
+
+msgid "Leads go cold waiting for a reply"
+msgstr "العملاء المحتملون يبردون في انتظار الرد"
+
+msgid "Booking errors and double-bookings"
+msgstr "أخطاء الحجز والحجوزات المزدوجة"
+
+msgid "No data on what customers ask"
+msgstr "لا بيانات حول ما يسأله العملاء"
+
+msgid "Response time: hours or days"
+msgstr "وقت الاستجابة: ساعات أو أيام"
+
+msgid "With G‑Bot"
+msgstr "مع G‑Bot"
+
+msgid "Handled 24/7, even on holidays"
+msgstr "معالج 24/7، حتى في أيام الإجازات"
+
+msgid "Bot handles 87% without human help"
+msgstr "الروبوت يتعامل مع 87% بدون مساعدة بشرية"
+
+msgid "Instant reply, lead captured in seconds"
+msgstr "رد فوري، عميل محتمل يُلتقط في ثوانٍ"
+
+msgid "Calendar sync prevents conflicts"
+msgstr "مزامنة التقويم تمنع التعارضات"
+
+msgid "Full analytics on every conversation"
+msgstr "تحليلات كاملة على كل محادثة"
+
+msgid "Response time: under 1 second"
+msgstr "وقت الاستجابة: أقل من ثانية واحدة"
+
+# ── PORTFOLIO ──────────────────────────────────────────────
+msgid "Portfolio · Delivered Work"
+msgstr "الأعمال · المشاريع المُسلَّمة"
+
+msgid "Projects We've Built & Shipped"
+msgstr "مشاريع بنيناها وسلّمناها"
+
+msgid "From enterprise web platforms to real-time inventory systems and data analytics dashboards — every project here was delivered on time, designed with care, and built to last."
+msgstr "من منصات الويب الشركية إلى أنظمة المخزون الفورية ولوحات تحليل البيانات — كل مشروع مُسلَّم في الوقت المحدد."
+
+msgid "Clients"
+msgstr "عميل"
+
+msgid "Industries"
+msgstr "قطاع"
+
+msgid "On-time"
+msgstr "في الموعد"
+
+msgid "View All Projects"
+msgstr "عرض جميع المشاريع"
+
+msgid "Start a Project"
+msgstr "ابدأ مشروعاً"
+
+msgid "All Projects"
+msgstr "جميع المشاريع"
+
+msgid "Web Dev"
+msgstr "تطوير ويب"
+
+msgid "Applications"
+msgstr "تطبيقات"
+
+msgid "Data & Analytics"
+msgstr "البيانات والتحليلات"
+
+msgid "Our Process"
+msgstr "عمليتنا"
+
+msgid "How We Deliver"
+msgstr "كيف نُسلِّم"
+
+msgid "Every project follows the same proven methodology — from the first call to launch day, and beyond."
+msgstr "كل مشروع يتبع نفس المنهجية المُجرَّبة — من أول مكالمة إلى يوم الإطلاق وما بعده."
+
+msgid "We learn your business goals, users and constraints. A detailed spec comes out of this, agreed before we write a single line of code."
+msgstr "نتعلم أهدافك التجارية ومستخدميك وقيودك. مواصفات مفصلة تنتج عن ذلك، متفق عليها قبل أي كود."
+
+msgid "Design & Plan"
+msgstr "التصميم والتخطيط"
+
+msgid "UI mockups, database schema, API contracts — nothing is built until the design is signed off by you."
+msgstr "نماذج UI ومخطط قاعدة البيانات وعقود API — لا شيء يُبنى حتى تعتمد التصميم."
+
+msgid "Build"
+msgstr "البناء"
+
+msgid "Sprint-based delivery with weekly demos. You see real progress every week — never in the dark about your project."
+msgstr "تسليم قائم على سبرينت مع عروض أسبوعية. ترى تقدماً حقيقياً كل أسبوع."
+
+msgid "Ship & Support"
+msgstr "التسليم والدعم"
+
+msgid "Full deployment, QA and post-launch support. We stay on until you're confident the product is truly yours."
+msgstr "نشر كامل وضبط جودة ودعم ما بعد الإطلاق حتى تكون واثقاً أن المنتج ملكك حقاً."
+
+msgid "Your Project, Next"
+msgstr "مشروعك التالي"
+
+msgid "Every project on this page started with a single conversation. Let's have yours — tell us what you need and we'll come back with a plan, for free."
+msgstr "كل مشروع في هذه الصفحة بدأ بمحادثة واحدة. دعنا نُجري محادثتك — أخبرنا باحتياجاتك وسنعود بخطة مجانية."
+
+msgid "Partner with Us"
+msgstr "شاركنا"
+
+# ── OUR VISION ─────────────────────────────────────────────
+msgid "Building the Global Tech Future"
+msgstr "بناء مستقبل التكنولوجيا العالمي"
+
+msgid "We see a world where AI and technology are tools of empowerment — accessible, ethical and designed around the people who use them. G‑Fenix is building toward that future, one product at a time, from Barcelona to the world."
+msgstr "نرى عالماً تكون فيه الذكاء الاصطناعي والتكنولوجيا أدوات تمكين — متاحة وأخلاقية ومصممة حول مستخدميها. G‑Fenix يبني نحو ذلك المستقبل."
+
+msgid "AI that assists, never replaces human judgement"
+msgstr "ذكاء اصطناعي يساعد ولا يحل محل الحكم البشري"
+
+msgid "Products built for international teams and markets"
+msgstr "منتجات مبنية للفرق والأسواق الدولية"
+
+msgid "Technology that grows with your business"
+msgstr "تكنولوجيا تنمو مع عملك"
+
+msgid "Roadmap"
+msgstr "خارطة الطريق"
+
+msgid "Where We've Been & Where We're Going"
+msgstr "أين كنا وإلى أين نتجه"
+
+msgid "Our journey from a small dev team to an international technology partner — and the milestones still ahead."
+msgstr "رحلتنا من فريق تطوير صغير إلى شريك تقنولوجي دولي."
+
+msgid "G‑Fenix is born"
+msgstr "ولادة G‑Fenix"
+
+msgid "Started as a small team of developers and data engineers with a simple goal: build software that actually solves business problems. First three clients. First three deliveries. Zero late projects."
+msgstr "بدأنا كفريق صغير من المطورين ومهندسي البيانات. أول ثلاثة عملاء. أول ثلاث تسليمات. صفر مشاريع متأخرة."
+
+msgid "Expanding into Data & AI"
+msgstr "التوسع في البيانات والذكاء الاصطناعي"
+
+msgid "We added a full Data Consultancy practice. BI dashboards, ETL pipelines, Power BI and predictive analytics for clients in Spain, Bulgaria and beyond. MWC Barcelona attendance — connecting with global innovators."
+msgstr "أضفنا ممارسة استشارات بيانات كاملة. لوحات BI وقنوات ETL وPower BI. حضور MWC Barcelona."
+
+msgid "Enterprise Products & AI Tooling"
+msgstr "منتجات المؤسسات وأدوات الذكاء الاصطناعي"
+
+msgid "Launched our MDM Enterprise Portal, StockSense inventory platform and first AI chatbot integrations. Team grew. Industries diversified. Clients now span four countries."
+msgstr "أطلقنا بوابة MDM Enterprise وStockSense وأولى تكاملات روبوت الدردشة. عملاء في أربع دول."
+
+msgid "Global AI-First Platform"
+msgstr "منصة عالمية تُقدّم الذكاء الاصطناعي"
+
+msgid "Building an AI-native product suite available internationally. Proprietary analytics platform, multi-language support for 10+ regions, a partner network across Europe and beyond. Technology for people, at global scale."
+msgstr "بناء مجموعة منتجات أصيلة بالذكاء الاصطناعي متاحة دولياً. دعم 10+ منطقة. شبكة شركاء عبر أوروبا."
+
+msgid "Strategic Focus"
+msgstr "التركيز الاستراتيجي"
+
+msgid "Three pillars of our future"
+msgstr "ثلاث ركائز لمستقبلنا"
+
+msgid "These are the areas we are investing in most — because we believe they represent the biggest opportunity to help people."
+msgstr "هذه المجالات التي نستثمر فيها أكثر — لأننا نؤمن أنها تمثل أكبر فرصة لمساعدة الناس."
+
+msgid "AI for Everyone"
+msgstr "الذكاء الاصطناعي للجميع"
+
+msgid "We're building AI tools that are practical, explainable and affordable for small and medium businesses — not just tech giants. Intelligent automation that your team can actually use and trust."
+msgstr "نبني أدوات ذكاء اصطناعي عملية وقابلة للتفسير وبأسعار معقولة للشركات الصغيرة والمتوسطة. أتمتة ذكية يثق بها فريقك."
+
+msgid "International Scale"
+msgstr "نطاق دولي"
+
+msgid "Our products are built multilingual and multi-currency from day one. We're expanding our client base across Europe, with a focus on Spain, Bulgaria, Turkey and the UK — and growing further."
+msgstr "منتجاتنا متعددة اللغات والعملات من اليوم الأول. نوسّع قاعدة عملائنا عبر أوروبا."
+
+msgid "Human-Centred Tech"
+msgstr "تكنولوجيا تتمحور حول الإنسان"
+
+msgid "Every product we build is evaluated by one question: does this genuinely help the person using it? We focus on usability, accessibility and real-world outcomes — not feature lists."
+msgstr "كل منتج نبنيه يُقيَّم بسؤال واحد: هل يساعد مستخدمه حقاً؟ نركز على الاستخدامية وإمكانية الوصول والنتائج الفعلية."
+
+msgid "Be part of the vision"
+msgstr "كن جزءاً من الرؤية"
+
+msgid "Whether you're a client, a partner or a developer who shares our values — there's a place for you in this journey. Let's build the future together."
+msgstr "سواء كنت عميلاً أو شريكاً أو مطوراً يشاركنا قيمنا — هناك مكان لك في هذه الرحلة."
+
+msgid "Become a Partner"
+msgstr "كن شريكاً"
+
+msgid "Get in Touch"
+msgstr "تواصل معنا"
+
+# ── OUR MISSION ────────────────────────────────────────────
+msgid "Technology That Works for People"
+msgstr "تكنولوجيا تعمل من أجل الناس"
+
+msgid "We exist to build web applications that genuinely make life easier — for individuals, teams and businesses. And to help companies grow by turning their raw data into clear, actionable strategy."
+msgstr "نحن موجودون لبناء تطبيقات ويب تُسهّل الحياة حقاً. ولمساعدة الشركات على النمو بتحويل بياناتها الخام إلى استراتيجية واضحة وقابلة للتنفيذ."
+
+msgid "See What We Build"
+msgstr "شاهد ما نبنيه"
+
+msgid "Work with Us"
+msgstr "اعمل معنا"
+
+msgid "What We Do"
+msgstr "ما نفعله"
+
+msgid "Three ways we make an impact"
+msgstr "ثلاثة طرق نحدث بها تأثيراً"
+
+msgid "Everything we do flows from one belief: technology should simplify, not complicate."
+msgstr "كل ما نفعله ينبثق من إيمان واحد: التكنولوجيا يجب أن تُبسّط لا أن تُعقّد."
+
+msgid "Web Applications"
+msgstr "تطبيقات الويب"
+
+msgid "We design and build full-stack web apps — business websites, e-commerce platforms, custom admin panels and SaaS tools — that solve real problems and ship on time."
+msgstr "نصمم ونبني تطبيقات ويب متكاملة — مواقع شركات ومنصات تجارة إلكترونية ولوحات تحكم مخصصة وأدوات SaaS."
+
+msgid "Data Consultancy"
+msgstr "استشارات البيانات"
+
+msgid "We turn messy spreadsheets and siloed databases into clear insights and automated dashboards. Growth decisions backed by data, not guesswork."
+msgstr "نحوّل جداول البيانات الفوضوية وقواعد البيانات المعزولة إلى رؤى واضحة ولوحات تحكم مؤتمتة."
+
+msgid "AI & Automation"
+msgstr "الذكاء الاصطناعي والأتمتة"
+
+msgid "Intelligent chatbots, automated workflows and AI-assisted analysis tools that save your team hours every week and keep you ahead of the curve."
+msgstr "روبوتات دردشة ذكية وسير عمل مؤتمت وأدوات تحليل بمساعدة الذكاء الاصطناعي تُوفّر ساعات لفريقك."
+
+msgid "Projects delivered"
+msgstr "مشروع مُسلَّم"
+
+msgid "Businesses grown"
+msgstr "شركة نمت"
+
+msgid "Countries reached"
+msgstr "دولة وصلنا إليها"
+
+msgid "On-time delivery"
+msgstr "تسليم في الموعد"
+
+msgid "What Drives Us"
+msgstr "ما الذي يحرّكنا"
+
+msgid "Our Core Values"
+msgstr "قيمنا الأساسية"
+
+msgid "The principles that shape every line of code we write and every conversation we have with a client."
+msgstr "المبادئ التي تُشكّل كل سطر كود نكتبه وكل محادثة مع عميل."
+
+msgid "Simplicity First"
+msgstr "البساطة أولاً"
+
+msgid "We resist unnecessary complexity. Every feature we build has a clear purpose, and if it doesn't make the user's life simpler, we don't ship it."
+msgstr "نقاوم التعقيد غير الضروري. كل ميزة نبنيها لها هدف واضح — إن لم تُبسّط حياة المستخدم لا نُطلقها."
+
+msgid "Radical Transparency"
+msgstr "شفافية جذرية"
+
+msgid "No hidden costs, no surprise pivots. We tell our clients exactly what we're building, when it'll be ready and why we made each decision."
+msgstr "لا تكاليف خفية ولا تحولات مفاجئة. نُخبر عملاءنا بالضبط ما نبنيه ومتى سيكون جاهزاً ولماذا اتخذنا كل قرار."
+
+msgid "Speed with Quality"
+msgstr "السرعة مع الجودة"
+
+msgid "We move fast because we plan well. Good architecture means you can iterate quickly without breaking things — and users never have to wait."
+msgstr "نتحرك بسرعة لأننا نخطط جيداً. البنية الجيدة تعني إمكانية التطوير السريع دون كسر أي شيء."
+
+msgid "Impact at Scale"
+msgstr "تأثير على نطاق واسع"
+
+msgid "We think beyond the single client. Every tool we build is designed to be maintained, extended and scaled — today's project is tomorrow's platform."
+msgstr "نفكر بما هو أبعد من العميل الواحد. كل أداة نبنيها مُصمَّمة للصيانة والتوسع والتوسع. مشروع اليوم هو منصة الغد."
+
+msgid "Ready to make an impact?"
+msgstr "هل أنت مستعد لإحداث تأثير؟"
+
+msgid "Tell us about your business challenge and we'll come back with a clear plan — no jargon, no fluff, just a real solution."
+msgstr "أخبرنا بتحديك التجاري وسنعود بخطة واضحة — بدون مصطلحات معقدة، فقط حل حقيقي."
+
+msgid "See Our Vision"
+msgstr "شاهد رؤيتنا"
+
+# ── PARTNERSHIP ────────────────────────────────────────────
+msgid "Partnership Program · G‑Fenix"
+msgstr "برنامج الشراكة · G‑Fenix"
+
+msgid "Grow. Earn. Together."
+msgstr "انمُ. اكسب. معاً."
+
+msgid "Join the G‑Fenix partner network. Whether you refer clients or co-build projects with us, we share the revenue, the work, and the success — fairly and transparently."
+msgstr "انضم إلى شبكة شركاء G‑Fenix. سواء أحلت عملاء أو شاركتنا في بناء مشاريع، نتشارك العائدات والعمل والنجاح."
+
+msgid "Revenue Share"
+msgstr "مشاركة الإيرادات"
+
+msgid "Referral Program"
+msgstr "برنامج الإحالة"
+
+msgid "No Hidden Fees"
+msgstr "لا رسوم خفية"
+
+msgid "How it works"
+msgstr "كيف يعمل"
+
+msgid "Response Time"
+msgstr "وقت الاستجابة"
+
+msgid "No Earning Cap"
+msgstr "لا حد أقصى للأرباح"
+
+msgid "Partner Types"
+msgstr "أنواع الشركاء"
+
+msgid "Process"
+msgstr "العملية"
+
+msgid "How It Works"
+msgstr "كيف يعمل"
+
+msgid "Four simple steps from first contact to your first payout. No complex contracts, no fine print."
+msgstr "أربع خطوات بسيطة من أول تواصل إلى أول دفعة. لا عقود معقدة ولا بنود دقيقة."
+
+msgid "Apply"
+msgstr "تقدّم"
+
+msgid "Reach out via our Contact page. Tell us about yourself, your network, and what kind of partnership you have in mind. We reply within 24 hours."
+msgstr "تواصل عبر صفحة الاتصال. أخبرنا عن نفسك وشبكتك ونوع الشراكة التي تفكر فيها. نرد خلال 24 ساعة."
+
+msgid "Align"
+msgstr "توافق"
+
+msgid "We schedule a quick 30-minute call to understand your goals and define which model fits best — referral commission or revenue share on co-built projects."
+msgstr "نجدول مكالمة سريعة 30 دقيقة لفهم أهدافك وتحديد النموذج الأنسب — عمولة إحالة أم مشاركة إيرادات."
+
+msgid "Launch"
+msgstr "انطلاق"
+
+msgid "You refer a client or co-build a project with us. G‑Fenix handles delivery with full quality and keeps you updated throughout."
+msgstr "تُحيل عميلاً أو تشاركنا في بناء مشروع. G‑Fenix يتولى التسليم بجودة كاملة ويبقيك محدّثاً."
+
+msgid "Earn"
+msgstr "اكسب"
+
+msgid "Once the project closes, your agreed share lands in your account. No delays, no excuses — just fair reward for your contribution."
+msgstr "بمجرد إغلاق المشروع، يصل حصتك المتفق عليها لحسابك. لا تأخير ولا أعذار — مكافأة عادلة لمساهمتك."
+
+msgid "Models"
+msgstr "النماذج"
+
+msgid "Two Ways to Collaborate"
+msgstr "طريقتان للتعاون"
+
+msgid "Choose the model that fits your style — or mix both."
+msgstr "اختر النموذج المناسب لأسلوبك — أو امزج بينهما."
+
+msgid "Best for: Agencies & Devs"
+msgstr "الأنسب لـ: الوكالات والمطورين"
+
+msgid "Co-build projects with G‑Fenix. You bring the client, the idea, or the technical skill — we combine forces and split revenue based on contribution. Agreed upfront, transparent throughout."
+msgstr "شارك G‑Fenix في بناء المشاريع. تُحضر العميل أو الفكرة أو المهارة التقنية — نجمع القوى ونقسم الإيرادات حسب المساهمة."
+
+msgid "Split defined upfront in writing"
+msgstr "التقسيم مُحدَّد مسبقاً بالكتابة"
+
+msgid "Full billing transparency"
+msgstr "شفافية كاملة في الفواتير"
+
+msgid "Ongoing collaboration possible"
+msgstr "تعاون مستمر ممكن"
+
+msgid "Suitable for technical partners"
+msgstr "مناسب للشركاء التقنيين"
+
+msgid "Best for: Freelancers & Consultants"
+msgstr "الأنسب لـ: المستقلين والمستشارين"
+
+msgid "Know someone who needs a website, data solution, or chatbot? Refer them to G‑Fenix and earn a commission when the project kicks off — no technical involvement required on your end."
+msgstr "تعرف شخصاً يحتاج موقعاً أو حل بيانات أو روبوت دردشة؟ أحله إلى G‑Fenix واكسب عمولة عند انطلاق المشروع."
+
+msgid "Estimate your referral earnings"
+msgstr "احسب أرباح إحالتك"
+
+msgid "Project value (€)"
+msgstr "قيمة المشروع (€)"
+
+msgid "You earn: €450"
+msgstr "تكسب: €450"
+
+msgid "Commission on every referral"
+msgstr "عمولة على كل إحالة"
+
+msgid "No cap on how many you refer"
+msgstr "لا حد لعدد الإحالات"
+
+msgid "Zero effort after introduction"
+msgstr "صفر جهد بعد التعريف"
+
+msgid "Perfect for networkers"
+msgstr "مثالي لصانعي العلاقات"
+
+msgid "Who Can Join"
+msgstr "من يمكنه الانضمام"
+
+msgid "Built for Builders, Connectors & Founders"
+msgstr "مبني للبنائين والوصلات والمؤسسين"
+
+msgid "Freelancers & Independent Devs"
+msgstr "المستقلون والمطورون المستقلون"
+
+msgid "You take on client work but sometimes the scope goes beyond your bandwidth. Refer overflow projects to G‑Fenix and earn a cut — or co-deliver with us on larger builds."
+msgstr "تتعامل مع مشاريع عملاء لكن أحياناً يتجاوز النطاق طاقتك. أحل المشاريع الفائضة أو اشترك معنا."
+
+msgid "Agencies & Consultancies"
+msgstr "الوكالات ومشاريع الاستشارات"
+
+msgid "Extend your offering without hiring. We act as white-label technical arm — your brand, our delivery."
+msgstr "وسّع عرضك دون توظيف. نعمل كذراع تقني بعلامتك التجارية — علامتك، تسليمنا."
+
+msgid "Startups & Early-Stage Teams"
+msgstr "الشركات الناشئة والفرق المبكرة"
+
+msgid "Need tech but not a full team yet? Partner with G‑Fenix as your development arm. We structure deals that work at your stage."
+msgstr "تحتاج تقنية لكن ليس فريقاً كاملاً بعد؟ تشارك مع G‑Fenix كذراع تطوير. نُهيكل صفقات تناسب مرحلتك."
+
+msgid "Common Questions"
+msgstr "أسئلة شائعة"
+
+msgid "Is there a cost to join the partnership program?"
+msgstr "هل هناك تكلفة للانضمام إلى برنامج الشراكة؟"
+
+msgid "No. Joining as a partner is completely free. We only make money when a project succeeds — so it's in our interest to help you succeed too."
+msgstr "لا. الانضمام كشريك مجاني تماماً. نكسب المال فقط عند نجاح المشروع — لذا من مصلحتنا مساعدتك على النجاح."
+
+msgid "How is the revenue split decided?"
+msgstr "كيف تُحدَّد نسبة تقسيم الإيرادات؟"
+
+msgid "We discuss and agree on the split before any work starts. The split depends on the contribution — who brought the client, who handles project management, who does technical work. Everything is put in writing."
+msgstr "نناقش ونتفق على التقسيم قبل بدء أي عمل. التقسيم يعتمد على المساهمة. كل شيء يُوثَّق كتابةً."
+
+msgid "When do I get paid after a referral?"
+msgstr "متى أتقاضى الدفع بعد الإحالة؟"
+
+msgid "Commission is paid once the referred client's project has been confirmed and the first payment has been received by G‑Fenix. We don't make you wait until project completion."
+msgstr "تُدفع العمولة بعد تأكيد مشروع العميل المُحال واستلام G‑Fenix للدفعة الأولى. لا انتظار حتى اكتمال المشروع."
+
+msgid "Can I be both a referral partner and a revenue share partner?"
+msgstr "هل يمكنني أن أكون شريك إحالة وشريك مشاركة إيرادات في نفس الوقت؟"
+
+msgid "Absolutely. The model is decided per project. You can refer one client and co-build another — there's no exclusivity between the two models."
+msgstr "بالتأكيد. النموذج يُحدَّد لكل مشروع. يمكنك إحالة عميل وبناء مشروع آخر بشكل مشترك — لا حصرية بين النموذجين."
+
+msgid "Do I need a technical background to partner with G‑Fenix?"
+msgstr "هل أحتاج خلفية تقنية للتشارك مع G‑Fenix؟"
+
+msgid "Not at all. The referral program requires zero technical knowledge. If you know businesses that need web, data, or AI solutions — that's enough."
+msgstr "لا على الإطلاق. برنامج الإحالة لا يتطلب أي معرفة تقنية. معرفة شركات تحتاج حلولاً تكفي."
+
+msgid "Ready to Build Something Great Together?"
+msgstr "مستعد لبناء شيء رائع معاً؟"
+
+msgid "Drop us a message and we'll set up a quick call to explore how we can work together. No pressure, no commitment required."
+msgstr "أرسل لنا رسالة وسنرتب مكالمة سريعة لاستكشاف كيف يمكننا العمل معاً. لا ضغط ولا التزام مطلوب."
+
+# ── CONTACT ────────────────────────────────────────────────
+msgid "Have a project in mind? Send us a message and we'll get back to you within a few hours."
+msgstr "لديك مشروع في ذهنك؟ أرسل لنا رسالة وسنرد في غضون ساعات قليلة."
+
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+msgid "Phone"
+msgstr "الهاتف"
+
+msgid "Working Hours"
+msgstr "ساعات العمل"
+
+msgid "Mon – Fri, 9am – 6pm GMT"
+msgstr "الإثنين – الجمعة، 9ص – 6م GMT"
+
+msgid "Location"
+msgstr "الموقع"
+
+msgid "Send a Message"
+msgstr "أرسل رسالة"
+
+msgid "We'll get back to you with a free consultation."
+msgstr "سنعود إليك باستشارة مجانية."
+
+msgid "First name"
+msgstr "الاسم الأول"
+
+msgid "Last name"
+msgstr "اسم العائلة"
+
+msgid "Email address"
+msgstr "عنوان البريد الإلكتروني"
+
+msgid "Subject"
+msgstr "الموضوع"
+
+msgid "Project enquiry, partnership…"
+msgstr "استفسار مشروع، شراكة…"
+
+msgid "Message"
+msgstr "الرسالة"
+
+msgid "Tell us about your project…"
+msgstr "أخبرنا عن مشروعك…"
+
+msgid "Send Message"
+msgstr "أرسل الرسالة"
+
+msgid "Message Sent!"
+msgstr "تم إرسال الرسالة!"
+
+msgid "Thanks for reaching out. We'll review your message and get back to you within a few hours."
+msgstr "شكراً لتواصلك. سنراجع رسالتك ونعود إليك في غضون ساعات قليلة."
+
+# ── BLOG ───────────────────────────────────────────────────
+msgid "Stories · Events · Technology"
+msgstr "قصص · فعاليات · تكنولوجيا"
+
+msgid "Ideas that Shape the Future."
+msgstr "أفكار تُشكّل المستقبل."
+
+msgid "From the floors of MWC Barcelona to the depths of data engineering — we write about what we build, what we learn, and where tech is heading."
+msgstr "من أرضيات MWC Barcelona إلى أعماق هندسة البيانات — نكتب عما نبنيه وما نتعلمه وأين تتجه التكنولوجيا."
+
+msgid "Curated Resources"
+msgstr "موارد مختارة"
+
+msgid "Field Reports"
+msgstr "تقارير ميدانية"
+
+msgid "Scroll to explore"
+msgstr "مرّر للاستكشاف"
+
+msgid "Field Report"
+msgstr "تقرير ميداني"
+
+msgid "We attended MWC Barcelona 2025 as G‑FENIX"
+msgstr "حضرنا MWC Barcelona 2025 بصفتنا G‑FENIX"
+
+msgid "In March, we participated in MWC Barcelona 2025 (Mobile World Congress), held in Barcelona. At the world's largest mobile technology fair, we explored cutting-edge innovations — from AI-powered products and 5G solutions to smart city systems and digital health applications."
+msgstr "في مارس، شاركنا في MWC Barcelona 2025. في أكبر معرض تقنولوجيا موبايل في العالم، استكشفنا ابتكارات متطورة من منتجات الذكاء الاصطناعي إلى حلول 5G."
+
+msgid "Seeing the technologies shaping the future up close was truly inspiring. The scale, the energy, the sheer density of innovation — MWC reminded us exactly why we do what we do at G‑Fenix."
+msgstr "رؤية التقنيات التي تُشكّل المستقبل عن كثب كانت ملهمة حقاً. MWC ذكّرنا بالضبط لماذا نفعل ما نفعله."
+
+msgid "Attendees"
+msgstr "حاضر"
+
+msgid "Exhibitors"
+msgstr "عارض"
+
+msgid "AI Innovation"
+msgstr "ابتكار الذكاء الاصطناعي"
+
+msgid "Curated Reading"
+msgstr "قراءة مختارة"
+
+msgid "Data & Software Reading List"
+msgstr "قائمة قراءة البيانات والبرمجيات"
+
+msgid "9 hand-picked resources from the G‑Fenix team — the blogs, docs and communities we actually read."
+msgstr "9 موارد مختارة يدوياً من فريق G‑Fenix — المدونات والوثائق والمجتمعات التي نقرأها فعلاً."
+
+msgid "Read"
+msgstr "اقرأ"
+
+msgid "Featured"
+msgstr "مميز"
+
+# ── LEGAL ──────────────────────────────────────────────────
+msgid "Privacy Policy"
+msgstr "سياسة الخصوصية"
+
+msgid "Last updated:"
+msgstr "آخر تحديث:"
+
+msgid "Who We Are (Data Controller)"
+msgstr "من نحن (مراقب البيانات)"
+
+msgid "What Data We Collect"
+msgstr "البيانات التي نجمعها"
+
+msgid "Purposes & Legal Bases"
+msgstr "الأغراض والأسس القانونية"
+
+msgid "Sharing Your Data"
+msgstr "مشاركة بياناتك"
+
+msgid "Retention"
+msgstr "الاحتفاظ بالبيانات"
+
+msgid "Your Rights"
+msgstr "حقوقك"
+
+msgid "Changes to this Policy"
+msgstr "التغييرات على هذه السياسة"
+
+msgid "Cookie Policy"
+msgstr "سياسة ملفات تعريف الارتباط"
+
+msgid "What Are Cookies?"
+msgstr "ما هي ملفات تعريف الارتباط؟"
+
+msgid "Cookies are small text files placed on your device. They help keep you signed in, secure the Platform, and improve performance."
+msgstr "ملفات تعريف الارتباط هي ملفات نصية صغيرة توضع على جهازك. تساعد في إبقائك مسجل الدخول وتأمين المنصة."
+
+msgid "Who Sets Cookies?"
+msgstr "من يضع ملفات تعريف الارتباط؟"
+
+msgid "Types of Cookies We Use"
+msgstr "أنواع ملفات تعريف الارتباط التي نستخدمها"
+
+msgid "Terms of Service"
+msgstr "شروط الخدمة"
+
+msgid "Effective date:"
+msgstr "تاريخ السريان:"
+
+msgid "Acceptance"
+msgstr "القبول"
+
+msgid "Eligibility"
+msgstr "الأهلية"
+
+msgid "Accounts & Security"
+msgstr "الحسابات والأمان"
+
+msgid "Acceptable Use"
+msgstr "الاستخدام المقبول"
+
+msgid "Disclaimers"
+msgstr "إخلاء المسؤولية"
+
+msgid "Limitation of Liability"
+msgstr "تحديد المسؤولية"
+
+msgid "Termination"
+msgstr "الإنهاء"
+
+msgid "Governing Law & Venue"
+msgstr "القانون الحاكم والاختصاص القضائي"
+
+msgid "Changes"
+msgstr "التغييرات"
+
+# ── FOOTER CTA + MISSING ────────────────────────────────────
+msgid "Let's build something great"
+msgstr "لنبنِ شيئاً رائعاً معاً"
+
+msgid "Have a project in mind?"
+msgstr "هل لديك مشروع في ذهنك؟"
+
+msgid "Drop your email and we'll reach out within 24 hours. No spam — ever."
+msgstr "أدرج بريدك الإلكتروني وسنتواصل معك خلال 24 ساعة. لا رسائل مزعجة أبداً."
+
+msgid "Get in touch"
+msgstr "تواصل معنا"
+
+msgid "Multilingual Support"
+msgstr "الدعم متعدد اللغات"
+
+msgid "We add 9+ languages to your existing site. Hreflang, language-based SEO and auto-redirects included."
+msgstr "نضيف أكثر من 9 لغات إلى موقعك الحالي. تشمل Hreflang وتحسين محركات البحث المستند إلى اللغة وإعادة التوجيه التلقائية."
+
+msgid "Admin Panel"
+msgstr "لوحة التحكم"
+
+msgid "Role Access"
+msgstr "وصول حسب الدور"
+
+msgid "Notifications"
+msgstr "الإشعارات"
+
+msgid "Invoicing"
+msgstr "الفوترة"
+
+msgid "Reports"
+msgstr "التقارير"
+
+msgid "Secure"
+msgstr "آمن"
+
+msgid "Inventory"
+msgstr "المخزون"
+
+msgid "Alerts"
+msgstr "التنبيهات"
+
+msgid "Warehouse"
+msgstr "المستودع"
+
+msgid "Payments"
+msgstr "المدفوعات"
+
+msgid "Analytics"
+msgstr "التحليلات"
+
+msgid "9+ Languages"
+msgstr "+9 لغات"
+
+msgid "Explore Services"
+msgstr "استكشف الخدمات"
+
+msgid "Explore more"
+msgstr "استكشف المزيد"
+
+msgid "Stay in the loop"
+msgstr "ابقَ على اطلاع"
+
+msgid "Get weekly insights on tech, AI, and digital growth — no spam."
+msgstr "رؤى أسبوعية حول التقنية والذكاء الاصطناعي والنمو الرقمي — لا رسائل مزعجة."
+
+msgid "Subscribe"
+msgstr "اشترك"
+
+msgid "Your email address"
+msgstr "عنوان بريدك الإلكتروني"

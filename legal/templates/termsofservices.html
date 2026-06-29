@@ -1,0 +1,48 @@
+{% extends “layout.html” %}
+{% load static i18n %}
+{% block title %}{% trans “G-Fenix | Terms of Service” %}{% endblock %}
+
+{% block content %}
+<section class=”container py-5 page-dark”>
+  <h1>{% trans “Terms of Service” %}</h1>
+  <p><strong>{% trans “Effective date:” %}</strong> {% trans “June 2025” %}</p>
+
+  <h2>{% trans “1. Acceptance” %}</h2>
+  <p>{% blocktrans %}By accessing or using the G-Fénix website and services, you agree to these Terms of Service and our Privacy Policy and Cookie Policy.{% endblocktrans %}</p>
+
+  <h2>{% trans “2. Services” %}</h2>
+  <p>{% blocktrans %}G-Fénix provides web development, AI integration, data consultancy, digital design, and related digital services. The scope, deliverables, and pricing of any project are agreed in a separate written proposal or contract.{% endblocktrans %}</p>
+
+  <h2>{% trans “3. Use of the Website” %}</h2>
+  <ul>
+    <li>{% trans “You agree to use the website only for lawful purposes.” %}</li>
+    <li>{% trans “You must not attempt to access systems or data without authorisation, scrape content automatically, or interfere with the website’s operation.” %}</li>
+    <li>{% trans “Contact form submissions must be genuine enquiries.” %}</li>
+  </ul>
+
+  <h2>{% trans “4. AI Assistant” %}</h2>
+  <p>{% blocktrans %}Our website includes an AI-powered assistant. Responses are generated automatically and may not always be accurate. Do not share personal, confidential, or sensitive information through the chat. G-Fénix accepts no liability for decisions made based on AI responses.{% endblocktrans %}</p>
+
+  <h2>{% trans “5. Intellectual Property” %}</h2>
+  <p>{% blocktrans %}All content on this website — including text, design, code, and graphics — belongs to G-Fénix or its licensors. You may not reproduce or reuse any content without our prior written consent.{% endblocktrans %}</p>
+  <p>{% blocktrans %}For client projects, intellectual property ownership is defined in the individual project contract. Unless otherwise agreed, full ownership transfers to the client upon final payment.{% endblocktrans %}</p>
+
+  <h2>{% trans “6. Disclaimers” %}</h2>
+  <p>{% blocktrans %}The website and AI assistant are provided “as is.” We make no warranties regarding uninterrupted availability, accuracy of AI responses, or fitness for a particular purpose, to the fullest extent permitted by law.{% endblocktrans %}</p>
+
+  <h2>{% trans “7. Limitation of Liability” %}</h2>
+  <p>{% blocktrans %}To the maximum extent permitted by applicable law, G-Fénix is not liable for indirect, incidental, or consequential damages arising from the use of this website or reliance on any content on it.{% endblocktrans %}</p>
+
+  <h2>{% trans “8. Third-Party Links” %}</h2>
+  <p>{% blocktrans %}The website may contain links to third-party websites. We are not responsible for their content or privacy practices.{% endblocktrans %}</p>
+
+  <h2>{% trans “9. Governing Law” %}</h2>
+  <p>{% blocktrans %}These Terms are governed by the laws of Spain. Any disputes shall be subject to the exclusive jurisdiction of the courts of Barcelona, except where mandatory consumer protection rules provide otherwise.{% endblocktrans %}</p>
+
+  <h2>{% trans “10. Changes” %}</h2>
+  <p>{% blocktrans %}We may update these Terms from time to time. Continued use of the website after changes are posted constitutes acceptance of the updated Terms.{% endblocktrans %}</p>
+
+  <h2>{% trans “11. Contact” %}</h2>
+  <p>{% blocktrans %}Questions about these Terms? Contact us at hello@g-fenix.com{% endblocktrans %}</p>
+</section>
+{% endblock %}

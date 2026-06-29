@@ -1,0 +1,1140 @@
+{% load static %}{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}G-Fenix{% endblock %}</title>
+
+  <link rel="icon" type="image/png" href="{% static 'images/l1no.png' %}">
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css" rel="stylesheet">
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div id="gf-cursor-dot"></div>
+<div id="gf-cursor-ring"></div>
+
+<!-- ══ PAGE LOADER ══════════════════════════════════════ -->
+<div id="gf-loader" aria-hidden="true">
+  <div class="gf-loader-inner">
+    <img src="{% static 'images/l1ye.png' %}" alt="G-Fenix" class="gf-loader-logo">
+    <div class="gf-loader-bar"><div class="gf-loader-fill"></div></div>
+  </div>
+</div>
+
+  <canvas id="gf-star-canvas"></canvas>
+  <div id="gf-mouse-glow"></div>
+
+<!-- ═══════════════════════ NAVBAR ═══════════════════════ -->
+<nav class="gf-navbar" id="gfNavbar">
+  <div class="gf-nav-inner">
+
+    <!-- LEFT: LOGO -->
+    <a class="gf-logo-wrap" href="/">
+      <img src="{% static 'images/l1ye.png' %}" alt="G-Fenix" class="gf-logo-img">
+    </a>
+
+    <!-- CENTER: LINKS -->
+    <ul class="gf-nav-center">
+
+      <!-- SERVICES -->
+      <li class="gf-nav-item gf-has-mega" data-mega="services">
+        <a class="gf-nav-link" href="#">
+          {% trans "Services" %} <i class="fa-solid fa-chevron-down gf-caret"></i>
+        </a>
+      </li>
+
+      <!-- PORTFOLIO -->
+      <li class="gf-nav-item gf-has-mega" data-mega="portfolio">
+        <a class="gf-nav-link" href="#">
+          {% trans "Portfolio" %} <i class="fa-solid fa-chevron-down gf-caret"></i>
+        </a>
+      </li>
+
+      <!-- ABOUT -->
+      <li class="gf-nav-item gf-has-mega" data-mega="about">
+        <a class="gf-nav-link" href="#">
+          {% trans "About us" %} <i class="fa-solid fa-chevron-down gf-caret"></i>
+        </a>
+      </li>
+
+      <!-- BLOG -->
+      <li class="gf-nav-item">
+        <a class="gf-nav-link" href="/blog">{% trans "Blog" %}</a>
+      </li>
+
+      <!-- CTA inside nav links -->
+      <li class="gf-nav-item gf-nav-cta-item">
+        <a href="/contact-us" class="gf-nav-cta">{% trans "Contact Us" %}</a>
+      </li>
+    </ul>
+
+    <!-- RIGHT: LANGUAGE BAR ONLY -->
+    <div class="gf-nav-actions">
+      <div class="gf-lang-bar" id="gfLangBar">
+        <a href="#" onclick="gfSwitchLang('en');return false;" class="gf-lang-pill" data-lang="en">
+          <span class="fi fi-gb"></span>EN
+        </a>
+        <span class="gf-lang-sep">·</span>
+        <a href="#" onclick="gfSwitchLang('tr');return false;" class="gf-lang-pill" data-lang="tr">
+          <span class="fi fi-tr"></span>TR
+        </a>
+        <span class="gf-lang-sep">·</span>
+        <a href="#" onclick="gfSwitchLang('es');return false;" class="gf-lang-pill" data-lang="es">
+          <span class="fi fi-es"></span>ES
+        </a>
+        <span class="gf-lang-sep">·</span>
+        <a href="#" onclick="gfSwitchLang('ca');return false;" class="gf-lang-pill" data-lang="ca">
+          <span class="fi fi-es-ct"></span>CA
+        </a>
+      </div>
+    </div>
+
+    <!-- MOBILE TOGGLE -->
+    <button class="gf-mobile-toggle" id="gfMobileToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- ───────── MEGA PANELS ───────── -->
+
+  <!-- SERVICES MEGA -->
+  <div class="gf-mega-panel" id="mega-services">
+    <div class="gf-mega-inner">
+
+      <!-- BUILD column -->
+      <div class="gf-mega-col">
+        <div class="gf-mega-col-header">
+          <i class="fa-solid fa-hammer"></i> {% trans "Build" %}
+        </div>
+        <a class="gf-mega-card" href="/services/build/web-development">
+          <span class="gf-mc-icon" style="background:linear-gradient(135deg,#2563eb,#06b6d4)">
+            <i class="fa-solid fa-globe"></i>
+          </span>
+          <div>
+            <div class="gf-mc-title">{% trans "Web Development" %}</div>
+            <div class="gf-mc-desc">{% trans "Modern, fast & responsive websites" %}</div>
+          </div>
+        </a>
+        <a class="gf-mega-card" href="/services/build/qr-menu">
+          <span class="gf-mc-icon" style="background:linear-gradient(135deg,#7c3aed,#a855f7)">
+            <i class="fa-solid fa-qrcode"></i>
+          </span>
+          <div>
+            <div class="gf-mc-title">{% trans "QR Menu Solutions" %}</div>
+            <div class="gf-mc-desc">{% trans "Restaurants & hotels, multilingual CMS" %}</div>
+          </div>
+        </a>
+        <a class="gf-mega-card" href="/services/build/chatbots">
+          <span class="gf-mc-icon" style="background:linear-gradient(135deg,#b45309,#fbbf24)">
+            <i class="fa-solid fa-robot"></i>
+          </span>
+          <div>
+            <div class="gf-mc-title">{% trans "Chatbot & AI Agents" %}</div>
+            <div class="gf-mc-desc">{% trans "AI-powered chat widgets" %}</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- DATA column -->
+      <div class="gf-mega-col">
+        <div class="gf-mega-col-header">
+          <i class="fa-solid fa-chart-line"></i> {% trans "Data" %}
+        </div>
+        <a class="gf-mega-card" href="/services/data/data-expert-consultancy">
+          <span class="gf-mc-icon" style="background:linear-gradient(135deg,#dc2626,#fb923c)">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+          </span>
+          <div>
+            <div class="gf-mc-title">{% trans "Data Expert Consultancy" %}</div>
+            <div class="gf-mc-desc">{% trans "Turn raw data into strategic decisions" %}</div>
+          </div>
+        </a>
+        <a class="gf-mega-card" href="/services/data/training">
+          <span class="gf-mc-icon" style="background:linear-gradient(135deg,#0369a1,#38bdf8)">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </span>
+          <div>
+            <div class="gf-mc-title">{% trans "Data & AI Training" %}</div>
+            <div class="gf-mc-desc">{% trans "Upskill your team with expert-led courses" %}</div>
+          </div>
+        </a>
+        <a class="gf-mega-card" href="/services/data/automation-ai">
+          <span class="gf-mc-icon" style="background:linear-gradient(135deg,#4f46e5,#818cf8)">
+            <i class="fa-solid fa-bolt"></i>
+          </span>
+          <div>
+            <div class="gf-mc-title">{% trans "Automation & AI" %}</div>
+            <div class="gf-mc-desc">{% trans "Smart workflows and AI-powered automation" %}</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- FEATURED -->
+      <div class="gf-mega-featured">
+        <div class="gf-mf-label">{% trans "Featured" %}</div>
+        <div class="gf-mf-title">{% trans "Free Data Audit" %}</div>
+        <p class="gf-mf-desc">{% trans "Let our experts review your current data setup and deliver a free 30‑min strategy call." %}</p>
+        <a class="gf-mf-btn" href="/contact-us" id="bookACallBtn">{% trans "Book a call" %} <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PORTFOLIO MEGA -->
+  <div class="gf-mega-panel" id="mega-portfolio">
+    <div class="gf-mega-inner gf-mega-inner--wide">
+      <a class="gf-port-card" href="/portfolio/references">
+        <div class="gf-pc-img" style="background:linear-gradient(135deg,#064e3b 0%,#10b981 100%)">
+          <i class="fa-solid fa-award"></i>
+        </div>
+        <div class="gf-pc-body">
+          <div class="gf-pc-title">{% trans "References" %}</div>
+          <div class="gf-pc-desc">{% trans "Clients we've worked with and results we've delivered." %}</div>
+          <span class="gf-pc-link">{% trans "See references" %} <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <a class="gf-port-card" href="/portfolio/user-cases">
+        <div class="gf-pc-img" style="background:linear-gradient(135deg,#1e3a5f 0%,#3b82f6 100%)">
+          <i class="fa-solid fa-lightbulb"></i>
+        </div>
+        <div class="gf-pc-body">
+          <div class="gf-pc-title">{% trans "User Cases" %}</div>
+          <div class="gf-pc-desc">{% trans "Real problems solved across industries." %}</div>
+          <span class="gf-pc-link">{% trans "View cases" %} <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ABOUT MEGA -->
+  <div class="gf-mega-panel" id="mega-about">
+    <div class="gf-mega-inner gf-mega-inner--wide">
+      <a class="gf-port-card" href="/about-us/our-team">
+        <div class="gf-pc-img" style="background:linear-gradient(135deg,#1a1a2e 0%,#adff2f 100%)">
+          <i class="fa-solid fa-people-group"></i>
+        </div>
+        <div class="gf-pc-body">
+          <div class="gf-pc-title">{% trans "Our Team" %}</div>
+          <div class="gf-pc-desc">{% trans "The passionate people building G-Fenix every day." %}</div>
+          <span class="gf-pc-link">{% trans "Meet us" %} <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <a class="gf-port-card" href="/about-us/our-vision">
+        <div class="gf-pc-img" style="background:linear-gradient(135deg,#0f2027 0%,#203a43 50%,#2c5364 100%)">
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <div class="gf-pc-body">
+          <div class="gf-pc-title">{% trans "Our Vision" %}</div>
+          <div class="gf-pc-desc">{% trans "Where we're headed and why it matters" %}</div>
+          <span class="gf-pc-link">{% trans "See vision" %} <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <a class="gf-port-card" href="/about-us/our-mission">
+        <div class="gf-pc-img" style="background:linear-gradient(135deg,#200122 0%,#6f0000 100%)">
+          <i class="fa-solid fa-bullseye"></i>
+        </div>
+        <div class="gf-pc-body">
+          <div class="gf-pc-title">{% trans "Our Mission" %}</div>
+          <div class="gf-pc-desc">{% trans "The core purpose that drives every decision" %}</div>
+          <span class="gf-pc-link">{% trans "Read more" %} <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</nav>
+
+<!-- OVERLAY -->
+<div class="gf-overlay" id="gfOverlay"></div>
+
+<!-- ═══════════════════════ MOBILE NAV ═══════════════════════ -->
+<div class="gf-mobile-nav" id="gfMobileNav">
+  <div class="gf-mob-header">
+    <img src="{% static 'images/l1ye.png' %}" alt="G-Fenix" class="gf-logo-img">
+    <button class="gf-mob-close" id="gfMobClose"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="gf-mob-body">
+    <div class="gf-mob-section">
+      <div class="gf-mob-title">{% trans "Services" %}</div>
+      <a href="/services/build/web-development"><i class="fa-solid fa-globe"></i> {% trans "Web Development" %}</a>
+      <a href="/services/build/qr-menu"><i class="fa-solid fa-qrcode"></i> {% trans "QR Menu Solutions" %}</a>
+      <a href="/services/build/chatbots"><i class="fa-solid fa-robot"></i> {% trans "Chatbot & AI Agents" %}</a>
+      <a href="/services/data/data-expert-consultancy"><i class="fa-solid fa-magnifying-glass-chart"></i> {% trans "Data Expert Consultancy" %}</a>
+      <a href="/services/data/training"><i class="fa-solid fa-graduation-cap"></i> {% trans "Data & AI Training" %}</a>
+      <a href="/services/data/automation-ai"><i class="fa-solid fa-bolt"></i> {% trans "Automation & AI" %}</a>
+    </div>
+    <div class="gf-mob-section">
+      <div class="gf-mob-title">{% trans "Portfolio" %}</div>
+      <a href="/portfolio/references"><i class="fa-solid fa-award"></i> {% trans "References" %}</a>
+      <a href="/portfolio/user-cases"><i class="fa-solid fa-lightbulb"></i> {% trans "User Cases" %}</a>
+    </div>
+    <div class="gf-mob-section">
+      <div class="gf-mob-title">{% trans "About us" %}</div>
+      <a href="/about-us/our-team"><i class="fa-solid fa-people-group"></i> {% trans "Our Team" %}</a>
+      <a href="/about-us/our-vision"><i class="fa-regular fa-star"></i> {% trans "Our Vision" %}</a>
+      <a href="/about-us/our-mission"><i class="fa-solid fa-bullseye"></i> {% trans "Our Mission" %}</a>
+    </div>
+    <div class="gf-mob-section">
+      <a href="/blog"><i class="fa-solid fa-newspaper"></i> {% trans "Blog" %}</a>
+      <a href="/contact-us" class="gf-mob-cta-link"><i class="fa-regular fa-envelope"></i> {% trans "Contact Us" %}</a>
+    </div>
+    <div class="gf-mob-section">
+      <div class="gf-mob-title">{% trans "Language" %}</div>
+      <div class="gf-mob-lang">
+        <a href="#" onclick="gfSwitchLang('en');return false;"><span class="fi fi-gb gf-lang-flag"></span><span class="gf-lang-code">EN</span></a>
+        <a href="#" onclick="gfSwitchLang('tr');return false;"><span class="fi fi-tr gf-lang-flag"></span><span class="gf-lang-code">TR</span></a>
+        <a href="#" onclick="gfSwitchLang('es');return false;"><span class="fi fi-es gf-lang-flag"></span><span class="gf-lang-code">ES</span></a>
+        <a href="#" onclick="gfSwitchLang('ca');return false;"><span class="fi fi-es-ct gf-lang-flag"></span><span class="gf-lang-code">CA</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ MAIN CONTENT ═══════════════════════ -->
+<main class="site-main">
+  {% block content %}{% endblock content %}
+</main>
+
+<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
+<footer class="gf-footer">
+
+  <!-- CTA BAND -->
+  <div class="gf-footer-cta" id="footer-cta">
+    <div class="gf-fcta-inner">
+      <div class="gf-fcta-text">
+        <div class="gf-fcta-eyebrow">{% trans "Let's build something great" %}</div>
+        <h2 class="gf-fcta-heading">{% trans "Have a project in mind?" %}</h2>
+        <p class="gf-fcta-sub">{% trans "Drop your email and we'll reach out within 2 hours — weekdays. Weekend messages answered Monday. No spam — ever." %}</p>
+      </div>
+      <form class="gf-fcta-form" id="gfNewsletterForm">
+        {% csrf_token %}
+        <div class="gf-fcta-field">
+          <i class="fa-regular fa-envelope gf-fcta-icon"></i>
+          <input type="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="gf-fcta-bottom">
+          <div class="gf-fcta-consent">
+            <input type="checkbox" id="gfNlConsent" name="consent" required>
+            <label for="gfNlConsent">{% trans "I accept the" %} <a href="{% url 'privacypolicy' %}" target="_blank" rel="noopener">{% trans "Privacy Policy" %}</a></label>
+          </div>
+          <button type="submit" class="gf-fcta-btn" id="gfNewsletterBtn">
+            {% trans "Get in touch" %} <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MAIN FOOTER GRID -->
+  <div class="gf-footer-body">
+    <div class="gf-footer-grid">
+
+      <!-- BRAND -->
+      <div class="gf-footer-brand">
+        <a href="/">
+          <img src="{% static 'images/l1ye.png' %}" alt="G-Fenix" class="gf-footer-logo">
+        </a>
+        <p>{% trans "Building modern web solutions, training future experts, and consulting businesses with data-driven strategies." %}</p>
+        <div class="gf-social">
+          <a href="https://www.instagram.com/heygfenix/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61575763814260" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://github.com/G-Fenix" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://wa.me/34630176674" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://t.me/+34630176674" target="_blank" rel="noopener" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          <a href="mailto:hello@g-fenix.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="gf-footer-col">
+        <h6>{% trans "Services" %}</h6>
+        <ul>
+          <li><a href="/services/build/web-development">{% trans "Web Development" %}</a></li>
+          <li><a href="/services/build/qr-menu">{% trans "QR Menu Solutions" %}</a></li>
+          <li><a href="/services/build/chatbots">{% trans "Chatbot & AI Agents" %}</a></li>
+          <li><a href="/services/data/data-expert-consultancy">{% trans "Data Expert Consultancy" %}</a></li>
+          <li><a href="/services/data/training">{% trans "Data & AI Training" %}</a></li>
+          <li><a href="/services/data/automation-ai">{% trans "Automation & AI" %}</a></li>
+        </ul>
+      </div>
+
+      <!-- COMPANY -->
+      <div class="gf-footer-col">
+        <h6>{% trans "About Us" %}</h6>
+        <ul>
+          <li><a href="/about-us/our-team">{% trans "Our Team" %}</a></li>
+          <li><a href="/about-us/our-mission">{% trans "Our Mission" %}</a></li>
+          <li><a href="/about-us/our-vision">{% trans "Our Vision" %}</a></li>
+          <li><a href="/blog">{% trans "Blog" %}</a></li>
+        </ul>
+      </div>
+
+      <!-- PORTFOLIO -->
+      <div class="gf-footer-col">
+        <h6>{% trans "Portfolio" %}</h6>
+        <ul>
+          <li><a href="/portfolio/references">{% trans "References" %}</a></li>
+          <li><a href="/portfolio/user-cases">{% trans "User Cases" %}</a></li>
+        </ul>
+        <h6 class="mt-4">{% trans "Legal" %}</h6>
+        <ul>
+          <li><a href="/legal/privacy-policy">{% trans "Privacy Policy" %}</a></li>
+          <li><a href="/legal/cookies-policy">{% trans "Cookies Policy" %}</a></li>
+          <li><a href="/legal/terms-of-service">{% trans "Terms of Service" %}</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="gf-footer-bottom">
+      <span>© 2025 G-Fenix. {% trans "All rights reserved." %}</span>
+      <div class="gf-footer-bottom-lang">
+        <a href="#" onclick="gfSwitchLang('en');return false;"><span class="fi fi-gb gf-flag-sm"></span> EN</a>
+        <a href="#" onclick="gfSwitchLang('tr');return false;"><span class="fi fi-tr gf-flag-sm"></span> TR</a>
+        <a href="#" onclick="gfSwitchLang('es');return false;"><span class="fi fi-es gf-flag-sm"></span> ES</a>
+        <a href="#" onclick="gfSwitchLang('ca');return false;"><span class="fi fi-es-ct gf-flag-sm"></span> CA</a>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+<!-- SCRIPTS -->
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({ once: false, duration: 800, offset: 60, easing: 'ease-out-quart' });
+</script>
+
+<!-- Navbar mega panel JS -->
+<script>
+(function(){
+  const items = document.querySelectorAll('.gf-has-mega');
+  const overlay = document.getElementById('gfOverlay');
+  let openPanel = null;
+  let closeTimer = null;
+
+  function openMega(item) {
+    clearTimeout(closeTimer);
+    const key = item.dataset.mega;
+    const panel = document.getElementById('mega-' + key);
+    if (!panel) return;
+    if (openPanel && openPanel !== panel) closeMega();
+    openPanel = panel;
+    item.classList.add('is-active');
+    panel.classList.add('is-open');
+    overlay.classList.add('is-visible');
+  }
+
+  function closeMega() {
+    if (!openPanel) return;
+    document.querySelectorAll('.gf-has-mega').forEach(i => i.classList.remove('is-active'));
+    openPanel.classList.remove('is-open');
+    overlay.classList.remove('is-visible');
+    openPanel = null;
+  }
+
+  items.forEach(item => {
+    item.addEventListener('mouseenter', () => openMega(item));
+    item.addEventListener('mouseleave', () => {
+      closeTimer = setTimeout(closeMega, 150);
+    });
+  });
+
+  document.querySelectorAll('.gf-mega-panel').forEach(panel => {
+    panel.addEventListener('mouseenter', () => clearTimeout(closeTimer));
+    panel.addEventListener('mouseleave', () => {
+      closeTimer = setTimeout(closeMega, 150);
+    });
+  });
+
+  const bookBtn = document.getElementById('bookACallBtn');
+  if (bookBtn) {
+    bookBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      closeMega();
+      window.location.href = '/contact-us';
+    });
+  }
+
+  overlay.addEventListener('mouseenter', closeMega);
+
+  const navbar = document.getElementById('gfNavbar');
+  let lastY = 0;
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    navbar.classList.toggle('is-scrolled', y > 40);
+    navbar.classList.toggle('is-hidden', y > lastY && y > 120);
+    lastY = y;
+  }, { passive: true });
+
+  const mobileNav = document.getElementById('gfMobileNav');
+  document.getElementById('gfMobileToggle').addEventListener('click', () => {
+    mobileNav.classList.add('is-open');
+    overlay.classList.add('is-visible');
+  });
+  function closeMobile() {
+    mobileNav.classList.remove('is-open');
+    overlay.classList.remove('is-visible');
+  }
+  document.getElementById('gfMobClose').addEventListener('click', closeMobile);
+  overlay.addEventListener('click', closeMobile);
+})();
+</script>
+
+<!-- Scroll to top -->
+<button id="gf-scroll-top" aria-label="Scroll to top" title="{% trans "Scroll to top" %}">
+  <i class="fa-solid fa-arrow-up gf-stt-arrow"></i>
+  <span class="gf-stt-label">{% trans "TOP" %}</span>
+</button>
+
+<!-- ══ CHAT WIDGET ══ -->
+<div id="gf-chat-widget">
+  <span class="gf-chat-antenna"></span>
+
+  <button id="gf-chat-btn" aria-label="Chat">
+    <div class="gf-robot-face" id="gf-chat-icon-open">
+      <div class="gf-robot-scan"></div>
+      <div class="gf-robot-visor"></div>
+      <div class="gf-robot-eyes">
+        <span class="gf-robot-eye gf-eye-l"></span>
+        <span class="gf-robot-eye gf-eye-r"></span>
+      </div>
+      <div class="gf-robot-mouth">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+    <i class="fa-solid fa-xmark" id="gf-chat-icon-close"></i>
+    <span class="gf-chat-btn-label">G-Chat</span>
+  </button>
+
+  <div id="gf-chat-panel" aria-hidden="true">
+    <div id="gf-chat-header">
+      <div class="gf-chat-hinfo">
+        <div class="gf-chat-avatar">
+          <img src="{% static 'images/l1ye.png' %}" alt="G-Fenix">
+        </div>
+        <div>
+          <div class="gf-chat-hname">G-Fenix</div>
+          <div class="gf-chat-hstatus">
+            <span class="gf-chat-dot"></span>{% trans "Online" %}
+          </div>
+        </div>
+      </div>
+      <button id="gf-chat-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <div id="gf-chat-messages">
+      <div class="gf-chat-msg gf-chat-bot">
+        <div class="gf-chat-bubble">{% trans "Hi! I'm the G-Fenix assistant. Ask me anything about our services." %}</div>
+      </div>
+    </div>
+
+    <div id="gf-chat-input-row">
+      <input id="gf-chat-input" type="text" autocomplete="off"
+             placeholder="{% trans "Type a message…" %}">
+      <button id="gf-chat-send" aria-label="Send">
+        <i class="fa-solid fa-paper-plane"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+@property --gf-stt-angle { syntax:'<angle>'; initial-value:0deg; inherits:false; }
+@keyframes gf-stt-spin { to { --gf-stt-angle:360deg; } }
+@keyframes gf-stt-jump {
+  0%,100%{ transform:translateY(0); opacity:1; }
+  45%    { transform:translateY(-7px); opacity:.6; }
+  60%    { transform:translateY(-7px); opacity:.6; }
+}
+#gf-scroll-top {
+  position:fixed; bottom:2rem; right:calc(2rem + 58px + 20px); z-index:9999;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px;
+  width:58px; height:64px;
+  background:rgba(10,12,20,.96); border:none; outline:none;
+  border-radius:14px 14px 10px 10px;
+  cursor:pointer;
+  backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  box-shadow:0 4px 24px rgba(0,0,0,.5);
+  opacity:0; transform:translateY(20px) scale(.9); pointer-events:none;
+  transition:opacity .35s ease, transform .35s ease, box-shadow .25s;
+  isolation:isolate; overflow:hidden;
+}
+#gf-scroll-top::before {
+  content:''; position:absolute; inset:-1.5px;
+  border-radius:16px 16px 12px 12px;
+  background:conic-gradient(from var(--gf-stt-angle),#adff2f 0%,#22d3ee 30%,#a855f7 60%,#adff2f 100%);
+  animation:gf-stt-spin 3s linear infinite;
+  z-index:-1;
+}
+#gf-scroll-top::after {
+  content:''; position:absolute; inset:1.5px;
+  border-radius:13px 13px 9px 9px;
+  background:rgba(10,12,20,.96); z-index:-1;
+}
+#gf-scroll-top.gf-stt-visible { opacity:1; transform:translateY(0) scale(1); pointer-events:auto; }
+#gf-scroll-top:hover { transform:translateY(-2px); box-shadow:0 8px 32px rgba(0,0,0,.6),0 0 24px rgba(34,211,238,.12); }
+.gf-stt-arrow { font-size:15px; color:#c8d0e0; position:relative; z-index:1; animation:gf-stt-jump 1.6s ease-in-out infinite; }
+#gf-scroll-top .gf-stt-label {
+  font-family:'Syne',sans-serif; font-size:9px; font-weight:800; letter-spacing:.5px;
+  background:linear-gradient(90deg,#adff2f,#22d3ee);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  position:relative; z-index:1; white-space:nowrap;
+}
+@media(max-width:576px){ #gf-scroll-top{ bottom:1.25rem; right:calc(1.25rem + 58px + 16px); } }
+</style>
+
+<style>
+/* ── Chat Widget ── */
+@property --gf-chat-angle { syntax:'<angle>'; initial-value:0deg; inherits:false; }
+@keyframes gf-chat-spin { to { --gf-chat-angle: 360deg; } }
+@keyframes gf-pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+@keyframes gf-tdot { 0%,80%,100%{transform:scale(.8);opacity:.35} 40%{transform:scale(1.15);opacity:1} }
+
+#gf-chat-widget {
+  position:fixed;
+  bottom:2rem;
+  right:2rem;
+  z-index:9998;
+}
+
+/* Toggle button */
+#gf-chat-btn {
+  position:relative;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px;
+  width:58px; height:64px; border-radius:14px 14px 10px 10px;
+  border:none; outline:none;
+  background:rgba(11,13,21,.96);
+  cursor:pointer;
+  backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  box-shadow:0 4px 24px rgba(0,0,0,.5);
+  transition:transform .2s, box-shadow .25s;
+  overflow:visible;
+  isolation:isolate;
+}
+#gf-chat-btn::before {
+  content:''; position:absolute; inset:-1.5px;
+  border-radius:16px 16px 12px 12px;
+  background:conic-gradient(from var(--gf-chat-angle),#adff2f 0%,#22d3ee 30%,#a855f7 60%,#adff2f 100%);
+  animation:gf-chat-spin 3s linear infinite; z-index:-1;
+}
+#gf-chat-btn::after {
+  content:''; position:absolute; inset:1.5px;
+  border-radius:13px 13px 9px 9px;
+  background:rgba(11,13,21,.96); z-index:-1;
+}
+#gf-chat-btn:hover { transform:translateY(-2px); box-shadow:0 8px 32px rgba(0,0,0,.6),0 0 24px rgba(34,211,238,.12); }
+#gf-chat-btn i { font-size:16px; position:relative; z-index:1; color:#a0aec0; }
+#gf-chat-icon-close { display:none; }
+#gf-chat-widget.gf-chat-open #gf-chat-icon-open  { display:none; }
+#gf-chat-widget.gf-chat-open #gf-chat-icon-close { display:block; }
+.gf-chat-btn-label {
+  font-family:'Syne',sans-serif; font-size:9px; font-weight:800; letter-spacing:.5px;
+  background:linear-gradient(90deg,#adff2f,#22d3ee);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  position:relative; z-index:1; white-space:nowrap;
+}
+
+/* ── Antenna ── */
+.gf-chat-antenna {
+  position:absolute;
+  bottom:100%; left:50%; transform:translateX(-50%);
+  width:2.5px; height:14px;
+  background:linear-gradient(to top,#22d3ee,transparent);
+  border-radius:2px; z-index:2;
+}
+.gf-chat-antenna::before {
+  content:''; position:absolute;
+  top:-7px; left:50%; transform:translateX(-50%);
+  width:8px; height:8px; border-radius:50%;
+  background:#22d3ee;
+  box-shadow:0 0 10px #22d3ee,0 0 20px rgba(34,211,238,.5);
+  animation:gf-ant-pulse 1.4s ease-in-out infinite;
+}
+@keyframes gf-ant-pulse { 0%,100%{opacity:1;transform:translateX(-50%) scale(1)} 50%{opacity:.3;transform:translateX(-50%) scale(.6)} }
+
+/* ── Robot face (faceplate) ── */
+.gf-robot-face {
+  position:relative; z-index:1;
+  display:flex; flex-direction:column; align-items:center; gap:5px;
+  padding:5px 7px 4px;
+  background:rgba(34,211,238,.04);
+  border:1px solid rgba(34,211,238,.18);
+  border-radius:7px;
+  box-shadow:0 0 10px rgba(34,211,238,.07) inset;
+  overflow:hidden;
+}
+/* side ear panels */
+.gf-robot-face::before {
+  content:''; position:absolute;
+  top:20%; bottom:20%; left:-4px; right:-4px;
+  border-left:2px solid rgba(173,255,47,.35);
+  border-right:2px solid rgba(168,85,247,.35);
+  border-radius:3px; pointer-events:none;
+}
+/* scan line */
+.gf-robot-scan {
+  position:absolute; left:0; right:0; height:35%;
+  background:linear-gradient(transparent,rgba(34,211,238,.07),transparent);
+  animation:gf-scan 2.2s ease-in-out infinite; pointer-events:none; z-index:0;
+}
+@keyframes gf-scan { 0%{top:-35%} 100%{top:130%} }
+
+/* visor line above eyes */
+.gf-robot-visor {
+  width:100%; height:2px;
+  background:linear-gradient(90deg,transparent,rgba(34,211,238,.4),rgba(173,255,47,.3),transparent);
+  border-radius:1px; position:relative; z-index:1;
+}
+
+/* eyes */
+.gf-robot-eyes { display:flex; gap:9px; position:relative; z-index:1; }
+.gf-robot-eye {
+  width:10px; height:10px; border-radius:2px;
+  animation:gf-eye-blink 3.8s ease-in-out infinite;
+}
+.gf-eye-l {
+  background:linear-gradient(135deg,#adff2f,#22d3ee);
+  box-shadow:0 0 8px rgba(34,211,238,1),0 0 4px rgba(173,255,47,.8),0 0 16px rgba(34,211,238,.4);
+}
+.gf-eye-r {
+  background:linear-gradient(135deg,#22d3ee,#a855f7);
+  box-shadow:0 0 8px rgba(168,85,247,1),0 0 4px rgba(34,211,238,.7),0 0 16px rgba(168,85,247,.4);
+  animation-delay:.08s;
+}
+@keyframes gf-eye-blink {
+  0%,85%,100%{transform:scaleY(1)} 88%,94%{transform:scaleY(0.08)}
+}
+
+/* equalizer mouth */
+.gf-robot-mouth { display:flex; gap:2.5px; align-items:flex-end; position:relative; z-index:1; }
+.gf-robot-mouth span {
+  width:4px; min-height:2px; border-radius:1.5px 1.5px 0 0;
+  animation:gf-eq .7s ease-in-out infinite alternate;
+}
+.gf-robot-mouth span:nth-child(1){background:rgba(173,255,47,.5); height:3px;animation-delay:0s}
+.gf-robot-mouth span:nth-child(2){background:rgba(34,211,238,.65); height:6px;animation-delay:.12s}
+.gf-robot-mouth span:nth-child(3){background:rgba(168,85,247,.55); height:4px;animation-delay:.24s}
+.gf-robot-mouth span:nth-child(4){background:rgba(34,211,238,.5); height:7px;animation-delay:.08s}
+.gf-robot-mouth span:nth-child(5){background:rgba(173,255,47,.4); height:2px;animation-delay:.18s}
+@keyframes gf-eq { from{transform:scaleY(.3)} to{transform:scaleY(1)} }
+
+/* Panel — absolutely positioned above button, doesn't affect button layout */
+#gf-chat-panel {
+  position:absolute;
+  bottom:calc(100% + 12px);
+  right:0;
+  width:320px; border-radius:16px; overflow:hidden;
+  border:1px solid rgba(255,255,255,.09);
+  background:rgba(10,12,20,.98); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
+  box-shadow:0 24px 64px rgba(0,0,0,.75), 0 0 0 1px rgba(173,255,47,.05);
+  display:flex; flex-direction:column;
+  opacity:0; transform:translateY(10px) scale(.97); pointer-events:none;
+  transition:opacity .28s ease, transform .28s ease;
+  max-height:480px;
+}
+#gf-chat-widget.gf-chat-open #gf-chat-panel { opacity:1; transform:translateY(0) scale(1); pointer-events:auto; }
+
+/* Header */
+#gf-chat-header {
+  display:flex; align-items:center; justify-content:space-between; padding:13px 16px;
+  background:linear-gradient(135deg,rgba(173,255,47,.06),rgba(34,211,238,.04));
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.gf-chat-hinfo { display:flex; align-items:center; gap:10px; }
+.gf-chat-avatar { width:34px; height:34px; border-radius:50%; background:rgba(173,255,47,.08); border:1px solid rgba(173,255,47,.2); display:flex; align-items:center; justify-content:center; overflow:hidden; }
+.gf-chat-avatar img { height:22px; width:auto; }
+.gf-chat-hname { font-family:'Syne',sans-serif; font-weight:700; font-size:.86rem; color:#f0f2f8; }
+.gf-chat-hstatus { display:flex; align-items:center; gap:5px; font-size:.7rem; color:#6b7a96; margin-top:1px; }
+.gf-chat-dot { width:6px; height:6px; border-radius:50%; background:#4ade80; box-shadow:0 0 5px #4ade80; animation:gf-pulse 2s ease-in-out infinite; flex-shrink:0; }
+#gf-chat-close { background:none; border:none; color:#4a5568; cursor:pointer; font-size:.85rem; padding:4px 6px; transition:color .2s; border-radius:6px; }
+#gf-chat-close:hover { color:#a0aec0; background:rgba(255,255,255,.05); }
+
+/* Messages */
+#gf-chat-messages { flex:1; overflow-y:auto; padding:14px; display:flex; flex-direction:column; gap:10px; scrollbar-width:thin; scrollbar-color:rgba(255,255,255,.08) transparent; }
+#gf-chat-messages::-webkit-scrollbar { width:3px; }
+#gf-chat-messages::-webkit-scrollbar-thumb { background:rgba(255,255,255,.1); border-radius:4px; }
+.gf-chat-msg { display:flex; }
+.gf-chat-msg.gf-chat-user { justify-content:flex-end; }
+.gf-chat-bubble { max-width:82%; padding:9px 13px; border-radius:14px; font-size:.81rem; line-height:1.58; }
+.gf-chat-bot .gf-chat-bubble { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.07); color:#c8d0e0; border-bottom-left-radius:3px; }
+.gf-chat-user .gf-chat-bubble { background:rgba(173,255,47,.1); border:1px solid rgba(173,255,47,.18); color:#d8f0a8; border-bottom-right-radius:3px; }
+
+/* Typing */
+.gf-chat-typing { display:flex; gap:4px; align-items:center; padding:4px 2px; }
+.gf-chat-typing span { width:6px; height:6px; border-radius:50%; background:rgba(173,255,47,.4); animation:gf-tdot .9s ease-in-out infinite; }
+.gf-chat-typing span:nth-child(2){animation-delay:.2s} .gf-chat-typing span:nth-child(3){animation-delay:.4s}
+
+/* Input */
+#gf-chat-input-row { display:flex; align-items:center; gap:8px; padding:10px 12px; border-top:1px solid rgba(255,255,255,.06); background:rgba(0,0,0,.2); }
+#gf-chat-input { flex:1; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.09); border-radius:8px; padding:8px 11px; color:#e2e8f0; font-size:.81rem; outline:none; transition:border-color .2s; }
+#gf-chat-input:focus { border-color:rgba(173,255,47,.3); }
+#gf-chat-input::placeholder { color:#3a4255; }
+#gf-chat-send { width:32px; height:32px; border-radius:8px; background:rgba(173,255,47,.08); border:1px solid rgba(173,255,47,.2); color:var(--accent); cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:.78rem; transition:background .2s, border-color .2s; flex-shrink:0; }
+#gf-chat-send:hover { background:rgba(173,255,47,.18); border-color:rgba(173,255,47,.45); }
+
+/* Mobile */
+@media(max-width:767px){
+  #gf-chat-widget { right:1.25rem; bottom:1.25rem; }
+  #gf-chat-panel { width:calc(100vw - 2.5rem); max-width:340px; }
+}
+</style>
+
+<script>
+(function(){
+  const btn = document.getElementById('gf-scroll-top');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    btn.classList.toggle('gf-stt-visible', window.scrollY > 300);
+  }, { passive: true });
+  btn.addEventListener('click', function() {
+    /* Reset showcase to frame 0 and unblock locks before scrolling to top */
+    window.gfScrollToTop = true;
+    if (typeof window.gfShowcaseReset === 'function') window.gfShowcaseReset();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(function() { window.gfScrollToTop = false; }, 1200);
+  });
+})();
+</script>
+
+{% block extra_js %}{% endblock %}
+
+<script>
+(function(){
+  const widget  = document.getElementById('gf-chat-widget');
+  const btn     = document.getElementById('gf-chat-btn');
+  const panel   = document.getElementById('gf-chat-panel');
+  const closeBtn= document.getElementById('gf-chat-close');
+  const input   = document.getElementById('gf-chat-input');
+  const sendBtn = document.getElementById('gf-chat-send');
+  const msgs    = document.getElementById('gf-chat-messages');
+  const lang    = '{{ LANGUAGE_CODE|default:"en" }}';
+
+  function toggleChat(open){
+    widget.classList.toggle('gf-chat-open', open);
+    panel.setAttribute('aria-hidden', String(!open));
+    if(open){ input.focus(); scrollMsgs(); }
+  }
+
+  btn.addEventListener('click', function(){
+    toggleChat(!widget.classList.contains('gf-chat-open'));
+  });
+  closeBtn.addEventListener('click', function(){ toggleChat(false); });
+
+  function scrollMsgs(){ msgs.scrollTop = msgs.scrollHeight; }
+
+  function addMsg(text, isUser){
+    const div = document.createElement('div');
+    div.className = 'gf-chat-msg ' + (isUser ? 'gf-chat-user' : 'gf-chat-bot');
+    const bub = document.createElement('div');
+    bub.className = 'gf-chat-bubble';
+    bub.textContent = text;
+    div.appendChild(bub);
+    msgs.appendChild(div);
+    scrollMsgs();
+    return bub;
+  }
+
+  function showTyping(){
+    const div = document.createElement('div');
+    div.className = 'gf-chat-msg gf-chat-bot';
+    div.id = 'gf-chat-typing';
+    div.innerHTML = '<div class="gf-chat-bubble gf-chat-typing"><span></span><span></span><span></span></div>';
+    msgs.appendChild(div);
+    scrollMsgs();
+  }
+
+  function hideTyping(){
+    const t = document.getElementById('gf-chat-typing');
+    if(t) t.remove();
+  }
+
+  async function sendMessage(){
+    const text = input.value.trim();
+    if(!text) return;
+    input.value = '';
+    addMsg(text, true);
+    showTyping();
+    sendBtn.disabled = true;
+    input.disabled = true;
+
+    try {
+      const res = await fetch('/api/chat/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: text, lang: lang })
+      });
+      const data = await res.json();
+      hideTyping();
+      addMsg(data.reply || data.error || '...', false);
+    } catch(e) {
+      hideTyping();
+      addMsg('Sorry, something went wrong.', false);
+    } finally {
+      sendBtn.disabled = false;
+      input.disabled = false;
+      input.focus();
+    }
+  }
+
+  sendBtn.addEventListener('click', sendMessage);
+  input.addEventListener('keydown', function(e){
+    if(e.key === 'Enter' && !e.shiftKey){ e.preventDefault(); sendMessage(); }
+  });
+})();
+</script>
+
+<!-- ══ SCROLL PROGRESS BAR ══ -->
+<script>
+(function(){
+  const bar=document.createElement('div');
+  bar.id='gf-scroll-bar';
+  document.body.prepend(bar);
+  window.addEventListener('scroll',()=>{
+    const pct=window.scrollY/(document.body.scrollHeight-window.innerHeight)*100;
+    bar.style.width=Math.min(pct,100)+'%';
+  },{passive:true});
+})();
+</script>
+
+<!-- ══ PAGE LOADER JS ══ -->
+<script>
+(function(){
+  var el = document.getElementById('gf-loader');
+  if (!el) return;
+  function hide() {
+    el.classList.add('gf-loader-done');
+    setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 500);
+  }
+  if (document.readyState === 'complete') { setTimeout(hide, 1200); }
+  else { window.addEventListener('load', function(){ setTimeout(hide, 1200); }); }
+}());
+</script>
+
+<!-- ══ LANGUAGE SWITCHER JS ══ -->
+<script>
+var GF_LANGS = ['tr','es','ca'];
+
+function gfGetCurrentLang() {
+  var path = location.pathname;
+  for (var i = 0; i < GF_LANGS.length; i++) {
+    var l = GF_LANGS[i];
+    if (path === '/' + l || path.startsWith('/' + l + '/')) return l;
+  }
+  return 'en';
+}
+
+function gfSwitchLang(code) {
+  try { sessionStorage.setItem('gf_scroll_pos', window.scrollY); } catch(e) {}
+  document.cookie = 'django_language=' + code + '; path=/; max-age=31536000; SameSite=Lax';
+  var path = location.pathname;
+  for (var i = 0; i < GF_LANGS.length; i++) {
+    var l = GF_LANGS[i];
+    if (path === '/' + l || path.startsWith('/' + l + '/')) {
+      path = path.substring(l.length + 1) || '/';
+      break;
+    }
+  }
+  if (!path.startsWith('/')) path = '/' + path;
+  location.href = (code === 'en' ? '' : '/' + code) + path;
+}
+
+window.addEventListener('load', function() {
+  try {
+    var pos = sessionStorage.getItem('gf_scroll_pos');
+    if (pos !== null) {
+      sessionStorage.removeItem('gf_scroll_pos');
+      window.scrollTo({ top: parseInt(pos, 10), behavior: 'instant' });
+    }
+  } catch(e) {}
+});
+
+/* Mark active language in nav lang bar */
+(function(){
+  var current = gfGetCurrentLang();
+
+  /* Mark active pill */
+  document.querySelectorAll('.gf-lang-pill[data-lang]').forEach(function(a){
+    if (a.dataset.lang === current) a.classList.add('active');
+  });
+  /* Mark active in mobile lang grid */
+  document.querySelectorAll('.gf-mob-lang a').forEach(function(a){
+    var fn = a.getAttribute('onclick') || '';
+    var m = fn.match(/gfSwitchLang\('([^']+)'\)/);
+    if (m && m[1] === current) a.classList.add('active');
+  });
+
+  /* Rewrite internal links with lang prefix */
+  if (current === 'en') return;
+  var prefix = '/' + current;
+  document.querySelectorAll('a[href]').forEach(function(a){
+    var href = a.getAttribute('href');
+    if (!href) return;
+    if (!href.startsWith('/') || href.startsWith('//')) return;
+    var alreadyPrefixed = GF_LANGS.some(function(l){
+      return href === '/'+l || href.startsWith('/'+l+'/');
+    });
+    if (alreadyPrefixed) return;
+    if (href === '/' || href === '#') { a.setAttribute('href', prefix + '/'); return; }
+    if (href.startsWith('/admin') || href.startsWith('/static') || href.startsWith('/i18n') || href.startsWith('/media')) return;
+    a.setAttribute('href', prefix + href);
+  });
+}());
+</script>
+
+<!-- Star canvas + Mouse glow -->
+<script>
+(function () {
+  const cv = document.getElementById('gf-star-canvas');
+  if (!cv) return;
+  const ctx = cv.getContext('2d');
+  let W, H, mx = -9999, my = -9999;
+  function resize() { W = cv.width = window.innerWidth; H = cv.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+  const stars = Array.from({ length: 200 }, () => ({
+    x: Math.random(), y: Math.random(),
+    r: Math.random() * 1.3 + 0.2,
+    base: Math.random() * .4 + .06,
+    twinkle: Math.random() * Math.PI * 2
+  }));
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  (function draw() {
+    ctx.clearRect(0, 0, W, H);
+    stars.forEach(s => {
+      const px = s.x * W, py = s.y * H;
+      const dist = Math.hypot(px - mx, py - my);
+      const boost = Math.max(0, 1 - dist / 280) * .6;
+      s.twinkle += .014;
+      const a = Math.min(1, s.base + Math.sin(s.twinkle) * .18 + boost);
+      if (boost > .05) {
+        ctx.beginPath();
+        ctx.arc(px, py, (s.r + boost * 2) * 2.5, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(34,211,238,${boost * .12})`;
+        ctx.fill();
+      }
+      ctx.beginPath();
+      ctx.arc(px, py, s.r + boost * 1.2, 0, Math.PI * 2);
+      ctx.fillStyle = boost > .06
+        ? `rgba(173,255,47,${a * .7})`
+        : `rgba(210,225,255,${a})`;
+      ctx.fill();
+    });
+    requestAnimationFrame(draw);
+  })();
+
+  /* Mouse glow */
+  const g = document.getElementById('gf-mouse-glow');
+  if (g) {
+    document.addEventListener('mousemove', e => {
+      g.style.left = e.clientX + 'px';
+      g.style.top  = e.clientY + 'px';
+    });
+  }
+})();
+</script>
+
+<!-- Custom cursor JS -->
+<script>
+(function(){
+  if (window.matchMedia('(hover: none)').matches) return;
+  const dot  = document.getElementById('gf-cursor-dot');
+  const ring = document.getElementById('gf-cursor-ring');
+  if (!dot || !ring) return;
+
+  let rx = -999, ry = -999, dx = -999, dy = -999;
+
+  document.addEventListener('mousemove', e => {
+    dx = e.clientX; dy = e.clientY;
+    dot.style.left = dx + 'px';
+    dot.style.top  = dy + 'px';
+  });
+
+  (function animRing(){
+    rx += (dx - rx) * 0.12;
+    ry += (dy - ry) * 0.12;
+    ring.style.left = rx + 'px';
+    ring.style.top  = ry + 'px';
+    requestAnimationFrame(animRing);
+  })();
+
+  document.querySelectorAll('a,button,input,label,[role="button"]').forEach(el => {
+    el.addEventListener('mouseenter', () => document.body.classList.add('gf-hovering'));
+    el.addEventListener('mouseleave', () => document.body.classList.remove('gf-hovering'));
+  });
+})();
+</script>
+
+<!-- Newsletter form -->
+<script>
+(function(){
+  const form = document.getElementById('gfNewsletterForm');
+  if (!form) return;
+
+  const lang = document.documentElement.lang || 'en';
+
+  /* Validation messages in page language */
+  const vMsgs = {
+    en: { required: 'Please fill in this field.', checkbox: 'Please accept the privacy policy to continue.' },
+    tr: { required: 'Bu alanı lütfen doldurun.', checkbox: 'Devam etmek için gizlilik politikasını kabul edin.' },
+    es: { required: 'Por favor, rellena este campo.', checkbox: 'Acepta la política de privacidad para continuar.' },
+    ca: { required: "Si us plau, omple aquest camp.", checkbox: "Accepta la política de privadesa per continuar." },
+  };
+  const vm = vMsgs[lang] || vMsgs.en;
+  form.querySelectorAll('[required]').forEach(el => {
+    const msg = el.type === 'checkbox' ? vm.checkbox : vm.required;
+    el.addEventListener('invalid', () => el.setCustomValidity(msg));
+    el.addEventListener('input',  () => el.setCustomValidity(''));
+    el.addEventListener('change', () => el.setCustomValidity(''));
+  });
+
+  /* Success / resend messages */
+  const successMsgs = {
+    en: "Got it! Weekdays we reply within 2 h — weekends on Monday.",
+    tr: "Alındı! Hafta içi 2 saat içinde, hafta sonu Pazartesi yanıt veririz.",
+    es: "¡Recibido! Días laborables en 2 h — fines de semana, el lunes.",
+    ca: "Rebut! Dies feiners en 2 h — caps de setmana, el dilluns."
+  };
+  const resendLabels = { en: "Send again", tr: "Tekrar gönder", es: "Enviar de nuevo", ca: "Enviar de nou" };
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = document.getElementById('gfNewsletterBtn');
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i>';
+    const data = new FormData(form);
+    try {
+      const res = await fetch('/newsletter/subscribe/', {
+        method: 'POST',
+        body: data,
+        headers: { 'X-CSRFToken': data.get('csrfmiddlewaretoken') }
+      });
+      if (res.ok) {
+        const bottom = form.querySelector('.gf-fcta-bottom') || form;
+        bottom.innerHTML = `
+          <div class="gf-nl-success">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>${successMsgs[lang] || successMsgs.en}</span>
+            <button type="button" class="gf-nl-resend" onclick="location.reload()" title="Reset">×</button>
+          </div>`;
+      } else { throw new Error(); }
+    } catch {
+      btn.disabled = false;
+      btn.innerHTML = '{% trans "Get in touch" %} <i class="fa-solid fa-arrow-right"></i>';
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

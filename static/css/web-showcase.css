@@ -1,0 +1,84 @@
+/* ═══════════════════════════════════════════════════════════
+   WEB SHOWCASE  —  mid-page frame sequence + headline words
+═══════════════════════════════════════════════════════════ */
+
+#webFrameSection {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  overflow: hidden;
+}
+
+#webFrameSection::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+  z-index: 2;
+}
+
+#webFrameCanvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  z-index: 1;
+}
+
+/* ── Both phase containers sit at the same center point ─── */
+.wf-phase {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 90%;
+  text-align: center;
+}
+
+/* ── Individual word ─────────────────────────────────────── */
+@keyframes wfGradShift {
+  0%   { background-position:   0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position:   0% 50%; }
+}
+
+.wf-word {
+  display: block;
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.8rem, 7vw, 6.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+
+  background: linear-gradient(90deg, #a78bfa, #38bdf8, #34d399, #f59e0b, #a78bfa);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: wfGradShift 6s ease infinite;
+
+  filter: drop-shadow(0 2px 20px rgba(139, 92, 246, 0.55));
+}
+
+.wf-word.wf-word-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .wf-word {
+    font-size: clamp(2rem, 11vw, 3.2rem);
+  }
+}

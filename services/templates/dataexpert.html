@@ -1,0 +1,728 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}G-Fenix | Data Expert Consultancy{% endblock %}
+
+{% block extra_head %}
+<style>
+  #gf-scroll-bar { background: linear-gradient(90deg, #8b5cf6, #a78bfa) !important; }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<style>
+/* ── TITLE GRANITE FLOW ── */
+@keyframes de-title-flow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ── HERO ── */
+.de-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: clamp(90px,10vh,120px) 0 clamp(60px,7vh,90px);
+  position: relative;
+  overflow: hidden;
+}
+.de-hero-stats {
+  display:flex; gap:32px; margin-top:32px;
+  padding-top:24px;
+  border-top:1px solid rgba(255,255,255,.07);
+}
+.de-hero-stat-num {
+  font-size:1.5rem; font-weight:900; color:#fff; line-height:1;
+}
+.de-hero-stat-num span { color:#adff2f; }
+.de-hero-stat-lbl {
+  font-size:.62rem; letter-spacing:.1em; text-transform:uppercase;
+  color:rgba(255,255,255,.35); margin-top:4px;
+}
+.de-hero::before {
+  content:'';
+  position:absolute;inset:0; z-index:1;
+  background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(139,92,246,.12) 0%, transparent 70%),
+              radial-gradient(ellipse 50% 40% at 10% 60%, rgba(34,211,238,.07) 0%, transparent 60%);
+  pointer-events:none;
+}
+.de-eyebrow {
+  font-size:.72rem; letter-spacing:.18em; font-weight:700;
+  color:#8b5cf6; text-transform:uppercase;
+  display:flex; align-items:center; gap:10px; margin-bottom:14px;
+}
+.de-eyebrow::before { content:''; display:block; width:28px; height:2px; background:#8b5cf6; }
+.de-hero-title {
+  font-size:clamp(1.7rem,2.8vw,2.6rem);
+  font-weight:900; line-height:1.1;
+  letter-spacing:-.02em; margin-bottom:16px;
+  background: linear-gradient(90deg, #fff 0%, #c4b5fd 18%, #67e8f9 36%, #fff 52%, #a78bfa 70%, #22d3ee 88%, #fff 100%);
+  background-size: 300% 100%;
+  animation: de-title-flow 7s ease infinite;
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.de-hero-sub {
+  font-size:.93rem; color:var(--text-secondary);
+  max-width:480px; line-height:1.7; margin-bottom:20px;
+}
+.de-tech-pills { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:22px; }
+.de-pill {
+  font-size:.75rem; font-weight:600; letter-spacing:.06em;
+  padding:5px 13px; border-radius:999px;
+  background:rgba(139,92,246,.12);
+  border:1px solid rgba(139,92,246,.3);
+  color:rgba(139,92,246,.9);
+}
+
+/* ── DASHBOARD VISUAL ── */
+.de-visual-wrap {
+  position:relative;
+  display:flex; align-items:center; justify-content:center;
+}
+.de-dashboard {
+  width:100%; max-width:480px;
+  background:rgba(14,16,24,.9);
+  border:1px solid rgba(139,92,246,.25);
+  border-radius:16px;
+  box-shadow: 0 0 60px rgba(139,92,246,.18), 0 30px 80px rgba(0,0,0,.5);
+  overflow:hidden;
+  position:relative;
+}
+.de-dash-bar {
+  display:flex; align-items:center; gap:8px;
+  padding:12px 16px;
+  background:rgba(8,10,15,.6);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.de-dash-dot { width:10px; height:10px; border-radius:50%; }
+.de-dash-dot.r { background:#ef4444; }
+.de-dash-dot.y { background:#f59e0b; }
+.de-dash-dot.g { background:#22c55e; }
+.de-dash-title {
+  margin-left:8px; font-size:.72rem; color:rgba(255,255,255,.35);
+  font-family:monospace; letter-spacing:.04em;
+}
+.de-dash-body { padding:20px; }
+
+/* KPI row */
+.de-kpi-row { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:18px; }
+.de-kpi-card {
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:10px; padding:12px 10px;
+  text-align:center;
+}
+.de-kpi-num { font-size:1.35rem; font-weight:800; color:#fff; line-height:1; }
+.de-kpi-lbl { font-size:.62rem; color:rgba(255,255,255,.35); letter-spacing:.08em; text-transform:uppercase; margin-top:4px; }
+.de-kpi-card.purple .de-kpi-num { color:#a78bfa; }
+.de-kpi-card.teal   .de-kpi-num { color:#22d3ee; }
+.de-kpi-card.lime   .de-kpi-num { color:#adff2f; }
+
+/* Chart */
+.de-chart-title { font-size:.68rem; color:rgba(255,255,255,.3); letter-spacing:.08em; text-transform:uppercase; margin-bottom:12px; }
+.de-bars { display:flex; align-items:flex-end; gap:6px; height:80px; }
+.de-bar-wrap { flex:1; display:flex; flex-direction:column; align-items:center; gap:5px; height:100%; }
+.de-bar {
+  width:100%; border-radius:4px 4px 0 0;
+  height:0; transition:height 1.2s cubic-bezier(.22,.61,.36,1);
+}
+.de-bar.animate { height:var(--h); }
+.de-bar.b1 { background:linear-gradient(180deg,#8b5cf6,rgba(139,92,246,.4)); }
+.de-bar.b2 { background:linear-gradient(180deg,#22d3ee,rgba(34,211,238,.4)); }
+.de-bar.b3 { background:linear-gradient(180deg,#adff2f,rgba(173,255,47,.4)); }
+.de-bar.b4 { background:linear-gradient(180deg,#8b5cf6,rgba(139,92,246,.4)); }
+.de-bar.b5 { background:linear-gradient(180deg,#22d3ee,rgba(34,211,238,.4)); }
+.de-bar.b6 { background:linear-gradient(180deg,#adff2f,rgba(173,255,47,.4)); }
+.de-bar-lbl { font-size:.58rem; color:rgba(255,255,255,.25); }
+
+/* Pulse line */
+.de-pulse-wrap { margin-top:16px; }
+.de-pulse-svg { width:100%; height:48px; overflow:visible; }
+.de-pulse-path { fill:none; stroke:#22d3ee; stroke-width:2; stroke-dasharray:300; stroke-dashoffset:300; animation:de-draw 2s .8s ease forwards; }
+.de-pulse-fill { fill:url(#de-pulse-grad); opacity:.2; clip-path:inset(0); }
+@keyframes de-draw { to { stroke-dashoffset:0; } }
+
+/* Metric rows */
+.de-metrics { margin-top:16px; display:flex; flex-direction:column; gap:8px; }
+.de-metric-row { display:flex; align-items:center; gap:10px; }
+.de-metric-lbl { font-size:.7rem; color:rgba(255,255,255,.35); min-width:90px; }
+.de-metric-bar-bg { flex:1; height:5px; background:rgba(255,255,255,.06); border-radius:3px; overflow:hidden; }
+.de-metric-fill { height:100%; border-radius:3px; width:0; transition:width 1.4s cubic-bezier(.22,.61,.36,1); }
+.de-metric-fill.animate { width:var(--w); }
+.de-metric-val { font-size:.7rem; color:#fff; font-weight:700; min-width:30px; text-align:right; }
+
+/* Floating badge */
+.de-float-badge {
+  position:absolute; bottom:-18px; right:-18px;
+  background:linear-gradient(135deg,#8b5cf6,#6d28d9);
+  border-radius:12px; padding:14px 18px;
+  box-shadow:0 8px 30px rgba(139,92,246,.4);
+  border:1px solid rgba(255,255,255,.1);
+  color:#fff; font-size:.8rem; font-weight:700;
+  white-space:nowrap;
+}
+.de-float-badge span { display:block; font-size:.62rem; font-weight:400; opacity:.7; margin-top:2px; }
+
+/* ── PAIN POINTS ── */
+.de-pain-section { padding:90px 0; background:rgba(20,24,34,.7); }
+.de-sec-label {
+  font-size:.68rem; letter-spacing:.18em; font-weight:700;
+  color:#8b5cf6; text-transform:uppercase; margin-bottom:16px;
+}
+.de-pain-title {
+  font-size:clamp(1.7rem,3vw,2.5rem);
+  font-weight:800; color:#fff; line-height:1.15; margin-bottom:50px;
+}
+.de-pain-card {
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:14px; padding:28px 24px;
+  height:100%; transition:border-color .3s, background .3s;
+}
+.de-pain-card:hover { border-color:rgba(139,92,246,.35); background:rgba(139,92,246,.05); }
+.de-pain-tag { font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:#8b5cf6; margin-bottom:12px; }
+.de-pain-head { font-size:1.1rem; font-weight:700; color:#fff; margin-bottom:10px; }
+.de-pain-body { font-size:.88rem; color:var(--text-secondary); line-height:1.65; }
+
+/* ── WHAT YOU GET ── */
+.de-get-section { padding:90px 0; }
+.de-get-head { margin-bottom:50px; }
+.de-get-title {
+  font-size:clamp(1.7rem,3vw,2.5rem);
+  font-weight:800; color:#fff; line-height:1.15; margin-bottom:14px;
+}
+.de-get-sub { font-size:.93rem; color:var(--text-secondary); line-height:1.7; max-width:600px; }
+.de-get-grid {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:16px;
+}
+@media(max-width:768px){ .de-get-grid { grid-template-columns:repeat(2,1fr); } }
+@media(max-width:480px){ .de-get-grid { grid-template-columns:1fr; } }
+.de-get-item {
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:14px; padding:22px 20px;
+  border-left:3px solid var(--gi-color);
+  transition:background .3s, transform .3s;
+}
+.de-get-item:hover { background:rgba(255,255,255,.05); transform:translateY(-3px); }
+.de-get-icon {
+  width:36px; height:36px; border-radius:10px; margin-bottom:14px;
+  background:rgba(var(--gi-rgb),.12);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--gi-color); font-size:.95rem;
+}
+.de-get-item-title { font-size:.9rem; font-weight:700; color:#fff; margin-bottom:7px; }
+.de-get-item-desc { font-size:.8rem; color:var(--text-secondary); line-height:1.65; }
+
+/* ── HOW IT WORKS ── */
+.de-how-section { padding:90px 0; background:rgba(20,24,34,.7); }
+.de-how-title {
+  font-size:clamp(1.7rem,3vw,2.5rem);
+  font-weight:800; color:#fff; line-height:1.15; margin-bottom:60px;
+}
+.de-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+@media(max-width:900px) { .de-steps { grid-template-columns:repeat(2,1fr); } }
+@media(max-width:540px) { .de-steps { grid-template-columns:1fr; } }
+.de-step { position:relative; }
+.de-step-num {
+  font-size:3.5rem; font-weight:900; line-height:1;
+  color:rgba(139,92,246,.12); font-variant-numeric:tabular-nums;
+  margin-bottom:8px;
+}
+.de-step-divider { width:100%; height:1px; background:rgba(139,92,246,.2); margin-bottom:16px; }
+.de-step-name { font-size:1.05rem; font-weight:700; color:#fff; margin-bottom:10px; }
+.de-step-body { font-size:.85rem; color:var(--text-secondary); line-height:1.7; }
+
+/* ── FAQ FLIP CARDS ── */
+.de-faq-section {
+  padding:90px 0;
+  position:relative;
+  overflow:hidden;
+}
+.de-faq-section::before {
+  content:'';
+  position:absolute; inset:0;
+  background: url("{% static 'images/que.png' %}") center/cover no-repeat;
+  opacity:.06;
+  pointer-events:none;
+}
+.de-faq-title {
+  font-size:clamp(1.7rem,3vw,2.5rem);
+  font-weight:800; color:#fff; line-height:1.15; margin-bottom:50px;
+}
+.de-faq-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+@media(max-width:900px){ .de-faq-grid { grid-template-columns:repeat(2,1fr); } }
+@media(max-width:560px){ .de-faq-grid { grid-template-columns:1fr; } }
+
+.de-flip-card {
+  perspective:1200px;
+  height:230px;
+  cursor:pointer;
+}
+.de-flip-inner {
+  position:relative; width:100%; height:100%;
+  transition:transform .6s cubic-bezier(.4,.2,.2,1);
+  transform-style:preserve-3d;
+}
+.de-flip-card.flipped .de-flip-inner { transform:rotateY(180deg); }
+.de-flip-front, .de-flip-back {
+  position:absolute; inset:0;
+  backface-visibility:hidden; -webkit-backface-visibility:hidden;
+  border-radius:14px; padding:24px;
+  display:flex; flex-direction:column; justify-content:space-between;
+}
+.de-flip-front {
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  transition:border-color .3s;
+}
+.de-flip-card:hover .de-flip-front { border-color:rgba(139,92,246,.35); }
+.de-flip-front-q {
+  font-size:.95rem; font-weight:700; color:#fff; line-height:1.45;
+}
+.de-flip-hint {
+  font-size:.65rem; letter-spacing:.09em; text-transform:uppercase;
+  display:flex; align-items:center; gap:6px;
+}
+.de-flip-hint.open { color:rgba(139,92,246,.7); }
+.de-flip-hint.close { color:rgba(34,211,238,.7); }
+.de-flip-hint i { font-size:.6rem; }
+.de-flip-back {
+  background:linear-gradient(135deg,rgba(139,92,246,.14),rgba(34,211,238,.07));
+  border:1px solid rgba(139,92,246,.28);
+  transform:rotateY(180deg);
+}
+.de-flip-back-a {
+  font-size:.83rem; color:var(--text-secondary); line-height:1.7;
+  flex:1; display:flex; align-items:center;
+}
+
+/* ── WORKS WELL WITH ── */
+.de-related-section { padding:90px 0; }
+.de-related-title {
+  font-size:clamp(1.7rem,3vw,2.5rem);
+  font-weight:800; color:#fff; line-height:1.15; margin-bottom:50px;
+}
+.de-rel-card {
+  display:block; text-decoration:none;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:14px; padding:28px;
+  height:100%; transition:border-color .3s, background .3s, transform .3s;
+}
+.de-rel-card:hover {
+  border-color:rgba(139,92,246,.35); background:rgba(139,92,246,.05);
+  transform:translateY(-4px); text-decoration:none;
+}
+.de-rel-tag { font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; font-weight:700; margin-bottom:12px; }
+.de-rel-tag.data { color:#8b5cf6; }
+.de-rel-tag.build { color:#22d3ee; }
+.de-rel-name { font-size:1.05rem; font-weight:700; color:#fff; margin-bottom:10px; }
+.de-rel-body { font-size:.85rem; color:var(--text-secondary); line-height:1.65; }
+</style>
+
+<!-- ═══════════════════════ HERO ═══════════════════════ -->
+<section class="de-hero">
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="row align-items-center g-5">
+
+      <!-- LEFT -->
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="de-eyebrow">{% trans "DATA" %} · {% trans "CONSULTANCY" %}</div>
+        <h1 class="de-hero-title">{% trans "Turn scattered data into clear decisions." %}</h1>
+        <p class="de-hero-sub">
+          {% trans "Most businesses don't have a data problem — they have a \"which number is right?\" problem. We map what you already have, agree on one source of truth, and turn it into reports people actually use. No jargon, no rip-and-replace." %}
+        </p>
+        <div class="de-tech-pills">
+          <span class="de-pill">Power BI</span>
+          <span class="de-pill">SQL Server</span>
+          <span class="de-pill">Azure</span>
+          <span class="de-pill">Databricks</span>
+          <span class="de-pill">Qlik Sense</span>
+          <span class="de-pill">Collibra</span>
+        </div>
+        <a href="/contact-us" class="gf-btn-primary">{% trans "Get a quote" %} →</a>
+
+        <!-- mini stats -->
+        <div class="de-hero-stats">
+          <div>
+            <div class="de-hero-stat-num">10<span>+</span></div>
+            <div class="de-hero-stat-lbl">{% trans "YEARS IN DATA" %}</div>
+          </div>
+          <div>
+            <div class="de-hero-stat-num">100<span>%</span></div>
+            <div class="de-hero-stat-lbl">{% trans "DELIVERED ON TIME" %}</div>
+          </div>
+          <div>
+            <div class="de-hero-stat-num">4</div>
+            <div class="de-hero-stat-lbl">{% trans "LANGUAGES" %}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT — animated dashboard -->
+      <div class="col-lg-6 d-flex justify-content-center" data-aos="fade-left" data-aos-delay="200">
+        <div class="de-visual-wrap w-100" style="max-width:460px;">
+          <div class="de-dashboard">
+            <div class="de-dash-bar">
+              <span class="de-dash-dot r"></span>
+              <span class="de-dash-dot y"></span>
+              <span class="de-dash-dot g"></span>
+              <span class="de-dash-title">analytics.dashboard — g·fenix</span>
+            </div>
+            <div class="de-dash-body">
+
+              <!-- KPI cards -->
+              <div class="de-kpi-row">
+                <div class="de-kpi-card purple">
+                  <div class="de-kpi-num" id="de-k1">0</div>
+                  <div class="de-kpi-lbl">{% trans "Data Sources" %}</div>
+                </div>
+                <div class="de-kpi-card teal">
+                  <div class="de-kpi-num" id="de-k2">0%</div>
+                  <div class="de-kpi-lbl">{% trans "Quality Score" %}</div>
+                </div>
+                <div class="de-kpi-card lime">
+                  <div class="de-kpi-num" id="de-k3">0</div>
+                  <div class="de-kpi-lbl">{% trans "Reports Live" %}</div>
+                </div>
+              </div>
+
+              <!-- Bar chart -->
+              <div class="de-chart-title">{% trans "Monthly performance" %}</div>
+              <div class="de-bars" id="de-bars">
+                <div class="de-bar-wrap"><div class="de-bar b1" style="--h:55%"></div><div class="de-bar-lbl">Jan</div></div>
+                <div class="de-bar-wrap"><div class="de-bar b2" style="--h:70%"></div><div class="de-bar-lbl">Feb</div></div>
+                <div class="de-bar-wrap"><div class="de-bar b3" style="--h:45%"></div><div class="de-bar-lbl">Mar</div></div>
+                <div class="de-bar-wrap"><div class="de-bar b4" style="--h:85%"></div><div class="de-bar-lbl">Apr</div></div>
+                <div class="de-bar-wrap"><div class="de-bar b5" style="--h:62%"></div><div class="de-bar-lbl">May</div></div>
+                <div class="de-bar-wrap"><div class="de-bar b6" style="--h:92%"></div><div class="de-bar-lbl">Jun</div></div>
+              </div>
+
+              <!-- Pulse line -->
+              <div class="de-pulse-wrap">
+                <svg class="de-pulse-svg" viewBox="0 0 400 48" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="de-pulse-grad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#22d3ee" stop-opacity=".6"/>
+                      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <path class="de-pulse-fill" d="M0 48 L0 32 C40 32 50 10 80 16 C110 22 130 36 160 28 C190 20 210 8 240 12 C270 16 290 34 320 26 C350 18 370 6 400 10 L400 48 Z"/>
+                  <path class="de-pulse-path" d="M0 32 C40 32 50 10 80 16 C110 22 130 36 160 28 C190 20 210 8 240 12 C270 16 290 34 320 26 C350 18 370 6 400 10"/>
+                </svg>
+              </div>
+
+              <!-- Metric rows -->
+              <div class="de-metrics" id="de-metrics">
+                <div class="de-metric-row">
+                  <span class="de-metric-lbl">{% trans "Data Quality" %}</span>
+                  <div class="de-metric-bar-bg"><div class="de-metric-fill b1" style="--w:94%; background:#a78bfa;"></div></div>
+                  <span class="de-metric-val">94%</span>
+                </div>
+                <div class="de-metric-row">
+                  <span class="de-metric-lbl">{% trans "Governance" %}</span>
+                  <div class="de-metric-bar-bg"><div class="de-metric-fill" style="--w:81%; background:#22d3ee;"></div></div>
+                  <span class="de-metric-val">81%</span>
+                </div>
+                <div class="de-metric-row">
+                  <span class="de-metric-lbl">{% trans "Adoption Rate" %}</span>
+                  <div class="de-metric-bar-bg"><div class="de-metric-fill" style="--w:76%; background:#adff2f;"></div></div>
+                  <span class="de-metric-val">76%</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- floating badge -->
+          <div class="de-float-badge" data-aos="zoom-in" data-aos-delay="600">
+            <i class="fa-solid fa-shield-halved me-1"></i> {% trans "Collibra Expert III" %}
+            <span>{% trans "Certified data governance" %}</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ WHO IT'S FOR ═══════════════════════ -->
+<section class="de-pain-section">
+  <div class="container">
+    <div class="de-sec-label" data-aos="fade-up">{% trans "WHO IT'S FOR" %}</div>
+    <h2 class="de-pain-title" data-aos="fade-up" data-aos-delay="60">
+      {% trans "If any of these sounds like you," %}<br>
+      {% trans "we should talk." %}
+    </h2>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+        <div class="de-pain-card">
+          <div class="de-pain-tag">{% trans "THE SPREADSHEET MAZE" %}</div>
+          <div class="de-pain-head">{% trans "Everything lives in ten files" %}</div>
+          <p class="de-pain-body">{% trans "Numbers are scattered across spreadsheets and tools, and no two reports agree. You spend more time reconciling than deciding." %}</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+        <div class="de-pain-card">
+          <div class="de-pain-tag">{% trans "NO SINGLE SOURCE OF TRUTH" %}</div>
+          <div class="de-pain-head">{% trans "Reports take days" %}</div>
+          <p class="de-pain-body">{% trans "Every team has its own version of the truth. Pulling a simple report means chasing people and copy-pasting by hand." %}</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="240">
+        <div class="de-pain-card">
+          <div class="de-pain-tag">{% trans "TOOLS, NO ADOPTION" %}</div>
+          <div class="de-pain-head">{% trans "You bought BI nobody opens" %}</div>
+          <p class="de-pain-body">{% trans "There's a dashboard somewhere, but it's confusing, out of date, or answers questions nobody asked. So people go back to Excel." %}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ WHAT YOU GET ═══════════════════════ -->
+<section class="de-get-section">
+  <div class="container">
+    <div class="de-get-head" data-aos="fade-up">
+      <div class="de-sec-label">{% trans "WHAT YOU GET" %}</div>
+      <h2 class="de-get-title">{% trans "Clarity first. Then the right tools — only where they earn their place." %}</h2>
+      <p class="de-get-sub">{% trans "We don't push platforms or sell licences. We start from your questions, map what exists, and build only what moves you forward." %}</p>
+    </div>
+
+    <div class="de-get-grid">
+      <div class="de-get-item" style="--gi-color:#a78bfa;--gi-rgb:167,139,250;" data-aos="fade-up" data-aos-delay="60">
+        <div class="de-get-icon"><i class="fa-solid fa-map"></i></div>
+        <div class="de-get-item-title">{% trans "A clear map of your data" %}</div>
+        <p class="de-get-item-desc">{% trans "sources, owners, quality and gaps, in plain language." %}</p>
+      </div>
+      <div class="de-get-item" style="--gi-color:#22d3ee;--gi-rgb:34,211,238;" data-aos="fade-up" data-aos-delay="100">
+        <div class="de-get-icon"><i class="fa-solid fa-bullseye"></i></div>
+        <div class="de-get-item-title">{% trans "The metrics that matter" %}</div>
+        <p class="de-get-item-desc">{% trans "defined with you, tied to real business questions." %}</p>
+      </div>
+      <div class="de-get-item" style="--gi-color:#adff2f;--gi-rgb:173,255,47;" data-aos="fade-up" data-aos-delay="140">
+        <div class="de-get-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="de-get-item-title">{% trans "Governance & quality basics" %}</div>
+        <p class="de-get-item-desc">{% trans "enough structure to keep the data trustworthy." %}</p>
+      </div>
+      <div class="de-get-item" style="--gi-color:#f59e0b;--gi-rgb:245,158,11;" data-aos="fade-up" data-aos-delay="180">
+        <div class="de-get-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <div class="de-get-item-title">{% trans "One agreed source of truth" %}</div>
+        <p class="de-get-item-desc">{% trans "so the numbers finally match across teams." %}</p>
+      </div>
+      <div class="de-get-item" style="--gi-color:#a78bfa;--gi-rgb:167,139,250;" data-aos="fade-up" data-aos-delay="220">
+        <div class="de-get-icon"><i class="fa-solid fa-chart-bar"></i></div>
+        <div class="de-get-item-title">{% trans "Reports people actually use" %}</div>
+        <p class="de-get-item-desc">{% trans "clean dashboards in Power BI or Qlik." %}</p>
+      </div>
+      <div class="de-get-item" style="--gi-color:#22d3ee;--gi-rgb:34,211,238;" data-aos="fade-up" data-aos-delay="260">
+        <div class="de-get-icon"><i class="fa-solid fa-route"></i></div>
+        <div class="de-get-item-title">{% trans "A practical roadmap" %}</div>
+        <p class="de-get-item-desc">{% trans "what to fix first, what can wait, and why." %}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ HOW IT WORKS ═══════════════════════ -->
+<section class="de-how-section">
+  <div class="container">
+    <div class="de-sec-label" data-aos="fade-up">{% trans "HOW IT WORKS" %}</div>
+    <h2 class="de-how-title" data-aos="fade-up" data-aos-delay="60">
+      {% trans "Four steps. From the mess you have" %}<br>{% trans "to decisions you trust." %}
+    </h2>
+    <div class="de-steps">
+      <div class="de-step" data-aos="fade-up" data-aos-delay="60">
+        <div class="de-step-num">01</div>
+        <div class="de-step-divider"></div>
+        <div class="de-step-name">{% trans "Listen" %}</div>
+        <div class="de-step-body">{% trans "We start with your business questions, not your tables. What decisions are you trying to make?" %}</div>
+      </div>
+      <div class="de-step" data-aos="fade-up" data-aos-delay="120">
+        <div class="de-step-num">02</div>
+        <div class="de-step-divider"></div>
+        <div class="de-step-name">{% trans "Map" %}</div>
+        <div class="de-step-body">{% trans "We audit what exists — sources, quality, owners, gaps. The honest picture, no surprises later." %}</div>
+      </div>
+      <div class="de-step" data-aos="fade-up" data-aos-delay="180">
+        <div class="de-step-num">03</div>
+        <div class="de-step-divider"></div>
+        <div class="de-step-name">{% trans "Build" %}</div>
+        <div class="de-step-body">{% trans "We model the data, define the metrics, and ship reports that answer the questions you started with." %}</div>
+      </div>
+      <div class="de-step" data-aos="fade-up" data-aos-delay="240">
+        <div class="de-step-num">04</div>
+        <div class="de-step-divider"></div>
+        <div class="de-step-name">{% trans "Embed" %}</div>
+        <div class="de-step-body">{% trans "We train your team, document everything, and hand over control. You own it, not us." %}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ FAQ ═══════════════════════ -->
+<section class="de-faq-section">
+  <div class="container">
+    <div class="de-sec-label" data-aos="fade-up">{% trans "FAQ" %}</div>
+    <h2 class="de-faq-title" data-aos="fade-up" data-aos-delay="60">
+      {% trans "The questions clients actually ask." %}
+    </h2>
+
+    <div class="de-faq-grid" data-aos="fade-up" data-aos-delay="100">
+
+      <!-- Card 1 -->
+      <div class="de-flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="de-flip-inner">
+          <div class="de-flip-front">
+            <div class="de-flip-front-q">{% trans "We're small — isn't this overkill?" %}</div>
+            <div class="de-flip-hint open"><i class="fa-solid fa-rotate"></i> {% trans "Tap to see answer" %}</div>
+          </div>
+          <div class="de-flip-back">
+            <p class="de-flip-back-a">{% trans "No. For smaller teams most of the value is clarity, not big tooling. We start from what you already have and only add what pays for itself." %}</p>
+            <div class="de-flip-hint close" style="margin-top:12px;"><i class="fa-solid fa-rotate-left"></i> {% trans "Close" %}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="de-flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="de-flip-inner">
+          <div class="de-flip-front">
+            <div class="de-flip-front-q">{% trans "Do we need a specific BI tool?" %}</div>
+            <div class="de-flip-hint open"><i class="fa-solid fa-rotate"></i> {% trans "Tap to see answer" %}</div>
+          </div>
+          <div class="de-flip-back">
+            <p class="de-flip-back-a">{% trans "No. We work across Power BI, Qlik and others and recommend what fits your team — we don't sell licenses or push a platform." %}</p>
+            <div class="de-flip-hint close" style="margin-top:12px;"><i class="fa-solid fa-rotate-left"></i> {% trans "Close" %}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="de-flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="de-flip-inner">
+          <div class="de-flip-front">
+            <div class="de-flip-front-q">{% trans "What if our data is a complete mess?" %}</div>
+            <div class="de-flip-hint open"><i class="fa-solid fa-rotate"></i> {% trans "Tap to see answer" %}</div>
+          </div>
+          <div class="de-flip-back">
+            <p class="de-flip-back-a">{% trans "That's the normal starting point, not a problem. Mapping the mess is literally step one — you can't fix what you haven't seen clearly." %}</p>
+            <div class="de-flip-hint close" style="margin-top:12px;"><i class="fa-solid fa-rotate-left"></i> {% trans "Close" %}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="de-flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="de-flip-inner">
+          <div class="de-flip-front">
+            <div class="de-flip-front-q">{% trans "Who actually does the work?" %}</div>
+            <div class="de-flip-hint open"><i class="fa-solid fa-rotate"></i> {% trans "Tap to see answer" %}</div>
+          </div>
+          <div class="de-flip-back">
+            <p class="de-flip-back-a" style="font-size:.78rem;">{% trans "Jessica — 10+ years in data, from hands-on engineering and MDM to leading teams and reporting to C-level, today inside the global data team of an industrial multinational. Certified in data governance (Collibra Expert III) and integration (Informatica)." %}</p>
+            <div class="de-flip-hint close" style="margin-top:8px;"><i class="fa-solid fa-rotate-left"></i> {% trans "Close" %}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="de-flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="de-flip-inner">
+          <div class="de-flip-front">
+            <div class="de-flip-front-q">{% trans "How long does a project take?" %}</div>
+            <div class="de-flip-hint open"><i class="fa-solid fa-rotate"></i> {% trans "Tap to see answer" %}</div>
+          </div>
+          <div class="de-flip-back">
+            <p class="de-flip-back-a">{% trans "It depends on scope, but a first diagnostic and roadmap typically takes 2–3 weeks. From there, the first live reports can be ready in 4–8 weeks." %}</p>
+            <div class="de-flip-hint close" style="margin-top:12px;"><i class="fa-solid fa-rotate-left"></i> {% trans "Close" %}</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ WORKS WELL WITH ═══════════════════════ -->
+<section class="de-related-section">
+  <div class="container">
+    <div class="de-sec-label" data-aos="fade-up">{% trans "WORKS WELL WITH" %}</div>
+    <h2 class="de-related-title" data-aos="fade-up" data-aos-delay="60">
+      {% trans "Most data projects don't travel alone." %}
+    </h2>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="80">
+        <a href="/services/data/automation-ai" class="de-rel-card">
+          <div class="de-rel-tag data">{% trans "DATA" %}</div>
+          <div class="de-rel-name">{% trans "Automation & AI" %}</div>
+          <p class="de-rel-body">{% trans "Once the data is clean, automate the work that just repeats." %}</p>
+        </a>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="160">
+        <a href="/services/data/training" class="de-rel-card">
+          <div class="de-rel-tag data">{% trans "DATA" %}</div>
+          <div class="de-rel-name">{% trans "Training" %}</div>
+          <p class="de-rel-body">{% trans "Make your team fluent so the dashboards keep getting used." %}</p>
+        </a>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="240">
+        <a href="/services/build/web-development" class="de-rel-card">
+          <div class="de-rel-tag build">{% trans "BUILD" %}</div>
+          <div class="de-rel-name">{% trans "Web Development" %}</div>
+          <p class="de-rel-body">{% trans "Surface your data in a fast, clean site or internal tool." %}</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}
+
+{% block extra_js %}
+<script>
+(function(){
+  /* ── count-up KPIs ── */
+  function countUp(el, target, suffix, duration){
+    let start = null;
+    function step(ts){
+      if(!start) start = ts;
+      const p = Math.min((ts-start)/duration, 1);
+      const ease = 1 - Math.pow(1-p, 3);
+      el.textContent = Math.round(ease * target) + suffix;
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  /* ── trigger animations on scroll ── */
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        // KPIs
+        countUp(document.getElementById('de-k1'), 12, '', 1400);
+        countUp(document.getElementById('de-k2'), 94, '%', 1600);
+        countUp(document.getElementById('de-k3'), 28, '', 1200);
+        // Bars
+        document.querySelectorAll('.de-bar').forEach(b => b.classList.add('animate'));
+        // Metrics
+        document.querySelectorAll('.de-metric-fill').forEach(m => m.classList.add('animate'));
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+
+  const dash = document.querySelector('.de-dashboard');
+  if(dash) observer.observe(dash);
+})();
+</script>
+{% endblock %}
