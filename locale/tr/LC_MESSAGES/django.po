@@ -8054,3 +8054,15 @@ msgid ""
 msgstr ""
 "E-posta adresinizi bırakın, hafta içi 2 saat içinde ulaşalım. Hafta sonu "
 "mesajlarına Pazartesi dönüş yapılır. Asla spam yok."
+
+msgid "Data · AI · Web Studio"
+msgstr "Veri · Yapay Zeka · Web Stüdyosu"
+
+msgid "AI Chatbots"
+msgstr "Yapay Zeka Chatbotları"
+
+msgid "Business Analytics"
+msgstr "İş Analitiği"
+
+msgid "QR Menu & Digital Card Solutions"
+msgstr "QR Menü ve Dijital Kart Çözümleri"

@@ -7318,3 +7318,15 @@ msgid ""
 msgstr ""
 "Deixa el teu correu i et contactem en 2 hores — dies feiners. Cap de "
 "setmana: el dilluns. Mai spam."
+
+msgid "Data · AI · Web Studio"
+msgstr "Dades · IA · Estudi Web"
+
+msgid "AI Chatbots"
+msgstr "Chatbots d'IA"
+
+msgid "Business Analytics"
+msgstr "Anàlisi Empresarial"
+
+msgid "QR Menu & Digital Card Solutions"
+msgstr "Solucions de Menú QR i Targeta Digital"

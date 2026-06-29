@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% load static i18n %}
 
-{% block title %}G-Fenix | Our Team{% endblock %}
+{% block title %}G-Fenix | {% trans "Our Team" %}{% endblock %}
 
 {% block extra_head %}
 <script>
@@ -36,11 +36,11 @@
 
     <a href="{% url 'jessica_profile' %}" class="ts-profile-card">
       <div class="ts-card-img">
-        <img src="{% static 'images/jessicaa.jpeg' %}" alt="Jessica Fénix Perez">
+        <img src="{% static 'images/jessicaa.jpeg' %}" alt="Jessica Fénix">
       </div>
       <div class="ts-card-body">
         <div class="ts-card-role">{% trans "Data & AI Expert" %}</div>
-        <div class="ts-card-name">Jessica Fénix Perez</div>
+        <div class="ts-card-name">Jessica Fénix</div>
         <div class="ts-card-arrow">→</div>
       </div>
     </a>

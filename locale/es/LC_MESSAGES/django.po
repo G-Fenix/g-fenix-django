@@ -7283,3 +7283,15 @@ msgid ""
 msgstr ""
 "Deja tu correo y te contactamos en 2 horas — días laborables. Fin de semana:"
 " el lunes. Cero spam, siempre."
+
+msgid "Data · AI · Web Studio"
+msgstr "Datos · IA · Estudio Web"
+
+msgid "AI Chatbots"
+msgstr "Chatbots de IA"
+
+msgid "Business Analytics"
+msgstr "Analítica Empresarial"
+
+msgid "QR Menu & Digital Card Solutions"
+msgstr "Soluciones de Menú QR y Tarjeta Digital"

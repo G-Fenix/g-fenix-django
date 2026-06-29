@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{% block title %}G-Fenix{% endblock %}</title>
 
-  <link rel="icon" type="image/png" href="{% static 'images/l1no.png' %}">
+  <link rel="icon" type="image/png" href="{% static 'images/l2no.png' %}">
+  <link rel="shortcut icon" type="image/png" href="{% static 'images/l2no.png' %}">
+  <meta property="og:image" content="https://g-fenix.com/static/images/l2no.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"G-Fenix","url":"https://g-fenix.com","logo":"https://g-fenix.com/static/images/l2no.png"}</script>
   <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -786,7 +789,7 @@ AOS.init({ once: false, duration: 800, offset: 60, easing: 'ease-out-quart' });
 /* Mobile */
 @media(max-width:767px){
   #gf-chat-widget { right:1.25rem; bottom:1.25rem; }
-  #gf-chat-panel { width:calc(100vw - 2.5rem); max-width:340px; }
+  #gf-chat-panel { width:calc(100vw - 2.5rem); max-width:340px; max-height:55svh; }
 }
 </style>
 
@@ -824,6 +827,7 @@ AOS.init({ once: false, duration: 800, offset: 60, easing: 'ease-out-quart' });
     widget.classList.toggle('gf-chat-open', open);
     panel.setAttribute('aria-hidden', String(!open));
     if(open){ input.focus(); scrollMsgs(); }
+    if(!open){ widget.style.bottom = ''; }
   }
 
   btn.addEventListener('click', function(){
@@ -891,6 +895,17 @@ AOS.init({ once: false, duration: 800, offset: 60, easing: 'ease-out-quart' });
   input.addEventListener('keydown', function(e){
     if(e.key === 'Enter' && !e.shiftKey){ e.preventDefault(); sendMessage(); }
   });
+
+  /* Keyboard awareness: push widget above virtual keyboard on mobile */
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', function() {
+      var kbH = Math.max(0, window.innerHeight - window.visualViewport.height);
+      var baseBottom = window.innerWidth <= 767 ? 20 : 32;
+      widget.style.bottom = (kbH > 50 && widget.classList.contains('gf-chat-open'))
+        ? (baseBottom + kbH) + 'px'
+        : '';
+    });
+  }
 })();
 </script>
 

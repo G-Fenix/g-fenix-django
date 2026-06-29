@@ -135,6 +135,38 @@
 
   document.addEventListener('wheel', onWheel, { passive: false });
 
+  /* ── Touch (mobile) ─────────────────────────────────────────── */
+  var touchLastY = 0;
+
+  function onTouchStart(e) {
+    touchLastY = e.touches[0].clientY;
+  }
+
+  function onTouchMove(e) {
+    var touchY = e.touches[0].clientY;
+    var delta  = touchLastY - touchY; // positive = finger up = forward
+    touchLastY = touchY;
+    if (Math.abs(delta) < 2) return;
+
+    if (locked) {
+      e.preventDefault();
+      wheelAccum = Math.max(0, wheelAccum + delta * 5);
+      var newFrame = Math.min(Math.round(wheelAccum / DELTA_PER), TOTAL - 1);
+      drawFrame(newFrame);
+      revealWordsByFrame(newFrame);
+      if (newFrame >= TOTAL - 1) unlockPage();
+    } else {
+      if (window.scrollY === 0 && delta < 0) {
+        e.preventDefault();
+        lockPage();
+        wheelAccum = currentFrame * DELTA_PER;
+      }
+    }
+  }
+
+  document.addEventListener('touchstart', onTouchStart, { passive: true });
+  document.addEventListener('touchmove',  onTouchMove,  { passive: false });
+
   /* ── Resize ─────────────────────────────────────────────────── */
   var resizeTimer;
   window.addEventListener('resize', function () {

@@ -540,7 +540,7 @@ img { max-width: 100%; display: block; }
 }
 .gf-mob-close:hover { background: var(--bg-hover); }
 
-.gf-mob-body { padding: 16px 20px; display: flex; flex-direction: column; gap: 4px; }
+.gf-mob-body { padding: 16px 20px 96px; display: flex; flex-direction: column; gap: 4px; }
 
 .gf-mob-section {
   margin-bottom: 8px;
