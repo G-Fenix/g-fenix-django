@@ -187,6 +187,53 @@
 
   document.addEventListener('wheel', onWheel, { passive: false });
 
+  /* ── Touch (mobile) ─────────────────────────────────────── */
+  var touchLastY = 0;
+
+  function onTouchStart(e) {
+    touchLastY = e.touches[0].clientY;
+  }
+
+  function onTouchMove(e) {
+    if (cooldown) return;
+    var touchY = e.touches[0].clientY;
+    var delta  = touchLastY - touchY; // positive = finger up = scroll down
+    touchLastY = touchY;
+    if (Math.abs(delta) < 2) return;
+
+    if (locked) {
+      e.preventDefault();
+      wheelAccum += delta * 5;
+      if (wheelAccum < 0) wheelAccum = 0;
+      var newFrame = Math.min(Math.round(wheelAccum / DELTA_PER), TOTAL - 1);
+      targetFrame = newFrame;
+      scheduleDraw();
+      if (newFrame >= TOTAL - 1 && delta > 0) { unlock(true);  return; }
+      if (wheelAccum <= 0        && delta < 0) { unlock(false); return; }
+      return;
+    }
+
+    var rect = section.getBoundingClientRect();
+    var vh   = window.innerHeight;
+    if (delta > 0 && rect.top >= -10 && rect.top <= 220) {
+      if (lastUnlockDir === 1) return;
+      e.preventDefault();
+      lastUnlockDir = 0;
+      lock(0);
+      return;
+    }
+    if (delta < 0 && rect.bottom >= vh - 220 && rect.bottom <= vh + 10) {
+      if (lastUnlockDir === -1) return;
+      e.preventDefault();
+      lastUnlockDir = 0;
+      lock(TOTAL - 1);
+      return;
+    }
+  }
+
+  document.addEventListener('touchstart', onTouchStart, { passive: true });
+  document.addEventListener('touchmove',  onTouchMove,  { passive: false });
+
   /* ── Scroll fallback (keyboard / scrollbar / fast fling) ── */
   window.addEventListener('scroll', function () {
     if (cooldown) { lastScrollY = window.scrollY; return; }
