@@ -15,8 +15,8 @@ HTML_WRAPPER = """\
   <tr><td align="center">
     <table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:8px;overflow:hidden;max-width:600px;">
       <tr>
-        <td style="background:#0a0a0a;padding:24px 40px;">
-          <img src="{logo}" alt="G-Fenix" width="120" style="display:block;">
+        <td bgcolor="#0a0a0a" style="background:#0a0a0a;padding:24px 40px;">
+          <img src="{logo}" alt="G-Fenix" width="130" style="display:block;">
         </td>
       </tr>
       <tr>
