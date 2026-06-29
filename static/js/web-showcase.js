@@ -139,11 +139,16 @@
     revealWords(-1);
     document.documentElement.style.overflow = '';
     document.body.style.overflow            = '';
-    window.scrollTo(0, goForward ? top + 1 : Math.max(0, top - 1));
+    /* On mobile scroll-up, jump further above the section so the page
+       actually moves and the user doesn't feel stuck at the boundary. */
+    var scrollTarget = goForward
+      ? top + 1
+      : Math.max(0, top - Math.round(window.innerHeight * 0.35));
+    window.scrollTo(0, scrollTarget);
     setTimeout(function () {
       cooldown    = false;
       lastScrollY = window.scrollY;
-    }, 600);
+    }, 400);
   }
 
   /* ── Wheel ───────────────────────────────────────────────── */
@@ -204,7 +209,10 @@
 
     if (locked) {
       e.preventDefault();
-      wheelAccum += delta * 5;
+      /* Cap backward delta so a single fast swipe can't skip past all frames.
+         Forward stays uncapped so advancing feels snappy. */
+      var effectiveDelta = delta < 0 ? Math.max(delta, -18) : delta;
+      wheelAccum += effectiveDelta * 5;
       if (wheelAccum < 0) wheelAccum = 0;
       var newFrame = Math.min(Math.round(wheelAccum / DELTA_PER), TOTAL - 1);
       targetFrame = newFrame;
