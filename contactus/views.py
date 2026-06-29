@@ -95,6 +95,64 @@ def contact_submit(request):
         return JsonResponse({'status': 'error'}, status=500)
 
 
+NEWSLETTER_REPLY = {
+    'en': {
+        'subject': 'G-Fenix will be in touch soon',
+        'body': (
+            "Hello,\n\n"
+            "Thank you for your interest in G-Fenix! We have received your email and "
+            "a member of our team will reach out to you within 2 business hours.\n\n"
+            "In the meantime, feel free to explore our services:\n"
+            "https://g-fenix.com\n\n"
+            "Best regards,\n"
+            "G-Fenix Team\n"
+            "hello@g-fenix.com"
+        ),
+    },
+    'tr': {
+        'subject': 'G-Fenix en kısa sürede sizinle iletişime geçecek',
+        'body': (
+            "Merhaba,\n\n"
+            "G-Fenix'e gösterdiğiniz ilgi için teşekkür ederiz! E-posta adresinizi aldık; "
+            "ekibimizden bir yetkili iş saatlerinde 2 saat içinde sizinle iletişime geçecektir.\n\n"
+            "Bu süreçte hizmetlerimizi inceleyebilirsiniz:\n"
+            "https://g-fenix.com/tr\n\n"
+            "Saygılarımızla,\n"
+            "G-Fenix Ekibi\n"
+            "hello@g-fenix.com"
+        ),
+    },
+    'es': {
+        'subject': 'G-Fenix se pondrá en contacto pronto',
+        'body': (
+            "Hola,\n\n"
+            "¡Gracias por su interés en G-Fenix! Hemos recibido su correo electrónico y "
+            "un miembro de nuestro equipo se pondrá en contacto con usted en un plazo de "
+            "2 horas hábiles.\n\n"
+            "Mientras tanto, puede explorar nuestros servicios:\n"
+            "https://g-fenix.com/es\n\n"
+            "Atentamente,\n"
+            "El equipo de G-Fenix\n"
+            "hello@g-fenix.com"
+        ),
+    },
+    'ca': {
+        'subject': 'G-Fenix es posarà en contacte aviat',
+        'body': (
+            "Hola,\n\n"
+            "Gràcies pel seu interès en G-Fenix! Hem rebut el seu correu electrònic i "
+            "un membre del nostre equip es posarà en contacte amb vostè en un termini de "
+            "2 hores hàbils.\n\n"
+            "Mentrestant, pot explorar els nostres serveis:\n"
+            "https://g-fenix.com/ca\n\n"
+            "Cordialment,\n"
+            "L'equip de G-Fenix\n"
+            "hello@g-fenix.com"
+        ),
+    },
+}
+
+
 @require_POST
 def newsletter_subscribe(request):
     email = request.POST.get('email', '').strip()
@@ -102,6 +160,19 @@ def newsletter_subscribe(request):
         return JsonResponse({'status': 'error'}, status=400)
     try:
         NewsletterSubscriber.objects.get_or_create(email=email)
+
+        lang = translation.get_language() or 'en'
+        lang = lang[:2]
+        reply = NEWSLETTER_REPLY.get(lang, NEWSLETTER_REPLY['en'])
+
+        send_mail(
+            subject=reply['subject'],
+            message=reply['body'],
+            from_email='G-Fenix <hello@g-fenix.com>',
+            recipient_list=[email],
+            fail_silently=True,
+        )
+
         return JsonResponse({'status': 'ok'})
     except Exception:
         return JsonResponse({'status': 'error'}, status=500)
