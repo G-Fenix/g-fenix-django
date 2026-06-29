@@ -7295,3 +7295,9 @@ msgstr "Analítica Empresarial"
 
 msgid "QR Menu & Digital Card Solutions"
 msgstr "Soluciones de Menú QR y Tarjeta Digital"
+
+msgid "Governance Index"
+msgstr "Índice de Gobernanza"
+
+msgid "Pipeline Uptime"
+msgstr "Disponibilidad del Pipeline"

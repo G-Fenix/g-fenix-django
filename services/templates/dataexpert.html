@@ -3,6 +3,7 @@
 {% load static %}
 
 {% block title %}G-Fenix | {% trans "Data Expert Consultancy" %}{% endblock %}
+{% block meta_desc %}{% trans "Data Expert Consultancy by G-Fenix. Strategy, governance, BI dashboards and analytics solutions — turn your raw data into strategic decisions." %}{% endblock %}
 
 {% block extra_head %}
 <style>
@@ -125,10 +126,10 @@
 /* Chart */
 .de-chart-title { font-size:.68rem; color:rgba(255,255,255,.3); letter-spacing:.08em; text-transform:uppercase; margin-bottom:12px; }
 .de-bars { display:flex; align-items:flex-end; gap:6px; height:80px; }
-.de-bar-wrap { flex:1; display:flex; flex-direction:column; align-items:center; gap:5px; height:100%; }
+.de-bar-wrap { flex:1; display:flex; flex-direction:column; align-items:center; gap:4px; }
 .de-bar {
   width:100%; border-radius:4px 4px 0 0;
-  height:0; transition:height 1.2s cubic-bezier(.22,.61,.36,1);
+  height:0; transition:height 1.2s cubic-bezier(.22,.61,.36,1); min-height:0;
 }
 .de-bar.animate { height:var(--h); }
 .de-bar.b1 { background:linear-gradient(180deg,#8b5cf6,rgba(139,92,246,.4)); }
@@ -399,12 +400,12 @@
               <!-- Bar chart -->
               <div class="de-chart-title">{% trans "Monthly performance" %}</div>
               <div class="de-bars" id="de-bars">
-                <div class="de-bar-wrap"><div class="de-bar b1" style="--h:55%"></div><div class="de-bar-lbl">Jan</div></div>
-                <div class="de-bar-wrap"><div class="de-bar b2" style="--h:70%"></div><div class="de-bar-lbl">Feb</div></div>
-                <div class="de-bar-wrap"><div class="de-bar b3" style="--h:45%"></div><div class="de-bar-lbl">Mar</div></div>
-                <div class="de-bar-wrap"><div class="de-bar b4" style="--h:85%"></div><div class="de-bar-lbl">Apr</div></div>
-                <div class="de-bar-wrap"><div class="de-bar b5" style="--h:62%"></div><div class="de-bar-lbl">May</div></div>
-                <div class="de-bar-wrap"><div class="de-bar b6" style="--h:92%"></div><div class="de-bar-lbl">Jun</div></div>
+                <div class="de-bar-wrap"><div class="de-bar b1" style="--h:30px"></div><div class="de-bar-lbl">Jan</div></div>
+                <div class="de-bar-wrap"><div class="de-bar b2" style="--h:44px"></div><div class="de-bar-lbl">Feb</div></div>
+                <div class="de-bar-wrap"><div class="de-bar b3" style="--h:26px"></div><div class="de-bar-lbl">Mar</div></div>
+                <div class="de-bar-wrap"><div class="de-bar b4" style="--h:54px"></div><div class="de-bar-lbl">Apr</div></div>
+                <div class="de-bar-wrap"><div class="de-bar b5" style="--h:40px"></div><div class="de-bar-lbl">May</div></div>
+                <div class="de-bar-wrap"><div class="de-bar b6" style="--h:62px"></div><div class="de-bar-lbl">Jun</div></div>
               </div>
 
               <!-- Pulse line -->
@@ -429,14 +430,14 @@
                   <span class="de-metric-val">94%</span>
                 </div>
                 <div class="de-metric-row">
-                  <span class="de-metric-lbl">{% trans "Governance" %}</span>
-                  <div class="de-metric-bar-bg"><div class="de-metric-fill" style="--w:81%; background:#22d3ee;"></div></div>
-                  <span class="de-metric-val">81%</span>
+                  <span class="de-metric-lbl">{% trans "Governance Index" %}</span>
+                  <div class="de-metric-bar-bg"><div class="de-metric-fill" style="--w:87%; background:#22d3ee;"></div></div>
+                  <span class="de-metric-val">87%</span>
                 </div>
                 <div class="de-metric-row">
-                  <span class="de-metric-lbl">{% trans "Adoption Rate" %}</span>
-                  <div class="de-metric-bar-bg"><div class="de-metric-fill" style="--w:76%; background:#adff2f;"></div></div>
-                  <span class="de-metric-val">76%</span>
+                  <span class="de-metric-lbl">{% trans "Pipeline Uptime" %}</span>
+                  <div class="de-metric-bar-bg"><div class="de-metric-fill" style="--w:99%; background:#adff2f;"></div></div>
+                  <span class="de-metric-val">99%</span>
                 </div>
               </div>
 

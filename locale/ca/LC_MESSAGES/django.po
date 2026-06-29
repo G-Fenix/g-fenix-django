@@ -7330,3 +7330,9 @@ msgstr "Anàlisi Empresarial"
 
 msgid "QR Menu & Digital Card Solutions"
 msgstr "Solucions de Menú QR i Targeta Digital"
+
+msgid "Governance Index"
+msgstr "Índex de Governança"
+
+msgid "Pipeline Uptime"
+msgstr "Disponibilitat del Pipeline"

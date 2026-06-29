@@ -143,6 +143,7 @@
   }
 
   function onTouchMove(e) {
+    if (window.gfMobileNavOpen) return;
     var touchY = e.touches[0].clientY;
     var delta  = touchLastY - touchY; // positive = finger up = forward
     touchLastY = touchY;

@@ -8,7 +8,18 @@
 
   <link rel="icon" type="image/png" href="{% static 'images/l2no.png' %}">
   <link rel="shortcut icon" type="image/png" href="{% static 'images/l2no.png' %}">
-  <meta property="og:image" content="https://g-fenix.com/static/images/l2no.png">
+  <!-- SEO: canonical + hreflang -->
+  <link rel="canonical" href="{{ SITE_BASE }}{% if LANGUAGE_CODE != 'en' %}/{{ LANGUAGE_CODE }}{% endif %}{{ CANONICAL_PATH }}">
+  <link rel="alternate" hreflang="en" href="{{ SITE_BASE }}{{ CANONICAL_PATH }}">
+  <link rel="alternate" hreflang="tr" href="{{ SITE_BASE }}/tr{{ CANONICAL_PATH }}">
+  <link rel="alternate" hreflang="es" href="{{ SITE_BASE }}/es{{ CANONICAL_PATH }}">
+  <link rel="alternate" hreflang="ca" href="{{ SITE_BASE }}/ca{{ CANONICAL_PATH }}">
+  <link rel="alternate" hreflang="x-default" href="{{ SITE_BASE }}{{ CANONICAL_PATH }}">
+  <!-- SEO: meta description -->
+  <meta name="description" content="{% block meta_desc %}G-Fenix — Web development, AI chatbots, data consultancy and automation solutions. Barcelona-based studio serving clients globally.{% endblock %}">
+  <meta property="og:image" content="{{ SITE_BASE }}/static/images/l2no.png">
+  <meta property="og:title" content="{% block title %}G-Fenix{% endblock %}">
+  <meta property="og:description" content="{% block og_desc %}G-Fenix — Web development, AI chatbots, data consultancy and automation solutions.{% endblock %}">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"G-Fenix","url":"https://g-fenix.com","logo":"https://g-fenix.com/static/images/l2no.png"}</script>
   <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
@@ -481,16 +492,23 @@ AOS.init({ once: false, duration: 800, offset: 60, easing: 'ease-out-quart' });
   }, { passive: true });
 
   const mobileNav = document.getElementById('gfMobileNav');
-  document.getElementById('gfMobileToggle').addEventListener('click', () => {
+  function openMobile() {
     mobileNav.classList.add('is-open');
     overlay.classList.add('is-visible');
-  });
+    document.body.classList.add('gf-nav-open');
+    window.gfMobileNavOpen = true;
+  }
   function closeMobile() {
     mobileNav.classList.remove('is-open');
     overlay.classList.remove('is-visible');
+    document.body.classList.remove('gf-nav-open');
+    window.gfMobileNavOpen = false;
   }
+  document.getElementById('gfMobileToggle').addEventListener('click', openMobile);
   document.getElementById('gfMobClose').addEventListener('click', closeMobile);
   overlay.addEventListener('click', closeMobile);
+  /* Prevent touchmove inside nav from reaching frame showcase handlers */
+  mobileNav.addEventListener('touchmove', function(e) { e.stopPropagation(); }, { passive: true });
 })();
 </script>
 

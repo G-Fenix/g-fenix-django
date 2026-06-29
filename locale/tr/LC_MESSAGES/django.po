@@ -8066,3 +8066,9 @@ msgstr "İş Analitiği"
 
 msgid "QR Menu & Digital Card Solutions"
 msgstr "QR Menü ve Dijital Kart Çözümleri"
+
+msgid "Governance Index"
+msgstr "Yönetişim Endeksi"
+
+msgid "Pipeline Uptime"
+msgstr "Pipeline Çalışma Süresi"
