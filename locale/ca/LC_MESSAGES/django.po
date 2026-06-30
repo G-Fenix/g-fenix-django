@@ -7336,3 +7336,84 @@ msgstr "Índex de Governança"
 
 msgid "Pipeline Uptime"
 msgstr "Disponibilitat del Pipeline"
+
+msgid "Smart Automations"
+msgstr "Automatitzacions Intel·ligents"
+
+msgid "Always Respond, Even When You're Away"
+msgstr "Respon Sempre, Fins i Tot Quan Ets Absent"
+
+msgid "Set up smart auto-replies across all your platforms — from social media DMs to email inquiries."
+msgstr "Configura respostes automàtiques intel·ligents a totes les teves plataformes — des de missatges directes a consultes per correu."
+
+msgid "Greeting Message"
+msgstr "Missatge de Benvinguda"
+
+msgid "Greet every new visitor automatically before your team picks up."
+msgstr "Saluda automàticament cada nou visitant abans que el teu equip respongui."
+
+msgid "Hi! 👋 Thanks for reaching out to G‑Fenix. We'll be right with you!"
+msgstr "Hola! 👋 Gràcies per contactar amb G‑Fenix. De seguida t'atenem!"
+
+msgid "Away Message"
+msgstr "Missatge d'Absència"
+
+msgid "Let customers know you're offline — no one left without an answer."
+msgstr "Informa els clients que no estàs disponible — ningú queda sense resposta."
+
+msgid "We're away right now 🌙 We reply Mon–Fri 9–18h. Leave a message!"
+msgstr "Ara no estem disponibles 🌙 Responem Dll–Div 9–18h. Deixa'ns un missatge!"
+
+msgid "Instant welcome for anyone who opens your Messenger chat."
+msgstr "Benvinguda instantània per a tothom que obri el teu xat de Messenger."
+
+msgid "Hello! Welcome to G‑Fenix 🚀 How can we help you today?"
+msgstr "Hola! Benvingut/da a G‑Fenix 🚀 En què et podem ajudar avui?"
+
+msgid "Cover weekends and after-hours automatically — every message is acknowledged."
+msgstr "Cobreix caps de setmana i fora d'horari automàticament — cada missatge queda confirmat."
+
+msgid "We're currently unavailable. We'll respond on the next business day! ✉️"
+msgstr "Ara no estem disponibles. Respondrem el proper dia laborable! ✉️"
+
+msgid "Instant Replies"
+msgstr "Respostes Instantànies"
+
+msgid "Set up quick-reply buttons and automated flows for your most common questions."
+msgstr "Configura botons de resposta ràpida i fluxos automatitzats per a les teves preguntes més freqüents."
+
+msgid "Hi! Choose an option:"
+msgstr "Hola! Tria una opció:"
+
+msgid "📋 Services"
+msgstr "📋 Serveis"
+
+msgid "💬 Contact us"
+msgstr "💬 Contacta'ns"
+
+msgid "Customers always get a reply, even outside business hours."
+msgstr "Els clients sempre reben una resposta, fins i tot fora de l'horari laboral."
+
+msgid "Thanks for writing! We'll get back to you within 24 hours 🙌"
+msgstr "Gràcies per escriure! Et respondrem en 24 hores 🙌"
+
+msgid "Email Auto-Reply"
+msgstr "Resposta Automàtica per Correu"
+
+msgid "Multilingual Responses"
+msgstr "Respostes Multilingües"
+
+msgid "When someone fills your contact form, they instantly get a personalised reply in their own language."
+msgstr "Quan algú omple el formulari de contacte, rep a l'instant una resposta personalitzada en el seu propi idioma."
+
+msgid "24 h Response Promise"
+msgstr "Compromís de Resposta en 24 h"
+
+msgid "The auto-reply confirms receipt and sets expectations — weekdays within 2 h, weekends on Monday."
+msgstr "La resposta automàtica confirma la recepció i gestiona les expectatives — dies feiners en 2 h, caps de setmana el dilluns."
+
+msgid "We got your message!"
+msgstr "Hem rebut el teu missatge!"
+
+msgid "Hi! Thanks for contacting G‑Fenix. We'll reply within 24 h (weekdays) or Monday morning (weekends). 🚀"
+msgstr "Hola! Gràcies per contactar amb G‑Fenix. Respondrem en 24 h (dies feiners) o el dilluns al matí (caps de setmana). 🚀"

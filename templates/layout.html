@@ -1151,6 +1151,8 @@ window.addEventListener('load', function() {
     ca: "Rebut! Dies feiners en 2 h — caps de setmana, el dilluns."
   };
   const resendLabels = { en: "Send again", tr: "Tekrar gönder", es: "Enviar de nuevo", ca: "Enviar de nou" };
+  const origBottom = form.querySelector('.gf-fcta-bottom').innerHTML;
+  const origField  = form.querySelector('.gf-fcta-field').innerHTML;
 
   form.addEventListener('submit', async e => {
     e.preventDefault();
@@ -1165,13 +1167,22 @@ window.addEventListener('load', function() {
         headers: { 'X-CSRFToken': data.get('csrfmiddlewaretoken') }
       });
       if (res.ok) {
-        const bottom = form.querySelector('.gf-fcta-bottom') || form;
+        form.querySelector('.gf-fcta-field').innerHTML = '';
+        const bottom = form.querySelector('.gf-fcta-bottom');
         bottom.innerHTML = `
           <div class="gf-nl-success">
             <i class="fa-solid fa-circle-check"></i>
             <span>${successMsgs[lang] || successMsgs.en}</span>
-            <button type="button" class="gf-nl-resend" onclick="location.reload()" title="Reset">×</button>
+            <button type="button" class="gf-nl-resend" id="gfNlResendBtn">
+              <i class="fa-solid fa-rotate-left"></i> ${resendLabels[lang] || resendLabels.en}
+            </button>
           </div>`;
+        document.getElementById('gfNlResendBtn').addEventListener('click', () => {
+          form.querySelector('.gf-fcta-field').innerHTML = origField;
+          bottom.innerHTML = origBottom;
+          form.querySelector('input[type="email"]').value = '';
+          form.querySelector('input[type="checkbox"]').checked = false;
+        });
       } else { throw new Error(); }
     } catch {
       btn.disabled = false;

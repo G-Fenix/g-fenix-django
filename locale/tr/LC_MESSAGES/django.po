@@ -8069,3 +8069,84 @@ msgstr "Yönetişim Endeksi"
 
 msgid "Pipeline Uptime"
 msgstr "Pipeline Çalışma Süresi"
+
+msgid "Smart Automations"
+msgstr "Akıllı Otomasyonlar"
+
+msgid "Always Respond, Even When You're Away"
+msgstr "Uzaktayken Bile Her Zaman Yanıt Verin"
+
+msgid "Set up smart auto-replies across all your platforms — from social media DMs to email inquiries."
+msgstr "Tüm platformlarınızda akıllı otomatik yanıtlar kurun — sosyal medya DM'lerinden e-posta sorgularına kadar."
+
+msgid "Greeting Message"
+msgstr "Karşılama Mesajı"
+
+msgid "Greet every new visitor automatically before your team picks up."
+msgstr "Ekibiniz devreye girmeden önce her yeni ziyaretçiyi otomatik olarak karşılayın."
+
+msgid "Hi! 👋 Thanks for reaching out to G‑Fenix. We'll be right with you!"
+msgstr "Merhaba! 👋 G‑Fenix'e ulaştığınız için teşekkürler. Hemen ilgileniyoruz!"
+
+msgid "Away Message"
+msgstr "Yokluğunda Mesaj"
+
+msgid "Let customers know you're offline — no one left without an answer."
+msgstr "Müşterilerinize çevrimdışı olduğunuzu bildirin — kimseyi yanıtsız bırakmayın."
+
+msgid "We're away right now 🌙 We reply Mon–Fri 9–18h. Leave a message!"
+msgstr "Şu an müsait değiliz 🌙 Pzt–Cum 9–18 arası yanıtlarız. Mesaj bırakın!"
+
+msgid "Instant welcome for anyone who opens your Messenger chat."
+msgstr "Messenger sohbetinizi açan herkese anında karşılama."
+
+msgid "Hello! Welcome to G‑Fenix 🚀 How can we help you today?"
+msgstr "Merhaba! G‑Fenix'e hoş geldiniz 🚀 Bugün size nasıl yardımcı olabiliriz?"
+
+msgid "Cover weekends and after-hours automatically — every message is acknowledged."
+msgstr "Hafta sonlarını ve mesai dışı saatleri otomatik olarak karşılayın — her mesaj onaylanır."
+
+msgid "We're currently unavailable. We'll respond on the next business day! ✉️"
+msgstr "Şu an müsait değiliz. Bir sonraki iş günü yanıt vereceğiz! ✉️"
+
+msgid "Instant Replies"
+msgstr "Anında Yanıtlar"
+
+msgid "Set up quick-reply buttons and automated flows for your most common questions."
+msgstr "En sık sorulan sorularınız için hızlı yanıt düğmeleri ve otomatik akışlar oluşturun."
+
+msgid "Hi! Choose an option:"
+msgstr "Merhaba! Bir seçenek belirleyin:"
+
+msgid "📋 Services"
+msgstr "📋 Hizmetler"
+
+msgid "💬 Contact us"
+msgstr "💬 Bize ulaşın"
+
+msgid "Customers always get a reply, even outside business hours."
+msgstr "Müşteriler, iş saatleri dışında bile her zaman yanıt alır."
+
+msgid "Thanks for writing! We'll get back to you within 24 hours 🙌"
+msgstr "Yazdığınız için teşekkürler! 24 saat içinde size döneceğiz 🙌"
+
+msgid "Email Auto-Reply"
+msgstr "E-posta Otomatik Yanıtı"
+
+msgid "Multilingual Responses"
+msgstr "Çok Dilli Yanıtlar"
+
+msgid "When someone fills your contact form, they instantly get a personalised reply in their own language."
+msgstr "Biri iletişim formunuzu doldurduğunda, anında kendi dilinde kişiselleştirilmiş bir yanıt alır."
+
+msgid "24 h Response Promise"
+msgstr "24 Saat Yanıt Taahhüdü"
+
+msgid "The auto-reply confirms receipt and sets expectations — weekdays within 2 h, weekends on Monday."
+msgstr "Otomatik yanıt, alındı onayı verir ve beklentileri yönetir — hafta içi 2 saat içinde, hafta sonu Pazartesi."
+
+msgid "We got your message!"
+msgstr "Mesajınızı aldık!"
+
+msgid "Hi! Thanks for contacting G‑Fenix. We'll reply within 24 h (weekdays) or Monday morning (weekends). 🚀"
+msgstr "Merhaba! G‑Fenix'e ulaştığınız için teşekkürler. Hafta içi 24 saat, hafta sonu Pazartesi sabahı yanıt vereceğiz. 🚀"
