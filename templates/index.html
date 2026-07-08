@@ -234,4 +234,21 @@
 
 {% endblock %}
 
+{% block extra_js %}
+<script>
+/* Business-card QR helper: only runs if the URL has ?vcard=name — does nothing otherwise. */
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var who = params.get('vcard');
+  if (who === 'cengizhan' || who === 'jessica') {
+    var a = document.createElement('a');
+    a.href = '/static/vcards/' + who + '.vcf';
+    a.download = who + '.vcf';
+    document.body.appendChild(a);
+    a.click();
+  }
+})();
+</script>
+{% endblock %}
+
 
