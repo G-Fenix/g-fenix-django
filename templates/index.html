@@ -246,6 +246,9 @@
     a.download = who + '.vcf';
     document.body.appendChild(a);
     a.click();
+    /* Clean the ?vcard=... part from the address bar so reopening this tab later
+       just shows the normal homepage instead of asking to download again. */
+    window.history.replaceState(null, '', window.location.pathname);
   }
 })();
 </script>
