@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{% block title %}G-Fenix{% endblock %}</title>
 
-  <link rel="icon" type="image/png" href="{% static 'images/l2no.png' %}">
-  <link rel="shortcut icon" type="image/png" href="{% static 'images/l2no.png' %}">
+  <link rel="icon" type="image/png" href="{% static 'images/l1no.png' %}">
+  <link rel="shortcut icon" type="image/png" href="{% static 'images/l1no.png' %}">
   <!-- SEO: canonical + hreflang -->
   <link rel="canonical" href="{{ SITE_BASE }}{% if LANGUAGE_CODE != 'en' %}/{{ LANGUAGE_CODE }}{% endif %}{{ CANONICAL_PATH }}">
   <link rel="alternate" hreflang="en" href="{{ SITE_BASE }}{{ CANONICAL_PATH }}">
@@ -17,10 +17,10 @@
   <link rel="alternate" hreflang="x-default" href="{{ SITE_BASE }}{{ CANONICAL_PATH }}">
   <!-- SEO: meta description -->
   <meta name="description" content="{% block meta_desc %}G-Fenix — Web development, AI chatbots, data consultancy and automation solutions. Barcelona-based studio serving clients globally.{% endblock %}">
-  <meta property="og:image" content="{{ SITE_BASE }}/static/images/l2no.png">
+  <meta property="og:image" content="{{ SITE_BASE }}/static/images/logoblack.png">
   <meta property="og:title" content="{% block og_title %}G-Fenix{% endblock %}">
   <meta property="og:description" content="{% block og_desc %}G-Fenix — Web development, AI chatbots, data consultancy and automation solutions.{% endblock %}">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"G-Fenix","url":"https://g-fenix.com","logo":"https://g-fenix.com/static/images/l2no.png"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"G-Fenix","url":"https://g-fenix.com","logo":"https://g-fenix.com/static/images/logoblack.png"}</script>
   <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -913,7 +913,7 @@ AOS.init({ once: false, duration: 800, offset: 60, easing: 'ease-out-quart' });
       addMsg(data.reply || data.error || '...', false);
     } catch(e) {
       hideTyping();
-      addMsg('Sorry, something went wrong.', false);
+      addMsg('{% trans "Sorry, something went wrong." %}', false);
     } finally {
       sendBtn.disabled = false;
       input.disabled = false;

@@ -275,7 +275,7 @@ msgstr ""
 "hafta sürebilir. Başlangıçta net bir zaman çizelgesi paylaşır ve her hafta "
 "güncelleriz."
 
-msgid "Close â†©"
+msgid "Close ↩"
 msgstr "Kapat ↩"
 
 msgid "What is included in the website package?"
@@ -428,7 +428,7 @@ msgid "Impress."
 msgstr "Etkile."
 
 msgid ""
-"From restaurant menus to hotel lounges and personal brand cards — Gâ€‘Fenix "
+"From restaurant menus to hotel lounges and personal brand cards — G‑Fenix "
 "builds smart QR experiences that work on any device, in any language, and "
 "update in real time without reprinting a single sheet."
 msgstr ""
@@ -552,7 +552,7 @@ msgstr "Menünüz. Her Zaman Taze. Hiç Yeniden Basılmaz."
 
 msgid ""
 "Paper menus are expensive to reprint, easy to soil, and impossible to update"
-" on the fly. A Gâ€‘Fenix QR menu lives on your phone — change a price, add a"
+" on the fly. A G‑Fenix QR menu lives on your phone — change a price, add a"
 " photo, mark something sold out — and every table sees it instantly."
 msgstr ""
 "Kağıt menülerin yeniden basılması pahalıdır, kolayca kirlenirler ve anında "
@@ -725,7 +725,7 @@ msgstr "Ne kadar hızlı canlıya geçebiliriz?"
 
 msgid ""
 "Most menus are live within 48 hours of receiving your content. For larger "
-"hotels with multiple sections we typically need 3â€“5 business days for "
+"hotels with multiple sections we typically need 3–5 business days for "
 "setup and testing."
 msgstr ""
 "Çoğu menü, içeriğinizi aldıktan sonra 48 saat içinde canlıya geçer. Birden "
@@ -788,7 +788,7 @@ msgid "Modern Web Solutions Built for Business"
 msgstr "İş Dünyası için İnşa Edilmiş Modern Web Çözümleri"
 
 msgid ""
-"Gâ€‘Fenix plans, designs, and ships. From corporate sites to custom admin "
+"G‑Fenix plans, designs, and ships. From corporate sites to custom admin "
 "panels, online accounting tools to multilingual platforms — fast, secure, "
 "and built to scale."
 msgstr ""
@@ -860,7 +860,7 @@ msgstr ""
 "Çevrimiçi envanter takibi, düşük stok uyarıları, tedarikçi yönetimi ve depo "
 "raporlaması."
 
-msgid "Eâ€‘Commerce"
+msgid "E‑Commerce"
 msgstr "E-Ticaret"
 
 msgid ""
@@ -896,7 +896,7 @@ msgid "A Management Panel Built for Your Business"
 msgstr "İşletmeniz için İnşa Edilmiş Yönetim Paneli"
 
 msgid ""
-"Off-the-shelf tools never fit your workflow. Gâ€‘Fenix builds everything "
+"Off-the-shelf tools never fit your workflow. G‑Fenix builds everything "
 "from scratch — staff attendance tracking to internal messaging, check-in/out"
 " logs to role-based permissions."
 msgstr ""
@@ -977,7 +977,7 @@ msgstr "Kullandığımız Teknolojiler"
 
 # â”€â”€ CHATBOTS PAGE
 # â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-msgid "Build Â· AI Chatbots"
+msgid "Build · AI Chatbots"
 msgstr "İnşa Et · AI Chatbotları"
 
 msgid ""
@@ -1339,7 +1339,7 @@ msgstr "Müşterilerin ne sorduğuna dair veri yok"
 msgid "Response time: hours or days"
 msgstr "Yanıt süresi: saatler veya günler"
 
-msgid "With Gâ€‘Bot"
+msgid "With G‑Bot"
 msgstr "G‑Bot ile"
 
 msgid "Handled 24/7, even on holidays"
@@ -1362,7 +1362,7 @@ msgstr "Yanıt süresi: 1 saniyenin altında"
 
 # â”€â”€ COMPLETED PROJECTS
 # â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-msgid "Portfolio Â· Delivered Work"
+msgid "Portfolio · Delivered Work"
 msgstr "Portföy · Teslim Edilen İşler"
 
 msgid "Projects We've Built & Shipped"
@@ -1475,7 +1475,7 @@ msgstr "Küresel Teknoloji Geleceğini İnşa Ediyoruz"
 
 msgid ""
 "We see a world where AI and technology are tools of empowerment — "
-"accessible, ethical and designed around the people who use them. Gâ€‘Fenix "
+"accessible, ethical and designed around the people who use them. G‑Fenix "
 "is building toward that future, one product at a time, from Barcelona to the"
 " world."
 msgstr ""
@@ -1505,7 +1505,7 @@ msgstr ""
 "Küçük bir geliştirme ekibinden uluslararası teknoloji ortağına yolculuğumuz "
 "— ve önümüzdeki kilometre taşları."
 
-msgid "Gâ€‘Fenix is born"
+msgid "G‑Fenix is born"
 msgstr "G‑Fenix doğdu"
 
 msgid ""
@@ -1769,14 +1769,14 @@ msgstr "Vizyonumuzu Görün"
 
 # â”€â”€ PARTNERSHIP
 # â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-msgid "Partnership Program Â· Gâ€‘Fenix"
+msgid "Partnership Program · G‑Fenix"
 msgstr "Ortaklık Programı · G‑Fenix"
 
 msgid "Grow. Earn. Together."
 msgstr "Büyü. Kazan. Birlikte."
 
 msgid ""
-"Join the Gâ€‘Fenix partner network. Whether you refer clients or co-build "
+"Join the G‑Fenix partner network. Whether you refer clients or co-build "
 "projects with us, we share the revenue, the work, and the success — fairly "
 "and transparently."
 msgstr ""
@@ -1844,7 +1844,7 @@ msgid "Launch"
 msgstr "Başlatın"
 
 msgid ""
-"You refer a client or co-build a project with us. Gâ€‘Fenix handles delivery"
+"You refer a client or co-build a project with us. G‑Fenix handles delivery"
 " with full quality and keeps you updated throughout."
 msgstr ""
 "Bir müşteri yönlendirir veya bizimle bir proje birlikte inşa edersiniz. "
@@ -1873,7 +1873,7 @@ msgid "Best for: Agencies & Devs"
 msgstr "En iyi: Ajanslar ve Geliştiriciler için"
 
 msgid ""
-"Co-build projects with Gâ€‘Fenix. You bring the client, the idea, or the "
+"Co-build projects with G‑Fenix. You bring the client, the idea, or the "
 "technical skill — we combine forces and split revenue based on contribution."
 " Agreed upfront, transparent throughout."
 msgstr ""
@@ -1898,7 +1898,7 @@ msgstr "En iyi: Serbest Çalışanlar ve Danışmanlar için"
 
 msgid ""
 "Know someone who needs a website, data solution, or chatbot? Refer them to "
-"Gâ€‘Fenix and earn a commission when the project kicks off — no technical "
+"G‑Fenix and earn a commission when the project kicks off — no technical "
 "involvement required on your end."
 msgstr ""
 "Web sitesine, veri çözümüne veya chatbota ihtiyacı olan birini biliyor "
@@ -1908,10 +1908,10 @@ msgstr ""
 msgid "Estimate your referral earnings"
 msgstr "Yönlendirme kazançlarınızı tahmin edin"
 
-msgid "Project value (â‚¬)"
+msgid "Project value (€)"
 msgstr "Proje değeri (€)"
 
-msgid "You earn: â‚¬450"
+msgid "You earn: €450"
 msgstr "Kazancınız: €450"
 
 msgid "Commission on every referral"
@@ -1937,7 +1937,7 @@ msgstr "Serbest Çalışanlar ve Bağımsız Geliştiriciler"
 
 msgid ""
 "You take on client work but sometimes the scope goes beyond your bandwidth. "
-"Refer overflow projects to Gâ€‘Fenix and earn a cut — or co-deliver with us "
+"Refer overflow projects to G‑Fenix and earn a cut — or co-deliver with us "
 "on larger builds."
 msgstr ""
 "Müşteri işleri üstleniyorsunuz ama bazen kapsam kapasiteni aşıyor. Taşan "
@@ -1958,7 +1958,7 @@ msgid "Startups & Early-Stage Teams"
 msgstr "Başlangıç ve Erken Aşama Ekipleri"
 
 msgid ""
-"Need tech but not a full team yet? Partner with Gâ€‘Fenix as your "
+"Need tech but not a full team yet? Partner with G‑Fenix as your "
 "development arm. We structure deals that work at your stage."
 msgstr ""
 "Teknolojiye ihtiyacınız var ama henüz tam ekip yok mu? G‑Fenix ile "
@@ -1996,7 +1996,7 @@ msgstr "Yönlendirmeden sonra ne zaman ödeme alırım?"
 
 msgid ""
 "Commission is paid once the referred client's project has been confirmed and"
-" the first payment has been received by Gâ€‘Fenix. We don't make you wait "
+" the first payment has been received by G‑Fenix. We don't make you wait "
 "until project completion."
 msgstr ""
 "Komisyon, yönlendirilen müşterinin projesinin onaylanması ve G‑Fenix "
@@ -2014,7 +2014,7 @@ msgstr ""
 " başka birini birlikte inşa edebilirsiniz — iki model arasında münhasırlık "
 "yoktur."
 
-msgid "Do I need a technical background to partner with Gâ€‘Fenix?"
+msgid "Do I need a technical background to partner with G‑Fenix?"
 msgstr "G‑Fenix ile ortak olmak için teknik geçmişe ihtiyacım var mı?"
 
 msgid ""
@@ -2052,7 +2052,7 @@ msgstr "Telefon"
 msgid "Working Hours"
 msgstr "Çalışma Saatleri"
 
-msgid "Mon â€“ Fri, 9am â€“ 6pm GMT"
+msgid "Mon – Fri, 9am – 6pm GMT"
 msgstr "Pzt – Cum, 09:00 – 18:00 GMT"
 
 msgid "Location"
@@ -2076,13 +2076,13 @@ msgstr "E-posta adresi"
 msgid "Subject"
 msgstr "Konu"
 
-msgid "Project enquiry, partnershipâ€¦"
+msgid "Project enquiry, partnership…"
 msgstr "Proje sorgusu, ortaklık…"
 
 msgid "Message"
 msgstr "Mesaj"
 
-msgid "Tell us about your projectâ€¦"
+msgid "Tell us about your project…"
 msgstr "Projenizi anlatın…"
 
 msgid "Send Message"
@@ -2100,7 +2100,7 @@ msgstr ""
 
 # â”€â”€ BLOG
 # â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-msgid "Stories Â· Events Â· Technology"
+msgid "Stories · Events · Technology"
 msgstr "Hikayeler · Etkinlikler · Teknoloji"
 
 msgid "Ideas that Shape the Future."
@@ -2125,7 +2125,7 @@ msgstr "Keşfetmek için kaydırın"
 msgid "Field Report"
 msgstr "Saha Raporu"
 
-msgid "We attended MWC Barcelona 2025 as Gâ€‘FENIX"
+msgid "We attended MWC Barcelona 2025 as G‑FENIX"
 msgstr "G‑FENİX olarak MWC Barcelona 2025'e katıldık"
 
 msgid ""
@@ -2142,7 +2142,7 @@ msgstr ""
 msgid ""
 "Seeing the technologies shaping the future up close was truly inspiring. The"
 " scale, the energy, the sheer density of innovation — MWC reminded us "
-"exactly why we do what we do at Gâ€‘Fenix."
+"exactly why we do what we do at G‑Fenix."
 msgstr ""
 "Geleceği şekillendiren teknolojileri yakından görmek gerçekten ilham "
 "vericiydi. Ölçek, enerji, inovasyonun yoğunluğu — MWC, G‑Fenix'te neden "
@@ -2164,7 +2164,7 @@ msgid "Data & Software Reading List"
 msgstr "Veri ve Yazılım Okuma Listesi"
 
 msgid ""
-"9 hand-picked resources from the Gâ€‘Fenix team — the blogs, docs and "
+"9 hand-picked resources from the G‑Fenix team — the blogs, docs and "
 "communities we actually read."
 msgstr ""
 "G‑Fenix ekibinden el seçimi 9 kaynak — gerçekten okuduğumuz bloglar, "
@@ -2193,7 +2193,7 @@ msgstr ""
 msgid "Get in touch"
 msgstr "İletişime geçin"
 
-# â”€â”€ WEB DEV â€“ EKSIK STRINGLER
+# â”€â”€ WEB DEV – EKSIK STRINGLER
 # â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 msgid "Multilingual Support"
 msgstr "Çok Dilli Destek"
@@ -2344,7 +2344,7 @@ msgstr "Değişiklikler"
 
 # â”€â”€ JS STRINGS
 # â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-msgid "Sendingâ€¦"
+msgid "Sending…"
 msgstr "Gönderiliyor…"
 
 msgid "Something went wrong. Please email us at hello@g-fenix.com"
@@ -2367,7 +2367,7 @@ msgstr "Siz Uyurken Çalışır"
 msgid "Speaks Any Language"
 msgstr "Her Dili Konuşur"
 
-msgid "Hi! ðŸ‘‹ I'm Gâ€‘Bot. How can I help today?"
+msgid "Hi! 👋 I'm G‑Bot. How can I help today?"
 msgstr "Merhaba! 👋 Ben G‑Bot. Bugün nasıl yardımcı olabilirim?"
 
 msgid "I need to book an appointment"
@@ -2379,7 +2379,7 @@ msgstr "Tabii! Hangi gün sizin için uygun?"
 msgid "Tomorrow afternoon please"
 msgstr "Yarın öğleden sonra lütfen"
 
-msgid "âœ“ Booked for tomorrow at 3 PM. See you! ðŸŽ‰"
+msgid "✓ Booked for tomorrow at 3 PM. See you! 🎉"
 msgstr "✓ Yarın saat 15:00 için rezerve edildi. Görüşürüz! 🎉"
 
 msgid "Hello! ðŸ‘‹ Ready to book your appointment?"
@@ -2443,7 +2443,7 @@ msgstr "İşim için yeni bir web sitesi"
 msgid "Exciting! What's your approximate budget?"
 msgstr "Harika! Yaklaşık bütçeniz ne kadar?"
 
-msgid "Around â‚¬2,000 to â‚¬5,000"
+msgid "Around €2,000 to €5,000"
 msgstr "Yaklaşık 2.000 - 5.000 €"
 
 msgid ""
@@ -2472,7 +2472,7 @@ msgstr ""
 msgid "Sure, +34 612 345 678"
 msgstr "Tabii, +34 612 345 678"
 
-msgid "âœ… Saved! Expect a call tomorrow before 10 AM. Sleep well! ðŸ˜´"
+msgid "✅ Saved! Expect a call tomorrow before 10 AM. Sleep well! 😴"
 msgstr "✅ Kaydedildi! Yarın sabah 10'dan önce arama bekleyin. İyi geceler! 😴"
 
 msgid "New referral submitted"
@@ -2550,7 +2550,7 @@ msgstr "MOBİL KULLANICLAR"
 msgid "Revenue Growth: With vs Without Website"
 msgstr "Gelir Artışı: Web Sitesiyle ve Web Sitesiz"
 
-msgid "5-year projection Â· avg small business"
+msgid "5-year projection · avg small business"
 msgstr "5 yıllık projeksiyon · ort. küçük işletme"
 
 msgid "MORE LEADS"
@@ -2623,7 +2623,7 @@ msgid "Free Data Audit"
 msgstr "Ücretsiz Veri Denetimi"
 
 msgid ""
-"Let our experts review your current data setup and deliver a free 30â€‘min "
+"Let our experts review your current data setup and deliver a free 30‑min "
 "strategy call."
 msgstr ""
 "Uzmanlarımızın mevcut veri yapınızı incelemesine ve ücretsiz 30 dakikalık "
@@ -2718,7 +2718,7 @@ msgstr ""
 msgid ""
 "Seeing the technologies shaping the future up close was truly inspiring. The"
 " scale, the energy, the sheer density of innovation — MWC reminded us "
-"exactly why we do what we do at Gâ€‘Fenix."
+"exactly why we do what we do at G‑Fenix."
 msgstr ""
 "Geleceği şekillendiren teknolojileri bu kadar yakından görmek gerçekten "
 "ilham vericiydi. Bu ölçek, bu enerji, inovasyonun yoğunluğu — MWC bize "
@@ -2734,7 +2734,7 @@ msgid "Reading List"
 msgstr "Okuma Listesi"
 
 msgid ""
-"9 hand-picked resources from the Gâ€‘Fenix team — the blogs, docs and "
+"9 hand-picked resources from the G‑Fenix team — the blogs, docs and "
 "communities we actually read."
 msgstr ""
 "G-Fenix ekibinden özenle seçilmiş 9 kaynak — gerçekten okuduğumuz bloglar, "
@@ -2880,7 +2880,7 @@ msgid "Built for Your Business"
 msgstr "Paneliniz"
 
 msgid ""
-"Off-the-shelf tools never fit your workflow. Gâ€‘Fenix builds everything "
+"Off-the-shelf tools never fit your workflow. G‑Fenix builds everything "
 "from scratch — staff attendance tracking to internal messaging, check-in/out"
 " logs to role-based permissions."
 msgstr ""
@@ -2990,7 +2990,7 @@ msgstr "Beklemede"
 msgid "Draft"
 msgstr "Taslak"
 
-msgid "4 invoices Â· Page 1 of 3"
+msgid "4 invoices · Page 1 of 3"
 msgstr "4 fatura · Sayfa 1/3"
 
 msgid "Stock Management — Dispatch"
@@ -3071,7 +3071,7 @@ msgstr "Dil değiştirici widget ve otomatik yönlendirme"
 msgid "RTL support (Arabic, Persian)"
 msgstr "RTL desteği (Arapça, Farsça)"
 
-msgid "06 — Eâ€‘Commerce"
+msgid "06 — E‑Commerce"
 msgstr "06 — E-Ticaret"
 
 msgid "A Store Built"
@@ -3147,7 +3147,7 @@ msgstr "Güven Sinyalleri"
 msgid "Product Photos"
 msgstr "Ürün Fotoğrafları"
 
-msgid "(1â€“3 days)"
+msgid "(1–3 days)"
 msgstr "(1–3 gün)"
 
 msgid "Workshop and content inventory"
@@ -3172,7 +3172,7 @@ msgstr "Tasarım sistemi ve bileşenler"
 msgid "Rapid prototyping with Figma"
 msgstr "Figma ile hızlı prototipleme"
 
-msgid "(1â€“2 weeks)"
+msgid "(1–2 weeks)"
 msgstr "(1–2 hafta)"
 
 msgid ""
@@ -3188,7 +3188,7 @@ msgstr "Hazırlama ortamına sürekli dağıtım"
 msgid "Core Web Vitals optimization"
 msgstr "Core Web Vitals optimizasyonu"
 
-msgid "(3â€“5 days)"
+msgid "(3–5 days)"
 msgstr "(3–5 gün)"
 
 msgid "UAT checklist and fixes"
@@ -3201,7 +3201,7 @@ msgid "Reporting and training session"
 msgstr "Raporlama ve eğitim oturumu"
 
 msgid ""
-"From restaurant menus to hotel lounges and personal brand cards — Gâ€‘Fenix "
+"From restaurant menus to hotel lounges and personal brand cards — G‑Fenix "
 "builds smart QR experiences that work on any device, in any language, and "
 "update in real time without reprinting a single sheet."
 msgstr ""
@@ -3244,7 +3244,7 @@ msgstr "Asla Yeniden Baskı Yapılmaz."
 
 msgid ""
 "Paper menus are expensive to reprint, easy to soil, and impossible to update"
-" on the fly. A Gâ€‘Fenix QR menu lives on your phone — change a price, add a"
+" on the fly. A G‑Fenix QR menu lives on your phone — change a price, add a"
 " photo, mark something sold out — and every table sees it instantly."
 msgstr ""
 "Kağıt menülerin yeniden basımı pahalı, kirlenmesi kolay ve anında "
@@ -3294,7 +3294,7 @@ msgstr "Club sandviç"
 msgid "Wine selection"
 msgstr "Şarap seçimi"
 
-msgid "from â‚¬ 24"
+msgid "from € 24"
 msgstr "€24'ten itibaren"
 
 msgid "Toiletry kit"
@@ -3318,7 +3318,7 @@ msgstr "El yapımı bira"
 msgid "Fresh smoothie"
 msgstr "Taze smoothie"
 
-msgid "AÃ§aÃ­ bowl"
+msgid "Açaí bowl"
 msgstr "Açaí kasesi"
 
 msgid "One QR Code,"
@@ -3327,7 +3327,7 @@ msgstr "Tek Bir QR Kod,"
 msgid "Your Entire Property."
 msgstr "Tüm Tesisiniz."
 
-msgid "Founder & CEO Â· G-Fenix"
+msgid "Founder & CEO · G-Fenix"
 msgstr "Kurucu ve CEO · G-Fenix"
 
 msgid "Save Contact"
@@ -3363,7 +3363,7 @@ msgstr "Kazan."
 msgid "Together."
 msgstr "Birlikte."
 
-msgid "Gâ€‘Fenix Partner"
+msgid "G‑Fenix Partner"
 msgstr "G-Fenix Ortağı"
 
 msgid "Active"
@@ -3484,7 +3484,7 @@ msgstr "2024 — Ölçekleme"
 msgid "Enterprise Products &amp; AI Tooling"
 msgstr "Kurumsal Ürünler &amp; AI Araçları"
 
-msgid "2025â€“2026 — Vision"
+msgid "2025–2026 — Vision"
 msgstr "2025–2026 — Vizyon"
 
 msgid "AI Platform"
@@ -3728,7 +3728,7 @@ msgstr "Ürün yayına alınmadan önce siz inceler ve onaylarsınız"
 msgid "User Cases"
 msgstr "Kullanım Örnekleri"
 
-msgid "Data Â· User Cases"
+msgid "Data · User Cases"
 msgstr "Veri · Kullanım Örnekleri"
 
 msgid "Real Problems,"
@@ -3813,7 +3813,7 @@ msgstr "Bizimle Konuşun"
 msgid "Real examples from real businesses"
 msgstr "Gerçek işletmelerden gerçek örnekler"
 
-# â”€â”€ INDEX SAYFASI â€“ YENÄ° DÄ°ZAYN
+# â”€â”€ INDEX SAYFASI – YENÄ° DÄ°ZAYN
 # â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 msgid "DATA"
 msgstr "VERİ"
@@ -3912,7 +3912,7 @@ msgstr "Sektörünüze özel gerçek dünya AI ve veri çözümleri."
 msgid "Explore all services"
 msgstr "Tüm hizmetleri keşfet"
 
-msgid "WHY FÃ‰NIX"
+msgid "WHY FÉNIX"
 msgstr "NEDEN FÉNIX"
 
 msgid "We don't start from"
@@ -4012,10 +4012,10 @@ msgstr "bir veri mimarı"
 msgid "walk into a"
 msgstr "bir"
 
-msgid "Not the start of a joke. It's GÂ·FÃ©nix."
+msgid "Not the start of a joke. It's G·Fénix."
 msgstr "Bu bir fıkranın başlangıcı değil. Bu G·Fénix."
 
-msgid "DATA Â· AI Â· STRATEGY"
+msgid "DATA · AI · STRATEGY"
 msgstr "VERİ · AI · STRATEJİ"
 
 msgid ""
@@ -4025,7 +4025,7 @@ msgstr ""
 "Teknolojiyi hayata geçirir. 10+ yıldır karmaşıklığı insanların "
 "anlayabileceği ve kullanabileceği bir şeye dönüştürüyor."
 
-msgid "DEVELOPMENT Â· WEB"
+msgid "DEVELOPMENT · WEB"
 msgstr "GELİŞTİRME · WEB"
 
 msgid ""
@@ -4035,10 +4035,10 @@ msgstr ""
 "Disiplinden ürün doğar. Tatamiden kod tabanına — temiz, talepkâr, kestirme "
 "yok."
 
-# â”€â”€ WEB GELÄ°ÅžTÄ°RME SAYFASI â€“ YENÄ° STRINGLER
+# â”€â”€ WEB GELÄ°ÅžTÄ°RME SAYFASI – YENÄ° STRINGLER
 # â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 msgid ""
-"Gâ€‘Fenix plans, designs, and ships. From corporate sites to stock "
+"G‑Fenix plans, designs, and ships. From corporate sites to stock "
 "management apps to multilingual platforms — fast, secure, and built to "
 "scale."
 msgstr ""
@@ -4103,7 +4103,7 @@ msgstr ""
 "yönlendirmeler entegre ediyoruz. Yeniden yazma gerekmez — sadece daha fazla "
 "erişim."
 
-msgid "04 — Eâ€‘Commerce"
+msgid "04 — E‑Commerce"
 msgstr "04 — E-Ticaret"
 
 msgid ""
@@ -4213,7 +4213,7 @@ msgstr "Izgara Bonfile (250g)"
 msgid "Sea Bass Fillet"
 msgstr "Levrek Fileto"
 
-msgid "CrÃ¨me BrÃ»lÃ©e"
+msgid "Crème Brûlée"
 msgstr "Crème Brûlée"
 
 msgid "Craft IPA"
@@ -4594,7 +4594,7 @@ msgstr "Bir proje ne kadar sürer?"
 
 msgid ""
 "It depends on scope, but a first diagnostic and roadmap typically takes "
-"2â€“3 weeks. From there, the first live reports can be ready in 4â€“8 weeks."
+"2–3 weeks. From there, the first live reports can be ready in 4–8 weeks."
 msgstr ""
 "Kapsama göre değişir, ancak ilk tanı ve yol haritası genellikle 2–3 hafta "
 "alır. Oradan ilk canlı raporlar 4–8 haftada hazır olabilir."
@@ -4658,7 +4658,7 @@ msgstr "verilerini ciddiye alanların tercihi."
 
 msgid ""
 "We let our clients speak. Here are the teams and businesses that trusted "
-"Gâ€‘Fenix — and what changed."
+"G‑Fenix — and what changed."
 msgstr ""
 "Müşterilerimizi konuşturalım. İşte G‑Fenix'e güvenen ekipler ve işletmeler —"
 " ve neler değişti."
@@ -4688,7 +4688,7 @@ msgid "Data Consultancy"
 msgstr "Veri Danışmanlığı"
 
 msgid ""
-"Before Gâ€‘Fenix, our weekly reports took two days to compile. Now they run "
+"Before G‑Fenix, our weekly reports took two days to compile. Now they run "
 "automatically every morning. Our board finally trusts the numbers."
 msgstr ""
 "G‑Fenix'ten önce haftalık raporlarımız iki gün sürerdi. Şimdi her sabah "
@@ -4701,7 +4701,7 @@ msgid "Germany"
 msgstr "Almanya"
 
 msgid ""
-"We had a vision but no technical team. Gâ€‘Fenix delivered a multilingual "
+"We had a vision but no technical team. G‑Fenix delivered a multilingual "
 "platform in six weeks that looks and performs better than sites that cost "
 "ten times more."
 msgstr ""
@@ -4814,7 +4814,7 @@ msgstr "VAKA ÇALIŞMALARI"
 msgid "Problems we've solved."
 msgstr "Çözdüğümüz problemler."
 
-msgid "RESTAURANT Â· QR MENU"
+msgid "RESTAURANT · QR MENU"
 msgstr "RESTORAN · QR MENÜ"
 
 msgid "Multilingual menu for a 5-language clientele"
@@ -4834,7 +4834,7 @@ msgstr ""
 msgid "Zero reprint cost. Menu updated in seconds."
 msgstr "Sıfır yeniden baskı maliyeti. Menü saniyeler içinde güncellendi."
 
-msgid "MANUFACTURING Â· DATA"
+msgid "MANUFACTURING · DATA"
 msgstr "ÜRETİM · VERİ"
 
 msgid "Single source of truth for a 3-country operation"
@@ -4850,7 +4850,7 @@ msgstr ""
 msgid "Monthly close cut from 4 days to 6 hours."
 msgstr "Aylık kapanış 4 günden 6 saate indi."
 
-msgid "E-COMMERCE Â· AI CHATBOT"
+msgid "E-COMMERCE · AI CHATBOT"
 msgstr "E-TİCARET · AI CHATBOT"
 
 msgid "24/7 support bot that qualifies leads automatically"
@@ -4866,7 +4866,7 @@ msgstr ""
 msgid "70% of tickets handled automatically, 24/7."
 msgstr "Biletlerin %70'i 7/24 otomatik olarak işleniyor."
 
-msgid "RETAIL Â· TRAINING"
+msgid "RETAIL · TRAINING"
 msgstr "PERAKENDE · EĞİTİM"
 
 msgid "Power BI training for a team of 12 analysts"
@@ -4882,7 +4882,7 @@ msgstr ""
 msgid "12 analysts self-sufficient within 8 weeks."
 msgstr "8 hafta içinde 12 analist kendi kendine yeter hale geldi."
 
-msgid "HOSPITALITY Â· WEB"
+msgid "HOSPITALITY · WEB"
 msgstr "KONAKLAMA · WEB"
 
 msgid "Booking-focused website with live availability"
@@ -4899,7 +4899,7 @@ msgstr ""
 msgid "Online bookings tripled in the first month."
 msgstr "İlk ayda online rezervasyonlar üç katına çıktı."
 
-msgid "LOGISTICS Â· AUTOMATION"
+msgid "LOGISTICS · AUTOMATION"
 msgstr "LOJİSTİK · OTOMASYON"
 
 msgid "Automated weekly reporting pipeline"
@@ -5080,7 +5080,7 @@ msgstr "Temel Veri Okuryazarlığı"
 msgid "8 participants confirmed"
 msgstr "8 katılımcı onaylandı"
 
-msgid "On-site Â· Barcelona"
+msgid "On-site · Barcelona"
 msgstr "Yerinde · Barselona"
 
 msgid "Materials included"
@@ -5285,7 +5285,7 @@ msgid "How long is a session?"
 msgstr "Bir oturum ne kadar sürer?"
 
 msgid ""
-"Typically half-day (3â€“4 hours) or full-day (6 hours), depending on scope. "
+"Typically half-day (3–4 hours) or full-day (6 hours), depending on scope. "
 "We've also run shorter focused workshops (90 min) when the goal is very "
 "specific. We scope this with you before anything is booked."
 msgstr ""
@@ -5376,10 +5376,10 @@ msgstr "içinde tamamlandı"
 msgid "no action needed"
 msgstr "işlem gerekmiyor"
 
-msgid "next trigger in 14 sâ€¦"
+msgid "next trigger in 14 s…"
 msgstr "sonraki tetikleme 14 sn içinde…"
 
-msgid "Invoice routed â†’"
+msgid "Invoice routed →"
 msgstr "Fatura yönlendirildi →"
 
 msgid "Slack notified —"
@@ -5669,7 +5669,7 @@ msgstr "Tabii, +34 612..."
 msgid "What's your monthly budget?"
 msgstr "Aylık bütçeniz ne kadar?"
 
-msgid "Around â‚¬2k"
+msgid "Around €2k"
 msgstr "Yaklaşık 2.000 €"
 
 msgid "Great fit! Connecting you now ðŸ”¥"
@@ -5705,7 +5705,7 @@ msgstr ""
 "Merhaba! Ben G-Fenix asistanıyım. Hizmetlerimiz hakkında her şeyi "
 "sorabilirsiniz."
 
-msgid "Type a messageâ€¦"
+msgid "Type a message…"
 msgstr "Mesaj yazın…"
 
 msgid "Previous Experience"
@@ -5731,10 +5731,10 @@ msgid "About these sheets"
 msgstr "Bu sayfalar hakkında"
 
 msgid ""
-"GÂ·FÃ©nix is a young studio, but the experience behind it is real. The "
+"G·Fénix is a young studio, but the experience behind it is real. The "
 "projects in these sheets are Jessica's previous professional experience, "
 "delivered as part of larger teams at other organizations — most within a "
-"specialist data & analytics consultancy. They are not GÂ·FÃ©nix projects, "
+"specialist data & analytics consultancy. They are not G·Fénix projects, "
 "and every client and employer is kept anonymous; only generic sectors are "
 "named."
 msgstr ""
@@ -5798,10 +5798,10 @@ msgid "Transparency"
 msgstr "Şeffaflık"
 
 msgid ""
-"GÂ·FÃ©nix is a young studio, but the experience behind it is real. The "
+"G·Fénix is a young studio, but the experience behind it is real. The "
 "projects in these sheets are previous professional experience, delivered as "
 "part of larger teams at other organizations — most within a specialist data "
-"& analytics consultancy. They are not GÂ·FÃ©nix projects, and every client "
+"& analytics consultancy. They are not G·Fénix projects, and every client "
 "and employer is kept anonymous; only generic sectors are named."
 msgstr ""
 "G·Fénix genç bir stüdyodur, ancak arkasındaki deneyim gerçektir. Bu "
@@ -5833,7 +5833,7 @@ msgstr "BENİMSEME"
 msgid "SCATTERED DATA"
 msgstr "DAĞINIK VERİ"
 
-msgid "no strategy Â· no trust"
+msgid "no strategy · no trust"
 msgstr "strateji yok · güven yok"
 
 msgid "DATA FUNCTION"
@@ -5842,7 +5842,7 @@ msgstr "VERİ FONKSİYONU"
 msgid "Strategy & roadmap"
 msgstr "Strateji ve yol haritası"
 
-msgid "Quality Â· Security Â· Compliance"
+msgid "Quality · Security · Compliance"
 msgstr "Kalite · Güvenlik · Uyum"
 
 msgid "ADOPTION & TRAINING"
@@ -5881,13 +5881,13 @@ msgstr "CRM & SATIŞ"
 msgid "20+ SOURCES"
 msgstr "20'DEN FAZLA KAYNAK"
 
-msgid "ETL layers Â· DQ Â· matching"
+msgid "ETL layers · DQ · matching"
 msgstr "ETL katmanları · VK · eşleştirme"
 
-msgid "SINGLE 360Â° MASTER"
+msgid "SINGLE 360° MASTER"
 msgstr "TEK 360° ANA KAYIT"
 
-msgid "people Â· entities Â· assets"
+msgid "people · entities · assets"
 msgstr "kişiler · varlıklar · kurumlar"
 
 msgid "CLIENT DATA SOURCES"
@@ -5974,7 +5974,7 @@ msgstr "BENİMSEME & EVRİM"
 msgid "SOURCE SYSTEMS"
 msgstr "KAYNAK SİSTEMLER"
 
-msgid "Staging Â· ODS Â· exploit"
+msgid "Staging · ODS · exploit"
 msgstr "Hazırlama · ODS · işleme"
 
 msgid "Data-quality rules"
@@ -5983,10 +5983,10 @@ msgstr "Veri kalitesi kuralları"
 msgid "Matching & consolidation"
 msgstr "Eşleştirme & konsolidasyon"
 
-msgid "entities Â· people Â· activities"
+msgid "entities · people · activities"
 msgstr "kurumlar · kişiler · faaliyetler"
 
-msgid "Staging Â· ODS Â· Data Mart"
+msgid "Staging · ODS · Data Mart"
 msgstr "Hazırlama · ODS · Veri Mart"
 
 msgid "Cleansing & DQ rules"
@@ -5998,7 +5998,7 @@ msgstr "Eşleştirme çekirdeği"
 msgid "MASTER TABLES"
 msgstr "ANA TABLOLAR"
 
-msgid "people Â· vehicles"
+msgid "people · vehicles"
 msgstr "kişiler · araçlar"
 
 msgid "INTEGRATION TESTED"
@@ -6191,7 +6191,7 @@ msgstr ""
 msgid "Master data management & integration at enterprise scale"
 msgstr "Kurumsal ölçekte ana veri yönetimi ve entegrasyonu"
 
-msgid "Data Engineer â†’ Project Delivery Manager"
+msgid "Data Engineer → Project Delivery Manager"
 msgstr "Veri Mühendisi → Proje Teslimat Yöneticisi"
 
 msgid "A specialist data & analytics consultancy"
@@ -6200,7 +6200,7 @@ msgstr "Uzmanlaşmış bir veri ve analitik danışmanlığı"
 msgid ""
 "Large enterprises running 20+ source systems with fragmented master data and"
 " tangled integrations. Every system told a slightly different story about "
-"the same person, entity or asset, and no one had a single, trusted 360Â° "
+"the same person, entity or asset, and no one had a single, trusted 360° "
 "view."
 msgstr ""
 "20'den fazla kaynak sistem çalıştıran ve parçalanmış ana veriye ve karmaşık "
@@ -6212,7 +6212,7 @@ msgid ""
 "Deliver MDM and large data-warehouse programs end to end. Build the ETL "
 "across every layer — staging, ODS and exploitation — write and enforce data-"
 "quality rules, and design the matching and consolidation logic that "
-"collapses 20+ sources into one trusted 360Â° master."
+"collapses 20+ sources into one trusted 360° master."
 msgstr ""
 "MDM ve büyük veri ambarı programlarını uçtan uca teslim et. Her katmanda ETL"
 " oluştur — hazırlama, ODS ve işleme — veri kalitesi kurallarını yaz ve "
@@ -6278,7 +6278,7 @@ msgstr "Veri yönetişimi işletim modeli"
 msgid "Data Governance Consultant"
 msgstr "Veri Yönetişimi Danışmanı"
 
-msgid "Insurance sector Â· via a data consultancy"
+msgid "Insurance sector · via a data consultancy"
 msgstr "Sigorta sektörü · bir veri danışmanlığı aracılığıyla"
 
 msgid ""
@@ -6351,7 +6351,7 @@ msgstr "Dikey analitik teslimatı ve danışmanlık"
 msgid "Delivery Management & Advisory"
 msgstr "Teslimat Yönetimi & Danışmanlık"
 
-msgid "Multiple enterprise clients Â· via a data consultancy"
+msgid "Multiple enterprise clients · via a data consultancy"
 msgstr "Birden fazla kurumsal müşteri · bir veri danışmanlığı aracılığıyla"
 
 msgid ""
@@ -6384,18 +6384,18 @@ msgstr ""
 "Proje yönetimi ve danışmanlık. Birden fazla alanda gereksinimlerden canlı, "
 "benimsenmiş uygulamalara kadar tüm yolu üstlendi."
 
-msgid "360Â° master data hub on SQL Server"
+msgid "360° master data hub on SQL Server"
 msgstr "SQL Server üzerinde 360° ana veri merkezi"
 
 msgid "Project Operations Lead"
 msgstr "Proje Operasyonları Lideri"
 
-msgid "Enterprise data-integration program Â· via a data consultancy"
+msgid "Enterprise data-integration program · via a data consultancy"
 msgstr ""
 "Kurumsal veri entegrasyon programı · bir veri danışmanlığı aracılığıyla"
 
 msgid ""
-"A large organization needed a single, trustworthy 360Â° view of legal "
+"A large organization needed a single, trustworthy 360° view of legal "
 "entities, individuals and their activities — but the same entity appeared "
 "differently across many disconnected systems."
 msgstr ""
@@ -6404,7 +6404,7 @@ msgstr ""
 "bağlantısız sistemde farklı görünüyordu."
 
 msgid ""
-"Lead the build of a 360Â° master: design the model and ETL across Staging, "
+"Lead the build of a 360° master: design the model and ETL across Staging, "
 "ODS and two exploitation layers, enforce data-quality rules, and develop the"
 " matching and consolidation core — then integrate with Salesforce via API "
 "and feed analytics."
@@ -6426,7 +6426,7 @@ msgstr ""
 "eşleştirme/konsolidasyon çekirdeği, Salesforce entegrasyonu ve teslimat "
 "metodolojisinin sahibi oldu."
 
-msgid "360Â° data warehouse on Oracle (20+ sources)"
+msgid "360° data warehouse on Oracle (20+ sources)"
 msgstr "Oracle üzerinde 360° veri ambarı (20'den fazla kaynak)"
 
 msgid "Data Engineer"
@@ -6434,7 +6434,7 @@ msgstr "Veri Mühendisi"
 
 msgid ""
 "An organization needed to consolidate more than twenty source systems into "
-"one 360Â° view of people and the vehicles associated with them — reliable "
+"one 360° view of people and the vehicles associated with them — reliable "
 "enough to trust as a master."
 msgstr ""
 "Bir kuruluşun yirmiden fazla kaynak sistemi, kişiler ve onlarla ilişkili "
@@ -6457,7 +6457,7 @@ msgstr "Teslimat ekibinin bir parçasıydı."
 
 msgid ""
 "Data engineer. Built the multi-layer ETL and data-quality work, and "
-"contributed to the matching/consolidation core behind the 360Â° masters."
+"contributed to the matching/consolidation core behind the 360° masters."
 msgstr ""
 "Veri mühendisi. Çok katmanlı ETL ve veri kalitesi çalışmasını oluşturdu ve "
 "360° ana kayıtların arkasındaki eşleştirme/konsolidasyon çekirdeğine katkıda"
@@ -6469,7 +6469,7 @@ msgstr "Power BI'da yönetici İK skorkartı"
 msgid "BI Consultant"
 msgstr "İZ Danışmanı"
 
-msgid "Enterprise HR function Â· via a data consultancy"
+msgid "Enterprise HR function · via a data consultancy"
 msgstr "Kurumsal İK fonksiyonu · bir veri danışmanlığı aracılığıyla"
 
 msgid ""
@@ -6505,7 +6505,7 @@ msgstr "Güvenli bilgi iletimi çalışması"
 msgid "Functional Analyst / Advisor"
 msgstr "Fonksiyonel Analist / Danışman"
 
-msgid "Enterprise security & systems Â· via a data consultancy"
+msgid "Enterprise security & systems · via a data consultancy"
 msgstr "Kurumsal güvenlik & sistemler · bir veri danışmanlığı aracılığıyla"
 
 msgid ""
@@ -6538,7 +6538,7 @@ msgstr ""
 msgid "QlikView management dashboards"
 msgstr "QlikView yönetim gösterge panelleri"
 
-msgid "Healthcare sector Â· via a data consultancy"
+msgid "Healthcare sector · via a data consultancy"
 msgstr "Sağlık sektörü · bir veri danışmanlığı aracılığıyla"
 
 msgid ""
@@ -6603,13 +6603,13 @@ msgstr "Eğitim"
 msgid "Education"
 msgstr "Eğitim"
 
-msgid "GÂ·FÃ©nix Web Services"
+msgid "G·Fénix Web Services"
 msgstr "G·Fénix Web Services"
 
-msgid "Python / Django Â· Full-Stack Web Developer"
+msgid "Python / Django · Full-Stack Web Developer"
 msgstr "Python / Django · Tam Yığın Web Geliştiricisi"
 
-msgid "Freelance Â· Remote"
+msgid "Freelance · Remote"
 msgstr "Serbest · Uzaktan"
 
 msgid "Skills & Tools"
@@ -6754,13 +6754,13 @@ msgstr ""
 "konaklama alanındaki geçmişim iletişim, ekip çalışması ve problem çözme "
 "becerilerimi güçlendirdi — bunların hepsini koda yansıtıyorum."
 
-msgid "DATA & AI EXPERT Â· GÂ·FÃ‰NIX"
+msgid "DATA & AI EXPERT · G·FÉNIX"
 msgstr "VERİ & AI UZMANI · G·FÉNIX"
 
-msgid "Data & Analytics Professional Â· 10+ Years in Consulting"
+msgid "Data & Analytics Professional · 10+ Years in Consulting"
 msgstr "Veri & Analitik Uzmanı · 10+ Yıl Danışmanlık"
 
-msgid "Data Â· AI Â· Governance"
+msgid "Data · AI · Governance"
 msgstr "Veri · AI · Yönetişim"
 
 msgid "Core Areas"
@@ -6991,19 +6991,19 @@ msgstr "Uzaktan"
 msgid "Skills"
 msgstr "Beceriler"
 
-msgid "Jan 2025 â€“ Present Â· 1 yr 6 mos"
+msgid "Jan 2025 – Present · 1 yr 6 mos"
 msgstr "Oca 2025 – Günümüz · 1 yıl 6 ay"
 
-msgid "Apr 2024 â€“ Dec 2024 Â· 9 mos"
+msgid "Apr 2024 – Dec 2024 · 9 mos"
 msgstr "Nis 2024 – Ara 2024 · 9 ay"
 
-msgid "Oct 2021 â€“ Sep 2023 Â· 2 yrs"
+msgid "Oct 2021 – Sep 2023 · 2 yrs"
 msgstr "Eki 2021 – Eyl 2023 · 2 yıl"
 
-msgid "Jun 2022 â€“ Sep 2022 Â· 4 mos"
+msgid "Jun 2022 – Sep 2022 · 4 mos"
 msgstr "Haz 2022 – Eyl 2022 · 4 ay"
 
-msgid "May 2021 â€“ Sep 2021 Â· 5 mos"
+msgid "May 2021 – Sep 2021 · 5 mos"
 msgstr "May 2021 – Eyl 2021 · 5 ay"
 
 msgid "Trabzon University"
@@ -7036,46 +7036,46 @@ msgstr "Ana Veri Yönetimi"
 msgid "Data Strategy"
 msgstr "Veri Stratejisi"
 
-msgid "Apr 2025 â€“ Present Â· 1 yr 3 mos"
+msgid "Apr 2025 – Present · 1 yr 3 mos"
 msgstr "Nis 2025 – Günümüz · 1 yıl 3 ay"
 
-msgid "Apr 2023 â€“ Mar 2025 Â· 2 yrs"
+msgid "Apr 2023 – Mar 2025 · 2 yrs"
 msgstr "Nis 2023 – Mar 2025 · 2 yıl"
 
-msgid "May 2021 â€“ Apr 2023 Â· 2 yrs"
+msgid "May 2021 – Apr 2023 · 2 yrs"
 msgstr "May 2021 – Nis 2023 · 2 yıl"
 
-msgid "Sep 2016 â€“ Aug 2020 Â· 4 yrs"
+msgid "Sep 2016 – Aug 2020 · 4 yrs"
 msgstr "Eyl 2016 – Ağu 2020 · 4 yıl"
 
-msgid "Feb 2020 â€“ Apr 2020"
+msgid "Feb 2020 – Apr 2020"
 msgstr "Şub 2020 – Nis 2020"
 
-msgid "Sep 2019 â€“ Jan 2020"
+msgid "Sep 2019 – Jan 2020"
 msgstr "Eyl 2019 – Oca 2020"
 
-msgid "Oct 2017 â€“ Sep 2019"
+msgid "Oct 2017 – Sep 2019"
 msgstr "Eki 2017 – Eyl 2019"
 
-msgid "Sep 2018 â€“ Sep 2019"
+msgid "Sep 2018 – Sep 2019"
 msgstr "Eyl 2018 – Eyl 2019"
 
-msgid "Apr 2017 â€“ Jun 2017"
+msgid "Apr 2017 – Jun 2017"
 msgstr "Nis 2017 – Haz 2017"
 
-msgid "Sep 2016 â€“ Feb 2017"
+msgid "Sep 2016 – Feb 2017"
 msgstr "Eyl 2016 – Şub 2017"
 
-msgid "DefiniciÃ³n del Modelo de Gobierno del Dato — Sector Seguros"
+msgid "Definición del Modelo de Gobierno del Dato — Sector Seguros"
 msgstr "Veri Yönetişim Modeli Tanımı — Sigorta Sektörü"
 
 msgid "Data Warehouse con SQL Server y Talend"
 msgstr "SQL Server ve Talend ile Veri Ambarı"
 
-msgid "ImplantaciÃ³n DWH SQL Server — VisiÃ³n 360Â° Personas & Actividades"
+msgid "Implantación DWH SQL Server — Visión 360° Personas & Actividades"
 msgstr "DWH SQL Server Kurulumu — 360° Kişiler & Aktiviteler"
 
-msgid "GestiÃ³n de Proyectos Verticales"
+msgid "Gestión de Proyectos Verticales"
 msgstr "Dikey Proje Yönetimi"
 
 msgid "Cuadro de Mando Integral en Power BI"
@@ -8150,3 +8150,15 @@ msgstr "Mesajınızı aldık!"
 
 msgid "Hi! Thanks for contacting G‑Fenix. We'll reply within 24 h (weekdays) or Monday morning (weekends). 🚀"
 msgstr "Merhaba! G‑Fenix'e ulaştığınız için teşekkürler. Hafta içi 24 saat, hafta sonu Pazartesi sabahı yanıt vereceğiz. 🚀"
+
+msgid "Sorry, something went wrong."
+msgstr "Üzgünüz, bir şeyler ters gitti."
+
+msgid "Track: dhl.com/track/4821"
+msgstr "Takip: dhl.com/track/4821"
+
+msgid "● Typing..."
+msgstr "● Yazıyor..."
+
+msgid "● Online"
+msgstr "● Çevrimiçi"

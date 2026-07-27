@@ -7382,3 +7382,15 @@ msgstr "¡Recibimos tu mensaje!"
 
 msgid "Hi! Thanks for contacting G‑Fenix. We'll reply within 24 h (weekdays) or Monday morning (weekends). 🚀"
 msgstr "¡Hola! Gracias por contactar con G‑Fenix. Respondemos en 24 h (días laborables) o el lunes por la mañana (fines de semana). 🚀"
+
+msgid "Sorry, something went wrong."
+msgstr "Lo sentimos, algo salió mal."
+
+msgid "Track: dhl.com/track/4821"
+msgstr "Seguimiento: dhl.com/track/4821"
+
+msgid "● Typing..."
+msgstr "● Escribiendo..."
+
+msgid "● Online"
+msgstr "● En línea"

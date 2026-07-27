@@ -195,7 +195,7 @@
         <div class="cb-uc-preview">
           <div class="cb-mini-msg cb-user">{% trans "Where's my order #4821?" %}</div>
           <div class="cb-mini-msg cb-bot">{% trans "It shipped today! ETA: Friday 📦" %}</div>
-          <div class="cb-mini-msg cb-bot">Track: dhl.com/track/4821</div>
+          <div class="cb-mini-msg cb-bot">{% trans "Track: dhl.com/track/4821" %}</div>
         </div>
       </div>
 
@@ -1211,7 +1211,7 @@ function cbPlayDemo(key){
   msgs.forEach((m, idx) => {
     const t1 = setTimeout(()=>{
       if(m.r === 'bot'){
-        status.textContent = '● Typing...';
+        status.textContent = '{% trans "● Typing..." %}';
         const dots = document.createElement('div');
         dots.className = 'cb-typing-dots'; dots.id = 'cbDots';
         dots.innerHTML = '<span></span><span></span><span></span>';
@@ -1223,11 +1223,11 @@ function cbPlayDemo(key){
           div.className = 'cb-msg cb-msg-bot';
           div.textContent = m.t;
           body.appendChild(div); body.scrollTop = body.scrollHeight;
-          if(idx === msgs.length-1){ status.textContent = '● Online'; }
+          if(idx === msgs.length-1){ status.textContent = '{% trans "● Online" %}'; }
         }, 800);
         cbDemoTimeouts.push(t2);
       } else {
-        status.textContent = '● Online';
+        status.textContent = '{% trans "● Online" %}';
         const div = document.createElement('div');
         div.className = 'cb-msg cb-msg-user';
         div.textContent = m.t;

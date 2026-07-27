@@ -7417,3 +7417,15 @@ msgstr "Hem rebut el teu missatge!"
 
 msgid "Hi! Thanks for contacting G‑Fenix. We'll reply within 24 h (weekdays) or Monday morning (weekends). 🚀"
 msgstr "Hola! Gràcies per contactar amb G‑Fenix. Respondrem en 24 h (dies feiners) o el dilluns al matí (caps de setmana). 🚀"
+
+msgid "Sorry, something went wrong."
+msgstr "Ho sentim, alguna cosa ha anat malament."
+
+msgid "Track: dhl.com/track/4821"
+msgstr "Seguiment: dhl.com/track/4821"
+
+msgid "● Typing..."
+msgstr "● Escrivint..."
+
+msgid "● Online"
+msgstr "● En línia"
