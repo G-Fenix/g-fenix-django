@@ -119,7 +119,7 @@ msgid "AI-Powered Products"
 msgstr "Productes amb IA"
 
 msgid "Expert Consulting"
-msgstr "Consultoria Expert"
+msgstr "Consultoria Experta"
 
 msgid ""
 "We build modern web experiences, deliver hands-on training and guide teams "
@@ -138,9 +138,6 @@ msgstr "Satisfacció"
 
 msgid "Countries"
 msgstr "Països"
-
-msgid "Explore more"
-msgstr "Exploreu més"
 
 msgid "What We Offer"
 msgstr "Què Oferim"
@@ -245,17 +242,17 @@ msgid "Smooth launch and ongoing care"
 msgstr "Llançament suau i atenció contínua"
 
 msgid "The Tech Behind G-Fenix"
-msgstr "La Tecnologia darrere G-Fenix"
+msgstr "La Tecnologia Darrere de G-Fenix"
 
 msgid "Always-on Insights"
-msgstr "Informació Sempre Disponible"
+msgstr "Informació Sempre Activa"
 
 msgid ""
 "From office to on the go — your key numbers and alerts are always within "
 "reach"
 msgstr ""
-"Des de l'oficina fins al carrer — els vostres números i alertes clau sempre "
-"a mà"
+"Tant si sou a l'oficina com en moviment — les vostres xifres clau i alertes "
+"sempre a mà"
 
 msgid "Got Questions?"
 msgstr "Teniu Preguntes?"
@@ -415,28 +412,15 @@ msgstr ""
 "empresarial. Allotjem el repositori al vostre compte de control de versions "
 "quan és possible."
 
-msgid "Businesses with websites grow 3x faster over 5 years."
-msgstr "Les empreses amb llocs web creixen 3 vegades més ràpid en 5 anys."
-
 # ── QR MENU PAGE ───────────────────────────────────────────
 msgid "Build — QR Solutions"
 msgstr "Construir — Solucions QR"
 
 msgid "Scan. Explore."
-msgstr "Escanejar. Explorar."
+msgstr "Escaneja. Explora."
 
 msgid "Impress."
-msgstr "Impressionar."
-
-msgid ""
-"From restaurant menus to hotel lounges and personal brand cards — G‑Fenix "
-"builds smart QR experiences that work on any device, in any language, and "
-"update in real time without reprinting a single sheet."
-msgstr ""
-"Des de menús de restaurant fins a sales d'hotel i targetes de marca personal"
-" — G‑Fenix crea experiències QR intel·ligents que funcionen en qualsevol "
-"dispositiu, en qualsevol idioma i s'actualitzen en temps real sense "
-"reimprimir un sol full."
+msgstr "Impressiona."
 
 msgid "Restaurants"
 msgstr "Restaurants"
@@ -553,16 +537,6 @@ msgstr "Tauler d'analítica"
 msgid "Your Menu. Always Fresh. Never Reprinted."
 msgstr "El Vostre Menú. Sempre Fresc. Mai Reimprès."
 
-msgid ""
-"Paper menus are expensive to reprint, easy to soil, and impossible to update"
-" on the fly. A G‑Fenix QR menu lives on your phone — change a price, add a "
-"photo, mark something sold out — and every table sees it instantly."
-msgstr ""
-"Els menús de paper són cars de reimprimir, fàcils d'embrutar i impossibles "
-"d'actualitzar al moment. Un menú QR de G‑Fenix viu al vostre telèfon — "
-"canvieu un preu, afegiu una foto, marqueu alguna cosa com a esgotada — i "
-"totes les taules ho veuen a l'instant."
-
 msgid "Scan to preview live demo"
 msgstr "Escanegeu per previsualitzar la demo en directe"
 
@@ -628,8 +602,8 @@ msgid ""
 msgstr ""
 "Els hotels tenen desenes de punts de contacte — servei d'habitació, reserves"
 " de spa, bar de piscina, esmorzar, consergeria. Els reunim tots en una "
-"experiència QR de marca que els vostres hostes mai han de descarregar una "
-"app."
+"experiència QR de marca per a la qual els vostres hostes mai no han de "
+"descarregar cap aplicació."
 
 msgid "Separate menu per department"
 msgstr "Menú separat per departament"
@@ -708,9 +682,6 @@ msgstr ""
 "Els turistes no sempre parlen l'idioma local. Els nostres menús detecten "
 "l'idioma del navegador automàticament i permeten als hostes canviar amb un "
 "toc — sense app addicional, sense cost addicional."
-
-msgid "FAQ"
-msgstr "Preguntes Freqüents"
 
 msgid "Do guests need to download an app?"
 msgstr "Els hostes han de descarregar una app?"
@@ -825,16 +796,6 @@ msgstr ""
 "Del llançament a l'escala — una solució personalitzada per a cada necessitat"
 " empresarial."
 
-msgid "Business Website"
-msgstr "Lloc Web Empresarial"
-
-msgid ""
-"Speed, SEO, and conversion-focused company sites that build trust and win "
-"customers."
-msgstr ""
-"Llocs corporatius centrats en velocitat, SEO i conversió que generen "
-"confiança i guanyen clients."
-
 msgid "Custom Panel / Dashboard"
 msgstr "Panell / Tauler Personalitzat"
 
@@ -854,16 +815,6 @@ msgid ""
 msgstr ""
 "Facturació, seguiment d'ingressos/despeses, informes i càlcul d'impostos — "
 "basat en navegador i segur."
-
-msgid "Stock Management App"
-msgstr "Aplicació de Gestió d'Estoc"
-
-msgid ""
-"Online inventory tracking, low-stock alerts, supplier management and "
-"warehouse reporting."
-msgstr ""
-"Seguiment d'inventari en línia, alertes d'estoc baix, gestió de proveïdors i"
-" informes d'emmagatzematge."
 
 msgid "E‑Commerce"
 msgstr "Comerç Electrònic"
@@ -898,16 +849,6 @@ msgstr ""
 
 msgid "A Management Panel Built for Your Business"
 msgstr "Un Panell de Gestió Construït per al Vostre Negoci"
-
-msgid ""
-"Off-the-shelf tools never fit your workflow. G‑Fenix builds everything from "
-"scratch — staff attendance tracking to internal messaging, check-in/out logs"
-" to role-based permissions."
-msgstr ""
-"Les eines prefabricades mai s'adapten al vostre flux de treball. G‑Fenix ho "
-"construeix tot des de zero — seguiment d'assistència del personal fins a "
-"missatgeria interna, registres d'entrada/sortida fins a permisos basats en "
-"rols."
 
 msgid "Move Your Accounting to the Browser"
 msgstr "Porteu la Vostra Comptabilitat al Navegador"
@@ -1289,8 +1230,8 @@ msgstr "Transferència a Humà"
 
 msgid "Escalates gracefully when it can't help — no frustrating dead ends."
 msgstr ""
-"Escala de manera elegant quan no pot ajudar — sense callejons sense sortida "
-"frustradors."
+"Escala de manera elegant quan no pot ajudar — sense carrerons sense sortida "
+"frustrants."
 
 msgid "Analytics Dashboard"
 msgstr "Tauler d'Analítica"
@@ -1449,9 +1390,6 @@ msgid ""
 msgstr ""
 "Maquetes d'interfície, esquema de base de dades, contractes d'API — res no "
 "es construeix fins que el disseny sigui aprovat per vosaltres."
-
-msgid "Build"
-msgstr "Construir"
 
 msgid ""
 "Sprint-based delivery with weekly demos. You see real progress every week — "
@@ -2062,9 +2000,6 @@ msgstr ""
 "Teniu un projecte en ment? Envieu-nos un missatge i us respondrem en unes "
 "poques hores."
 
-msgid "Email"
-msgstr "Correu Electrònic"
-
 msgid "Phone"
 msgstr "Telèfon"
 
@@ -2114,8 +2049,8 @@ msgid ""
 "Thanks for reaching out. We'll review your message and get back to you "
 "within a few hours."
 msgstr ""
-"Gràcies per contactar-nos! Els dies feiners responem en 2 hores. Els "
-"missatges del cap de setmana es respondran el dilluns."
+"Gràcies per contactar-nos! Revisarem el teu missatge i et respondrem en unes"
+" hores."
 
 # ── BLOG ───────────────────────────────────────────────────
 msgid "Stories · Events · Technology"
@@ -2159,15 +2094,6 @@ msgstr ""
 "solucions 5G fins a sistemes de ciutats intel·ligents i aplicacions de salut"
 " digital."
 
-msgid ""
-"Seeing the technologies shaping the future up close was truly inspiring. The"
-" scale, the energy, the sheer density of innovation — MWC reminded us "
-"exactly why we do what we do at G‑Fenix."
-msgstr ""
-"Veure de prop les tecnologies que formen el futur va ser realment "
-"inspirador. L'escala, l'energia, la densa densitat d'innovació — MWC ens va "
-"recordar exactament per què fem el que fem a G‑Fenix."
-
 msgid "Attendees"
 msgstr "Assistents"
 
@@ -2183,18 +2109,8 @@ msgstr "Lectura Seleccionada"
 msgid "Data & Software Reading List"
 msgstr "Llista de Lectura de Dades i Programari"
 
-msgid ""
-"9 hand-picked resources from the G‑Fenix team — the blogs, docs and "
-"communities we actually read."
-msgstr ""
-"9 recursos seleccionats a mà per l'equip de G‑Fenix — els blogs, la "
-"documentació i les comunitats que realment llegim."
-
 msgid "Read"
 msgstr "Llegir"
-
-msgid "Featured"
-msgstr "Destacat"
 
 # ── FOOTER CTA + MISSING STRINGS ────────────────────────────────────────────
 msgid "Let's build something great"
@@ -2207,8 +2123,7 @@ msgid ""
 "Drop your email and we'll reach out within 24 hours — weekdays. No spam — "
 "ever."
 msgstr ""
-"Deixa el teu correu i et contactem en 2 hores — dies feiners. Cap de "
-"setmana: el dilluns. Mai spam."
+"Deixa el teu correu i et contactem en 24 hores — dies feiners. Mai spam."
 
 msgid "Get in touch"
 msgstr "Poseu-vos en contacte"
@@ -2264,9 +2179,6 @@ msgstr "Explorar Serveis"
 
 msgid "Explore more"
 msgstr "Exploreu més"
-
-msgid "Our Team"
-msgstr "El Nostre Equip"
 
 msgid "Ongoing Projects"
 msgstr "Projectes en Curs"
@@ -2530,7 +2442,7 @@ msgid "Revenue Growth: With vs Without Website"
 msgstr "Creixement d'Ingressos: Amb vs Sense Web"
 
 msgid "5-year projection · avg small business"
-msgstr "Projecció a 5 anys · promig petita empresa"
+msgstr "Projecció a 5 anys · mitjana petita empresa"
 
 msgid "MORE LEADS"
 msgstr "MÉS LEADS"
@@ -2861,9 +2773,6 @@ msgstr "Usuari"
 
 msgid "Login"
 msgstr "Iniciar Sessió"
-
-msgid "Chat"
-msgstr "Xat"
 
 msgid "Dashboard"
 msgstr "Tauler"
@@ -3223,7 +3132,7 @@ msgid "Desserts"
 msgstr "Postres"
 
 msgid "Tomato, basil, aged balsamic"
-msgstr "Tomàquet, alfàbrega, balsàmic envellert"
+msgstr "Tomàquet, alfàbrega, balsàmic envellit"
 
 msgid "Creamy burrata, San Daniele"
 msgstr "Burrata cremosa, San Daniele"
@@ -3548,7 +3457,7 @@ msgid ""
 "management and auto-reorder workflows."
 msgstr ""
 "Seguiment d'estoc en temps real amb alertes d'estoc baix, escaneig de codis "
-"de barres, gestió de proveïdors i fluxos de treball de recomanda automàtica."
+"de barres, gestió de proveïdors i fluxos de treball de reposició automàtica."
 
 msgid "SKUs managed"
 msgstr "SKUs gestionats"
@@ -3561,9 +3470,6 @@ msgstr "App Empresarial"
 
 msgid "Total"
 msgstr "Total"
-
-msgid "Online"
-msgstr "En Línia"
 
 msgid "Alert"
 msgstr "Alerta"
@@ -3611,7 +3517,7 @@ msgid ""
 "inboxes."
 msgstr ""
 "Plataforma BI completa amb pipelines ETL, taulers KPI, previsió de vendes i "
-"informes executius automatitzats lliurats directament als bústies dels "
+"informes executius automatitzats lliurats directament a les bústies dels "
 "interessats."
 
 msgid "Report time"
@@ -3736,9 +3642,6 @@ msgstr "Revises i valides el producte abans que surti en viu"
 msgid "Use Cases"
 msgstr "Casos d'Ús"
 
-msgid "User Cases"
-msgstr "Casos d'Ús"
-
 msgid "Data · User Cases"
 msgstr "Dades · Casos d'Ús"
 
@@ -3789,8 +3692,8 @@ msgid ""
 "Dashboards and pipelines that turn raw numbers into decisions your team can "
 "act on."
 msgstr ""
-"Quadres de comandament i fluxos de dades que converteixen números en brut en"
-" decisions que el teu equip pot prendre."
+"Taulers i fluxos de dades que converteixen números en brut en decisions que "
+"el teu equip pot prendre."
 
 msgid "Healthcare Clinics"
 msgstr "Clíniques de Salut"
@@ -3932,7 +3835,7 @@ msgid "zero."
 msgstr "zero."
 
 msgid "We"
-msgstr "Millorem"
+msgstr "Reconstruïm"
 
 msgid "rebuild"
 msgstr "el que"
@@ -4079,7 +3982,7 @@ msgid ""
 "warehouse reporting."
 msgstr ""
 "Seguiment d'inventari en línia, alertes d'estoc baix, gestió de proveïdors i"
-" informes d'almacen."
+" informes de magatzem."
 
 msgid ""
 "We add languages to your existing site. Hreflang, SEO and auto-redirects "
@@ -7343,14 +7246,19 @@ msgstr "Automatitzacions Intel·ligents"
 msgid "Always Respond, Even When You're Away"
 msgstr "Respon Sempre, Fins i Tot Quan Ets Absent"
 
-msgid "Set up smart auto-replies across all your platforms — from social media DMs to email inquiries."
-msgstr "Configura respostes automàtiques intel·ligents a totes les teves plataformes — des de missatges directes a consultes per correu."
+msgid ""
+"Set up smart auto-replies across all your platforms — from social media DMs "
+"to email inquiries."
+msgstr ""
+"Configura respostes automàtiques intel·ligents a totes les teves plataformes"
+" — des de missatges directes a consultes per correu."
 
 msgid "Greeting Message"
 msgstr "Missatge de Benvinguda"
 
 msgid "Greet every new visitor automatically before your team picks up."
-msgstr "Saluda automàticament cada nou visitant abans que el teu equip respongui."
+msgstr ""
+"Saluda automàticament cada nou visitant abans que el teu equip respongui."
 
 msgid "Hi! 👋 Thanks for reaching out to G‑Fenix. We'll be right with you!"
 msgstr "Hola! 👋 Gràcies per contactar amb G‑Fenix. De seguida t'atenem!"
@@ -7359,10 +7267,12 @@ msgid "Away Message"
 msgstr "Missatge d'Absència"
 
 msgid "Let customers know you're offline — no one left without an answer."
-msgstr "Informa els clients que no estàs disponible — ningú queda sense resposta."
+msgstr ""
+"Informa els clients que no estàs disponible — ningú queda sense resposta."
 
 msgid "We're away right now 🌙 We reply Mon–Fri 9–18h. Leave a message!"
-msgstr "Ara no estem disponibles 🌙 Responem Dll–Div 9–18h. Deixa'ns un missatge!"
+msgstr ""
+"Ara no estem disponibles 🌙 Responem Dll–Div 9–18h. Deixa'ns un missatge!"
 
 msgid "Instant welcome for anyone who opens your Messenger chat."
 msgstr "Benvinguda instantània per a tothom que obri el teu xat de Messenger."
@@ -7370,17 +7280,26 @@ msgstr "Benvinguda instantània per a tothom que obri el teu xat de Messenger."
 msgid "Hello! Welcome to G‑Fenix 🚀 How can we help you today?"
 msgstr "Hola! Benvingut/da a G‑Fenix 🚀 En què et podem ajudar avui?"
 
-msgid "Cover weekends and after-hours automatically — every message is acknowledged."
-msgstr "Cobreix caps de setmana i fora d'horari automàticament — cada missatge queda confirmat."
+msgid ""
+"Cover weekends and after-hours automatically — every message is "
+"acknowledged."
+msgstr ""
+"Cobreix caps de setmana i fora d'horari automàticament — cada missatge queda"
+" confirmat."
 
-msgid "We're currently unavailable. We'll respond on the next business day! ✉️"
+msgid ""
+"We're currently unavailable. We'll respond on the next business day! ✉️"
 msgstr "Ara no estem disponibles. Respondrem el proper dia laborable! ✉️"
 
 msgid "Instant Replies"
 msgstr "Respostes Instantànies"
 
-msgid "Set up quick-reply buttons and automated flows for your most common questions."
-msgstr "Configura botons de resposta ràpida i fluxos automatitzats per a les teves preguntes més freqüents."
+msgid ""
+"Set up quick-reply buttons and automated flows for your most common "
+"questions."
+msgstr ""
+"Configura botons de resposta ràpida i fluxos automatitzats per a les teves "
+"preguntes més freqüents."
 
 msgid "Hi! Choose an option:"
 msgstr "Hola! Tria una opció:"
@@ -7392,7 +7311,8 @@ msgid "💬 Contact us"
 msgstr "💬 Contacta'ns"
 
 msgid "Customers always get a reply, even outside business hours."
-msgstr "Els clients sempre reben una resposta, fins i tot fora de l'horari laboral."
+msgstr ""
+"Els clients sempre reben una resposta, fins i tot fora de l'horari laboral."
 
 msgid "Thanks for writing! We'll get back to you within 24 hours 🙌"
 msgstr "Gràcies per escriure! Et respondrem en 24 hores 🙌"
@@ -7403,20 +7323,32 @@ msgstr "Resposta Automàtica per Correu"
 msgid "Multilingual Responses"
 msgstr "Respostes Multilingües"
 
-msgid "When someone fills your contact form, they instantly get a personalised reply in their own language."
-msgstr "Quan algú omple el formulari de contacte, rep a l'instant una resposta personalitzada en el seu propi idioma."
+msgid ""
+"When someone fills your contact form, they instantly get a personalised "
+"reply in their own language."
+msgstr ""
+"Quan algú omple el formulari de contacte, rep a l'instant una resposta "
+"personalitzada en el seu propi idioma."
 
 msgid "24 h Response Promise"
 msgstr "Compromís de Resposta en 24 h"
 
-msgid "The auto-reply confirms receipt and sets expectations — weekdays within 2 h, weekends on Monday."
-msgstr "La resposta automàtica confirma la recepció i gestiona les expectatives — dies feiners en 2 h, caps de setmana el dilluns."
+msgid ""
+"The auto-reply confirms receipt and sets expectations — weekdays within 2 h,"
+" weekends on Monday."
+msgstr ""
+"La resposta automàtica confirma la recepció i gestiona les expectatives — "
+"dies feiners en 2 h, caps de setmana el dilluns."
 
 msgid "We got your message!"
 msgstr "Hem rebut el teu missatge!"
 
-msgid "Hi! Thanks for contacting G‑Fenix. We'll reply within 24 h (weekdays) or Monday morning (weekends). 🚀"
-msgstr "Hola! Gràcies per contactar amb G‑Fenix. Respondrem en 24 h (dies feiners) o el dilluns al matí (caps de setmana). 🚀"
+msgid ""
+"Hi! Thanks for contacting G‑Fenix. We'll reply within 24 h (weekdays) or "
+"Monday morning (weekends). 🚀"
+msgstr ""
+"Hola! Gràcies per contactar amb G‑Fenix. Respondrem en 24 h (dies feiners) o"
+" el dilluns al matí (caps de setmana). 🚀"
 
 msgid "Sorry, something went wrong."
 msgstr "Ho sentim, alguna cosa ha anat malament."
@@ -7429,3 +7361,758 @@ msgstr "● Escrivint..."
 
 msgid "● Online"
 msgstr "● En línia"
+
+msgid "REFERENCES"
+msgstr "REFERÈNCIES"
+
+msgid "USER CASES"
+msgstr "CASOS D'ÚS"
+
+msgid ""
+"We let our clients speak. Here are the teams and businesses that trusted "
+"G‑Fenix — and what changed."
+msgstr ""
+"Deixem que parlin els nostres clients. Aquests són els equips i empreses que"
+" van confiar en G‑Fenix — i què va canviar."
+
+msgid "WHAT CLIENTS SAY"
+msgstr "EL QUE DIUEN ELS CLIENTS"
+
+msgid "In their own words."
+msgstr "En les seves pròpies paraules."
+
+msgid "Data & BI"
+msgstr "Dades i BI"
+
+msgid "AI Chatbot"
+msgstr "Chatbot d'IA"
+
+msgid ""
+"Before G‑Fenix, our weekly reports took two days to compile. Now they run "
+"automatically every morning. Our board finally trusts the numbers."
+msgstr ""
+"Abans de G‑Fenix, els nostres informes setmanals trigaven dos dies a "
+"compilar-se. Ara s'executen automàticament cada matí. El nostre consell per "
+"fi confia en les xifres."
+
+msgid "CFO, Industrial Manufacturer"
+msgstr "CFO, Fabricant Industrial"
+
+msgid "Germany"
+msgstr "Alemanya"
+
+msgid ""
+"We had a vision but no technical team. G‑Fenix delivered a multilingual "
+"platform in six weeks that looks and performs better than sites that cost "
+"ten times more."
+msgstr ""
+"Teníem una visió però cap equip tècnic. G‑Fenix va lliurar una plataforma "
+"multilingüe en sis setmanes que es veu i funciona millor que llocs que "
+"costen deu vegades més."
+
+msgid "Founder, Tourism Startup"
+msgstr "Fundador, Startup de Turisme"
+
+msgid "Barcelona"
+msgstr "Barcelona"
+
+msgid ""
+"The chatbot they built handles 70% of our first-contact support queries. Our"
+" team now focuses on the cases that actually need human attention."
+msgstr ""
+"El chatbot que van construir gestiona el 70% de les nostres consultes de "
+"suport de primer contacte. El nostre equip ara es concentra en els casos que"
+" realment necessiten atenció humana."
+
+msgid "Operations Manager, E-commerce"
+msgstr "Gerent d'Operacions, Comerç Electrònic"
+
+msgid "Spain"
+msgstr "Espanya"
+
+msgid ""
+"Our international guests scan once and see the full menu in their language. "
+"We've cut reprint costs completely and menu updates happen in seconds."
+msgstr ""
+"Els nostres hostes internacionals escanegen una vegada i veuen el menú "
+"complet en el seu idioma. Hem eliminat completament els costos de "
+"reimpressió i les actualitzacions del menú passen en segons."
+
+msgid "Owner, Restaurant"
+msgstr "Propietari, Restaurant"
+
+msgid "Istanbul"
+msgstr "Istanbul"
+
+msgid ""
+"Three months after the training, our analysts are building their own "
+"dashboards in Power BI. No more depending on IT for every report. Completely"
+" changed how we work."
+msgstr ""
+"Tres mesos després de la formació, els nostres analistes construeixen els "
+"seus propis taulers a Power BI. Ja no depenem d'informàtica per a cada "
+"informe. Va canviar completament la nostra manera de treballar."
+
+msgid "Head of Analytics, Retail Group"
+msgstr "Cap d'Analítica, Grup de Retail"
+
+msgid "France"
+msgstr "França"
+
+msgid ""
+"Jessica mapped our entire data landscape in two weeks and delivered a "
+"roadmap we could actually follow. For the first time we have one agreed "
+"version of the truth."
+msgstr ""
+"Jessica va mapar tot el nostre panorama de dades en dues setmanes i va "
+"lliurar un full de ruta que realment vam poder seguir. Per primera vegada "
+"tenim una única versió acordada de la veritat."
+
+msgid "COO, Logistics Company"
+msgstr "COO, Empresa de Logística"
+
+msgid "Denmark"
+msgstr "Dinamarca"
+
+msgid "YEARS EXPERIENCE"
+msgstr "ANYS D'EXPERIÈNCIA"
+
+msgid "COUNTRIES"
+msgstr "PAÏSOS"
+
+msgid "ON-TIME DELIVERY"
+msgstr "LLIURAMENT A TEMPS"
+
+msgid "BASED IN BARCELONA"
+msgstr "AMB SEU A BARCELONA"
+
+msgid ""
+"Across industries, the same pattern: messy data, manual work, tools nobody "
+"uses. Here's how we fixed it — and what the numbers look like after."
+msgstr ""
+"En tots els sectors, el mateix patró: dades desordenades, treball manual, "
+"eines que ningú utilitza. Així és com ho vam solucionar — i així es veuen "
+"les xifres després."
+
+msgid "CASE STUDIES"
+msgstr "CASOS D'ESTUDI"
+
+msgid "Problems we've solved."
+msgstr "Problemes que hem resolt."
+
+msgid "RESTAURANT · QR MENU"
+msgstr "RESTAURANT · MENÚ QR"
+
+msgid "Multilingual menu for a 5-language clientele"
+msgstr "Menú multilingüe per a una clientela de 5 idiomes"
+
+msgid "THE PROBLEM"
+msgstr "EL PROBLEMA"
+
+msgid ""
+"A Barcelona restaurant with guests from 12+ countries was reprinting menus "
+"every time prices changed. Staff were manually translating on sticky notes."
+msgstr ""
+"Un restaurant de Barcelona amb clients de més de 12 països reimprimia els "
+"menús cada vegada que canviaven els preus. El personal traduïa manualment en"
+" notes adhesives."
+
+msgid "Zero reprint cost. Menu updated in seconds."
+msgstr "Cost de reimpressió zero. Menú actualitzat en segons."
+
+msgid "MANUFACTURING · DATA"
+msgstr "FABRICACIÓ · DADES"
+
+msgid "Single source of truth for a 3-country operation"
+msgstr "Font única de veritat per a una operació en 3 països"
+
+msgid ""
+"Finance, operations and sales each had their own Excel files. Monthly close "
+"took 4 days of reconciling. No one trusted the final number."
+msgstr ""
+"Finances, operacions i vendes tenien cadascuna els seus propis arxius Excel."
+" El tancament mensual requeria 4 dies de conciliació. Ningú confiava en la "
+"xifra final."
+
+msgid "Monthly close cut from 4 days to 6 hours."
+msgstr "El tancament mensual es va reduir de 4 dies a 6 hores."
+
+msgid "E-COMMERCE · AI CHATBOT"
+msgstr "COMERÇ ELECTRÒNIC · CHATBOT D'IA"
+
+msgid "24/7 support bot that qualifies leads automatically"
+msgstr "Bot de suport 24/7 que qualifica leads automàticament"
+
+msgid ""
+"A growing online store was drowning in repetitive support emails. Two agents"
+" spent 70% of their time answering the same 15 questions."
+msgstr ""
+"Una botiga en línia en creixement s'ofegava en correus de suport repetitius."
+" Dos agents passaven el 70% del seu temps responent les mateixes 15 "
+"preguntes."
+
+msgid "70% of tickets handled automatically, 24/7."
+msgstr "El 70% dels tiquets gestionats automàticament, 24/7."
+
+msgid "RETAIL · TRAINING"
+msgstr "RETAIL · FORMACIÓ"
+
+msgid "Power BI training for a team of 12 analysts"
+msgstr "Formació en Power BI per a un equip de 12 analistes"
+
+msgid ""
+"The company had Power BI licences for a year but the tool was unused. Every "
+"report still came from IT. Analysts felt blocked and dependent."
+msgstr ""
+"L'empresa tenia llicències de Power BI des de feia un any, però l'eina no "
+"s'utilitzava. Cada informe encara venia d'informàtica. Els analistes se "
+"sentien bloquejats i dependents."
+
+msgid "12 analysts self-sufficient within 8 weeks."
+msgstr "12 analistes autosuficients en 8 setmanes."
+
+msgid "HOSPITALITY · WEB"
+msgstr "HOSTALERIA · WEB"
+
+msgid "Booking-focused website with live availability"
+msgstr "Lloc web centrat en reserves amb disponibilitat en directe"
+
+msgid ""
+"A boutique hotel had an outdated site that converted less than 1% of "
+"visitors. Booking still happened by phone. Mobile experience was unusable."
+msgstr ""
+"Un hotel boutique tenia un lloc antiquat que convertia menys de l'1% dels "
+"visitants. Les reserves encara es feien per telèfon. L'experiència mòbil era"
+" inutilitzable."
+
+msgid "Online bookings tripled in the first month."
+msgstr "Les reserves en línia es van triplicar el primer mes."
+
+msgid "LOGISTICS · AUTOMATION"
+msgstr "LOGÍSTICA · AUTOMATITZACIÓ"
+
+msgid "Automated weekly reporting pipeline"
+msgstr "Pipeline d'informes setmanals automatitzat"
+
+msgid ""
+"An operations manager spent every Monday morning pulling data from five "
+"systems and pasting it into a PowerPoint for the weekly review meeting."
+msgstr ""
+"Un gerent d'operacions passava cada dilluns al matí extraient dades de cinc "
+"sistemes i enganxant-les en un PowerPoint per a la reunió setmanal de "
+"revisió."
+
+msgid "3 hours of manual work eliminated every week."
+msgstr "3 hores de treball manual eliminades cada setmana."
+
+msgid "DATA & ANALYTICS"
+msgstr "DADES I ANALÍTICA"
+
+msgid "we solve."
+msgstr "que resolem."
+
+msgid ""
+"10 real problems companies face when data starts piling up — and how we turn"
+" scattered spreadsheets, ad-hoc extracts and rogue dashboards into clean, "
+"reliable, available data and confident decisions."
+msgstr ""
+"10 problemes reals que afronten les empreses quan les dades comencen a "
+"acumular-se — i com convertim fulls de càlcul dispersos, extraccions "
+"puntuals i dashboards descontrolats en dades netes, fiables, disponibles i "
+"decisions amb confiança."
+
+msgid "ASSESS"
+msgstr "AVALUAR"
+
+msgid "Inventory & diagnose"
+msgstr "Inventariar i diagnosticar"
+
+msgid "QUICK WINS"
+msgstr "VICTÒRIES RÀPIDES"
+
+msgid "Value in 0–90 days"
+msgstr "Valor en 0–90 dies"
+
+msgid "ROADMAP"
+msgstr "FULL DE RUTA"
+
+msgid "Short & medium term"
+msgstr "Curt i mitjà termini"
+
+msgid "DATA-DRIVEN"
+msgstr "BASAT EN DADES"
+
+msgid "Decisions on clean data"
+msgstr "Decisions sobre dades netes"
+
+msgid "THE SITUATION"
+msgstr "LA SITUACIÓ"
+
+msgid "OUR APPROACH"
+msgstr "EL NOSTRE ENFOCAMENT"
+
+msgid "QUICK WINS · 0–90 DAYS"
+msgstr "VICTÒRIES RÀPIDES · 0–90 DIES"
+
+msgid "SHORT TERM"
+msgstr "CURT TERMINI"
+
+msgid "3–6 months"
+msgstr "3–6 mesos"
+
+msgid "MEDIUM TERM"
+msgstr "MITJÀ TERMINI"
+
+msgid "6–18 months"
+msgstr "6–18 mesos"
+
+msgid "OUTCOME"
+msgstr "RESULTAT"
+
+msgid "PROFESSIONAL SERVICES · ANY SECTOR"
+msgstr "SERVEIS PROFESSIONALS · QUALSEVOL SECTOR"
+
+msgid "From scattered spreadsheets to a single source of truth"
+msgstr "De fulls de càlcul dispersos a una única font de veritat"
+
+msgid ""
+"No real data platform. Excels, manual extractions and a few Power BI reports"
+" built by different people keep piling up. Numbers don't match between "
+"teams, and decisions depend on whoever happens to hold the latest file."
+msgstr ""
+"No hi ha una plataforma de dades real. Excels, extraccions manuals i alguns "
+"informes de Power BI creats per persones diferents es continuen acumulant. "
+"Les xifres no coincideixen entre equips, i les decisions depenen de qui "
+"tingui l'arxiu més recent."
+
+msgid ""
+"We run a data assessment: we inventory every source, map how data flows, and"
+" diagram the current situation in plain, non-technical language so "
+"leadership can actually decide. Then we deliver a prioritized action plan — "
+"quick wins now plus a roadmap toward clean, reliable, available data."
+msgstr ""
+"Fem una avaluació de dades: inventariem cada font, mapegem com flueixen les "
+"dades i diagramem la situació actual en un llenguatge clar i no tècnic "
+"perquè el lideratge pugui decidir de veritat. Després lliurem un pla d'acció"
+" prioritzat — victòries ràpides ara més un full de ruta cap a dades netes, "
+"fiables i disponibles."
+
+msgid "Consolidate the 3 most critical reports into one trusted dashboard."
+msgstr "Consolida els 3 informes més crítics en un únic tauler de confiança."
+
+msgid ""
+"Define metric owners and a shared glossary so everyone counts the same way."
+msgstr ""
+"Defineix responsables de les mètriques i un glossari compartit perquè tothom"
+" compti de la mateixa manera."
+
+msgid "Retire duplicate and contradictory files."
+msgstr "Elimina els arxius duplicats i contradictoris."
+
+msgid ""
+"Central data store with automated refresh; one trusted version of key "
+"reports."
+msgstr ""
+"Magatzem de dades central amb actualització automàtica; una versió de "
+"confiança dels informes clau."
+
+msgid ""
+"Governed self-service BI and a culture of decisions made on clean data."
+msgstr ""
+"BI d'autoservei governat i una cultura de decisions basades en dades netes."
+
+msgid ""
+"One version of the truth, faster and calmer decisions, far less manual "
+"rework."
+msgstr ""
+"Una única versió de la veritat, decisions més ràpides i tranquil·les, molt "
+"menys retreball manual."
+
+msgid "RETAIL · E-COMMERCE"
+msgstr "RETAIL · E-COMMERCE"
+
+msgid "A unified sales & inventory view across channels"
+msgstr "Una vista unificada de vendes i inventari entre canals"
+
+msgid ""
+"Sales live separately in the POS, the online store and the marketplace. "
+"Inventory is reconciled by hand, so stockouts and overstock are discovered "
+"far too late."
+msgstr ""
+"Les vendes viuen per separat al TPV, la botiga en línia i el marketplace. "
+"L'inventari es concilia a mà, així que les ruptures d'estoc i l'excés es "
+"descobreixen massa tard."
+
+msgid ""
+"We integrate every channel into one model, standardize SKUs into a clean "
+"product master, and build a near-real-time sales & stock dashboard with "
+"alerts on the products that matter most."
+msgstr ""
+"Integrem cada canal en un únic model, estandarditzem els SKUs en un mestre "
+"de productes net i construïm un tauler de vendes i estoc gairebé en temps "
+"real amb alertes sobre els productes més importants."
+
+msgid "Daily consolidated sales report across all channels."
+msgstr "Informe diari de vendes consolidat en tots els canals."
+
+msgid "Low-stock alerts on best-sellers."
+msgstr "Alertes d'estoc baix en els més venuts."
+
+msgid "Clean, de-duplicated product master."
+msgstr "Mestre de productes net i sense duplicats."
+
+msgid "Automated channel ingestion feeding one sales & stock model."
+msgstr ""
+"Ingesta automatitzada de canals que alimenta un únic model de vendes i "
+"estoc."
+
+msgid "Demand-aware replenishment and margin analytics by product and store."
+msgstr ""
+"Reposició basada en la demanda i analítica de marges per producte i botiga."
+
+msgid ""
+"Fewer stockouts, less dead stock, and clear margin visibility per channel."
+msgstr ""
+"Menys ruptures d'estoc, menys estoc mort i visibilitat clara de marges per "
+"canal."
+
+msgid "MANUFACTURING"
+msgstr "FABRICACIÓ"
+
+msgid "Turning machine & shop-floor logs into OEE"
+msgstr "Convertir registres de màquines i planta en OEE"
+
+msgid ""
+"Production data is trapped inside machines and paper or Excel logs. Downtime"
+" causes are anecdotal, and OEE is unknown or roughly estimated."
+msgstr ""
+"Les dades de producció estan atrapades dins de les màquines i en registres "
+"de paper o Excel. Les causes de les aturades són anecdòtiques, i l'OEE és "
+"desconegut o s'estima a grans trets."
+
+msgid ""
+"We capture and clean production data, define OEE (availability, performance,"
+" quality) consistently, and visualize where losses happen by line and shift."
+msgstr ""
+"Capturem i netegem les dades de producció, definim l'OEE (disponibilitat, "
+"rendiment, qualitat) de forma consistent, i visualitzem on es produeixen les"
+" pèrdues per línia i torn."
+
+msgid "Automated daily output and downtime report."
+msgstr "Informe diari automatitzat de producció i aturades."
+
+msgid "Pareto of the top stoppage causes."
+msgstr "Pareto de les principals causes d'aturada."
+
+msgid "Reliable OEE baseline per line."
+msgstr "Línia base d'OEE fiable per línia."
+
+msgid "Trustworthy OEE per line, refreshed automatically."
+msgstr "OEE fiable per línia, actualitzat automàticament."
+
+msgid "Predictive maintenance signals and scrap-reduction analytics."
+msgstr "Senyals de manteniment predictiu i analítica de reducció de rebuig."
+
+msgid ""
+"Visible bottlenecks, targeted improvements, and measurable throughput gains."
+msgstr ""
+"Colls d'ampolla visibles, millores específiques i guanys de producció "
+"mesurables."
+
+msgid "LOGISTICS · DISTRIBUTION"
+msgstr "LOGÍSTICA · DISTRIBUCIÓ"
+
+msgid "An operations KPI cockpit you can trust"
+msgstr "Un quadre de comandament operatiu del qual et pots refiar"
+
+msgid ""
+"Deliveries, routes and costs are tracked in personal spreadsheets. There are"
+" no reliable on-time or cost-per-delivery KPIs to manage the operation."
+msgstr ""
+"Els lliuraments, rutes i costos es controlen en fulls de càlcul personals. "
+"No hi ha KPIs fiables de puntualitat o cost per lliurament per gestionar "
+"l'operació."
+
+msgid ""
+"We model the operational data into one dataset and build a KPI cockpit — on-"
+"time %, cost per delivery, route efficiency — with drill-down to the problem"
+" cases."
+msgstr ""
+"Modelem les dades operatives en un únic dataset i construïm un quadre de "
+"comandament — % de puntualitat, cost per lliurament, eficiència de rutes — "
+"amb detall fins als casos problemàtics."
+
+msgid "Automated on-time and cost dashboard."
+msgstr "Tauler automatitzat de puntualitat i costos."
+
+msgid "Exception list of late or expensive deliveries."
+msgstr "Llista d'excepcions de lliuraments tardans o cars."
+
+msgid "Single, agreed operational dataset."
+msgstr "Un únic dataset operatiu acordat."
+
+msgid "One operational data model powering daily KPIs."
+msgstr "Un model de dades operatiu que alimenta els KPIs diaris."
+
+msgid "Route optimization and SLA forecasting."
+msgstr "Optimització de rutes i previsió d'SLA."
+
+msgid "Tighter SLAs, lower cost per delivery, and accountable operations."
+msgstr ""
+"SLAs més estrictes, menor cost per lliurament i una operació més "
+"responsable."
+
+msgid "HEALTHCARE · CLINICS"
+msgstr "SANITAT · CLÍNIQUES"
+
+msgid "Clean, compliant operational reporting"
+msgstr "Informes operatius nets i conformes a la normativa"
+
+msgid ""
+"Patient, appointment and billing data sit in separate systems. Monthly "
+"reports are built by hand, while data quality and privacy remain ongoing "
+"concerns."
+msgstr ""
+"Les dades de pacients, cites i facturació viuen en sistemes separats. Els "
+"informes mensuals es fan a mà, i la qualitat de les dades i la privacitat "
+"continuen sent preocupacions constants."
+
+msgid ""
+"We consolidate sources with privacy by design, clean and standardize "
+"records, and automate the operational and financial reporting that today "
+"eats hours every month."
+msgstr ""
+"Consolidem les fonts amb privacitat des del disseny, netegem i "
+"estandarditzem els registres, i automatitzem els informes operatius i "
+"financers que avui consumeixen hores cada mes."
+
+msgid "Automated occupancy and no-show report."
+msgstr "Informe automatitzat d'ocupació i absències."
+
+msgid "De-duplicated patient master record."
+msgstr "Registre mestre de pacients sense duplicats."
+
+msgid "Access-controlled reporting layer."
+msgstr "Capa d'informes amb accés controlat."
+
+msgid "Governed reporting layer with role-based access."
+msgstr "Capa d'informes governada amb accés basat en rols."
+
+msgid "Capacity planning and clinical outcome analytics."
+msgstr "Planificació de capacitat i analítica de resultats clínics."
+
+msgid "Hours saved every month, trustworthy KPIs, and audit-ready data."
+msgstr ""
+"Hores estalviades cada mes, KPIs fiables i dades preparades per a auditoria."
+
+msgid "E-COMMERCE · MARKETING"
+msgstr "E-COMMERCE · MÀRQUETING"
+
+msgid "Knowing what actually drives sales"
+msgstr "Saber què impulsa realment les vendes"
+
+msgid ""
+"Ad spend is spread across channels and ROAS is argued from each platform's "
+"own numbers. There is no unified, comparable attribution."
+msgstr ""
+"La despesa en publicitat es reparteix entre canals i el ROAS es discuteix "
+"amb les xifres pròpies de cada plataforma. No hi ha una atribució unificada "
+"i comparable."
+
+msgid ""
+"We unify spend and revenue into one marketing mart, build a comparable "
+"channel attribution and ROAS model, and deliver a marketing performance "
+"dashboard the whole team trusts."
+msgstr ""
+"Unifiquem la despesa i els ingressos en un únic data mart de màrqueting, "
+"construïm un model comparable d'atribució per canal i ROAS, i lliurem un "
+"tauler de rendiment de màrqueting en el qual confia tot l'equip."
+
+msgid "Blended ROAS and CAC dashboard."
+msgstr "Tauler combinat de ROAS i CAC."
+
+msgid "Weekly channel performance view."
+msgstr "Vista setmanal del rendiment per canal."
+
+msgid "Unified spend and revenue dataset."
+msgstr "Dataset unificat de despesa i ingressos."
+
+msgid "Single marketing data mart across channels."
+msgstr "Un únic data mart de màrqueting per a tots els canals."
+
+msgid "Attribution modeling and budget-allocation scenarios."
+msgstr "Modelatge d'atribució i escenaris d'assignació de pressupost."
+
+msgid ""
+"Smarter budget allocation, lower CAC, and defensible marketing decisions."
+msgstr ""
+"Assignació de pressupost més intel·ligent, menor CAC i decisions de "
+"màrqueting defensables."
+
+msgid "FINANCE · SAAS"
+msgstr "FINANCES · SAAS"
+
+msgid "Automating the monthly close & board reporting"
+msgstr "Automatitzar el tancament mensual i els informes al consell"
+
+msgid ""
+"The monthly close and board reporting run on fragile Excel files — slow, "
+"error-prone, and dependent on one person who holds all the knowledge."
+msgstr ""
+"El tancament mensual i els informes al consell funcionen sobre arxius Excel "
+"fràgils — lents, propensos a errors i depenents d'una sola persona que té "
+"tot el coneixement."
+
+msgid ""
+"We model finance data in a warehouse, automate the core metrics (MRR, churn,"
+" margin), and deliver board reports that update themselves and reconcile to "
+"the source."
+msgstr ""
+"Modelem les dades financeres en un magatzem de dades, automatitzem les "
+"mètriques clau (MRR, churn, marge), i lliurem informes al consell que "
+"s'actualitzen sols i concilien amb la font."
+
+msgid "Automated MRR and churn dashboard."
+msgstr "Tauler automatitzat de MRR i churn."
+
+msgid "Reconciled revenue report."
+msgstr "Informe d'ingressos conciliat."
+
+msgid "Documented, repeatable metric definitions."
+msgstr "Definicions de mètriques documentades i repetibles."
+
+msgid "One finance data model feeding self-updating reports."
+msgstr "Un model de dades financer que alimenta informes autoactualitzables."
+
+msgid "Scenario planning and forecasting."
+msgstr "Planificació d'escenaris i previsió."
+
+msgid "A faster close, fewer errors, and no key-person risk."
+msgstr ""
+"Un tancament més ràpid, menys errors i sense risc de dependència d'una "
+"persona clau."
+
+msgid "HR · PEOPLE ANALYTICS"
+msgstr "RRHH · PEOPLE ANALYTICS"
+
+msgid "From HR spreadsheets to people insight"
+msgstr "De fulls de càlcul de RRHH al coneixement de les persones"
+
+msgid ""
+"Headcount, turnover and recruiting are tracked in disconnected spreadsheets,"
+" leaving leadership without a clear, current picture of the workforce."
+msgstr ""
+"La plantilla, la rotació i la contractació es controlen en fulls de càlcul "
+"desconnectats, deixant la direcció sense una imatge clara i actual de la "
+"plantilla."
+
+msgid ""
+"We consolidate HR data with privacy in mind, define the core people KPIs, "
+"and build a leadership people dashboard that answers the recurring questions"
+" instantly."
+msgstr ""
+"Consolidem les dades de RRHH tenint en compte la privacitat, definim els "
+"KPIs clau de persones, i construïm un tauler de persones per a la direcció "
+"que respon a l'instant a les preguntes recurrents."
+
+msgid "Headcount and turnover dashboard."
+msgstr "Tauler de plantilla i rotació."
+
+msgid "Time-to-hire report."
+msgstr "Informe de temps de contractació."
+
+msgid "Clean, consolidated people data model."
+msgstr "Model de dades de persones net i consolidat."
+
+msgid "Reliable people data model with core KPIs."
+msgstr "Model de dades de persones fiable amb els KPIs clau."
+
+msgid "Attrition-risk analytics and workforce planning."
+msgstr "Analítica de risc de rotació i planificació de plantilla."
+
+msgid "Proactive retention, faster hiring, and data-backed people decisions."
+msgstr ""
+"Retenció proactiva, contractació més ràpida i decisions de persones "
+"recolzades per dades."
+
+msgid "Consolidating POS data across every venue"
+msgstr "Consolidar les dades de TPV de tots els locals"
+
+msgid ""
+"Each venue runs its own POS and performance is compared by emailing "
+"spreadsheets around. There is no timely, fair cross-location view."
+msgstr ""
+"Cada local usa el seu propi TPV i el rendiment es compara enviant fulls de "
+"càlcul per correu. No hi ha una visió oportuna i justa entre locals."
+
+msgid ""
+"We centralize POS data, standardize the menu and product catalog, and build "
+"per-location and group dashboards so every site is measured the same way."
+msgstr ""
+"Centralitzem les dades de TPV, estandarditzem el menú i el catàleg de "
+"productes, i construïm taulers per local i de grup perquè cada lloc es "
+"mesuri de la mateixa manera."
+
+msgid "Daily group sales with per-venue ranking."
+msgstr "Vendes diàries del grup amb rànquing per local."
+
+msgid "Labor-versus-sales view by site."
+msgstr "Vista de personal enfront de vendes per local."
+
+msgid "Standardized menu and product catalog."
+msgstr "Menú i catàleg de productes estandarditzats."
+
+msgid "Automated multi-venue ingestion into one model."
+msgstr "Ingesta automatitzada multi-local en un únic model."
+
+msgid "Menu engineering and demand forecasting per site."
+msgstr "Enginyeria de menú i previsió de demanda per local."
+
+msgid "Fair comparison across sites, faster reactions, and protected margins."
+msgstr ""
+"Comparació justa entre locals, reaccions més ràpides i marges protegits."
+
+msgid "AGENCIES · PROFESSIONAL SERVICES"
+msgstr "AGÈNCIES · SERVEIS PROFESSIONALS"
+
+msgid "Finally seeing project & client profitability"
+msgstr "Veure per fi la rendibilitat de projectes i clients"
+
+msgid ""
+"Time tracking, costs and invoicing are scattered. Nobody knows which "
+"projects or clients are actually profitable until it is too late to act."
+msgstr ""
+"El control d'hores, els costos i la facturació estan dispersos. Ningú sap "
+"quins projectes o clients són realment rendibles fins que és massa tard per "
+"actuar."
+
+msgid ""
+"We join time, cost and revenue data, define project and client profitability"
+" consistently, and build a live margin dashboard that flags trouble early."
+msgstr ""
+"Unim les dades d'hores, costos i ingressos, definim la rendibilitat de "
+"projectes i clients de forma consistent, i construïm un tauler de marges en "
+"directe que detecta problemes a temps."
+
+msgid "Project margin and utilization dashboard."
+msgstr "Tauler de marge i utilització de projectes."
+
+msgid "Automatic flag of loss-making projects."
+msgstr "Marcatge automàtic de projectes amb pèrdues."
+
+msgid "Unified delivery and finance dataset."
+msgstr "Dataset unificat de lliurament i finances."
+
+msgid "One delivery-and-finance dataset powering margin views."
+msgstr ""
+"Un únic dataset de lliurament i finances que alimenta les vistes de marge."
+
+msgid "Pricing insights and capacity forecasting."
+msgstr "Informació sobre preus i previsió de capacitat."
+
+msgid "Protected margins, better pricing, and clear utilization visibility."
+msgstr ""
+"Marges protegits, millors preus i visibilitat clara de la utilització."
+
+msgid "HOSPITALITY · MULTI-LOCATION"
+msgstr "HOSTALERIA · MULTI-LOCAL"
